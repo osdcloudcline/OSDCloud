@@ -35,3 +35,4 @@ Rename-Item -Path $UPBRFilePath -NewName "C:\OSDCloud\GitHub\downloads\UPBR.exe"
 
 
 Write-Host "Completed All Downloads..." -ForegroundColor Green
+exit
