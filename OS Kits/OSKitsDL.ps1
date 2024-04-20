@@ -27,5 +27,11 @@ Write-Host "Processing and Downloading File 5 of 5: MDT Setup File..." -Foregrou
 $MDTURL = "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/MicrosoftDeploymentToolkit_x64.msi"
 Save-WebFile -SourceUrl $MDTURL -DestinationDirectory $OSDCloudGHdownloads
 
+Write-Host "Processing and Downloading File 5 of 5: User Profile Backup Restore File..." -ForegroundColor Cyan
+$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
+$UPBRURL = "https://github.com/osdcloudcline/OSDCloud/raw/main/User%20Profile%20Backup%20Restore/UserProfileBackupRestore.exe"
+Save-WebFile -SourceUrl $UPBRURL -DestinationDirectory $OSDCloudGHdownloads
+Rename-Item -Path $UPBRFilePath -NewName "C:\OSDCloud\GitHub\downloads\UPBR.exe"
+
 
 Write-Host "Completed All Downloads..." -ForegroundColor Green
