@@ -1,5 +1,10 @@
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 
+Write-Host "Configuring OSD PowerShell Modules..." -ForegroundColor Green
+
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name OSD -Force
+
 Write-Host "Accessing OSD Cloud\OS Kits GitHub Repo from OSDCloudCline to download Windows SDK, ADK, PE ADK Add-On, MDT 64-bit and MSDaRT setup files..." -ForegroundColor Cyan
 
 Write-Host "Processing and Downloading File 1 of 5: Windows 11 22H2 SDK Setup File..." -ForegroundColor Cyan
