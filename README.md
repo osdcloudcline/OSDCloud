@@ -5,6 +5,7 @@ includes
 
  - OS Kits\ Windows 11 ADK 22H2 install file
  - OS Kits\ Windows 11 ADK PE Add-On 22H2
+ - OS Kits\Windows 11 SDK
  - OS Kits\ Orca install file
  - OS Kits\ MDT Install file
  - OS Kits\ DaRT install file
