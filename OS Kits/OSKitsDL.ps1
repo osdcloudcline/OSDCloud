@@ -18,5 +18,9 @@ Write-Host "Processing and Downloading: MSDaRT Setup File..." -ForegroundColor C
 $MSDARTURL = "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/MSDaRT100.msi"
 Save-WebFile "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/MSDaRT100.msi" -DestinationDirectory $OSDCloudGHdownloads
 
+Write-Host "Processing and Downloading: MDT Setup File..." -ForegroundColor Cyan
+$MDTURL = "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/MicrosoftDeploymentToolkit_x64.msi"
+Save-WebFile "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/MicrosoftDeploymentToolkit_x64.msi" -DestinationDirectory $OSDCloudGHdownloads
+
 
 Write-Host "Completed All Downloads..." -ForegroundColor Green
