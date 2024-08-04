@@ -2,17 +2,6 @@ $DellLaptopTemplateLog = "C:\Logs\OSDCloud\Templates\OEM\Dell\Laptops.log"
 
 Start-Transcript -Path $DellLaptopTemplateLog
 
-Get-DellAlienware
-
-Get-DellGSeries
-
-Get-DellXPS
-
-Get-DellInspiron
-
-Get-DellLatitude
-
-
 Function Get-DellAlienware(){
 $AlienwareWorkspace = "C:\OSDCloud\Laptops\Dell\Alienware"
 Write-Verbose "Creating new OSD Cloud Workspace for Dell Alienware laptops..."
@@ -62,5 +51,18 @@ Write-Verbose "Creating New OSD Cloud Template for Dell Latitude Laptops..." -Ve
 New-OSDCloudTemplate -Name 'Dell Latitude Laptops'
 Write-Verbose "Finished creating Dell Latitude Laptop Template..." -Verbose
 }
+
+Get-DellAlienware
+
+Get-DellGSeries
+
+Get-DellXPS
+
+Get-DellInspiron
+
+Get-DellLatitude
+
+
+
 
 Stop-Transcript
