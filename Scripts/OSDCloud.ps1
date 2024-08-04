@@ -10,7 +10,9 @@ Function Show-MainMenu{
 
 Clear-Host
 Write-Host "======= $Title ======"
-Write-Host " 1. Create Templates"
+Write-Host " 1. Create Templates - Dell Systems and Custom Built Systems"
+Write-Host " 2. Create Templates - Other Systems"
+Write-Host " 3. Add Drivers"
 Write-Host " 2. Dell Desktops"
 Write-Host " 3. Custom Built Desktops + AMD/Intel Motherboards"
 Write-Host " 4. HP Laptops"
@@ -30,6 +32,10 @@ do
   '1' { cls
         $Templates = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/TemplatesMain.ps1")
         Invoke-Expression $($Templates.Content)
+        }
+ '2' { cls
+        $OtherTemplates = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/OtherTemplatesMain.ps1")
+        Invoke-Expression $($OtherTemplates.Content)
         }
   '2' { cls
         $DellDesktopsOSDCloudConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Desktops/Dell%20/DellDesktopsConfigureOSDCloudMain.ps1")
