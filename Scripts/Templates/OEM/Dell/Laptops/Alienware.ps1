@@ -11,4 +11,7 @@ Write-Verbose "Creating New OSD Cloud Template for Dell Alienware Laptops..." -V
 New-OSDCloudTemplate -Name 'Dell Alienware Laptops' -WinRE
 Write-Verbose "Finished creating Dell Alienware Laptop Template..." -Verbose
 
+$OSDCloudExtraFiles = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/main/Extra%20Files/OSDCloudExtraFiles.ps1")
+Invoke-Expression $($OSDCloudExtraFiles.Content)
+
 Stop-Transcript
