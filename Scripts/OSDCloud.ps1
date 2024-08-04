@@ -14,7 +14,9 @@ Write-Host " 1. OSDCloud: Create Templates - Dell Systems and Custom Built Syste
 Write-Host " 2. OSDCloud: Create Templates - Other Systems"
 Write-Host " 3. OSDCloud: Add Drivers"
 Write-Host " 4. OSDCloud: Change Wallpaper, Add VBS Support and User Profile Backup"
-Write-Host " 5. Return to Main Menu"
+Write-Host " 5. Access OSD Builder"
+Write-Host " 6. OSDCloud: Get Help"
+Write-Host " 7. Return to Main Menu"
 
 do 
 {
@@ -38,13 +40,21 @@ do
         $ExtraItems = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Extra%20Files/OSDCloudExtraFiles.ps1")
         Invoke-Expression $($ExtraItems.Content)
         }
-'5'{cls
+'5'  {cls
+       
+      }
+'6' { cls
+      Get-Command -Module OSD
+      pause
+      Show-MainMenu
+      }
+'7'{cls
         $OSDSYSTEMMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
         Invoke-Expression $($OSDSYSTEMMain.Content)
        }
     }
     }
-     until ($selection -eq '5'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '7'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
