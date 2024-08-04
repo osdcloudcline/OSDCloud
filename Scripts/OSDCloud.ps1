@@ -25,7 +25,7 @@ do
   {
 
   '1' { cls
-        $ISO = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/TemplatesMain.ps1")
+        $ISO = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/ISO%20Files/ISOMain.ps1")
         Invoke-Expression $($ISO.Content)
         }
  '2' { cls
