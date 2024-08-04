@@ -10,7 +10,12 @@ Function Show-MainMenu{
 
 Clear-Host
 Write-Host "======= $Title ======"
-Write-Host " 1. Dell Laptops"
+Write-Host " 1. Dell Alienware Laptops"
+Write-Host " 2. Dell G-Series Laptops"
+Write-Host " 3. Dell Inspiron Laptops"
+Write-Host " 4. Dell Latitude Laptops"
+Write-Host " 5. Dell Vostro Laptops"
+Write-Host " 6. Dell XPS Laptops"
 Write-Host " 2. Dell Desktops"
 Write-Host " 3. Custom Built Desktops + AMD/Intel Motherboards"
 Write-Host " 10. Return to OSD Cloud Main Menu"
@@ -22,8 +27,8 @@ do
   {
 
   '1' { cls
-        $DellLaptopsOSDCloudConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Laptops/Dell%20/DELLConfigureOSDCloudMain.ps1")
-        Invoke-Expression $($DellLaptopsOSDCloudConfigScript.Content)
+        $Alienware = Invoke-WebRequest("")
+        Invoke-Expression $($Alienware.Content)
         }
   '2' { cls
         $DellDesktopsOSDCloudConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Desktops/Dell%20/DellDesktopsConfigureOSDCloudMain.ps1")
