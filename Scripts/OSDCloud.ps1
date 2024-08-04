@@ -31,16 +31,16 @@ do
         Invoke-Expression $($OtherTemplates.Content)
         }
  '3' { cls
-        $Drivers = Invoke-WebRequest ("")
+        $Drivers = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloudDrivers/raw/main/OSDCloudDriversMain.ps1")
         Invoke-Expression $($Drivers.Content)
         }
  '4' { cls
-        $ExtraItems = Invoke-WebRequest ("")
+        $ExtraItems = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Extra%20Files/OSDCloudExtraFiles.ps1")
         Invoke-Expression $($ExtraItems.Content)
         }
 '5'{cls
-        $OSDCloudMain = Invoke-WebRequest("")
-        Invoke-Expression $($OSDCloudMain.Content)
+        $OSDSYSTEMMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
+        Invoke-Expression $($OSDSYSTEMMain.Content)
        }
     }
     }
