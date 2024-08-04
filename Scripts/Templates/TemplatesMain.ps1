@@ -13,7 +13,7 @@ Write-Host "======= $Title ======"
 Write-Host " 1. Dell Laptops"
 Write-Host " 2. Dell Desktops"
 Write-Host " 3. Custom Built Desktops + AMD/Intel Motherboards"
-Write-Host " 10. Return to Main Menu"
+Write-Host " 10. Return to OSD Cloud Main Menu"
 
 do 
 {
@@ -34,12 +34,12 @@ do
         Invoke-Expression $($CustomPCOSDCloudConfigScript.Content)
         }
    '4'{cls
-        $OSDMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
-        Invoke-Expression $($OSDMain.Content)
+        $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/OSDCloud.ps1")
+        Invoke-Expression $($OSDCloudMain.Content)
        }
     }
     }
-     until ($selection -eq '4'){Invoke-Expression $($OSDMain.Content)}
+     until ($selection -eq '4'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
