@@ -44,7 +44,7 @@ do
        
       }
 '6' { cls
-      Get-Command -Module OSD
+      Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
       pause
       Show-MainMenu
       }
