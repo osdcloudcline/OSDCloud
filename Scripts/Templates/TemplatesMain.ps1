@@ -18,7 +18,7 @@ Write-Host " 5. Dell Vostro Laptops"
 Write-Host " 6. Dell XPS Laptops"
 Write-Host " 7. Dell Micro Form Factor Optiplex Desktops"
 Write-Host " 8. Custom Built Desktops"
-Write-Host " 10. Return to OSD Cloud Main Menu"
+Write-Host " 9. Return to OSD Cloud Main Menu"
 
 do 
 {
