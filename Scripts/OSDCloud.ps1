@@ -29,7 +29,7 @@ do
         Invoke-Expression $($ISO.Content)
         }
  '2' { cls
-        $OtherISO = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/OtherTemplatesMain.ps1")
+        $OtherISO = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/ISO%20Files/OtherISOMain.ps1")
         Invoke-Expression $($OtherISO.Content)
         }
  '3' { cls
