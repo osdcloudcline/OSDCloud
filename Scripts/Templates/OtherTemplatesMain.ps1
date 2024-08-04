@@ -16,7 +16,7 @@ Write-Host " 3. Acer Laptops"
 Write-Host " 4. Lenovo Laptops"
 Write-Host " 5. Virtual Machines"
 Write-Host " 6. MS Surface Devices"
-Write-Host " 7. Return to Main Menu"
+Write-Host " 7. Return to OSD Cloud Main Menu"
 
 do 
 {
@@ -49,12 +49,12 @@ do
         Invoke-Expression $($MSSurfaceTemplateConfigScript.Content)
         }
   '7'{cls
-        $OSDMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
-        Invoke-Expression $($OSDMain.Content)
+        $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/OSDCloud.ps1")
+        Invoke-Expression $($OSDCloudMain.Content)
        }
     }
     }
-     until ($selection -eq '7'){Invoke-Expression $($OSDMain.Content)}
+     until ($selection -eq '7'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
