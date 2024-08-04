@@ -10,8 +10,8 @@ Function Show-MainMenu{
 
 Clear-Host
 Write-Host "======= $Title ======"
-Write-Host " 1. OSDCloud: Create Templates - Dell Systems and Custom Built Systems"
-Write-Host " 2. OSDCloud: Create Templates - Other Systems"
+Write-Host " 1. OSDCloud: Create ISO - Dell Systems and Custom Built Systems"
+Write-Host " 2. OSDCloud: Create ISO - Other Systems"
 Write-Host " 3. OSDCloud: Add Drivers"
 Write-Host " 4. OSDCloud: Change Wallpaper, Add VBS Support and User Profile Backup"
 Write-Host " 5. Access OSD Builder"
@@ -25,12 +25,12 @@ do
   {
 
   '1' { cls
-        $Templates = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/TemplatesMain.ps1")
-        Invoke-Expression $($Templates.Content)
+        $ISO = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/TemplatesMain.ps1")
+        Invoke-Expression $($ISO.Content)
         }
  '2' { cls
-        $OtherTemplates = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/OtherTemplatesMain.ps1")
-        Invoke-Expression $($OtherTemplates.Content)
+        $OtherISO = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/OtherTemplatesMain.ps1")
+        Invoke-Expression $($OtherISO.Content)
         }
  '3' { cls
         $Drivers = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloudDrivers/raw/main/OSDCloudDriversMain.ps1")
