@@ -16,8 +16,8 @@ Write-Host " 3. Dell Inspiron Laptops"
 Write-Host " 4. Dell Latitude Laptops"
 Write-Host " 5. Dell Vostro Laptops"
 Write-Host " 6. Dell XPS Laptops"
-Write-Host " 2. Dell Desktops"
-Write-Host " 3. Custom Built Desktops + AMD/Intel Motherboards"
+Write-Host " 7. Dell Micro Form Factor Optiplex Desktops"
+Write-Host " 8. Custom Built Desktops"
 Write-Host " 10. Return to OSD Cloud Main Menu"
 
 do 
@@ -27,24 +27,44 @@ do
   {
 
   '1' { cls
-        $Alienware = Invoke-WebRequest("")
+        $Alienware = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/OEM/Dell/Laptops/Alienware.ps1")
         Invoke-Expression $($Alienware.Content)
         }
   '2' { cls
-        $DellDesktopsOSDCloudConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Desktops/Dell%20/DellDesktopsConfigureOSDCloudMain.ps1")
-        Invoke-Expression $($DellDesktopsOSDCloudConfigScript.Content)
+        $GSeries = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/OEM/Dell/Laptops/GSeries.ps1")
+        Invoke-Expression $($GSeries.Content)
         }
   '3' { cls
-        $CustomPCOSDCloudConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Desktops/Custom%20Build%20/CustomBuildConfigureOSDCloudMain.ps1")
-        Invoke-Expression $($CustomPCOSDCloudConfigScript.Content)
+        $Inspiron = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/OEM/Dell/Laptops/Inspiron.ps1")
+        Invoke-Expression $($Inspiron.Content)
         }
-   '4'{cls
+  '4' { cls
+        $Latitude = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/OEM/Dell/Laptops/Latitude.ps1")
+        Invoke-Expression $($Latitude.Content)
+        }
+  '5' { cls
+        $Vostro = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/OEM/Dell/Laptops/Vostro.ps1")
+        Invoke-Expression $($Vostro.Content)
+        }
+  '6' { cls
+        $XPS = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/OEM/Dell/Laptops/XPS.ps1")
+        Invoke-Expression $($XPS.Content)
+        }
+ '7' { cls
+        $OptiplexMFF = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/Templates/OEM/Dell/MFF%20Desktops/Optiplex.ps1")
+        Invoke-Expression $($OptiplexMFF.Content)
+        } 
+ '8' { cls
+        $Custom = Invoke-WebRequest ("")
+        Invoke-Expression $($Custom.Content)
+        }
+ '9'{cls
         $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/main/Scripts/OSDCloud.ps1")
         Invoke-Expression $($OSDCloudMain.Content)
        }
     }
     }
-     until ($selection -eq '4'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '9'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
