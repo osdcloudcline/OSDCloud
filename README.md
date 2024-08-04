@@ -10,6 +10,6 @@ includes
  - OS Kits\ MDT Install file
  - OS Kits\ DaRT install file
  - Extra Files\Scripting Support\VBS Scripting\VBS Scripting Support CAB Files in compressed zip file
- - User Profile Backup Restore\ Custom Built User Profile Backup/Restore - working in bootable WinRE OSDCloud
- - OSDCloud Wallpaper
+ - Extra Files\User Profile Backup Restore\ Custom Built User Profile Backup/Restore - working in bootable WinRE OSDCloud
+ - Extra Files\OSDCloud Wallpaper
    
