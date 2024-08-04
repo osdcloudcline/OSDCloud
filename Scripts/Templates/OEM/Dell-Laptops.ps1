@@ -2,7 +2,7 @@ $DellLaptopTemplateLog = "C:\Logs\OSDCloud\Templates\OEM\Dell\Laptops.log"
 
 Start-Transcript -Path $DellLaptopTemplateLog
 
-Function Get-DellAlienware(){
+Function Show-DellAlienware(){
 $AlienwareWorkspace = "C:\OSDCloud\Laptops\Dell\Alienware"
 Write-Verbose "Creating new OSD Cloud Workspace for Dell Alienware laptops..."
 New-OSDCloudWorkspace -WorkspacePath $AlienwareWorkspace
@@ -12,7 +12,7 @@ New-OSDCloudTemplate -Name 'Dell Alienware Laptops'
 Write-Verbose "Finished creating Dell Alienware Laptop Template..." -Verbose
 }
 
-Function Get-DellGSeries(){
+Function Show-DellGSeries(){
 $GSeriesWorkspace = "C:\OSDCloud\Laptops\Dell\G-Series"
 Write-Verbose "Creating new OSD Cloud Workspace for Dell G-Series laptops..."
 New-OSDCloudWorkspace -WorkspacePath $GSeriesWorkspace
@@ -22,7 +22,7 @@ New-OSDCloudTemplate -Name 'Dell G-Series Laptops'
 Write-Verbose "Finished creating Dell G-Series Laptop Template..." -Verbose
 }
 
-Function Get-DellXPS(){
+Function Show-DellXPS(){
 $XPSWorkspace = "C:\OSDCloud\Laptops\Dell\XPS"
 Write-Verbose "Creating new OSD Cloud Workspace for Dell XPS laptops..."
 New-OSDCloudWorkspace -WorkspacePath $XPSWorkspace
@@ -32,7 +32,7 @@ New-OSDCloudTemplate -Name 'Dell XPS Laptops'
 Write-Verbose "Finished creating Dell XPS Laptop Template..." -Verbose
 }
 
-Function Get-DellInspiron(){
+Function Show-DellInspiron(){
 $InspironWorkspace = "C:\OSDCloud\Laptops\Dell\Inspiron"
 Write-Verbose "Creating new OSD Cloud Workspace for Dell Inspiron laptops..."
 New-OSDCloudWorkspace -WorkspacePath $InspironWorkspace
@@ -42,7 +42,7 @@ New-OSDCloudTemplate -Name 'Dell Inspiron Laptops'
 Write-Verbose "Finished creating Dell Inspiron Laptop Template..." -Verbose
 }
 
-Function Get-DellLatitude(){
+Function Show-DellLatitude(){
 $LatitudeWorkspace = "C:\OSDCloud\Laptops\Dell\Latitude"
 Write-Verbose "Creating new OSD Cloud Workspace for Dell Latitude laptops..."
 New-OSDCloudWorkspace -WorkspacePath $LatitudeWorkspace
@@ -52,15 +52,15 @@ New-OSDCloudTemplate -Name 'Dell Latitude Laptops'
 Write-Verbose "Finished creating Dell Latitude Laptop Template..." -Verbose
 }
 
-Get-DellAlienware
+Show-DellAlienware
 
-Get-DellGSeries
+Show-DellGSeries
 
-Get-DellXPS
+Show-DellXPS
 
-Get-DellInspiron
+Show-DellInspiron
 
-Get-DellLatitude
+Show-DellLatitude
 
 
 
