@@ -200,20 +200,42 @@ Write-Verbose "Creating New OSD Cloud Template for Dell Alienware Laptops..." -V
 New-OSDCloudTemplate -Name 'Dell Alienware Laptops' -WinRE
 Write-Verbose "Finished creating Dell Alienware Laptop Template..." -Verbose
 
-Write-Host "Integrating Dell Cloud Drivers into OSDCloud..." -ForegroundColor Green
+Write-Verbose "Integrating OSDCloud Cloud Drivers..." -Verbose
+Write-Host
+Write-Host "Processing: OSDCloud Dell Cloud Drivers..." -ForegroundColor Green
 Edit-OSDCloudWinPE -CloudDriver Dell
-
-Write-Host "Integrating Dell Alienware Network Card, WiFi and Bluetooth Drivers into OSDCloud..." -ForegroundColor Green
-Edit-OSDCloudWinPE -DriverPath "C:\Drivers\OSDCloud\Dell\Alienware\Network"
-
-Write-Host "Integrating Dell Alienware Storage Drivers into OSDCloud..." -ForegroundColor Green
-Edit-OSDCloudWinPE -DriverPath "C:\Drivers\OSDCloud\Dell\Alienware\Storage"
-
-Write-Host "Integrating VMWare Cloud Drivers into OSDCloud..." -ForegroundColor Green
+Write-Host
+Write-Host "Processing: OSDCloud Intel Cloud Drivers..." -ForegroundColor Green
+Edit-OSDCloudWinPE -CloudDriver IntelNet
+Write-Host
+Write-Host "Processing: OSDCloud Nutanix Cloud Drivers..." -ForegroundColor Green
+Edit-OSDCloudWinPE -CloudDriver Nutanix
+Write-Host
+Write-Host "Processing: OSDCloud USB Cloud Drivers..." -ForegroundColor Green
+Edit-OSDCloudWinPE -CloudDriver USB
+Write-Host
+Write-Host "Processing: OSDCloud WiFi Cloud Drivers..." -ForegroundColor Green
+Edit-OSDCloudWinPE -CloudDriver WiFi
+Write-Host
+Write-Host "Processing: OSDCloud VMWare Cloud Drivers..." -ForegroundColor Green
 Edit-OSDCloudWinPE -CloudDriver VMWare
+Write-Host
+Write-Verbose "Completed integration of OSDCloud Cloud Drivers..." -Verbose
+Write-Host
 
-Write-Host "Integrating VMWare ESXI Drivers into OSDCloud..." -ForegroundColor Green
+Write-Verbose "Integrating Dell Alienware and VMWare ESXI Drivers..." -Verbose
+Write-Host
+Write-Host "Processing: Dell Alienware Network Card, WiFi and Bluetooth Drivers..." -ForegroundColor Green
+Edit-OSDCloudWinPE -DriverPath "C:\Drivers\OSDCloud\Dell\Alienware\Network"
+Write-Host
+Write-Host "Processing: Dell Alienware Storage Drivers..." -ForegroundColor Green
+Edit-OSDCloudWinPE -DriverPath "C:\Drivers\OSDCloud\Dell\Alienware\Storage"
+Write-Host
+Write-Host "Processing: VMWare ESXI Drivers..." -ForegroundColor Green
 Edit-OSDCloudWinPE -DriverPath "C:\Drivers\OSDCloud\VMWare\ESXI"
+Write-Host
+Write-Verbose "Completed integration of Dell Alienware and VMWare ESXI Drivers..." -Verbose
+Write-Host
 
 $OSDCloudExtraFiles = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/main/Extra%20Files/OSDCloudExtraFiles.ps1")
 Invoke-Expression $($OSDCloudExtraFiles.Content)
