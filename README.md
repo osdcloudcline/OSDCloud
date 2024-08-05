@@ -12,5 +12,5 @@ includes
  - Extra Files\Scripting Support\VBS Scripting\VBS Scripting Support CAB Files in compressed zip file
  - Extra Files\User Profile Backup Restore\ Custom Built User Profile Backup/Restore - working in bootable WinRE OSDCloud
  - Extra Files\OSDCloud Wallpaper
- - - Extra Files\Browsers - Google Chrome Portable
+ - Extra Files\Browsers - Google Chrome Portable
    
