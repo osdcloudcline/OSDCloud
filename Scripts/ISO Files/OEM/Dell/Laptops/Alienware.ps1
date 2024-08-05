@@ -1,4 +1,4 @@
-$DellLaptopTemplateLog = "C:\Logs\OSDCloud\Templates\OEM\Dell\Laptops.log"
+ll$DellLaptopTemplateLog = "C:\Logs\OSDCloud\Templates\OEM\Dell\Laptops.log"
 
 Function Get-OSDCloudMount(){
 $OSDCloudMountQues = Read-Host -Prompt 'Is the OSD Cloud boot.wim already mounted?'
@@ -192,17 +192,18 @@ Write-Host "Extracting DELL Alienware Storage Drivers..." -ForegroundColor Green
 Expand-Archive -Path "$GHdownloads\Alienware-OSDCloud-StorageDrivers.zip" -DestinationPath "$AWOSDCloudIRSTDrivers1_Extract"
 
 $AlienwareWorkspace = "C:\OSDCloud\Laptops\Dell\Alienware"
-Write-Verbose "Creating new OSD Cloud Workspace for Dell Alienware laptops..."
+Write-Verbose "Creating and Setting new OSD Cloud Workspace for Dell Alienware laptops..."
 New-OSDCloudWorkspace -WorkspacePath $AlienwareWorkspace
+Set-OSDCloudWorkspace -WorkspacePath $AlienwareWorkspace
 Get-OSDCloudWorkspace
 Write-Verbose "Creating New OSD Cloud Template for Dell Alienware Laptops..." -Verbose
 New-OSDCloudTemplate -Name 'Dell Alienware Laptops' -WinRE
 Write-Verbose "Finished creating Dell Alienware Laptop Template..." -Verbose
 
-Write-Host "Integrating DELL Alienware Network Card, WiFi and Bluetooth Drivers into OSDCloud..." -ForegroundColor Green
+Write-Host "Integrating Dell Alienware Network Card, WiFi and Bluetooth Drivers into OSDCloud..." -ForegroundColor Green
 Edit-OSDCloudWinPE -DriverPath "C:\Drivers\OSDCloud\Dell\Alienware\Network"
 
-Write-Host "Integrating DELL Alienware Storage Drivers into OSDCloud..." -ForegroundColor Green
+Write-Host "Integrating Dell Alienware Storage Drivers into OSDCloud..." -ForegroundColor Green
 Edit-OSDCloudWinPE -DriverPath "C:\Drivers\OSDCloud\Dell\Alienware\Storage"
 
 Write-Host "Integrating VMWare ESXI Drivers into OSDCloud..." -ForegroundColor Green
