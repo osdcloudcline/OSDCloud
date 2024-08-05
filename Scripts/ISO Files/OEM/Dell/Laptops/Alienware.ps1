@@ -200,11 +200,17 @@ Write-Verbose "Creating New OSD Cloud Template for Dell Alienware Laptops..." -V
 New-OSDCloudTemplate -Name 'Dell Alienware Laptops' -WinRE
 Write-Verbose "Finished creating Dell Alienware Laptop Template..." -Verbose
 
+Write-Host "Integrating Dell Cloud Drivers into OSDCloud..." -ForegroundColor Green
+Edit-OSDCloudWinPE -CloudDriver Dell
+
 Write-Host "Integrating Dell Alienware Network Card, WiFi and Bluetooth Drivers into OSDCloud..." -ForegroundColor Green
 Edit-OSDCloudWinPE -DriverPath "C:\Drivers\OSDCloud\Dell\Alienware\Network"
 
 Write-Host "Integrating Dell Alienware Storage Drivers into OSDCloud..." -ForegroundColor Green
 Edit-OSDCloudWinPE -DriverPath "C:\Drivers\OSDCloud\Dell\Alienware\Storage"
+
+Write-Host "Integrating VMWare Cloud Drivers into OSDCloud..." -ForegroundColor Green
+Edit-OSDCloudWinPE -CloudDriver VMWare
 
 Write-Host "Integrating VMWare ESXI Drivers into OSDCloud..." -ForegroundColor Green
 Edit-OSDCloudWinPE -DriverPath "C:\Drivers\OSDCloud\VMWare\ESXI"
