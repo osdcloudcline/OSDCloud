@@ -43,7 +43,7 @@ $OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Ext
 ######################################################################################
 ####    OSDCloud Web Browser URL                                                 #######
 ######################################################################################
-$OSDBrowser = ""
+$OSDBrowser = "https://github.com/osdcloudcline/OSDCloud/raw/main/Extra%20Files/Browser/Chrome.exe"
 
 ######################################################################################
 ####    OSDCloud Chrome Browser EXTRACTION LOCATION                            #######
