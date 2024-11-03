@@ -132,8 +132,8 @@ do
     Show-MainMenu
     }
 '6'{cls
-    $OSDSYSTEMMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
-    Invoke-Expression $($OSDSYSTEMMain.Content)
+    $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
+    Invoke-Expression $($OSDCloudMain.Content)
    }
     }
     }
