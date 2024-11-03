@@ -5,7 +5,7 @@
 Function Show-MainMenu{
    [CmdletBinding()]
    param(
-   [string]$Title = 'Operating System Administration & Deployment - Main Menu',
+   [string]$Title = 'OSD Cloud - Main Menu',
    [string]$Question = 'What type of action do you need to do?' 
    )
 cls
@@ -95,4 +95,16 @@ Write-Host '                                                                    
 pause
 Clear-Host
 
+Write-Host "======= $Title ======"
+Write-Host " 1. OSDCloud: Create ISO - Desktop Motherboards"
+Write-Host " 2. OSDCloud: Create ISO - Custom Built Systems"
+Write-Host " 3. OSDCloud: Create ISO - OEM Systems"
+Write-Host " 4. OSDCloud: Create ISO - Virtualization"
+Write-Host " 5. OSDCloud: Get Help"
+Write-Host " 6. Return to Main Menu"
 
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
