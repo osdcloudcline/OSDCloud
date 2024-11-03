@@ -117,7 +117,7 @@ do
     Invoke-Expression $($MSIMotherboards.Content)
     }
 '3'{cls
-    $GigabyteMotherboards = Invoke-WebRequest("")
+    $GigabyteMotherboards = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/GigabyteMain.ps1")
     Invoke-Expression $($GigabyteMotherboards.Content)
     }
 '4'{cls
