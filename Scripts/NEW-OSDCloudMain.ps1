@@ -108,3 +108,20 @@ do
   $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
+'1'{cls
+    $DesktopMotherboards = Invoke-WebRequest("")
+    Invoke-Expression $($DesktopMotherboards.Content)
+    }
+'2'{cls
+    $CustomBuilt = Invoke-WebRequest("")
+    Invoke-Expression $($CustomBuilt.Content)
+    }
+'3'{cls
+    $OEM = Invoke-WebRequest("")
+    Invoke-Expression $($OEM.Content)
+    }
+'4'{cls
+    $Virtualization = Invoke-WebRequest("")
+    Invoke-Expression $($Virtualization.Content)
+    }
+'5'{}
