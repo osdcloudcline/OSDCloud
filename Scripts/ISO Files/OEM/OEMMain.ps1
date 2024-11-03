@@ -121,9 +121,8 @@ do
     Invoke-Expression $($OEMTablets.Content)
     }
 '4'{cls
-    $OSDHelp = "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
-    Get-Command -Module OSD | Out-File -FilePath $OSDHelp
-    Start-Process -FilePath $OSDHelp
+    Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
+    Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
