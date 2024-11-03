@@ -124,4 +124,12 @@ do
     $Virtualization = Invoke-WebRequest("")
     Invoke-Expression $($Virtualization.Content)
     }
-'5'{}
+'5'{cls
+    $OSDHelp = "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
+    Get-Command -Module OSD | Out-File -FilePath $OSDHelp
+    Start-Process -FilePath $OSDHelp
+    pause
+    Show-MainMenu
+    }
+'6'{cls
+   }
