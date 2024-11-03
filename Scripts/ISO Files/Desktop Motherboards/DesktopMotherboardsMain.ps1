@@ -109,7 +109,7 @@ do
   switch($selection)
   {
 '1'{cls
-    $ASUSMotherboards = Invoke-WebRequest("")
+    $ASUSMotherboards = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/ASUSMain.ps1")
     Invoke-Expression $($ASUSMotherboards.Content)
     }
 '2'{cls
