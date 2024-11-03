@@ -113,7 +113,7 @@ do
     Invoke-Expression $($ASUSMotherboards.Content)
     }
 '2'{cls
-    $MSIMotherboards = Invoke-WebRequest("")
+    $MSIMotherboards = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/MSIMain.ps1")
     Invoke-Expression $($MSIMotherboards.Content)
     }
 '3'{cls
