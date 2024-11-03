@@ -135,3 +135,10 @@ do
     $OSDSYSTEMMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
     Invoke-Expression $($OSDSYSTEMMain.Content)
    }
+    }
+    }
+     until ($selection -eq '6'){Invoke-Expression $($OSDCloudMain.Content)}
+    }
+
+    
+Show-MainMenu
