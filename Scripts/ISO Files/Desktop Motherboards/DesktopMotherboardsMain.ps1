@@ -5,7 +5,7 @@
 Function Show-MainMenu{
    [CmdletBinding()]
    param(
-   [string]$Title = 'OSD Cloud - Main Menu',
+   [string]$Title = 'OSD Cloud Desktop Motherboards - Main Menu',
    [string]$Question = 'What type of action do you need to do?' 
    )
 cls
@@ -132,7 +132,7 @@ do
     Show-MainMenu
     }
 '6'{cls
-    $OSDSYSTEMMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
+    $OSDSYSTEMMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDSYSTEMMain.Content)
    }
     }
