@@ -16,7 +16,8 @@ $OSDBrowser = "https://github.com/osdcloudcline/OSDCloud/raw/main/Extra%20Files/
 ######################################################################################
 $ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
 
-Write-Host "Acquiring Google Chrome Portable Web Browser from GitHub repository..." -ForegroundColor Green
+Write-Verbose "Acquiring Google Chrome Portable Web Browser from GitHub repository..." -Verbose
 Save-WebFile -SourceUrl $OSDBrowser DestinationDirectory $OSDCloudGHdownloads
 
 
+Write-Verbose "Processing: Adding Google Chrome portable browser" -Verbose
