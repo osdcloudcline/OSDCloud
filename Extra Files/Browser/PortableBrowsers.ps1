@@ -15,3 +15,8 @@ $OSDBrowser = "https://github.com/osdcloudcline/OSDCloud/raw/main/Extra%20Files/
 ####    OSDCloud Chrome Browser EXTRACTION LOCATION                            #######
 ######################################################################################
 $ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
+
+Write-Host "Acquiring Google Chrome Portable Web Browser from GitHub repository..." -ForegroundColor Green
+Save-WebFile -SourceUrl $OSDBrowser DestinationDirectory $OSDCloudGHdownloads
+
+
