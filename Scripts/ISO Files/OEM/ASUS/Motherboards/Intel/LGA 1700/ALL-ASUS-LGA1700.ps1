@@ -45,7 +45,7 @@ Get-OSDCloudWorkspace
 # ASUS LGA 1700 Motherboards
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 Business Motherboard Ethernet Drivers..." -Verbose 
+Write-Verbose "Processing: ASUS LGA 1700 Business Motherboard Ethernet Drivers..." -Verbose 
 $BusinessEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\Business\Ethernet1"
 $BusinessEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\Business\Ethernet2"
 $BusinessEthernet3 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\Business\Ethernet3"
