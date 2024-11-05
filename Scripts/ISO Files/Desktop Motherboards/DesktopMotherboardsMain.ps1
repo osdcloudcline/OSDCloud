@@ -99,7 +99,7 @@ Write-Host "======= $Title ======"
 Write-Host " 1. OSDCloud: ASUS Motherboards"
 Write-Host " 2. OSDCloud: MSI Motherboards"
 Write-Host " 3. OSDCloud: Gigabyte Motherboards"
-Write-Host " 4. OSDCloud: AsRock Motherboards"
+Write-Host " 4. OSDCloud: ASRock Motherboards"
 Write-Host " 5. OSDCloud: Get Help"
 Write-Host " 6. Return to Main Menu"
 
