@@ -41,3 +41,16 @@ New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1700 Expedition Motherboard Ethernet Drivers..." -Verbose 
+$ExpeditionEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\Expedition\Ethernet"
+
+Edit-OSDCloudWinPE -DriverPath $ExpeditionEthernet
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1700 Expedition Motherboard Storage Drivers..." -Verbose 
+$ExpeditionStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\Expedition\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $ExpeditionStorage
+
