@@ -105,7 +105,7 @@ do
   switch($selection)
   {
 '1'{cls
-    $LGA1851 = Invoke-WebRequest("")
+    $LGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/Intel/LGA%201851/OSDCloud-LGA1851.ps1")
     Invoke-Expression $($LGA1851.Content)
     }
 '2'{cls
