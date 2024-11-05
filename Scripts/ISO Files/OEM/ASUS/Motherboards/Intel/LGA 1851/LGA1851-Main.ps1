@@ -73,7 +73,7 @@ do
    }
     }
     }
-     until ($selection -eq '4'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '11'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
