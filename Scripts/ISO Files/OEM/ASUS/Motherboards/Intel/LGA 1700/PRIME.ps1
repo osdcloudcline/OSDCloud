@@ -41,3 +41,29 @@ New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1700 PRIME Motherboard Ethernet Drivers..." -Verbose 
+$PRIMEEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\PRIME\Ethernet1"
+$PRIMEEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\PRIME\Ethernet2"
+$PRIMEEthernet3 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\PRIME\Ethernet3"
+$PRIMEEthernet4 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\PRIME\Ethernet4"
+
+Edit-OSDCloudWinPE -DriverPath $PRIMEEthernet1
+Edit-OSDCloudWinPE -DriverPath $PRIMEEthernet2
+Edit-OSDCloudWinPE -DriverPath $PRIMEEthernet3
+Edit-OSDCloudWinPE -DriverPath $PRIMEEthernet4
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1700 PRIME Motherboard WiFi Drivers..." -Verbose 
+$PRIMEWiFi1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\PRIME\WiFi1"
+$PRIMEWiFi2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\PRIME\WiFi2"
+
+Edit-OSDCloudWinPE -DriverPath $PRIMEWiFi1
+Edit-OSDCloudWinPE -DriverPath $PRIMEWiFi2
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1700 PRIME Motherboard Storage Drivers..." -Verbose 
+$PRIMEStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\PRIME\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $PRIMEStorage
