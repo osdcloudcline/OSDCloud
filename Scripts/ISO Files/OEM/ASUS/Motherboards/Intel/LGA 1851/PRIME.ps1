@@ -43,3 +43,21 @@ Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
 # ASUS LGA 1851 Motherboards
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 PRIME Motherboard Ethernet Drivers..." -Verbose 
+$PRIMEEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\PRIME\Ethernet"
+
+Edit-OSDCloudWinPE -DriverPath $PRIMEEthernet
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 PRIME Motherboard WiFi Drivers..." -Verbose 
+$PRIMEWiFi = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\PRIME\WiFi"
+
+Edit-OSDCloudWinPE -DriverPath $PRIMEWiFi
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 PRIME Motherboard Storage Drivers..." -Verbose 
+$PRIMEStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\PRIME\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $PRIMEStorage
