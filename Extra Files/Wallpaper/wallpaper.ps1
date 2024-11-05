@@ -36,3 +36,7 @@ Write-Host "Configuring OSD PowerShell Modules..." -ForegroundColor Green
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name OSD -Force
 
+Write-Host "Changing OSDCloud wallpaper..." -ForegroundColor Green
+$OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/Wallpaper/winpe.jpg"
+Save-WebFile -SourceUrl $OSDCloudWallpaperURL -DestinationDirectory $OSDCloudGHdownloads
+Edit-OSDCloudWinPE -Wallpaper "$OSDCloudGHdownloads\winpe.jpg"
