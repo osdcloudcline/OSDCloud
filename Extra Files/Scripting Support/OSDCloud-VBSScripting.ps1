@@ -38,3 +38,35 @@ Function Get-OSDCloudDismount(){
 $mountdir = Read-Host -Prompt 'Please provide mount directory'
 Dismount-WindowsImage -Path $mountdir -Save
 }
+
+Import-Module -Name OSD -Force
+
+Write-Host "Acquiring VBS Script Support CAB Files from GitHub repository..." -ForegroundColor Green
+Save-WebFile -SourceUrl $VBSScriptSupport_URL -DestinationDirectory $OSDCloudGHdownloads
+
+Write-Host "Integrating VBS Scripting Support into OSDCloud..." -ForegroundColor Green
+$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBSName3 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBSName4 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+
+$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBS3 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+
+Get-OSDCloudMount
+
+Write-Host "Processing Item: $VBSName1..."
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
+
+Write-Host "Processing Item: $VBSName2..."
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
+
+Write-Host "Processing Item: $VBSName3..."
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
+
+Write-Host "Processing Item: $VBSName4..."
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
+
+Get-OSDCloudDismount
