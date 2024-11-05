@@ -96,12 +96,13 @@ pause
 Clear-Host
 
 Write-Host "======= $Title ======"
-Write-Host " 1. OSDCloud: Create ISO - Desktop Motherboards"
-Write-Host " 2. OSDCloud: Create ISO - Custom Built Systems"
-Write-Host " 3. OSDCloud: Create ISO - OEM Systems"
-Write-Host " 4. OSDCloud: Create ISO - Virtualization"
-Write-Host " 5. OSDCloud: Get Help"
-Write-Host " 6. Return to Main Menu"
+Write-Host " 1. OSDCloud: Desktop Motherboards"
+Write-Host " 2. OSDCloud: Custom Built Systems"
+Write-Host " 3. OSDCloud: OEM Systems"
+Write-Host " 4. OSDCloud: Virtualization"
+Write-Host " 5. OSDCloud: By Processor and Motherboard Socket Type"
+Write-Host " 6. OSDCloud: Get Help"
+Write-Host " 7. Return to Main Menu"
 
 do 
 {
@@ -125,12 +126,16 @@ do
     Invoke-Expression $($Virtualization.Content)
     }
 '5'{cls
+    $CPUSocket = Invoke-WebRequest("")
+    Invoke-Expression $($CPUSocket.Content)
+    }
+'6'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
-'6'{cls
+'7'{cls
     $OSDSYSTEMMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
     Invoke-Expression $($OSDSYSTEMMain.Content)
    }
