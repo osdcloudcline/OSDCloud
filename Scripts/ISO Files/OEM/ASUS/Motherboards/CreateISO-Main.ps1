@@ -45,16 +45,17 @@ do
     $AMDMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/ASUS-AMDMain.ps1")
     Invoke-Expression $($AMDMain.Content)
     }
-'5'{cls
+'3'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
-'6'{cls
+'4'{cls
     $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
+    }
     }
     until ($selection -eq '4'){Invoke-Expression $($OSDCloudMain.Content)}
     }
