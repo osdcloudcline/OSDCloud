@@ -96,10 +96,10 @@ pause
 Clear-Host
 
 Write-Host "======= $Title ======"
-Write-Host " 1. OSDCloud: Create ISO - ASUS Motherboards"
-Write-Host " 2. OSDCloud: Create ISO - MSI Motherboards"
-Write-Host " 3. OSDCloud: Create ISO - Gigabyte Motherboards"
-Write-Host " 4. OSDCloud: Create ISO - Asrock Motherboards"
+Write-Host " 1. OSDCloud: ASUS Motherboards"
+Write-Host " 2. OSDCloud: MSI Motherboards"
+Write-Host " 3. OSDCloud: Gigabyte Motherboards"
+Write-Host " 4. OSDCloud: AsRock Motherboards"
 Write-Host " 5. OSDCloud: Get Help"
 Write-Host " 6. Return to Main Menu"
 
