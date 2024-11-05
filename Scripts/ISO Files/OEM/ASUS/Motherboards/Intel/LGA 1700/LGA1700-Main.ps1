@@ -76,7 +76,7 @@ do
     Invoke-Expression $($TUF1700.Content)
     }
 '9'{cls
-    $Expedition1700 = Invoke-WebRequest("")
+    $Expedition1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201700/Expedition.ps1")
     Invoke-Expression $($Expedition1700.Content)
     }
 '10'{cls
