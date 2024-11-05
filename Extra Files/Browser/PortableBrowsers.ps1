@@ -42,3 +42,7 @@ Get-OSDCloudMount
 
 Write-Verbose "Processing: Adding Google Chrome portable browser" -Verbose
 
+$ChromeDestination = "$mountdir\Windows\System32"
+Copy-Item -Path $ChromePath -Destination $ChromeDestination
+
+Get-OSDCloudDismount
