@@ -41,3 +41,34 @@ New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1700 TUF Gaming Motherboard Ethernet Drivers..." -Verbose 
+$TUFEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\TUF\Ethernet1"
+$TUFEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\TUF\Ethernet2"
+$TUFEthernet3 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\TUF\Ethernet3"
+
+Edit-OSDCloudWinPE -DriverPath $TUFEthernet1
+Edit-OSDCloudWinPE -DriverPath $TUFEthernet2
+Edit-OSDCloudWinPE -DriverPath $TUFEthernet3
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1700 TUF Gaming Motherboard WiFi Drivers..." -Verbose 
+$TUFWiFi1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\TUF\WiFi1"
+$TUFWiFi2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\TUF\WiFi2"
+$TUFWiFi3 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\TUF\WiFi3"
+$TUFWiFi4 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\TUF\WiFi4"
+$TUFWiFi5 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\TUF\WiFi5"
+
+Edit-OSDCloudWinPE -DriverPath $TUFWiFi1
+Edit-OSDCloudWinPE -DriverPath $TUFWiFi2
+Edit-OSDCloudWinPE -DriverPath $TUFWiFi3
+Edit-OSDCloudWinPE -DriverPath $TUFWiFi4
+Edit-OSDCloudWinPE -DriverPath $TUFWiFi5
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1700 TUF Gaming Motherboard Storage Drivers..." -Verbose 
+$TUFStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\TUF\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $TUFStorage
+
