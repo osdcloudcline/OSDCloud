@@ -80,7 +80,7 @@ do
     Invoke-Expression $($Expedition1700.Content)
     }
 '10'{cls
-    $Workstation1700 = Invoke-WebRequest("")
+    $Workstation1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201700/Workstation.ps1")
     Invoke-Expression $($Workstation1700.Content)
     }
 '11'{cls
