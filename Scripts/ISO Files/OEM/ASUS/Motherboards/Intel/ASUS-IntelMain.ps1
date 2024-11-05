@@ -1,3 +1,15 @@
+#################################################################
+# Main Menu
+#################################################################
+
+Function Show-MainMenu{
+   [CmdletBinding()]
+   param(
+   [string]$Title = 'OSD Cloud - ASUS Intel Main Menu',
+   [string]$Question = 'What type of action do you need to do?' 
+   )
+cls
+
 $Date = Get-Date
 Write-Host "Today is:" "$Date"
 Write-Host
