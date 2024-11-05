@@ -41,3 +41,14 @@ Write-Host "Configuring OSD PowerShell Modules..." -ForegroundColor Green
 
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name OSD -Force
+
+Write-Host "Acquiring User Profile Backup and Restore from GitHub repository..." -ForegroundColor Green
+Save-WebFile -SourceUrl $UPBR_URL -DestinationDirectory $OSDCloudGHdownloads
+Rename-Item -Path $UPBRFilePath -NewName "C:\OSDCloud\GitHub\downloads\UPBR.exe"
+
+Get-OSDCloudMount
+
+$UBPRDestination = "$mountdir\Windows\System32"
+Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination
+
+Get-OSDCloudDismount
