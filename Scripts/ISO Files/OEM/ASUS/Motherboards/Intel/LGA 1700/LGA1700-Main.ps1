@@ -68,7 +68,7 @@ do
     Invoke-Expression $($ProArt1700.Content)
     }
 '7'{cls
-    $ROG1700 = Invoke-WebRequest("")
+    $ROG1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201700/ROG.ps1")
     Invoke-Expression $($ROG1700.Content)
     }
 '8'{cls
