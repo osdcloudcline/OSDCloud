@@ -93,10 +93,10 @@ pause
 Clear-Host
 
 Write-Host "======= $Title ======"
-Write-Host " 1. OSDCloud: Create ISO - ASUS Intel LGA 1851"
-Write-Host " 2. OSDCloud: Create ISO - ASUS Intel LGA 1700"
-Write-Host " 3. OSDCloud: Create ISO - ASUS AMD AM5"
-Write-Host " 4. OSDCloud: Create ISO - ASUS AMD AM4"
+Write-Host " 1. OSDCloud: ASUS Intel LGA 1851"
+Write-Host " 2. OSDCloud: ASUS Intel LGA 1700"
+Write-Host " 3. OSDCloud: ASUS AMD AM5"
+Write-Host " 4. OSDCloud: ASUS AMD AM4"
 Write-Host " 5. OSDCloud: Get Help"
 Write-Host " 6. Return to Main Menu"
 
