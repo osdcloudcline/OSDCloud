@@ -126,7 +126,7 @@ do
     Invoke-Expression $($Virtualization.Content)
     }
 '5'{cls
-    $CPUSocket = Invoke-WebRequest("")
+    $CPUSocket = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/CPUSocketMain.ps1")
     Invoke-Expression $($CPUSocket.Content)
     }
 '6'{cls
