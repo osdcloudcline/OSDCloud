@@ -36,3 +36,8 @@ Function Get-OSDCloudDismount(){
 $mountdir = Read-Host -Prompt 'Please provide mount directory'
 Dismount-WindowsImage -Path $mountdir -Save
 }
+
+Write-Host "Configuring OSD PowerShell Modules..." -ForegroundColor Green
+
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name OSD -Force
