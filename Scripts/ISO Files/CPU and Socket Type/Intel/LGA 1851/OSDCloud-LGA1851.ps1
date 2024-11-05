@@ -228,11 +228,11 @@ Write-Host
 Write-Verbose "Completed: Integration of Cloud Drivers..." -Verbose 
 
 Write-Host
-Write-Verbose "Copying OSD PowerShell Module..." -Verbose
+Write-Verbose "Processing: Copying OSD PowerShell Module..." -Verbose
 Edit-OSDCloudWinPE -PSModuleCopy OSD
 
 Write-Host
-Write-Verbose "Adding OSD PowerShell Module..." -Verbose
+Write-Verbose "Processing: Extra OSD PowerShell Module..." -Verbose
 Edit-OSDCloudWinPE -PSModuleInstall Azure
 Edit-OSDCloudWinPE -PSModuleInstall AzureAD
 Edit-OSDCloudWinPE -PSModuleInstall Az.Accounts
