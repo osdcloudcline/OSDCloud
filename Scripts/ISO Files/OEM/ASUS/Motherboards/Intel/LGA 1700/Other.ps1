@@ -41,3 +41,25 @@ New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1700 Other Motherboard Ethernet Drivers..." -Verbose 
+$OtherEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\Other\Ethernet1"
+$OtherEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\Other\Ethernet2"
+
+Edit-OSDCloudWinPE -DriverPath $OtherEthernet1
+Edit-OSDCloudWinPE -DriverPath $OtherEthernet2
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1700 Other Motherboard WiFi Drivers..." -Verbose 
+$OtherWiFi1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\Other\WiFi1"
+$OtherWiFi2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\Other\WiFi2"
+
+Edit-OSDCloudWinPE -DriverPath $OtherWiFi1
+Edit-OSDCloudWinPE -DriverPath $OtherWiFi2
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1700 Other Motherboard Storage Drivers..." -Verbose 
+$OtherStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\Other\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $OtherStorage
