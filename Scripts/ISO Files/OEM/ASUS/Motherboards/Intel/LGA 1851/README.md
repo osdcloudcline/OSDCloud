@@ -1,4 +1,4 @@
-# OSDCLoud Creation scripts for ASUS LGA 1851 motherboards:
+# OSDCloud Creation scripts for ASUS LGA 1851 motherboards:
  - #### Business motherboards
  - #### CSM motherboards
  - #### Other motherboards
