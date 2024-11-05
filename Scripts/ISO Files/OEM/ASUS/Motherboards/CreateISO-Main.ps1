@@ -29,7 +29,7 @@ do
     Invoke-Expression $($IntelMain.Content)
     }
 '2'{cls
-    $AMDMain = Invoke-WebRequest("")
+    $AMDMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/ASUS-AMDMain.ps1")
     Invoke-Expression $($AMDMain.Content)
     }
 '5'{cls
