@@ -35,6 +35,8 @@ $mountdir = Read-Host -Prompt 'Please provide mount directory'
 Dismount-WindowsImage -Path $mountdir -Save
 }
 
+Import-Module -Name OSD -Force
+
 Write-Verbose "Acquiring Google Chrome Portable Web Browser from GitHub repository..." -Verbose
 Save-WebFile -SourceUrl $OSDBrowser DestinationDirectory $OSDCloudGHdownloads
 
