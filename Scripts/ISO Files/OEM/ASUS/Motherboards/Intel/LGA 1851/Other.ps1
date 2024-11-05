@@ -61,3 +61,47 @@ Write-Verbose "Processing: ASUS LGA 1851 Other Motherboard Storage Drivers..." -
 $OtherStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\Other\Storage"
 
 Edit-OSDCloudWinPE -DriverPath $OtherStorage
+
+# VM Drivers
+
+
+
+Write-Host
+Write-Verbose "Completed: Integration of Virtual Machine Drivers..." -Verbose 
+
+# Cloud Drivers
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Cloud Drivers..." -Verbose 
+Edit-OSDCloudWinPE -CloudDriver USB, VMware, WiFi
+Write-Host
+Write-Verbose "Completed: Integration of Cloud Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: Copying OSD PowerShell Module..." -Verbose
+Edit-OSDCloudWinPE -PSModuleCopy OSD
+
+Write-Host
+Write-Verbose "Processing: Extra OSD PowerShell Module..." -Verbose
+Edit-OSDCloudWinPE -PSModuleInstall Azure
+Edit-OSDCloudWinPE -PSModuleInstall AzureAD
+Edit-OSDCloudWinPE -PSModuleInstall Az.Accounts
+Edit-OSDCloudWinPE -PSModuleInstall Az.Storage
+Edit-OSDCloudWinPE -PSModuleInstall Az.Resources
+Edit-OSDCloudWinPE -PSModuleInstall Az.KeyVault
+Edit-OSDCloudWinPE -PSModuleInstall Az.Compute
+Edit-OSDCloudWinPE -PSModuleInstall Az.Automation
+Edit-OSDCloudWinPE -PSModuleInstall Az.Network
+Edit-OSDCloudWinPE -PSModuleInstall Az.ApiManagement
+Edit-OSDCloudWinPE -PSModuleInstall OSDCloudGUI
+Edit-OSDCloudWinPE -PSModuleInstall OSDCloudAzure
+Edit-OSDCloudWinPE -PSModuleInstall OSDUpdate
+Edit-OSDCloudWinPE -PSModuleInstall AutopilotOOBE
+Edit-OSDCloudWinPE -PSModuleInstall OSDDrivers
+Edit-OSDCloudWinPE -PSModuleInstall OSDDeploy
+Edit-OSDCloudWinPE -PSModuleInstall OSDSoftware
+Edit-OSDCloudWinPE -PSModuleInstall OSDCatalog
+Edit-OSDCloudWinPE -PSModuleInstall OSDProgress
+Edit-OSDCloudWinPE -PSModuleInstall PSCloudPC
+Edit-OSDCloudWinPE -PSModuleInstall PSWindowsUpdate
+Edit-OSDCloudWinPE -PSModuleInstall wifiprofilemanagement
