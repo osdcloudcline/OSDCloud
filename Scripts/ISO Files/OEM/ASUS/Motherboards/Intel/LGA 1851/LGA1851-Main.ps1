@@ -38,7 +38,7 @@ do
     Invoke-Expression $($Business1851.Content)
     }
 '3'{cls
-    $CSM1851 = Invoke-WebRequest("")
+    $CSM1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/CSM.ps1")
     Invoke-Expression $($CSM1851.Content)
     }
 '4'{cls
