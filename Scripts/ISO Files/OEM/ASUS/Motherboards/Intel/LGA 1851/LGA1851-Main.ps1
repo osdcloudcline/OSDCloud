@@ -84,6 +84,7 @@ do
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
+    }
     until ($selection -eq '10'){Invoke-Expression $($OSDCloudMain.Content)}
     }
    
