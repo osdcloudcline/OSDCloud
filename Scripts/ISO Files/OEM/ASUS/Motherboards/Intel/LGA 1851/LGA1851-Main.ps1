@@ -20,7 +20,7 @@ Write-Host '                                                                    
 Write-Host '            This OSDCloud section allows the user to perform:                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '          - Creating ISO images for Desktop motherboards                      ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                 for the following manufacturers:                             ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '          - ASUS: Intel LGA 1700/LGA 1851 socket types                        ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - ASUS: Intel LGA 1851 socket types                                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                              ' -BackgroundColor White
 pause
 Clear-Host
