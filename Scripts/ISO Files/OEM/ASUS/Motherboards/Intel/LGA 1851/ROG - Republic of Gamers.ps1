@@ -118,3 +118,15 @@ Edit-OSDCloudWinPE -PSModuleInstall OSDProgress
 Edit-OSDCloudWinPE -PSModuleInstall PSCloudPC
 Edit-OSDCloudWinPE -PSModuleInstall PSWindowsUpdate
 Edit-OSDCloudWinPE -PSModuleInstall wifiprofilemanagement
+
+$PortableBrowsers = InvokeWebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Browser/PortableBrowsers.ps1")
+Invoke-Expression $($PortableBrowsers.Content)
+
+$VBSScripting = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Scripting%20Support/OSDCloud-VBSScripting.ps1")
+Invoke-Expression $($VBSScripting.Content)
+
+$UPBR = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/User%20Profile%20Backup%20Restore/UPBR.ps1")
+Invoke-Expression $($UPBR.Content)
+
+$OSDCloudWallpaper = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Wallpaper/wallpaper.ps1")
+Invoke-Expression $($OSDCloudWallpaper.Content)
