@@ -56,7 +56,7 @@ do
     Invoke-Expression $($CSM1700.Content)
     }
 '4'{cls
-    $Other1700 = Invoke-WebRequest("")
+    $Other1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201700/Other.ps1")
     Invoke-Expression $($Other1700.Content)
     }
 '5'{cls
