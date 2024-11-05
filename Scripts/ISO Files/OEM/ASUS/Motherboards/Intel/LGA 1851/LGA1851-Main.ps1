@@ -50,7 +50,7 @@ do
     Invoke-Expression $($PRIME1851.Content)
     }
 '6'{cls
-    $ProArt1851 = Invoke-WebRequest("")
+    $ProArt1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/ProArt.ps1")
     Invoke-Expression $($ProArt1851.Content)
     }
 '7'{cls
