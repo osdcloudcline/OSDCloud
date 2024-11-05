@@ -5,7 +5,7 @@
 Function Show-MainMenu{
    [CmdletBinding()]
    param(
-   [string]$Title = 'OSD Cloud ASUS Desktop Motherboards - Main Menu',
+   [string]$Title = 'OSD Cloud - ASUS Main Menu',
    [string]$Question = 'What type of action do you need to do?' 
    )
 cls
