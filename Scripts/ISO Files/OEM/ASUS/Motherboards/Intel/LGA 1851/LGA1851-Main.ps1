@@ -34,7 +34,7 @@ do
     Invoke-Expression $($ALLASUSLGA1851.Content)
     }
 '2'{cls
-    $Business1851 = Invoke-WebRequest("")
+    $Business1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/Business.ps1")
     Invoke-Expression $($Business1851.Content)
     }
 '3'{cls
