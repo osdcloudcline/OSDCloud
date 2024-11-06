@@ -31,3 +31,33 @@ Write-Host " 2. OSDCloud: Create ISO - ASUS AMD AM 5"
 Write-Host " 3. OSDCloud: Get Help"
 Write-Host " 4. Return to Main Menu"
 
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+'1'{cls
+    $AM4 = Invoke-WebRequest("")
+    Invoke-Expression $($AM4.Content)
+    }
+'2'{cls
+    $AM5 = Invoke-WebRequest("")
+    Invoke-Expression $($AM5.Content)
+    }
+'5'{cls
+    Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
+    Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
+    pause
+    Show-MainMenu
+    }
+'6'{cls
+    $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
+    Invoke-Expression $($OSDCloudMain.Content)
+   }
+    }
+    }
+     until ($selection -eq '4'){Invoke-Expression $($OSDCloudMain.Content)}
+    }
+
+    
+Show-MainMenu
