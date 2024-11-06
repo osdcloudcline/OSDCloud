@@ -37,7 +37,7 @@ do
   switch($selection)
   {
 '1'{cls
-    $LGA1851 = Invoke-WebRequest("")
+    $LGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1851/LGA1851-Main.ps1")
     Invoke-Expression $($LGA1851.Content)
     }
 '2'{cls
