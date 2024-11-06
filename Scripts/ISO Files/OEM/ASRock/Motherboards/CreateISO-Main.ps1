@@ -38,7 +38,7 @@ do
   switch($selection)
   {
 '1'{cls
-    $IntelMain = Invoke-WebRequest("")
+    $IntelMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/ASRock-IntelMain.ps1")
     Invoke-Expression $($IntelMain.Content)
     }
 '2'{cls
