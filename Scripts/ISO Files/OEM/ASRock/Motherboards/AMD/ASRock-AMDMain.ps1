@@ -37,7 +37,7 @@ do
   switch($selection)
   {
 '1'{cls
-    $AM4 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/AM4-Main.ps1")
+    $AM4 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/AM4-Main.ps1")
     Invoke-Expression $($AM4.Content)
     }
 '2'{cls
