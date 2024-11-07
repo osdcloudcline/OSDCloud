@@ -96,8 +96,9 @@ Write-Host " 2. OSDCloud: Intel LGA 1700"
 Write-Host " 3. OSDCloud: AMD AM 4"
 Write-Host " 4. OSDCloud: AMD AM 5"
 Write-Host " 5. OSDCloud: Snapdragon"
-Write-Host " 6. OSDCloud: Get Help"
-Write-Host " 7. Return to Main Menu"
+Write-Host " 6. OSDCloud: ALL CPU Socket Types"
+Write-Host " 7. OSDCloud: Get Help"
+Write-Host " 8. Return to Main Menu"
 
 do 
 {
@@ -117,7 +118,7 @@ do
     Invoke-Expression $($AM4.Content)
     }
 '4'{cls
-    $AM5 = Invoke-WebRequest("")
+    $AM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/AMD/AM5/OSDCloud-AM5.ps1")
     Invoke-Expression $($AM5.Content)
     }
 '5'{cls
@@ -125,18 +126,22 @@ do
     Invoke-Expression $($Snapdragon.Content)
     }
 '6'{cls
+    $ALLCPU = Invoke-WebRequest("")
+    Invoke-Expression $($ALLCPU.Content)
+    }
+'7'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
-'7'{cls
+'8'{cls
     $OSDSYSTEMMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
     Invoke-Expression $($OSDSYSTEMMain.Content)
    }
     }
     }
-     until ($selection -eq '6'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '8'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
