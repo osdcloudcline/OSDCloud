@@ -109,7 +109,7 @@ do
     Invoke-Expression $($LGA1851.Content)
     }
 '2'{cls
-    $LGA1700 = Invoke-WebRequest("")
+    $LGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/Intel/LGA%201700/OSDCloud-LGA1700.ps1")
     Invoke-Expression $($LGA1700.Content)
     }
 '3'{cls
