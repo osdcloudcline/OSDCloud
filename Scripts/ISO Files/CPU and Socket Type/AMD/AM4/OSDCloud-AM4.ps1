@@ -43,3 +43,4 @@ Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
+# ASUS AM 4 Motherboards
