@@ -43,6 +43,14 @@ Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
+# Add VBS Scripting Support
+
+# Add UPBR Program
+
+# Add Google Chrome Portable Browser
+
+# Change Wallpaper
+
 # ASUS AM 4 Motherboards
 
 Write-Host
@@ -239,3 +247,141 @@ Edit-OSDCloudWinPE -DriverPath $WorkstationStorage2
 
 Write-Host
 Write-Verbose "Completed: Integration of ASUS Intel AM 4 Motherboard Drivers..." -Verbose 
+
+# ASRock AM 4 Motherboards
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Extreme Motherboard Ethernet Drivers..." -Verbose 
+
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Extreme Motherboard WiFi Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Extreme Motherboard Storage Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Fatal1ty Gaming Motherboard Ethernet Drivers..." -Verbose 
+
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Fatal1ty Gaming Motherboard WiFi Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Fatal1ty Gaming Motherboard Storage Drivers..." -Verbose 
+
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 PRO Motherboard Ethernet Drivers..." -Verbose 
+
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 PRO Motherboard WiFi Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 PRO Motherboard Storage Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Phantom Gaming Motherboard Ethernet Drivers..." -Verbose 
+
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Phantom Gaming Motherboard WiFi Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Phantom Gaming Motherboard Storage Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Steel Legend Motherboard Ethernet Drivers..." -Verbose 
+
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Steel Legend Motherboard WiFi Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Steel Legend Motherboard Storage Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Taichi Motherboard Ethernet Drivers..." -Verbose 
+
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Taichi Motherboard WiFi Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Taichi Motherboard Storage Drivers..." -Verbose 
+
+
+Write-Host
+Write-Verbose "Completed: Integration of ASRock AMD AM 4 Motherboard Drivers..." -Verbose 
+
+
+# Gigabyte AM 4 Motherboards
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AERO Motherboard Ethernet Drivers..." -Verbose 
+
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AERO Motherboard WiFi Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AERO Motherboard Storage Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard Ethernet Drivers..." -Verbose 
+
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard WiFi Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard Storage Drivers..." -Verbose 
+
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 Gaming Motherboard Ethernet Drivers..." -Verbose 
+
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 Gaming Motherboard WiFi Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 Gaming Motherboard Storage Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 Ultra Durable Motherboard Ethernet Drivers..." -Verbose 
+
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 Ultra Durable Motherboard WiFi Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 Ultra Durable Motherboard Storage Drivers..." -Verbose 
+
+Write-Host
+Write-Verbose "Completed: Integration of Gigabyte AMD AM 4 Motherboard Drivers..." -Verbose 
+
+# MSI AM 4 Motherboards
+
+Write-Host
+Write-Verbose "Attention: MSI does not have any AM 4 motherboard downloads avaible on their website..." -Verbose 
+
+# OSDCloud Cloud Drivers
+
+Write-Host
+Write-Verbose "Processing: OSDCloud - Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPE -CloudDriver USB,VMware,WiFi
+
+Write-Host
+Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose 
+
+# Virtual Machine Drivers - ESXI
+
+# Virtual Machine Drivers - VMWare Workstation
+
+# Virtual Machine Drivers - Proxmox
+
+# Virtual Machine Drivers - Hyper-V
+
