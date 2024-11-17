@@ -90,7 +90,7 @@ Write-Host '     - Creating ISO images for Custom-built PCs                     
 Write-Host '     - Creating ISO images for OEM Laptops, Desktops and                      ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '       tablet devices                                                         ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Creating ISO images for Virtual machines, including ESXI, Hyper-V      ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '       VMWare Workstation, Proxmox, Virtual Box and Docker enviroments        ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '       VMWare Workstation and Proxmox enviroments                             ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                              ' -BackgroundColor White
 pause
 Clear-Host
