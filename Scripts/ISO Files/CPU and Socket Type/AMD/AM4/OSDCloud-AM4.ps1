@@ -59,7 +59,6 @@ $BusinessEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Business\Etherne
 $BusinessEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Business\Ethernet2"
 
 Edit-OSDCloudWinPE -DriverPath $BusinessEthernet1
-
 Edit-OSDCloudWinPE -DriverPath $BusinessEthernet2
 
 Write-Host
@@ -80,7 +79,6 @@ $CSMStorage1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\CSM\Storage1"
 $CSMStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\CSM\Storage2"
 
 Edit-OSDCloudWinPE -DriverPath $CSMStorage1
-
 Edit-OSDCloudWinPE -DriverPath $CSMStorage2
 
 Write-Host
@@ -102,9 +100,7 @@ $PRIMEEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\PRIME\Ethernet2"
 $PRIMEEthernet3 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\PRIME\Ethernet3"
 
 Edit-OSDCloudWinPE -DriverPath $PRIMEEthernet1
-
 Edit-OSDCloudWinPE -DriverPath $PRIMEEthernet2
-
 Edit-OSDCloudWinPE -DriverPath $PRIMEEthernet3
 
 Write-Host
@@ -121,11 +117,8 @@ $PRIMEStorage3 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\PRIME\Storage3"
 $PRIMEStorage4 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\PRIME\Storage4"
 
 Edit-OSDCloudWinPE -DriverPath $PRIMEStorage1
-
 Edit-OSDCloudWinPE -DriverPath $PRIMEStorage2
-
 Edit-OSDCloudWinPE -DriverPath $PRIMEStorage3
-
 Edit-OSDCloudWinPE -DriverPath $PRIMEStorage4
 
 Write-Host
