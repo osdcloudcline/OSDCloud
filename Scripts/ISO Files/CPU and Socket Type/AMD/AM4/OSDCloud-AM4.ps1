@@ -43,14 +43,6 @@ Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
-# Add VBS Scripting Support
-
-# Add UPBR Program
-
-# Add Google Chrome Portable Browser
-
-# Change Wallpaper
-
 # ASUS AM 4 Motherboards
 
 Write-Host
@@ -377,4 +369,12 @@ Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
 # Virtual Machine Drivers - Proxmox
 
 # Virtual Machine Drivers - Hyper-V
+
+# Add VBS Scripting Support
+
+# Add UPBR Program
+
+# Add Google Chrome Portable Browser
+
+# Change Wallpaper
 
