@@ -237,24 +237,17 @@ Write-Verbose "Completed: Integration of ASUS Intel AM 4 Motherboard Drivers..."
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Extreme Motherboard Ethernet Drivers..." -Verbose 
+$ExtremeEthernet = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Extreme\Ethernet"
 
-
-Write-Host
-Write-Verbose "Processing: ASRock AM 4 Extreme Motherboard WiFi Drivers..." -Verbose 
+Edit-OSDCloudWinPE -DriversPath $ExtremeEthernet
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Extreme Motherboard Storage Drivers..." -Verbose 
+$ExtremeStorage1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Extreme\Storage1"
+$ExtremeStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Extreme\Storage2"
 
-Write-Host
-Write-Verbose "Processing: ASRock AM 4 Fatal1ty Gaming Motherboard Ethernet Drivers..." -Verbose 
-
-
-Write-Host
-Write-Verbose "Processing: ASRock AM 4 Fatal1ty Gaming Motherboard WiFi Drivers..." -Verbose 
-
-Write-Host
-Write-Verbose "Processing: ASRock AM 4 Fatal1ty Gaming Motherboard Storage Drivers..." -Verbose 
-
+Edit-OSDCloudWinPE -DriversPath $ExtremeStorage1
+Edit-OSDCloudWinPE -DriversPath $ExtremeStorage2
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 PRO Motherboard Ethernet Drivers..." -Verbose 
