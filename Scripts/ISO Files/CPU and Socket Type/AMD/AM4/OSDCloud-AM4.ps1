@@ -251,44 +251,97 @@ Edit-OSDCloudWinPE -DriversPath $ExtremeStorage2
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 PRO Motherboard Ethernet Drivers..." -Verbose 
+$PROEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PRO\Ethernet1"
+$PROEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PRO\Ethernet2"
+$PROEthernet3 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PRO\Ethernet3"
+$PROEthernet4 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PRO\Ethernet4"
+$PROEthernet5 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PRO\Ethernet5"
 
-
-Write-Host
-Write-Verbose "Processing: ASRock AM 4 PRO Motherboard WiFi Drivers..." -Verbose 
+Edit-OSDCloudWinPE -DriversPath $PROEthernet1
+Edit-OSDCloudWinPE -DriversPath $PROEthernet2
+Edit-OSDCloudWinPE -DriversPath $PROEthernet3
+Edit-OSDCloudWinPE -DriversPath $PROEthernet4
+Edit-OSDCloudWinPE -DriversPath $PROEthernet5
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 PRO Motherboard Storage Drivers..." -Verbose 
+$PROStorage = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PRO\Storage"
+
+Edit-OSDCloudWinPE -DriversPath $PROStorage
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Phantom Gaming Motherboard Ethernet Drivers..." -Verbose 
+$PhantomGamingEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PhantomGaming\Ethernet1"
+$PhantomGamingEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PhantomGaming\Ethernet2"
+$PhantomGamingEthernet3 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PhantomGaming\Ethernet3"
+$PhantomGamingEthernet4 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PhantomGaming\Ethernet4"
+$PhantomGamingEthernet5 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PhantomGaming\Ethernet5"
 
+Edit-OSDCloudWinPE -DriversPath $PhantomGamingEthernet1
+Edit-OSDCloudWinPE -DriversPath $PhantomGamingEthernet2
+Edit-OSDCloudWinPE -DriversPath $PhantomGamingEthernet3
+Edit-OSDCloudWinPE -DriversPath $PhantomGamingEthernet4
+Edit-OSDCloudWinPE -DriversPath $PhantomGamingEthernet5
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Phantom Gaming Motherboard WiFi Drivers..." -Verbose 
+$PhantomGamingWLAN = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PhantomGaming\WiFi"
+
+Edit-OSDCloudWinPE -DriversPath $PhantomGamingWiFi
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Phantom Gaming Motherboard Storage Drivers..." -Verbose 
+$PhantomGamingStorage1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PhantomGaming\Storage1"
+$PhantomGamingStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PhantomGaming\Storage2"
+
+Edit-OSDCloudWinPE -DriversPath $PhantomGamingStorage1
+Edit-OSDCloudWinPE -DriversPath $PhantomGamingStorage2
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Steel Legend Motherboard Ethernet Drivers..." -Verbose 
+$SteelLegendEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\SteelLegend\Ethernet1"
+$SteelLegendEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\SteelLegend\Ethernet2"
+$SteelLegendEthernet3 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\SteelLegend\Ethernet3"
+$SteelLegendEthernet4 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\SteelLegend\Ethernet4"
 
+Edit-OSDCloudWinPE -DriversPath $SteelLegendEthernet1
+Edit-OSDCloudWinPE -DriversPath $SteelLegendEthernet2
+Edit-OSDCloudWinPE -DriversPath $SteelLegendEthernet3
+Edit-OSDCloudWinPE -DriversPath $SteelLegendEthernet4
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Steel Legend Motherboard WiFi Drivers..." -Verbose 
+$SteelLegendWLAN = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\SteelLegend\WiFi"
+
+Edit-OSDCloudWinPE -DriversPath $SteelLegendWiFi
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Steel Legend Motherboard Storage Drivers..." -Verbose 
+$SteelLegendStorage1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\SteelLegend\Storage1"
+$SteelLegendStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\SteelLegend\Storage2"
+
+Edit-OSDCloudWinPE -DriversPath $SteelLegendStorage1
+Edit-OSDCloudWinPE -DriversPath $SteelLegendStorage2
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Taichi Motherboard Ethernet Drivers..." -Verbose 
+$TaichiEthernet = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Taichi\Ethernet"
 
+Edit-OSDCloudWinPE -DriversPath $TaichiEthernet
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Taichi Motherboard WiFi Drivers..." -Verbose 
+$TaichiWLAN = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Taichi\WiFi"
+
+Edit-OSDCloudWinPE -DriversPath $TaichiWLAN
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Taichi Motherboard Storage Drivers..." -Verbose 
+$TaichiStorage1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Taichi\Storage1"
+$TaichiStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Taichi\Storage2"
 
+Edit-OSDCloudWinPE -DriversPath $TaichiStorage1
+Edit-OSDCloudWinPE -DriversPath $TaichiStorage2
 
 Write-Host
 Write-Verbose "Completed: Integration of ASRock AMD AM 4 Motherboard Drivers..." -Verbose 
