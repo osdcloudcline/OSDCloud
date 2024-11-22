@@ -415,10 +415,16 @@ $ESXINetwork = "C:\OSDCloud\Drivers\Virtualization\ESXI\Network"
 Edit-OSDCloudWinPE -DriversPath $ESXINetwork
 
 Write-Host
+Write-Verbose "Completed: Integration of ESXI - Network Drivers..." -Verbose 
+
+Write-Host
 Write-Verbose "Processing: VMWare ESXI Storage Drivers..." -Verbose 
 $ESXIStorage = "C:\OSDCloud\Drivers\Virtualization\ESXI\Storage"
 
 Edit-OSDCloudWinPE -DriversPath $ESXIStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of ESXI - Storage Drivers..." -Verbose
 
 # Virtual Machine Drivers - VMWare Workstation
 Write-Host
@@ -428,10 +434,16 @@ $VMWareWorkstationProNetwork = "C:\OSDCloud\Drivers\Virtualization\VMWare\Workst
 Edit-OSDCloudWinPE -DriversPath $VMWareWorkstationProNetwork
 
 Write-Host
+Write-Verbose "Completed: Integration of VMWare Workstation Pro - Network Drivers..." -Verbose
+
+Write-Host
 Write-Verbose "Processing: VMWare Workstation Pro Storage Drivers..." -Verbose 
 $VMWareWorkstationProStorage = "C:\OSDCloud\Drivers\Virtualization\VMWare\Workstation\Storage"
 
 Edit-OSDCloudWinPE -DriversPath $VMWareWorkstationProStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of VMWare Workstation Pro - Storage Drivers..." -Verbose
 
 # Virtual Machine Drivers - Proxmox
 Write-Host
@@ -441,11 +453,16 @@ $ProxmoxNetwork = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network"
 Edit-OSDCloudWinPE -DriversPath $ProxmoxNetwork
 
 Write-Host
+Write-Verbose "Completed: Integration of Proxmox - Network Drivers..." -Verbose
+
+Write-Host
 Write-Verbose "Processing: Proxmox Storage Drivers..." -Verbose 
 $ProxmoxStorage = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage"
 
 Edit-OSDCloudWinPE -DriversPath $ProxmoxStorage
 
+Write-Host
+Write-Verbose "Completed: Integration of Proxmox - Storage Drivers..." -Verbose
 
 # Virtual Machine Drivers - Hyper-V
 Write-Host
@@ -453,6 +470,9 @@ Write-Verbose "Processing: Hyper-V Network Drivers..." -Verbose
 $HyperVNetwork = "C:\OSDCloud\Drivers\Virtualization\HyperV\Network"
 
 Edit-OSDCloudWinPE -DriversPath $HyperVNetwork
+
+Write-Host
+Write-Verbose "Completed: Integration of Microsoft Hyper-V - Network Drivers..." -Verbose
 
 # Add VBS Scripting Support
 
