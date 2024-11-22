@@ -406,13 +406,53 @@ Edit-OSDCloudWinPE -CloudDriver USB,VMware,WiFi
 Write-Host
 Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose 
 
+
 # Virtual Machine Drivers - ESXI
+Write-Host
+Write-Verbose "Processing: VMWare ESXI Network Drivers..." -Verbose 
+$ESXINetwork = "C:\OSDCloud\Drivers\Virtualization\ESXI\Network"
+
+Edit-OSDCloudWinPE -DriversPath $ESXINetwork
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI Storage Drivers..." -Verbose 
+$ESXIStorage = "C:\OSDCloud\Drivers\Virtualization\ESXI\Storage"
+
+Edit-OSDCloudWinPE -DriversPath $ESXIStorage
 
 # Virtual Machine Drivers - VMWare Workstation
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro Network Drivers..." -Verbose 
+$VMWareWorkstationProNetwork = "C:\OSDCloud\Drivers\Virtualization\VMWare\Workstation\Network"
+
+Edit-OSDCloudWinPE -DriversPath $VMWareWorkstationProNetwork
+
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro Storage Drivers..." -Verbose 
+$VMWareWorkstationProStorage = "C:\OSDCloud\Drivers\Virtualization\VMWare\Workstation\Storage"
+
+Edit-OSDCloudWinPE -DriversPath $VMWareWorkstationProStorage
 
 # Virtual Machine Drivers - Proxmox
+Write-Host
+Write-Verbose "Processing: Proxmox Virtual I/O Network Drivers..." -Verbose 
+$ProxmoxNetwork = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network"
+
+Edit-OSDCloudWinPE -DriversPath $ProxmoxNetwork
+
+Write-Host
+Write-Verbose "Processing: Proxmox Storage Drivers..." -Verbose 
+$ProxmoxStorage = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage"
+
+Edit-OSDCloudWinPE -DriversPath $ProxmoxStorage
+
 
 # Virtual Machine Drivers - Hyper-V
+Write-Host
+Write-Verbose "Processing: Hyper-V Network Drivers..." -Verbose 
+$HyperVNetwork = "C:\OSDCloud\Drivers\Virtualization\HyperV\Network"
+
+Edit-OSDCloudWinPE -DriversPath $HyperVNetwork
 
 # Add VBS Scripting Support
 
