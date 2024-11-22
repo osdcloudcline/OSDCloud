@@ -133,9 +133,9 @@ Edit-OSDCloudWinPE -DriverPath $ProArtStorage
 
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 ROG - Republic of Gamers Motherboard Bluetooth Drivers..." -Verbose 
-$ROGBT = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Bluetooth"
-
 $ROGBluetooth = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ROG\Bluetooth"
+
+Edit-OSDCloudWinPE -DriverPath $ROGBluetooth
 
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 ROG - Republic of Gamers Motherboard Ethernet Drivers..." -Verbose 
@@ -144,7 +144,6 @@ $ROGEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ROG\Ethernet2"
 $ROGEthernet3 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ROG\Ethernet3"
 $ROGEthernet4 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ROG\Ethernet4"
 $ROGEthernet5 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ROG\Ethernet5"
-
 
 Edit-OSDCloudWinPE -DriverPath $ROGEthernet1
 Edit-OSDCloudWinPE -DriverPath $ROGEthernet2
@@ -158,7 +157,6 @@ $ROGWiFi1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ROG\WiFi1"
 $ROGWiFi2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ROG\WiFi2"
 $ROGWiFi3 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ROG\WiFi3"
 $ROGWiFi4 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ROG\WiFi4"
-
 
 Edit-OSDCloudWinPE -DriverPath $ROGWiFi1
 Edit-OSDCloudWinPE -DriverPath $ROGWiFi2
