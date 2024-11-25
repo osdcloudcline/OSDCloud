@@ -458,6 +458,14 @@ Edit-OSDCloudWinPE -DriverPath $AORUSStorage1
 Edit-OSDCloudWinPE -DriverPath $AORUSStorage2
 
 Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard Bluetooth Drivers..." -Verbose 
+$AORUSBluetooth1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\Bluetooth"
+$AORUSBluetooth2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Bluetooth"
+
+Edit-OSDCloudWinPE -DriverPath $AORUSBluetooth1
+Edit-OSDCloudWinPE -DriverPath $AORUSBluetooth2
+
+Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 Gaming Motherboard Ethernet Drivers..." -Verbose 
 
 
