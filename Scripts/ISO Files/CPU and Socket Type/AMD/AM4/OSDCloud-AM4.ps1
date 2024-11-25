@@ -371,14 +371,91 @@ Edit-OSDCloudWinPE -DriversPath  $AEROStorage2
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard Ethernet Drivers..." -Verbose 
+$AORUSEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\A520\Ethernet1"
+$AORUSEthernet2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\A520\Ethernet2"
+$AORUSEthernet3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B450\Ethernet1"
+$AORUSEthernet4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B450\Ethernet2"
+$AORUSEthernet5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B450\Ethernet3"
+$AORUSEthernet6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\Ethernet1"
+$AORUSEthernet7 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\Ethernet2"
+$AORUSEthernet8 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X370\Ethernet1"
+$AORUSEthernet9 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X370\Ethernet2"
+$AORUSEthernet10 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X370\Ethernet3"
+$AORUSEthernet11 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X370\Ethernet4"
+$AORUSEthernet12 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X370\Ethernet5"
+$AORUSEthernet13 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X470\Ethernet1"
+$AORUSEthernet14 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X470\Ethernet2"
+$AORUSEthernet15 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X470\Ethernet3"
+$AORUSEthernet16 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X470\Ethernet4"
+$AORUSEthernet17 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet1"
+$AORUSEthernet18 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet2"
+$AORUSEthernet19 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet3"
+$AORUSEthernet20 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet4"
+$AORUSEthernet21 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet5"
+$AORUSEthernet22 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet6"
+$AORUSEthernet23 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet7"
+$AORUSEthernet24 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet8"
+$AORUSEthernet25 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet9"
+$AORUSEthernet26 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet10"
+$AORUSEthernet27 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet11"
 
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet1
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet2
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet3
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet4
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet5
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet6
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet7
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet8
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet9
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet10
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet11
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet12
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet13
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet14
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet15
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet16
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet17
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet18
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet19
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet20
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet21
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet22
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet23
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet24
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet25
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet26
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet27
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard WiFi Drivers..." -Verbose 
+$AORUSWiFi1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B450\WiFi1"
+$AORUSWiFi2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\WiFi1"
+$AORUSWiFi3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\WiFi2"
+$AORUSWiFi4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\WiFi3"
+$AORUSWiFi5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\WiFi4"
+$AORUSWiFi6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\WiFi5"
+$AORUSWiFi7 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X470\WiFi1"
+$AORUSWiFi8 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\WiFi1"
+$AORUSWiFi9 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\WiFi2"
+
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi1
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi2
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi3
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi4
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi5
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi6
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi7
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi8
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi9
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard Storage Drivers..." -Verbose 
+$AORUSStorage1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\Storage\RAID\NVMe"
+$AORUSStorage2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\Storage\RAID\SATA"
 
+Edit-OSDCloudWinPE -DriverPath $AORUSStorage1
+Edit-OSDCloudWinPE -DriverPath $AORUSStorage2
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 Gaming Motherboard Ethernet Drivers..." -Verbose 
