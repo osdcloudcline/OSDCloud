@@ -529,7 +529,39 @@ Edit-OSDCloudWinPE -DriverPath $GamingStorage15
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 Ultra Durable Motherboard Ethernet Drivers..." -Verbose 
+$UDEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A520\Ethernet1"
+$UDEthernet2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A520\Ethernet2"
+$UDEthernet3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B350\Ethernet"
+$UDEthernet4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B450\Ethernet1"
+$UDEthernet5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B450\Ethernet2"
+$UDEthernet6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet1"
+$UDEthernet7 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet2"
+$UDEthernet8 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet3"
+$UDEthernet9 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet4"
+$UDEthernet10 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet5"
+$UDEthernet11 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet6"
+$UDEthernet12 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet7"
+$UDEthernet13 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet8"
+$UDEthernet14 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\X370\Ethernet"
+$UDEthernet15 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\X570\Ethernet1"
+$UDEthernet16 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\X570\Ethernet2"
 
+Edit-OSDCloudWinPE -DriverPath $UDEthernet1
+Edit-OSDCloudWinPE -DriverPath $UDEthernet2
+Edit-OSDCloudWinPE -DriverPath $UDEthernet3
+Edit-OSDCloudWinPE -DriverPath $UDEthernet4
+Edit-OSDCloudWinPE -DriverPath $UDEthernet5
+Edit-OSDCloudWinPE -DriverPath $UDEthernet6
+Edit-OSDCloudWinPE -DriverPath $UDEthernet7
+Edit-OSDCloudWinPE -DriverPath $UDEthernet8
+Edit-OSDCloudWinPE -DriverPath $UDEthernet9
+Edit-OSDCloudWinPE -DriverPath $UDEthernet10
+Edit-OSDCloudWinPE -DriverPath $UDEthernet11
+Edit-OSDCloudWinPE -DriverPath $UDEthernet12
+Edit-OSDCloudWinPE -DriverPath $UDEthernet13
+Edit-OSDCloudWinPE -DriverPath $UDEthernet14
+Edit-OSDCloudWinPE -DriverPath $UDEthernet15
+Edit-OSDCloudWinPE -DriverPath $UDEthernet16
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 Ultra Durable Motherboard WiFi Drivers..." -Verbose 
