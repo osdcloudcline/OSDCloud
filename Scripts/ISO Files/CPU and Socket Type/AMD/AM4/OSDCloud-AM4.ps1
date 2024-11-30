@@ -713,9 +713,23 @@ Write-Verbose "Completed: Integration of Microsoft Hyper-V - Network Drivers..."
 
 # Add VBS Scripting Support
 
+$VBSScripting = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Scripting%20Support/OSDCloud-VBSScripting.ps1")
+Invoke-Expression $($VBSCripting.Content)
+
 # Add UPBR Program
+
+$UBPR = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/User%20Profile%20Backup%20Restore/UPBR.ps1")
+Invoke-Expression $($UPBR.Content)
+
 
 # Add Google Chrome Portable Browser
 
+$Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Browser/PortableBrowsers.ps1")
+Invoke-Expression $($Chrome.Content)
+
 # Change Wallpaper
+
+$wallpaper = Invoke-WEbRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Wallpaper/wallpaper.ps1")
+Invoke-Expression $($wallpaper.Content)
+
 
