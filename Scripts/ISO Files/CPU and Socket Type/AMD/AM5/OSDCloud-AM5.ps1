@@ -43,7 +43,7 @@ Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
-# ASRock Am5 motherboards
+# ASRock AM5 motherboards
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 5 PRO Motherboard Ethernet Drivers..." -Verbose 
