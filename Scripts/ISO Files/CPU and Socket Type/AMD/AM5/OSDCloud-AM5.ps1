@@ -7,12 +7,12 @@ Write-Host
 Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
 Write-Host
 Write-Host 
-Write-Host '                                                                                              ' -BackgroundColor White                                                              
+Write-Host '                                                                                              ' -BackgroundColor White  
 Write-Host '    This scripts creates an OSCloud Deployment ISO with the following:                        ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Networking and Storage: ASRock AM5 Motherboard drivers                                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Networking and Storage: ASUS AM5 motherboard drivers                                   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Networking and Storage: MSI AM5 Motherboard drivers                                    ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Networking and Storage: Gigabyte AM5 Motherboard drivers                               ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Networking and Storage: ASRock AM5 Motherboard drivers                                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Networking and Storage: VM drivers for ESXI, Hyper-V, VMWare Workstation and Proxmox   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - VBS Scripting Support                                                                  ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Wireless networking support                                                            ' -ForegroundColor DarkBlue -BackgroundColor White
@@ -44,3 +44,5 @@ Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
 
+Write-Host
+Write-Verbose "Processing: ASRock AM 5 PRO Motherboard Ethernet Drivers..." -Verbose 
