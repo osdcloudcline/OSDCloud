@@ -126,7 +126,7 @@ do
     Invoke-Expression $($Snapdragon.Content)
     }
 '6'{cls
-    $ALLCPU = Invoke-WebRequest("")
+    $ALLCPU = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/ALL%20CPU/ALL-CPU.ps1")
     Invoke-Expression $($ALLCPU.Content)
     }
 '7'{cls
