@@ -667,3 +667,53 @@ Write-Verbose "Processing: ASRock AM5 PRO Motherboard Storage Drivers..." -Verbo
 $PROAM5Storage = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\PRO\Storage"
 
 Edit-OSDCloudWinPE -DriverPath $PROAM5Storage
+
+Write-Host
+Write-Verbose "Processing: ASRock AM5 Steel Legend Motherboard Ethernet Drivers..." -Verbose
+$SteelLegendAM5Ethernet = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\SteelLegend\Ethernet"
+
+Edit-OSDCloudWinPE -DriverPath $SteelLegendAM5Ethernet 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM5 Steel Legend Motherboard WiFi Drivers..." -Verbose
+$SteelLegendAM5WiFi = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\SteelLegend\WiFi"
+
+Edit-OSDCloudWinPE -DriverPath $SteelLegendAM5WiFi
+
+Write-Host
+Write-Verbose "Processing: ASRock AM5 Steel Legend Motherboard Bluetooth Drivers..." -Verbose
+$SteelLegendAM5Bluetooth = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\SteelLegend\Bluetooth"
+
+Edit-OSDCloudWinPE -DriverPath $SteelLegendAM5Bluetooth
+
+Write-Host
+Write-Verbose "Processing: ASRock AM5 Steel Legend Motherboard Storage Drivers..." -Verbose
+$SteelLegendAM5Storage = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\SteelLegend\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $SteelLegendAM5Storage
+
+Write-Host
+Write-Verbose "Processing: ASRock AM5 Taichi Motherboard Ethernet Drivers..." -Verbose
+$TaichiAM5Ethernet = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\Taichi\Ethernet"
+
+Edit-OSDCloudWinPE -DriverPath $TaichiAM5Ethernet
+
+Write-Host
+Write-Verbose "Processing: ASRock AM5 Taichi Motherboard WiFi Drivers..." -Verbose
+$TaichiAM5WiFi = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\Taichi\WiFi"
+
+Edit-OSDCloudWinPE -DriverPath $TaichiAM5WiFi
+
+Write-Host
+Write-Verbose "Processing: ASRock AM5 Taichi Motherboard Bluetooth Drivers..." -Verbose
+$TaichiAM5Bluetooth = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\Taichi\Bluetooth1"
+$TaichiAM5Bluetooth1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\Taichi\Bluetooth2"
+
+Edit-OSDCloudWinPE -DriverPath $TaichiAM5Bluetooth
+Edit-OSDCloudWinPE -DriverPath $TaichiAM5Bluetooth1
+
+Write-Host
+Write-Verbose "Processing: ASRock AM5 Taichi Motherboard Storage Drivers..." -Verbose
+$TaichiAM5Storage = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\Taichi\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $TaichiAM5Storage
