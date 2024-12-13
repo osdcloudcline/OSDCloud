@@ -717,3 +717,69 @@ Write-Verbose "Processing: ASRock AM5 Taichi Motherboard Storage Drivers..." -Ve
 $TaichiAM5Storage = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\Taichi\Storage"
 
 Edit-OSDCloudWinPE -DriverPath $TaichiAM5Storage
+
+
+# ASUS AM5 Motherboards
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 Business Motherboard Ethernet Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 Business Motherboard Storage Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 CSM Motherboard Ethernet Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 CSM Motherboard Storage Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 Expedition Motherboard Ethernet Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 Expedition Motherboard Storage Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 Other Motherboard Ethernet Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 Other Motherboard Storage Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 PRIME Motherboard Ethernet Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 PRIME Motherboard Storage Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 ProArt Motherboard Ethernet Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 ProArt Motherboard Storage Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 ROG - Republic of Gamers Motherboard Ethernet Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 ROG - Republic of Gamers Motherboard Storage Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 TUF Gaming Motherboard Ethernet Drivers..." -Verbose
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 TUF Gaming Motherboard Storage Drivers..." -Verbose
