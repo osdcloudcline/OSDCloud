@@ -642,6 +642,8 @@ Write-Verbose "Attention: MSI does not have any AM 4 motherboard downloads avaib
 Write-Host
 Write-Verbose "Processing: AMD AM5 CPU Socket motherboards..." -Verbose 
 
+# ASRock AM5 Motherboards
+
 Write-Host
 Write-Verbose "Processing: ASRock AM5 PRO Motherboard Ethernet Drivers..." -Verbose
 $PROAM5Ethernet = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\PRO\Ethernet"
