@@ -47,7 +47,7 @@ Get-OSDCloudWorkspace
 # AM4 CPU Socket
 
 Write-Host
-Write-Verbose "Processing: AMD AM4 CPU Socket motherboards..." -Verbose 
+Write-Verbose "Processing: AMD CPU Socket AM4 motherboards..." -Verbose 
 
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 Business Motherboard Ethernet Drivers..." -Verbose 
@@ -640,7 +640,7 @@ Write-Verbose "Attention: MSI does not have any AM 4 motherboard downloads avaib
 # AM5 CPU Socket
 
 Write-Host
-Write-Verbose "Processing: AMD AM5 CPU Socket motherboards..." -Verbose 
+Write-Verbose "Processing: AMD CPU Socket AM5 motherboards..." -Verbose 
 
 # ASRock AM5 Motherboards
 
@@ -720,6 +720,7 @@ Edit-OSDCloudWinPE -DriverPath $TaichiAM5Storage
 
 
 # ASUS AM5 Motherboards
+
 
 Write-Host
 Write-Verbose "Processing: ASUS AM5 Business Motherboard Ethernet Drivers..." -Verbose
