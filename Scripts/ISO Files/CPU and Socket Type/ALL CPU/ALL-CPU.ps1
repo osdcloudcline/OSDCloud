@@ -47,7 +47,7 @@ Get-OSDCloudWorkspace
 # AM4 CPU Socket
 
 Write-Host
-Write-Verbose "Processing: AMD AM 4 CPU Socket motherboards..." -Verbose 
+Write-Verbose "Processing: AMD AM4 CPU Socket motherboards..." -Verbose 
 
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 Business Motherboard Ethernet Drivers..." -Verbose 
@@ -638,3 +638,30 @@ Write-Host
 Write-Verbose "Attention: MSI does not have any AM 4 motherboard downloads avaible on their website..." -Verbose 
 
 # AM5 CPU Socket
+
+Write-Host
+Write-Verbose "Processing: AMD AM5 CPU Socket motherboards..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM5 PRO Motherboard Ethernet Drivers..." -Verbose
+$PROAM5Ethernet = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\PRO\Ethernet"
+
+Edit-OSDCloudWinPE -DriverPath $PROAM5Ethernet 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM5 PRO Motherboard WiFi Drivers..." -Verbose
+$PROAM5WiFi = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\PRO\WiFi"
+
+Edit-OSDCloudWinPE -DriverPath $PROAM5WiFi 
+
+Write-Host
+Write-Verbose "Processing: ASRock AM5 PRO Motherboard Bluetooth Drivers..." -Verbose
+$PROAM5Bluetooth = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\PRO\Bluetooth"
+
+Edit-OSDCloudWinPE -DriverPath $PROAM5Bluetooth
+
+Write-Host
+Write-Verbose "Processing: ASRock AM5 PRO Motherboard Storage Drivers..." -Verbose
+$PROAM5Storage = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\PRO\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $PROAM5Storage
