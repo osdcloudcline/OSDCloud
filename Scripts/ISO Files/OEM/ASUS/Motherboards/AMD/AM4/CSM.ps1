@@ -20,3 +20,19 @@ pause
 Clear-Host
 
 
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM 4 CSM Motherboard Ethernet Drivers..." -Verbose 
+$CSMEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\CSM\Ethernet"
+
+Edit-OSDCloudWinPE -DriverPath $CSMEthernet
+
+Write-Host
+Write-Verbose "Processing: ASUS AM 4 CSM Motherboard Storage Drivers..." -Verbose 
+$CSMStorage1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\CSM\Storage1"
+$CSMStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\CSM\Storage2"
+
+Edit-OSDCloudWinPE -DriverPath $CSMStorage1
+Edit-OSDCloudWinPE -DriverPath $CSMStorage2
+
