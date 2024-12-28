@@ -56,7 +56,7 @@ do
     Invoke-Expression $($Business.Content)
     }
 '2'{cls
-    $CSM = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/AM5-Main.ps1")
+    $CSM = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/CSM.ps1")
     Invoke-Expression $($CSM.Content)
     }
 '3'{cls
