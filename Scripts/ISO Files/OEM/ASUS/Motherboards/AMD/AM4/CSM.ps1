@@ -57,3 +57,6 @@ $CSMStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\CSM\Storage2"
 Edit-OSDCloudWinPE -DriverPath $CSMStorage1
 Edit-OSDCloudWinPE -DriverPath $CSMStorage2
 
+Write-Host
+Write-Verbose "Completed: Integration of ASUS AMD AM4 Motherboard Drivers..." -Verbose 
+Write-Host
