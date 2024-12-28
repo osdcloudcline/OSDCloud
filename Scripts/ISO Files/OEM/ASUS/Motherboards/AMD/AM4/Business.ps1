@@ -19,9 +19,12 @@ Write-Host '                                                                    
 pause
 Clear-Host
 
+$BusinessAM4DriverDownload = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/Business%20Motherboards/Business.ps1")
+Invoke-Expression $($BusinessAM4DriverDownload.Content)
+
+
 Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
 New-OSDCloudTemplate -Name WinRE -WinRE
-
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
