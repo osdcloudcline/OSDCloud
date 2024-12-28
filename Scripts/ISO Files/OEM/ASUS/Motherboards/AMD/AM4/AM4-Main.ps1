@@ -64,7 +64,7 @@ do
     Invoke-Expression $($Others.Content)
     }
 '4'{cls
-    $PRIME = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/AM5-Main.ps1")
+    $PRIME = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/PRIME.ps1")
     Invoke-Expression $($PRIME.Content)
     }
 '5'{cls
