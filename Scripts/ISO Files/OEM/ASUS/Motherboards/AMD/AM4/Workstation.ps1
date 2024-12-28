@@ -58,3 +58,5 @@ Edit-OSDCloudWinPE -DriverPath $WorkstationStorage1
 Edit-OSDCloudWinPE -DriverPath $WorkstationStorage2
 
 Write-Host
+Write-Verbose "Completed: Integration of ASUS AMD AM4 Motherboard Drivers..." -Verbose 
+Write-Host
