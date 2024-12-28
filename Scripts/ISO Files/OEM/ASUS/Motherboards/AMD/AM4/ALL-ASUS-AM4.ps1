@@ -82,7 +82,7 @@ $OtherEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Other\Ethernet"
 Edit-OSDCloudWinPE -DriverPath $OtherEthernet
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 Other Motherboard Storage Drivers..." -Verbose 
+Write-Verbose "Processing: ASUS AM 4 Other Motherboard Storage Drivers..." -Verbose 
 $OtherStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Other\Storage"
 
 Edit-OSDCloudWinPE -DriverPath $OtherStorage
