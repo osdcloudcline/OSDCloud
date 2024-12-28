@@ -20,3 +20,16 @@ pause
 Clear-Host
 
 
+
+
+Write-Host
+Write-Verbose "Processing: ASUS AM 4 Other Motherboard Ethernet Drivers..." -Verbose 
+$OtherEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Other\Ethernet"
+
+Edit-OSDCloudWinPE -DriverPath $OtherEthernet
+
+Write-Host
+Write-Verbose "Processing: ASUS AM 4 Other Motherboard Storage Drivers..." -Verbose 
+$OtherStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Other\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $OtherStorage
