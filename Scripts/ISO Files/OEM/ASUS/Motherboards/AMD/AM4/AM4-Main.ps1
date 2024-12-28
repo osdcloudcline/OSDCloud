@@ -80,7 +80,7 @@ do
     Invoke-Expression $($TUFGaming.Content)
     }
 '8'{cls
-    $Workstation = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/AM5-Main.ps1")
+    $Workstation = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/Workstation.ps1")
     Invoke-Expression $($Workstation.Content)
     }
 '9'{cls
