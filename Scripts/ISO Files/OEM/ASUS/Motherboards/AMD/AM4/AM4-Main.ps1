@@ -76,7 +76,7 @@ do
     Invoke-Expression $($ROG.Content)
     }
 '7'{cls
-    $TUFGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/Business.ps1")
+    $TUFGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/TUFGaming.ps1")
     Invoke-Expression $($TUFGaming.Content)
     }
 '8'{cls
