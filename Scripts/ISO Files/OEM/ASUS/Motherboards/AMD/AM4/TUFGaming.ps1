@@ -43,3 +43,47 @@ Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
 # ASUS AM 4 Motherboards
+
+Write-Host
+Write-Verbose "Processing: ASUS AM 4 TUF Gaming Motherboard Bluetooth Drivers..." -Verbose 
+$TUFBluetooth = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\Bluetooth"
+
+Edit-OSDCloudWinPE -DriverPath $TUFBluetooth
+
+Write-Host
+Write-Verbose "Processing: ASUS AM 4 TUF Gaming Motherboard Ethernet Drivers..." -Verbose 
+$TUFEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\Ethernet1"
+$TUFEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\Ethernet2"
+$TUFEthernet3 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\Ethernet3"
+$TUFEthernet4 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\Ethernet4"
+
+Edit-OSDCloudWinPE -DriverPath $TUFEthernet1
+Edit-OSDCloudWinPE -DriverPath $TUFEthernet2
+Edit-OSDCloudWinPE -DriverPath $TUFEthernet3
+Edit-OSDCloudWinPE -DriverPath $TUFEthernet4
+
+Write-Host
+Write-Verbose "Processing: ASUS AM 4 TUF Gaming Motherboard WiFi Drivers..." -Verbose 
+$TUFWiFi1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\WiFi1"
+$TUFWiFi2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\WiFi2"
+$TUFWiFi3 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\WiFi3"
+$TUFWiFi4 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\WiFi4"
+$TUFWiFi5 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\WiFi5"
+$TUFWiFi6 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\WiFi6"
+
+Edit-OSDCloudWinPE -DriverPath $TUFWiFi1
+Edit-OSDCloudWinPE -DriverPath $TUFWiFi2
+Edit-OSDCloudWinPE -DriverPath $TUFWiFi3
+Edit-OSDCloudWinPE -DriverPath $TUFWiFi4
+Edit-OSDCloudWinPE -DriverPath $TUFWiFi5
+Edit-OSDCloudWinPE -DriverPath $TUFWiFi6
+
+Write-Host
+Write-Verbose "Processing: ASUS AM 4 TUF Gaming Motherboard Storage Drivers..." -Verbose 
+$TUFStorage1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\Storage1"
+$TUFStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\Storage2"
+
+Edit-OSDCloudWinPE -DriverPath $TUFStorage1
+Edit-OSDCloudWinPE -DriverPath $TUFStorage2
+
+Write-Host
