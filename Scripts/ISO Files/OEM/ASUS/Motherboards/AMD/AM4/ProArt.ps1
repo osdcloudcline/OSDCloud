@@ -42,3 +42,23 @@ Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
 # ASUS AM 4 Motherboards
+
+Write-Host
+Write-Verbose "Processing: ASUS AM 4 ProArt Motherboard Ethernet Drivers..." -Verbose 
+$ProArtEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ProArt\Ethernet"
+
+Edit-OSDCloudWinPE -DriverPath $ProArtEthernet
+
+Write-Host
+Write-Verbose "Processing: ASUS AM 4 ProArt Motherboard WiFi Drivers..." -Verbose 
+$ProArtWiFi = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ProArt\WiFi1"
+
+Edit-OSDCloudWinPE -DriverPath $ProArtWiFi
+
+Write-Host
+Write-Verbose "Processing: ASUS AM 4 ProArt Motherboard Storage Drivers..." -Verbose 
+$ProArtStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ProArt\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $ProArtStorage
+
+Write-Host
