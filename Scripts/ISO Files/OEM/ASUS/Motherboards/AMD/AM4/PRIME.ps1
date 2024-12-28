@@ -71,3 +71,5 @@ Edit-OSDCloudWinPE -DriverPath $PRIMEStorage3
 Edit-OSDCloudWinPE -DriverPath $PRIMEStorage4
 
 Write-Host
+Write-Verbose "Completed: Integration of ASUS AMD AM4 Motherboard Drivers..." -Verbose 
+Write-Host
