@@ -84,7 +84,7 @@ do
     Invoke-Expression $($Workstation.Content)
     }
 '9'{cls
-    $ALLASUS = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/AM5-Main.ps1")
+    $ALLASUS = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/edit/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/ALL-ASUS-AM4.ps1")
     Invoke-Expression $($ALLASUS.Content)
     }
 '10'{cls
