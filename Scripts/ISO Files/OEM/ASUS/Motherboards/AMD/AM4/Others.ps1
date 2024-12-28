@@ -54,3 +54,7 @@ Write-Verbose "Processing: ASUS AM 4 Other Motherboard Storage Drivers..." -Verb
 $OtherStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Other\Storage"
 
 Edit-OSDCloudWinPE -DriverPath $OtherStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of ASUS AMD AM4 Motherboard Drivers..." -Verbose 
+Write-Host
