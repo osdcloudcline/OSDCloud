@@ -62,3 +62,5 @@ $ProArtStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ProArt\Storage"
 Edit-OSDCloudWinPE -DriverPath $ProArtStorage
 
 Write-Host
+Write-Verbose "Completed: Integration of ASUS AMD AM4 Motherboard Drivers..." -Verbose 
+Write-Host
