@@ -72,7 +72,7 @@ do
     Invoke-Expression $($ProArt.Content)
     }
 '6'{cls
-    $ROG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/AM5-Main.ps1")
+    $ROG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/ROG%20-%20Republic%20of%20Gamers.ps1")
     Invoke-Expression $($ROG.Content)
     }
 '7'{cls
