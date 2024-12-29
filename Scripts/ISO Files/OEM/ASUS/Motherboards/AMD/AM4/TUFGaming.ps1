@@ -125,6 +125,8 @@ Write-Host
 Write-Verbose "Completed: Integration of ASUS AMD AM4 Motherboard Drivers..." -Verbose 
 Write-Host
 
+# Virtualization Hypervisors
+
 Write-Host
 Write-Verbose "Processing: Microsoft Hyper-V Ethernet Drivers..." -Verbose 
 $HyperVNetwork = "C:\OSDCloud\Drivers\Virtualization\HyperV\Network"
@@ -187,6 +189,8 @@ Write-Host
 Write-Verbose "Completed: Integration of VMWare Workstation Pro Network and Storage Drivers..." -Verbose
 Write-Host
 
+# OSDCloud Cloud Drivers
+
 Write-Host
 Write-Verbose "Processing: OSDCloud - Cloud Drivers..." -Verbose 
 
@@ -195,6 +199,8 @@ Edit-OSDCloudWinPE -CloudDriver USB,VMware,WiFi
 Write-Host
 Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
 Write-Host
+
+# VBS Scripting Support
 
 Write-Host
 Write-Verbose "Processing: VBS Scripting Support..." -Verbose 
@@ -229,6 +235,8 @@ Write-Host
 Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
 Write-Host
 
+# Google Chrome Portable Browser - OSDCloud
+
 Write-Host
 Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verbose 
 $ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
@@ -239,6 +247,8 @@ Copy-Item -Path $ChromePath -Destination $ChromeDestination
 Write-Host
 Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
 Write-Host
+
+# User Profile Backup and Restore for OSDCloud
 
 Write-Host
 Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
@@ -251,6 +261,8 @@ Write-Host
 Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
 Write-Host
 
+# OSDCloud wallpaper
+
 Write-Host
 Write-Verbose "Processing: NEW OSDCloud Wallpaper..." -Verbose 
 $OSDCloudwallpaper = "C:\downloads\OSDCloud\GitHub\wallpaper\winpe.jpg"
@@ -259,4 +271,3 @@ Edit-OSDCloudWinPE -Wallpaper $OSDCloudwallpaper
 
 Write-Host
 Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
-Write-Host
