@@ -26,8 +26,8 @@ Write-Host
 Write-Verbose "Processing: ASUS AM4 CSM Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
 
-$CSMAM4DriversDownload = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/CSM%20Motherboards/CSM.ps1")
-Invoke-Expression $($CSMAM4DriversDownload.Content)
+$CSM = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/CSM%20Motherboards/CSM.ps1")
+Invoke-Expression $($CSM.Content)
 
 $HyperV = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
 Invoke-Expression $($HyperV.Content)
@@ -183,19 +183,19 @@ $VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad3
 
 Write-Host
 Write-Verbose "Processing Item: $VBSName1..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
+Add-WindowsPackage -Path $WorkspacePath -PackagePath $VBS1
 Write-Host
 
 Write-Verbose "Processing Item: $VBSName2..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
+Add-WindowsPackage -Path $WorkspacePath -PackagePath $VBS2
 Write-Host
 
 Write-Verbose "Processing Item: $VBSName3..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
+Add-WindowsPackage -Path $WorkspacePath -PackagePath $VBS3
 Write-Host
 
 Write-Verbose "Processing Item: $VBSName4..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
+Add-WindowsPackage -Path $WorkspacePath -PackagePath $VBS4
 
 Write-Host
 Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
