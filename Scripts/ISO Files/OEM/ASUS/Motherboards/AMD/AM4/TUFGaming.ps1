@@ -19,6 +19,12 @@ Write-Host '                                                                    
 pause
 Clear-Host
 
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name OSD -Force
+
+Write-Host
+Write-Verbose "Processing: ASUS AM4 TUF Gaming Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
+Write-Host
 
 $TUFGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/TUF%20Gaming%20Motherboards/TUF%20Gaming.ps1")
 Invoke-Expression $($TUFGaming.Content)
