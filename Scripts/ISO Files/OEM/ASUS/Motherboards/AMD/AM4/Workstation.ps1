@@ -53,6 +53,10 @@ Invoke-Expression $($UPBR.Content)
 $OSDCloudWallpaper = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Wallpaper/OSDCloudWallpaper-Download.ps1")
 Invoke-Expression $($OSDCloudWallpaper.Content) 
 
+Write-Host
+Write-Verbose "Completed: ALL ASUS AM4 Workstations Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
+Write-Host
+
 Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
 New-OSDCloudTemplate -Name WinRE -WinRE
 
