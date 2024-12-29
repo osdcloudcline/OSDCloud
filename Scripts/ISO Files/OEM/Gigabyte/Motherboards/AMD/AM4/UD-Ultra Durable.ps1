@@ -27,6 +27,8 @@ Write-Host
 Write-Verbose "Processing: Gigabyte AM4 UD - Ultra Durable Motherboard drivers, Virtualization drivers, scripting support and other utilities file downloads" -Verbose
 Write-Host 
 
+$UD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/Ultra%20Durable/UltraDurable.ps1")
+Invoke-Expression $($UD.Content)
 
 $HyperV = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
 Invoke-Expression $($HyperV.Content)
