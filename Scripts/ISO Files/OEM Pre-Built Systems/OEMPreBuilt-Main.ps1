@@ -86,7 +86,7 @@ Write-Host
 Write-Host '                                                                              ' -BackgroundColor White                                                              
 Write-Host '            This OSDCloud section allows the user to perform:                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '   - Creating ISO images for the following manufacturers:                     ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Dell: Laptops and Micro-Form factor desktops                           ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Dell: Laptops, Desktops and Micro-Form factor desktops                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - HP: Laptops                                                            ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - ASUS: Laptops                                                          ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Acer: Laptops                                                          ' -ForegroundColor DarkBlue -BackgroundColor White
@@ -99,9 +99,10 @@ Clear-Host
 Write-Host "======= $Title ======"
 Write-Host " 1. OSDCloud: Create ISO - Laptops"
 Write-Host " 2. OSDCloud: Create ISO - OEM Desktops"
-Write-Host " 3. OSDCloud: Create ISO - Tablets"
-Write-Host " 4. OSDCloud: Get Help"
-Write-Host " 5. Return to Main Menu"
+Write-Host " 3. OSDCloud: Create ISO - Dell Micro-Form Factor"
+Write-Host " 4. OSDCloud: Create ISO - Tablets"
+Write-Host " 5. OSDCloud: Get Help"
+Write-Host " 6. Return to Main Menu"
 
 do 
 {
@@ -117,22 +118,26 @@ do
     Invoke-Expression $($OEMDesktops.Content)
     }
 '3'{cls
+    $DellMFF = Invoke-WebRequest("")
+    Invoke-Expression $($DellMFF.Content)
+    }
+'4'{cls
     $OEMTablets = Invoke-WebRequest("")
     Invoke-Expression $($OEMTablets.Content)
     }
-'4'{cls
+'5'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
-'5'{cls
+'6'{cls
     $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
     }
-     until ($selection -eq '5'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '6'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
