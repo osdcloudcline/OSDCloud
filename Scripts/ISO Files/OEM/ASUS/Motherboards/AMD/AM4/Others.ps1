@@ -104,3 +104,129 @@ Edit-OSDCloudWinPE -DriverPath $HyperVNetwork
 Write-Host
 Write-Verbose "Completed: Integration of Microsoft Hyper-V Network Drivers..." -Verbose
 Write-Host
+
+Write-Host
+Write-Verbose "Processing: Proxmox Virtual IO Ethernet Drivers..." -Verbose 
+$ProxmoxEthernet1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\Windows11"
+$ProxmoxEthernet2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\WindowsServer2025"
+
+Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet1
+Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet2
+
+Write-Host
+Write-Verbose "Processing: Proxmox Virtual IO Storage Drivers..." -Verbose 
+$ProxmoxStorage1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\Windows11"
+$ProxmoxStorage2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\WindowsServer2025"
+
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage1
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage2
+
+Write-Host
+Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere Ethernet Drivers..." -Verbose 
+$ESXIEthernet = "C:\OSDCloud\Drivers\Virtualization\ESXI\Network"
+
+Edit-OSDCloudWinPE -DriverPath  $ESXIEthernet
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere Storage Drivers..." -Verbose 
+$ESXIStorage = "C:\OSDCloud\Drivers\Virtualization\ESXI\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $ESXIStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of VMWare ESXI vSphere Network and Storage Drivers..." -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro Ethernet Drivers..." -Verbose 
+$VMWareWorkstationProEthernet = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Network"
+
+Edit-OSDCloudWinPE -DriverPath  $VMWareWorkstationProEthernet
+
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro Storage Drivers..." -Verbose 
+$VMWareWorkstationProStorage = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $VMWareWorkstationProStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of VMWare Workstation Pro Network and Storage Drivers..." -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: OSDCloud - Cloud Drivers..." -Verbose 
+
+Edit-OSDCloudWinPE -CloudDriver USB,VMware,WiFi
+
+Write-Host
+Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: VBS Scripting Support..." -Verbose 
+
+$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
+$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBSName3 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBSName4 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBS3 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+
+Write-Host
+Write-Verbose "Processing Item: $VBSName1..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName2..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName3..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName4..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
+
+Write-Host
+Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verbose 
+$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
+$ChromeDestination = "$WorkspacePath\Windows\System32"
+
+Copy-Item -Path $ChromePath -Destination $ChromeDestination
+
+Write-Host
+Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
+$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
+$UBPRDestination = "$WorkspacePath\Windows\System32"
+
+Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination
+
+Write-Host
+Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: NEW OSDCloud Wallpaper..." -Verbose 
+$OSDCloudwallpaper = "C:\downloads\OSDCloud\GitHub\wallpaper\winpe.jpg"
+
+Edit-OSDCloudWinPE -Wallpaper $OSDCloudwallpaper
+
+Write-Host
+Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
+Write-Host
