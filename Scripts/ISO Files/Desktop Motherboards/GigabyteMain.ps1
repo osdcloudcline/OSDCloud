@@ -110,7 +110,7 @@ do
     Invoke-Expression $($LGA1851.Content)
     }
 '2'{cls
-    $LGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/Intel/LGA%201700/LGA1700-Main.ps1")
+    $LGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/Intel/LGA%201700/LGA1700-Main.ps1")
     Invoke-Expression $($LGA1700.Content)
     }
 '3'{cls
