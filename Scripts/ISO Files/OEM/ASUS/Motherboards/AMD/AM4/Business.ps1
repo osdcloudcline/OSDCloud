@@ -19,6 +19,13 @@ Write-Host '                                                                    
 pause
 Clear-Host
 
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name OSD -Force
+
+Write-Host
+Write-Verbose "Processing: ASUS AM4 Business Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
+Write-Host 
+
 $BusinessAM4DriverDownload = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/Business%20Motherboards/Business.ps1")
 Invoke-Expression $($BusinessAM4DriverDownload.Content)
 
@@ -45,6 +52,10 @@ Invoke-Expression $($UPBR.Content)
 
 $OSDCloudWallpaper = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Wallpaper/OSDCloudWallpaper-Download.ps1")
 Invoke-Expression $($OSDCloudWallpaper.Content) 
+
+Write-Host
+Write-Verbose "Completed: ALL ASUS AM4 Business Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
+Write-Host
 
 Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
 New-OSDCloudTemplate -Name WinRE -WinRE
