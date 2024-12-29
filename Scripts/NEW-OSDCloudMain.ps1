@@ -101,8 +101,9 @@ Write-Host " 2. OSDCloud: Custom Built Systems"
 Write-Host " 3. OSDCloud: OEM Systems"
 Write-Host " 4. OSDCloud: Virtualization"
 Write-Host " 5. OSDCloud: By Processor and Motherboard Socket Type"
-Write-Host " 6. OSDCloud: Get Help"
-Write-Host " 7. Return to Main Menu"
+Write-Host " 6. OSDCloud: Download Drivers ONLY"
+Write-Host " 7. OSDCloud: Get Help"
+Write-Host " 8. Return to Main Menu"
 
 do 
 {
@@ -130,12 +131,16 @@ do
     Invoke-Expression $($CPUSocket.Content)
     }
 '6'{cls
+    $DriversDL = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/CPUSocketMain.ps1")
+    Invoke-Expression $($DriversDL.Content)
+    }
+'7'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
-'7'{cls
+'8'{cls
     $OSDSYSTEMMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
     Invoke-Expression $($OSDSYSTEMMain.Content)
    }
