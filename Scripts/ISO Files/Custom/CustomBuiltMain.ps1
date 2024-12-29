@@ -108,7 +108,7 @@ do
   switch($selection)
   {
 '1'{cls
-    $BillyPC = Invoke-WebRequest("")
+    $BillyPC = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/BillyPC.ps1")
     Invoke-Expression $($BillyPC.Content)
     }
 '2'{cls
