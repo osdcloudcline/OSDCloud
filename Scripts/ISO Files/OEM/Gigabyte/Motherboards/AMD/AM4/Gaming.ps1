@@ -27,6 +27,8 @@ Write-Host
 Write-Verbose "Processing: Gigabyte AM4 Gaming Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host 
 
+$Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/Gaming/Gaming.ps1")
+Invoke-Expression $($Gaming.Content)
 
 $HyperV = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
 Invoke-Expression $($HyperV.Content)
