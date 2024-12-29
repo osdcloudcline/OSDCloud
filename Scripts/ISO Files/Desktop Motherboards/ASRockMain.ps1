@@ -104,7 +104,7 @@ do
   switch($selection)
   {
 '1'{cls
-    $Intel = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/LGA1851-Main.ps1")
+    $Intel = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/ASRock-IntelMain.ps1")
     Invoke-Expression $($Intel.Content)
     }
 '2'{cls
