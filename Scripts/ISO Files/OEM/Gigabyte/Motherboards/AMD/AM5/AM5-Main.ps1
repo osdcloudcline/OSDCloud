@@ -21,6 +21,7 @@ Write-Host '          - Gigabyte: AMD AM5 AI TOP motherboards                   
 Write-Host '          - Gigabyte: AMD AM5 Gaming motherboards                             ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '          - Gigabyte: AMD AM5 UD - Ultra Durable motherboards                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '          - Gigabyte: AMD AM5 AERO motherboards                               ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - Gigabyte: AMD AM5 Eagle motherboards                              ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '          - Gigabyte: ALL AMD AM5 motherboards                                ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                              ' -BackgroundColor White
 pause
@@ -28,13 +29,14 @@ Clear-Host
 
 Write-Host "======= $Title ======"
 Write-Host " 1. OSDCloud: Create ISO - Gigabyte AMD AM 5 AORUS motherboards"
-Write-Host " 1. OSDCloud: Create ISO - Gigabyte AMD AM 5 AI TOP motherboards"
-Write-Host " 2. OSDCloud: Create ISO - Gigabyte AMD AM 5 Gaming motherboards"
-Write-Host " 3. OSDCloud: Create ISO - Gigabyte AMD AM 5 UD - Ultra Durable motherboards"
-Write-Host " 4. OSDCloud: Create ISO - Gigabyte AMD AM 5 AERO motherboards"
-Write-Host " 5. OSDCloud: Create ISO - ALL Gigabyte AMD AM 5 motherboards"
-Write-Host " 6. OSDCloud: Get Help"
-Write-Host " 7. Return to Main Menu"
+Write-Host " 2. OSDCloud: Create ISO - Gigabyte AMD AM 5 AI TOP motherboards"
+Write-Host " 3. OSDCloud: Create ISO - Gigabyte AMD AM 5 Gaming motherboards"
+Write-Host " 4. OSDCloud: Create ISO - Gigabyte AMD AM 5 UD - Ultra Durable motherboards"
+Write-Host " 5. OSDCloud: Create ISO - Gigabyte AMD AM 5 AERO motherboards"
+Write-Host " 6. OSDCloud: Create ISO - Gigabyte AMD AM 5 Eagle motherboards"
+Write-Host " 7. OSDCloud: Create ISO - ALL Gigabyte AMD AM 5 motherboards"
+Write-Host " 8. OSDCloud: Get Help"
+Write-Host " 9. Return to Main Menu"
 
 do 
 {
@@ -42,38 +44,46 @@ do
   switch($selection)
   {
 '1'{cls
-    $AORUS = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM4/AORUS.ps1")
+    $AORUS = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/AORUS.ps1")
     Invoke-Expression $($AORUS.Content)
     }
 '2'{cls
-    $Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM4/Gaming.ps1")
-    Invoke-Expression $($Gaming.Content)
+    $AITop = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/AI%20Top.ps1")
+    Invoke-Expression $($AITop.Content)
     }
 '3'{cls
-    $UltraDurable = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM4/UD-Ultra%20Durable.ps1")
-    Invoke-Expression $($UltraDurable.Content)
+    $Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/Gaming.ps1")
+    Invoke-Expression $($Gaming.Content)
     }
 '4'{cls
-    $AERO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM4/AERO.ps1")
-    Invoke-Expression $($AERO.Content)
+    $UD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/UD-Ultra%20Durable.ps1")
+    Invoke-Expression $($UD.Content)
     }  
 '5'{cls
+    $AERO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/AERO.ps1")
+    Invoke-Expression $($AERO.Content)
+    }  
+'6'{cls
+    $Eagle = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/Eagle.ps1")
+    Invoke-Expression $($Eagle.Content)
+    }  
+'7'{cls
     $ALLGigabyte = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM4/ALL-Gigabyte-AM4.ps1")
     Invoke-Expression $($ALLGigabyte.Content)
     }
-'6'{cls
+'8'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
-'7'{cls
+'9'{cls
     $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
     }
-     until ($selection -eq '7'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '9'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
