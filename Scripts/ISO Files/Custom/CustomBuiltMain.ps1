@@ -135,7 +135,7 @@ do
     Invoke-Expression $($DaveVDesktop.Content)
     }
 '7'{cls
-    $SeanDesktop = Invoke-WebRequest("")
+    $SeanDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/SeanDesktop.ps1")
     Invoke-Expression $($SeanDesktop.Content)
     }
 '8'{cls
