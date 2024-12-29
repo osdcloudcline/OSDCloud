@@ -41,7 +41,7 @@ do
     Invoke-Expression $($AM4.Content)
     }
 '2'{cls
-    $AM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/AM5-Main.ps1")
+    $AM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/AM5-Main.ps1")
     Invoke-Expression $($AM5.Content)
     }
 '3'{cls
