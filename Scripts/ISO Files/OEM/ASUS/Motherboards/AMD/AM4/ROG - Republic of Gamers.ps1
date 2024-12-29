@@ -19,6 +19,12 @@ Write-Host '                                                                    
 pause
 Clear-Host
 
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name OSD -Force
+
+Write-Host
+Write-Verbose "Processing: ASUS AM4 ROG - Republic of Gamers Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
+Write-Host
 
 $ROG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/ROG%20-%20Republic%20of%20Gamers%20Motherboards/ROG%20-%20Republic%20of%20Gamers.ps1")
 Invoke-Expression $($ROG.Content)
