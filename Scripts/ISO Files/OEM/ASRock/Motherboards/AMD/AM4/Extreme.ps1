@@ -80,3 +80,19 @@ Get-OSDCloudWorkspace
 
 # ASRock AM 4 Motherboards
 
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Extreme Motherboard Ethernet Drivers..." -Verbose 
+$ExtremeEthernet = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Extreme\Ethernet"
+
+Edit-OSDCloudWinPE -DriversPath $ExtremeEthernet
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Extreme Motherboard Storage Drivers..." -Verbose 
+$ExtremeStorage1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Extreme\Storage1"
+$ExtremeStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Extreme\Storage2"
+
+Edit-OSDCloudWinPE -DriversPath $ExtremeStorage1
+Edit-OSDCloudWinPE -DriversPath $ExtremeStorage2
+
+Write-Host
+Write-Verbose "Completed: Integration of ASRock AMD AM 4 Motherboard Drivers..." -Verbose 
