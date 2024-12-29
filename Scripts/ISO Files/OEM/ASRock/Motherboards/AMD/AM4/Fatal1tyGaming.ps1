@@ -100,7 +100,7 @@ Write-Host
 Write-Verbose "Processing: ASRock AM 4 Fatal1ty Gaming Motherboard Bluetooth Drivers..." -Verbose 
 $Fatal1tyGamingBluetooth = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Fatal1tyGaming\Bluetooth"
 
-Edit-OSDCloudWinPE -DriversPath $Fatal1tyGamingWiFi1
+Edit-OSDCloudWinPE -DriversPath $Fatal1tyGamingBluetooth
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Extreme Motherboard Storage Drivers..." -Verbose 
