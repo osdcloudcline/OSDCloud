@@ -19,6 +19,9 @@ Write-Host '                                                                    
 pause
 Clear-Host
 
+$Others = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/Other%20Motherboards/Others.ps1")
+Invoke-Expression $($Others.Content)
+
 
 
 Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
