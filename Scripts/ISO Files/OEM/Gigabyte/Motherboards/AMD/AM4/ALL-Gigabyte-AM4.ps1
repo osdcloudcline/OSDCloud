@@ -84,3 +84,286 @@ New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
+
+# Gigabyte AM 4 Motherboards
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AERO Motherboard Ethernet Drivers..." -Verbose 
+$AEROEthernet = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM4\AERO\Ethernet"
+
+Edit-OSDCloudWinPE -DriversPath $AEROEthernet
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AERO Motherboard WiFi Drivers..." -Verbose 
+$AEROWiFi1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM4\AERO\WiFi1"
+$AEROWiFi2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM4\AERO\WiFi2"
+
+Edit-OSDCloudWinPE -DriversPath $AEROWiFi1
+Edit-OSDCloudWinPE -DriversPath $AEROWiFi2
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AERO Motherboard Storage Drivers..." -Verbose 
+$AEROStorage1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM4\AERO\Storage1"
+$AEROStorage2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM4\AERO\Storage2"
+
+Edit-OSDCloudWinPE -DriversPath  $AEROStorage1
+Edit-OSDCloudWinPE -DriversPath  $AEROStorage2
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard Ethernet Drivers..." -Verbose 
+$AORUSEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\A520\Ethernet1"
+$AORUSEthernet2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\A520\Ethernet2"
+$AORUSEthernet3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B450\Ethernet1"
+$AORUSEthernet4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B450\Ethernet2"
+$AORUSEthernet5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B450\Ethernet3"
+$AORUSEthernet6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\Ethernet1"
+$AORUSEthernet7 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\Ethernet2"
+$AORUSEthernet8 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X370\Ethernet1"
+$AORUSEthernet9 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X370\Ethernet2"
+$AORUSEthernet10 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X370\Ethernet3"
+$AORUSEthernet11 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X370\Ethernet4"
+$AORUSEthernet12 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X370\Ethernet5"
+$AORUSEthernet13 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X470\Ethernet1"
+$AORUSEthernet14 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X470\Ethernet2"
+$AORUSEthernet15 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X470\Ethernet3"
+$AORUSEthernet16 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X470\Ethernet4"
+$AORUSEthernet17 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet1"
+$AORUSEthernet18 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet2"
+$AORUSEthernet19 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet3"
+$AORUSEthernet20 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet4"
+$AORUSEthernet21 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet5"
+$AORUSEthernet22 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet6"
+$AORUSEthernet23 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet7"
+$AORUSEthernet24 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet8"
+$AORUSEthernet25 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet9"
+$AORUSEthernet26 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet10"
+$AORUSEthernet27 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Ethernet11"
+
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet1
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet2
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet3
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet4
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet5
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet6
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet7
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet8
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet9
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet10
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet11
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet12
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet13
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet14
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet15
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet16
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet17
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet18
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet19
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet20
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet21
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet22
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet23
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet24
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet25
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet26
+Edit-OSDCloudWinPE -DriverPath $AORUSEthernet27
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard WiFi Drivers..." -Verbose 
+$AORUSWiFi1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B450\WiFi1"
+$AORUSWiFi2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\WiFi1"
+$AORUSWiFi3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\WiFi2"
+$AORUSWiFi4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\WiFi3"
+$AORUSWiFi5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\WiFi4"
+$AORUSWiFi6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\WiFi5"
+$AORUSWiFi7 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X470\WiFi1"
+$AORUSWiFi8 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\WiFi1"
+$AORUSWiFi9 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\WiFi2"
+
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi1
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi2
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi3
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi4
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi5
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi6
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi7
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi8
+Edit-OSDCloudWinPE -DriverPath $AORUSWiFi9
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard Storage Drivers..." -Verbose 
+$AORUSStorage1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\Storage\RAID\NVMe"
+$AORUSStorage2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\Storage\RAID\SATA"
+
+Edit-OSDCloudWinPE -DriverPath $AORUSStorage1
+Edit-OSDCloudWinPE -DriverPath $AORUSStorage2
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard Bluetooth Drivers..." -Verbose 
+$AORUSBluetooth1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\B550\Bluetooth"
+$AORUSBluetooth2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Bluetooth"
+
+Edit-OSDCloudWinPE -DriverPath $AORUSBluetooth1
+Edit-OSDCloudWinPE -DriverPath $AORUSBluetooth2
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 Gaming Motherboard Ethernet Drivers..." -Verbose 
+$GamingEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\B350\Ethernet"
+$GamingEthernet2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\B450\Ethernet1"
+$GamingEthernet3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\B450\Ethernet2"
+$GamingEthernet4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\B550\Ethernet1"
+$GamingEthernet5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\B550\Ethernet2"
+$GamingEthernet6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\X370\Ethernet1"
+$GamingEthernet7 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\X370\Ethernet2"
+$GamingEthernet8 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\X570\Ethernet1"
+$GamingEthernet9 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\X570\Ethernet2"
+
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet1
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet2
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet3
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet4
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet5
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet6
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet7
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet8
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet9
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard Bluetooth Drivers..." -Verbose 
+$GamingBluetooth = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\B350\Bluetooth"
+
+Edit-OSDCloudWinPE -DriverPath $GamingBluetooth
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 Gaming Motherboard Storage Drivers..." -Verbose 
+$GamingStorage1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\B350\RAID\NVMe"
+$GamingStorage2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\B350\RAID\SATA"
+$GamingStorage3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\B450\RAID\NVMe"
+$GamingStorage4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\B450\RAID\SATA"
+$GamingStorage5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\B550\RAID\NVMe1"
+$GamingStorage6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\B550\RAID\NVMe2"
+$GamingStorage7 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\B550\RAID\SATA"
+$GamingStorage8 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\X370\RAID\NVMe"
+$GamingStorage9 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\X370\RAID\SATA"
+$GamingStorage10 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\X570\RAID\NVMe1"
+$GamingStorage11 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\X570\RAID\NVMe2"
+$GamingStorage12 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\X570\RAID\NVMe3"
+$GamingStorage13 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\X570\RAID\NVMe4"
+$GamingStorage14 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\X570\RAID\SATA1"
+$GamingStorage15 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\Storage\X570\RAID\SATA2"
+
+Edit-OSDCloudWinPE -DriverPath $GamingStorage1
+Edit-OSDCloudWinPE -DriverPath $GamingStorage2
+Edit-OSDCloudWinPE -DriverPath $GamingStorage3
+Edit-OSDCloudWinPE -DriverPath $GamingStorage4
+Edit-OSDCloudWinPE -DriverPath $GamingStorage5
+Edit-OSDCloudWinPE -DriverPath $GamingStorage6
+Edit-OSDCloudWinPE -DriverPath $GamingStorage7
+Edit-OSDCloudWinPE -DriverPath $GamingStorage8
+Edit-OSDCloudWinPE -DriverPath $GamingStorage9
+Edit-OSDCloudWinPE -DriverPath $GamingStorage10
+Edit-OSDCloudWinPE -DriverPath $GamingStorage11
+Edit-OSDCloudWinPE -DriverPath $GamingStorage12
+Edit-OSDCloudWinPE -DriverPath $GamingStorage13
+Edit-OSDCloudWinPE -DriverPath $GamingStorage14
+Edit-OSDCloudWinPE -DriverPath $GamingStorage15
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 Ultra Durable Motherboard Ethernet Drivers..." -Verbose 
+$UDEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A520\Ethernet1"
+$UDEthernet2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A520\Ethernet2"
+$UDEthernet3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B350\Ethernet"
+$UDEthernet4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B450\Ethernet1"
+$UDEthernet5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B450\Ethernet2"
+$UDEthernet6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet1"
+$UDEthernet7 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet2"
+$UDEthernet8 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet3"
+$UDEthernet9 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet4"
+$UDEthernet10 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet5"
+$UDEthernet11 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet6"
+$UDEthernet12 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet7"
+$UDEthernet13 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\Ethernet8"
+$UDEthernet14 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\X370\Ethernet"
+$UDEthernet15 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\X570\Ethernet1"
+$UDEthernet16 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\X570\Ethernet2"
+
+Edit-OSDCloudWinPE -DriverPath $UDEthernet1
+Edit-OSDCloudWinPE -DriverPath $UDEthernet2
+Edit-OSDCloudWinPE -DriverPath $UDEthernet3
+Edit-OSDCloudWinPE -DriverPath $UDEthernet4
+Edit-OSDCloudWinPE -DriverPath $UDEthernet5
+Edit-OSDCloudWinPE -DriverPath $UDEthernet6
+Edit-OSDCloudWinPE -DriverPath $UDEthernet7
+Edit-OSDCloudWinPE -DriverPath $UDEthernet8
+Edit-OSDCloudWinPE -DriverPath $UDEthernet9
+Edit-OSDCloudWinPE -DriverPath $UDEthernet10
+Edit-OSDCloudWinPE -DriverPath $UDEthernet11
+Edit-OSDCloudWinPE -DriverPath $UDEthernet12
+Edit-OSDCloudWinPE -DriverPath $UDEthernet13
+Edit-OSDCloudWinPE -DriverPath $UDEthernet14
+Edit-OSDCloudWinPE -DriverPath $UDEthernet15
+Edit-OSDCloudWinPE -DriverPath $UDEthernet16
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 Ultra Durable Motherboard WiFi Drivers..." -Verbose 
+$UDWiFi1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A320\WiFi1"
+$UDWiFi2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A320\WiFi2"
+$UDWiFi3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B450\WiFi1"
+$UDWiFi4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B450\WiFi2"
+$UDWiFi5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\WiFi1"
+$UDWiFi6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\WiFi2"
+
+Edit-OSDCloudWinPE -DriverPath $UDWiFi1
+Edit-OSDCloudWinPE -DriverPath $UDWiFi2
+Edit-OSDCloudWinPE -DriverPath $UDWiFi3
+Edit-OSDCloudWinPE -DriverPath $UDWiFi4
+Edit-OSDCloudWinPE -DriverPath $UDWiFi5
+Edit-OSDCloudWinPE -DriverPath $UDWiFi6
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 4 Ultra Durable Motherboard Storage Drivers..." -Verbose 
+$UDStorage1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A320\RAID\NVMe"
+$UDStorage2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A320\RAID\SATA"
+$UDStorage3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A520\RAID\NVMe1"
+$UDStorage4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A520\RAID\NVMe2"
+$UDStorage5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A520\RAID\NVMe3"
+$UDStorage6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A520\RAID\NVMe4"
+$UDStorage7 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A520\RAID\SATA1"
+$UDStorage8 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A520\RAID\SATA2"
+$UDStorage9 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B350\RAID\NVMe"
+$UDStorage10 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B350\RAID\SATA"
+$UDStorage11 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B450\RAID\NVMe"
+$UDStorage12 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B450\RAID\SATA"
+$UDStorage13 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\RAID\NVMe1"
+$UDStorage14 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\RAID\NVMe2"
+$UDStorage15 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\RAID\SATA"
+$UDStorage16 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\B550\RAID\Thunderbolt"
+$UDStorage17 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\X370\RAID\NVMe"
+$UDStorage18 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\X370\RAID\SATA"
+$UDStorage19 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\X570\RAID\NVMe1"
+$UDStorage20 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\X570\RAID\NVMe2"
+$UDStorage21 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\X570\RAID\SATA"
+
+Edit-OSDCloudWinPE -DriverPath $UDStorage1
+Edit-OSDCloudWinPE -DriverPath $UDStorage2
+Edit-OSDCloudWinPE -DriverPath $UDStorage3
+Edit-OSDCloudWinPE -DriverPath $UDStorage4
+Edit-OSDCloudWinPE -DriverPath $UDStorage5
+Edit-OSDCloudWinPE -DriverPath $UDStorage6
+Edit-OSDCloudWinPE -DriverPath $UDStorage7
+Edit-OSDCloudWinPE -DriverPath $UDStorage8
+Edit-OSDCloudWinPE -DriverPath $UDStorage9
+Edit-OSDCloudWinPE -DriverPath $UDStorage10
+Edit-OSDCloudWinPE -DriverPath $UDStorage11
+Edit-OSDCloudWinPE -DriverPath $UDStorage12
+Edit-OSDCloudWinPE -DriverPath $UDStorage13
+Edit-OSDCloudWinPE -DriverPath $UDStorage14
+Edit-OSDCloudWinPE -DriverPath $UDStorage15
+Edit-OSDCloudWinPE -DriverPath $UDStorage16
+Edit-OSDCloudWinPE -DriverPath $UDStorage17
+Edit-OSDCloudWinPE -DriverPath $UDStorage18
+Edit-OSDCloudWinPE -DriverPath $UDStorage19
+Edit-OSDCloudWinPE -DriverPath $UDStorage20
+Edit-OSDCloudWinPE -DriverPath $UDStorage21
+
+Write-Host
+Write-Verbose "Completed: Integration of Gigabyte AMD AM 4 Motherboard Drivers..." -Verbose 
