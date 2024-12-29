@@ -112,7 +112,7 @@ do
     Invoke-Expression $($BillyPC.Content)
     }
 '2'{cls
-    $BryanDesktop = Invoke-WebRequest("")
+    $BryanDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/BryanDesktop.ps1")
     Invoke-Expression $($BryanDesktop.Content)
     }
 '3'{cls
