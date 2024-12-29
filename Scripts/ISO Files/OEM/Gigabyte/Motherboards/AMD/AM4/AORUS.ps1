@@ -54,5 +54,5 @@ $OSDCloudWallpaper = Invoke-WebRequest("https://github.com/osdcloudcline/OSDClou
 Invoke-Expression $($OSDCloudWallpaper.Content) 
 
 Write-Host
-Write-Verbose "Completed: ALL ASRock AM4 Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
+Write-Verbose "Completed: ALL Gigabyte AM4 Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
