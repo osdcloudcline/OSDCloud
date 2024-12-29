@@ -372,19 +372,19 @@ $VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad3
 
 Write-Host
 Write-Verbose "Processing Item: $VBSName1..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
+Add-WindowsPackage -Path $WorkspacePath -PackagePath $VBS1
 Write-Host
 
 Write-Verbose "Processing Item: $VBSName2..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
+Add-WindowsPackage -Path $WorkspacePath -PackagePath $VBS2
 Write-Host
 
 Write-Verbose "Processing Item: $VBSName3..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
+Add-WindowsPackage -Path $WorkspacePath -PackagePath $VBS3
 Write-Host
 
 Write-Verbose "Processing Item: $VBSName4..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
+Add-WindowsPackage -Path $WorkspacePath -PackagePath $VBS4
 
 Write-Host
 Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
