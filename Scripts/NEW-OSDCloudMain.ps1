@@ -98,7 +98,7 @@ Clear-Host
 Write-Host "======= $Title ======"
 Write-Host " 1. OSDCloud: Desktop Motherboards"
 Write-Host " 2. OSDCloud: Custom Built Systems"
-Write-Host " 3. OSDCloud: OEM Systems"
+Write-Host " 3. OSDCloud: OEM Pre-Built Systems"
 Write-Host " 4. OSDCloud: Virtualization"
 Write-Host " 5. OSDCloud: By Processor and Motherboard Socket Type"
 Write-Host " 6. OSDCloud: Download Drivers ONLY"
@@ -119,7 +119,7 @@ do
     Invoke-Expression $($CustomBuilt.Content)
     }
 '3'{cls
-    $OEM = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/OEMMain.ps1")
+    $OEM = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM%20Pre-Built%20Systems/OEMPreBuilt-Main.ps1")
     Invoke-Expression $($OEM.Content)
     }
 '4'{cls
