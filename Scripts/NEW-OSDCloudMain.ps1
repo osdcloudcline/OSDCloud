@@ -131,7 +131,7 @@ do
     Invoke-Expression $($CPUSocket.Content)
     }
 '6'{cls
-    $DriversDL = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/CPUSocketMain.ps1")
+    $DriversDL = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/main/OSDCloudDriversMain.ps1")
     Invoke-Expression $($DriversDL.Content)
     }
 '7'{cls
@@ -146,7 +146,7 @@ do
    }
     }
     }
-     until ($selection -eq '6'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '8'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
