@@ -93,10 +93,8 @@ pause
 Clear-Host
 
 Write-Host "======= $Title ======"
-Write-Host " 1. OSDCloud: Create ISO - MSI Intel LGA 1851"
-Write-Host " 2. OSDCloud: Create ISO - MSI Intel LGA 1700"
-Write-Host " 3. OSDCloud: Create ISO - MSI AMD AM5"
-Write-Host " 4. OSDCloud: Create ISO - MSI AMD AM4"
+Write-Host " 1. OSDCloud: Create ISO - MSI Intel Main Menu"
+Write-Host " 3. OSDCloud: Create ISO - MSI AMD Main Menu"
 Write-Host " 5. OSDCloud: Get Help"
 Write-Host " 6. Return to Main Menu"
 
@@ -106,34 +104,26 @@ do
   switch($selection)
   {
 '1'{cls
-    $LGA1851 = Invoke-WebRequest("")
-    Invoke-Expression $($LGA1851.Content)
-    }
-'2'{cls
-    $LGA1700 = Invoke-WebRequest("")
-    Invoke-Expression $($LGA1700.Content)
+    $Intel = Invoke-WebRequest("")
+    Invoke-Expression $($Intel.Content)
     }
 '3'{cls
-    $AM5 = Invoke-WebRequest("")
-    Invoke-Expression $($AM5.Content)
+    $AMD = Invoke-WebRequest("")
+    Invoke-Expression $($AMD.Content)
     }
-'4'{cls
-    $AM4 = Invoke-WebRequest("")
-    Invoke-Expression $($AM4.Content)
-    }
-'5'{cls
+'3'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
-'6'{cls
+'4'{cls
     $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
     }
-     until ($selection -eq '6'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '4'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
