@@ -20,6 +20,7 @@ $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 
 $VBSScriptSupport_URL = "https://github.com/osdcloudcline/OSDCloud/raw/main/Extra%20Files/Scripting%20Support/VBS%20Scripting/VBScriptCABFiles.zip"
 
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name OSD -Force
 
 Write-Verbose  "Acquiring VBS Script Support CAB Files from GitHub repository..." -Verbose
