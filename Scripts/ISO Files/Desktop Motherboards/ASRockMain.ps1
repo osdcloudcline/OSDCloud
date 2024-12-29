@@ -108,7 +108,7 @@ do
     Invoke-Expression $($Intel.Content)
     }
 '2'{cls
-    $AMD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM5/AM5-Main.ps1")
+    $AMD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/ASRock-AMDMain.ps1")
     Invoke-Expression $($AMD.Content)
     }
 '3'{cls
