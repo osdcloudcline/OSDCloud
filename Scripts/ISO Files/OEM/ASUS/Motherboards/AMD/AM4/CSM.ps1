@@ -19,6 +19,13 @@ Write-Host '                                                                    
 pause
 Clear-Host
 
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name OSD -Force
+
+Write-Host
+Write-Verbose "Processing: ASUS AM4 CSM Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
+Write-Host
+
 $CSMAM4DriversDownload = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/CSM%20Motherboards/CSM.ps1")
 Invoke-Expression $($CSMAM4DriversDownload.Content)
 
