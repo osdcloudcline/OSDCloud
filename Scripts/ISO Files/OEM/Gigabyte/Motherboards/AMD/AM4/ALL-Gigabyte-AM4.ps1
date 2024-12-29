@@ -28,7 +28,8 @@ Write-Verbose "Processing: Gigabyte AM4 Motherboard driver, Virtualization drive
 Write-Host 
 
 
-
+$AORUS = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/AORUS/AORUS.ps1")
+Invoke-Expression $($AORUS.Content)
 
 
 
