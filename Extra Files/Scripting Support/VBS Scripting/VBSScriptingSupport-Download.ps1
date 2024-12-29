@@ -24,4 +24,5 @@ Import-Module -Name OSD -Force
 
 Write-Verbose  "Acquiring VBS Script Support CAB Files from GitHub repository..." -Verbose
 Save-WebFile -SourceUrl $VBSScriptSupport_URL -DestinationDirectory $OSDCloudGHdownloads
+Expand-7Zip -ArchiveFileName "$OSDCloudGHdownloads\VBScriptCABFiles.zip" -TargetPath $OSDCloudVBS_Extract -ErrorAction SilentlyContinue
 Write-Host
