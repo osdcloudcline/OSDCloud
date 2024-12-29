@@ -93,12 +93,10 @@ pause
 Clear-Host
 
 Write-Host "======= $Title ======"
-Write-Host " 1. OSDCloud: Create ISO - Gigabyte Intel LGA 1851"
-Write-Host " 2. OSDCloud: Create ISO - Gigabyte Intel LGA 1700"
-Write-Host " 3. OSDCloud: Create ISO - Gigabyte AMD AM5"
-Write-Host " 4. OSDCloud: Create ISO - Gigabyte AMD AM4"
-Write-Host " 5. OSDCloud: Get Help"
-Write-Host " 6. Return to Main Menu"
+Write-Host " 1. OSDCloud: Create ISO - Gigabyte Intel Main Menu"
+Write-Host " 2. OSDCloud: Create ISO - Gigabyte AMD Main Menu"
+Write-Host " 3. OSDCloud: Get Help"
+Write-Host " 4. Return to Main Menu"
 
 do 
 {
@@ -106,34 +104,26 @@ do
   switch($selection)
   {
 '1'{cls
-    $LGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/Intel/LGA%201851/LGA1851-Main.ps1")
+    $Intel = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/Intel/Gigabyte-IntelMain.ps1")
     Invoke-Expression $($LGA1851.Content)
     }
-'2'{cls
-    $LGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/Intel/LGA%201700/LGA1700-Main.ps1")
-    Invoke-Expression $($LGA1700.Content)
+'3'{cls
+    $AMD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/AM5-Main.ps1")
+    Invoke-Expression $($AMD.Content)
     }
 '3'{cls
-    $AM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/AM5-Main.ps1")
-    Invoke-Expression $($AM5.Content)
-    }
-'4'{cls
-    $AM4 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM4/AM4-Main.ps1")
-    Invoke-Expression $($AM4.Content)
-    }
-'5'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
-'6'{cls
+'4'{cls
     $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
     }
-     until ($selection -eq '6'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '4'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
