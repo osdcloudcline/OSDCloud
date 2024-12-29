@@ -77,3 +77,6 @@ New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
+
+# Gigabyte AM 4 Motherboards
+
