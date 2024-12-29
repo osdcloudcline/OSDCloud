@@ -230,7 +230,7 @@ Edit-OSDCloudWinPE -DriverPath $GamingEthernet8
 Edit-OSDCloudWinPE -DriverPath $GamingEthernet9
 
 Write-Host
-Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard Bluetooth Drivers..." -Verbose 
+Write-Verbose "Processing: Gigabyte AM 4 Gaming Motherboard Bluetooth Drivers..." -Verbose 
 $GamingBluetooth = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\B350\Bluetooth"
 
 Edit-OSDCloudWinPE -DriverPath $GamingBluetooth
