@@ -102,6 +102,9 @@ $AEROStorage2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM4\AERO\Storage2"
 Edit-OSDCloudWinPE -DriversPath  $AEROStorage1
 Edit-OSDCloudWinPE -DriversPath  $AEROStorage2
 
+Write-Host
+Write-Verbose "Completed: Integration of Gigabyte AMD AM 4 Motherboard Drivers..." -Verbose 
+
 # Virtualization Hypervisors
 
 Write-Host
