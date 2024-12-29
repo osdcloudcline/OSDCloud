@@ -57,3 +57,26 @@ Invoke-Expression $($OSDCloudWallpaper.Content)
 Write-Host
 Write-Verbose "Completed: ALL ASRock AM4 Extreme Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
+
+Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
+New-OSDCloudTemplate -Name WinRE -WinRE
+
+Write-Host
+Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
+Get-OSDCloudTemplateNames
+
+Write-Host
+Write-Verbose "Retriving OSDCloud Workspaces..." -Verbose
+Get-OSDCloudWorkspace
+
+Write-Host
+Write-Verbose "Configuring new OSDCloud Workspace Path..." -Verbose
+$WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
+New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
+
+Write-Host
+Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
+Get-OSDCloudWorkspace
+
+# ASRock AM 4 Motherboards
+
