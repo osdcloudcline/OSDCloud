@@ -11,3 +11,7 @@ pause
 ####    OSDCloud Wallpaper URL                                                 #######
 ######################################################################################
 $OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/Wallpaper/winpe.jpg"
+
+
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name OSD -Force
