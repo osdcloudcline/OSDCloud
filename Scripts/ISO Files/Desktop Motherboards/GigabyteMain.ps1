@@ -108,7 +108,7 @@ do
     Invoke-Expression $($LGA1851.Content)
     }
 '3'{cls
-    $AMD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/AM5-Main.ps1")
+    $AMD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/Gigabyte-AMDMain.ps1")
     Invoke-Expression $($AMD.Content)
     }
 '3'{cls
