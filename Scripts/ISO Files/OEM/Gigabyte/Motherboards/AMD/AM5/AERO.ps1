@@ -71,7 +71,7 @@ Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AERO Motherboard WiFi Drivers..." -Verbose 
 $AEROWiFi = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AERO\WiFi"
 
-Edit-OSDCloudWinPE -DriversPath $AEROWiFi1
+Edit-OSDCloudWinPE -DriversPath $AEROWiFi
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AERO Motherboard Bluetooth Drivers..." -Verbose 
