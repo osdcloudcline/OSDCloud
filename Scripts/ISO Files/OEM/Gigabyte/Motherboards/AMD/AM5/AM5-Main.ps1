@@ -48,7 +48,7 @@ do
     Invoke-Expression $($AORUS.Content)
     }
 '2'{cls
-    $AITop = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/AI%20Top.ps1")
+    $AITop = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/AI-TOP.ps1")
     Invoke-Expression $($AITop.Content)
     }
 '3'{cls
