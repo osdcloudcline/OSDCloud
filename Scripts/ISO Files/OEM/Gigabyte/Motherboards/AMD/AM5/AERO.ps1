@@ -58,3 +58,34 @@ Invoke-Expression $($OSDCloudWallpaper.Content)
 Write-Host
 Write-Verbose "Completed: ALL Gigabyte AM5 AERO Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
+
+# Gigabyte AM 4 Motherboards
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 AERO Motherboard Ethernet Drivers..." -Verbose 
+$AEROEthernet = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AERO\Ethernet"
+
+Edit-OSDCloudWinPE -DriversPath $AEROEthernet
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 AERO Motherboard WiFi Drivers..." -Verbose 
+$AEROWiFi = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AERO\WiFi"
+
+Edit-OSDCloudWinPE -DriversPath $AEROWiFi1
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 AERO Motherboard Bluetooth Drivers..." -Verbose 
+$AEROBluetooth = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AERO\Bluetooth"
+
+Edit-OSDCloudWinPE -DriversPath $AEROBluetooth
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 AERO Motherboard Storage Drivers..." -Verbose 
+$AEROStorage = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AERO"
+
+Edit-OSDCloudWinPE -DriversPath  $AEROStorage
+
+
+Write-Host
+Write-Verbose "Completed: Integration of Gigabyte AMD AM 5 AERO Motherboard Drivers..." -Verbose 
+
