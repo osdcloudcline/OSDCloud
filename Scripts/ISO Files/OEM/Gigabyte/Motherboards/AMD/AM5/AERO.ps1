@@ -81,7 +81,7 @@ Edit-OSDCloudWinPE -DriversPath $AEROBluetooth
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AERO Motherboard Storage Drivers..." -Verbose 
-$AEROStorage = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AERO"
+$AEROStorage = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AERO\Storage"
 
 Edit-OSDCloudWinPE -DriversPath  $AEROStorage
 
