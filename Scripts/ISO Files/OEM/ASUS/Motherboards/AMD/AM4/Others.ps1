@@ -231,6 +231,16 @@ Write-Host
 Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
 Write-Host
 
+# PowerShell 5.1 Modules - OSDCloud
+
+$OSDCloudPS5xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS5xMods.Content)
+
+# PowerShell 7.x Modules - OSDCloud
+
+$OSDCloudPS7xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS7xMods.Content)
+
 # OSDCloud wallpaper
 
 Write-Host
