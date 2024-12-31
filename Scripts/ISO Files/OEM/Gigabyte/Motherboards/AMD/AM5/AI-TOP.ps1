@@ -60,8 +60,10 @@ Write-Verbose "Completed: ALL Gigabyte AM5 AI TOP Motherboard driver, Virtualiza
 Write-Host
 
 
+# OSDCloud Template and Workspace configuration
+
 Write-Host
-Write-Verbose "Confirming OSDCloudTemplates......" -Verbose
+Write-Verbose "Confirming OSDCloud Templates......" -Verbose
 Get-OSDCloudTemplate
 
 Write-Host
