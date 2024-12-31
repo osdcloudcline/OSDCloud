@@ -75,6 +75,10 @@ Write-Verbose "Completed: ALL Gigabyte AM5 Motherboard driver, Virtualization dr
 Write-Host
 
 Write-Host
+Write-Verbose "Confirming OSDCloudTemplates......" -Verbose
+Get-OSDCloudTemplate
+
+Write-Host
 Write-Verbose "Creating New OSDCloud WinRE Template specific for Gigabyte AM5 motherboards to enable wireless networking support..." -Verbose
 New-OSDCloudTemplate -Name Gigabyte-AM5 -WinRE
 
