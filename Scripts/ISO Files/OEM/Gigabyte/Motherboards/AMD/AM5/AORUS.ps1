@@ -59,6 +59,11 @@ Write-Host
 Write-Verbose "Completed: ALL Gigabyte AM5 AORUS Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
 
+
+Write-Host
+Write-Verbose "Confirming OSDCloud Templates......" -Verbose
+Get-OSDCloudTemplate
+
 Write-Host
 Write-Verbose "Creating New OSDCloud WinRE Template specific for Gigabyte AM5 AORUS motherboards to enable wireless networking support..." -Verbose
 New-OSDCloudTemplate -Name Gigabyte-AORUS-AM5 -WinRE
