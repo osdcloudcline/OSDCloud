@@ -64,7 +64,7 @@ Write-Verbose "Confirming OSDCloudTemplates......" -Verbose
 Get-OSDCloudTemplate
 
 Write-Host
-Write-Verbose "Creating New OSDCloud WinRE Template specific for Gigabyte AM AERO motherboards to enable wireless networking support..." -Verbose
+Write-Verbose "Creating New OSDCloud WinRE Template specific for Gigabyte AM5 AERO motherboards to enable wireless networking support..." -Verbose
 New-OSDCloudTemplate -Name Gigabyte-AERO-AM5 -WinRE
 
 Write-Host
