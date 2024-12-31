@@ -102,8 +102,12 @@ Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
+# Adding PowerShell 7 to OSDCloud 
 
-# Gigabyte AM 4 Motherboards
+$AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
+Invoke-Expression $($AddPS7.Content)
+
+# Gigabyte AM 5 Motherboards
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AERO Motherboard Ethernet Drivers..." -Verbose 
