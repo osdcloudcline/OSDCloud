@@ -11,14 +11,15 @@ $PS7Source = "https://github.com/PowerShell/PowerShell/releases/download/v7.4.6/
 $PS7Destination = "C:\downloads\OSDCloud"
 $PS7Extract = "C:\downloads\OSDCloud\PS7"
 $mountdir = "C:\Mount"
+
 $sourceWIMDir = "$WorkspacePath\Media\sources"
 
 # Create Mount Directory
 New-Item -Path $mountdir -ItemType Directory -Force
 
 # Mount the image
-
-Mount-WindowsImage -ImagePath "$sourceWIMDir\boot.wim" -Path $mountdir -Index 1
+$OSDCloudWorkspacePath = $sourceWIMDir
+Mount-WindowsImage -ImagePath "$OSDCloudWorkspacePath\boot.wim" -Path $mountdir -Index 1
 
 Write-Verbose "Processing: Expanding Windows PowerShell 7 ZIP File" -Verbose
 Expand-Archive -Path "$PS7Destination\PowerShell-7.4.6-win-x64.zip" -DestinationPath "$mountdir\Program Files\PowerShell\7" -Force
