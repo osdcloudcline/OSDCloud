@@ -62,8 +62,13 @@ Write-Host
 Write-Verbose "Completed: ALL ASRock AM4 Extreme Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
 
-Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name WinRE -WinRE
+Write-Host
+Write-Verbose "Confirming OSDCloudTemplates......" -Verbose
+Get-OSDCloudTemplate
+
+Write-Host
+Write-Verbose "Creating New OSDCloud WinRE Template specific for ASRock AM4 Extreme motherboards to enable wireless networking support..." -Verbose
+New-OSDCloudTemplate -Name ASRock-Extreme-AM4 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
@@ -74,9 +79,10 @@ Write-Verbose "Retriving OSDCloud Workspaces..." -Verbose
 Get-OSDCloudWorkspace
 
 Write-Host
-Write-Verbose "Configuring new OSDCloud Workspace Path..." -Verbose
+Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
 $WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
+Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
 Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
