@@ -17,8 +17,8 @@ $sourceWIMDir = "$WorkspacePath\Media\sources"
 New-Item -Path $mountdir -ItemType Directory -Force
 
 # Mount the image
-$WimFile = "$sourceWIMDir\boot.wim"
-Mount-WindowsImage -ImagePath $WimFile -Path $mountdir -Index 1
+
+Mount-WindowsImage -ImagePath "$sourceWIMDir\boot.wim" -Path $mountdir -Index 1
 
 Write-Verbose "Processing: Expanding Windows PowerShell 7 ZIP File" -Verbose
 Expand-Archive -Path "$PS7Destination\PowerShell-7.4.6-win-x64.zip" -DestinationPath "$mountdir\Program Files\PowerShell\7" -Force
