@@ -60,8 +60,15 @@ Write-Verbose "Completed: ALL Gigabyte AM5 Gaming Motherboard driver, Virtualiza
 Write-Host
 
 
-Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name WinRE -WinRE
+# OSDCloud Template and Workspace configuration
+
+Write-Host
+Write-Verbose "Confirming OSDCloud Templates......" -Verbose
+Get-OSDCloudTemplate
+
+Write-Host
+Write-Verbose "Creating New OSDCloud WinRE Template specific for Gigabyte AM5 Gaming motherboards to enable wireless networking support..." -Verbose
+New-OSDCloudTemplate -Name Gigabyte-Gaming-AM5 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
@@ -72,9 +79,10 @@ Write-Verbose "Retriving OSDCloud Workspaces..." -Verbose
 Get-OSDCloudWorkspace
 
 Write-Host
-Write-Verbose "Configuring new OSDCloud Workspace Path..." -Verbose
+Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
 $WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
+Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
 Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
