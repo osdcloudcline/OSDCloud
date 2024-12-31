@@ -77,8 +77,10 @@ Write-Host
 Write-Verbose "Completed: ALL ASRock AM4 Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
 
+# OSDCloud Template and Workspace configuration
+
 Write-Host
-Write-Verbose "Confirming OSDCloudTemplates......" -Verbose
+Write-Verbose "Confirming OSDCloud Templates......" -Verbose
 Get-OSDCloudTemplate
 
 Write-Host
