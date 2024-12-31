@@ -59,6 +59,11 @@ Write-Host
 Write-Verbose "Completed: ALL Gigabyte AM5 Eagle Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
 
+# OSDCloud Template and Workspace configuration
+
+Write-Host
+Write-Verbose "Confirming OSDCloud Templates......" -Verbose
+Get-OSDCloudTemplate
 
 Write-Host
 Write-Verbose "Creating New OSDCloud WinRE Template specific for Gigabyte AM5 Eagle motherboards to enable wireless networking support..." -Verbose
