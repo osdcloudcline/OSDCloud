@@ -266,8 +266,6 @@ Write-Host
 
 # VBS Scripting Support
 
-
-
 $OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
 $VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
 $VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
@@ -318,7 +316,7 @@ Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verb
 $ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
 $ChromeDestination = "$mountdir\Windows\System32"
 
-Copy-Item -Path $ChromePath -Destination $ChromeDestination
+Copy-Item -Path $ChromePath -Destination $ChromeDestination -Force
 
 Write-Host
 Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
@@ -331,17 +329,16 @@ Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose
 $UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
 $UBPRDestination = "$mountdir\Windows\System32"
 
-Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination
+Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
 
 Write-Host
 Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
 Write-Host
 
 Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
-# Mount the image
+# Disount the image
 
 Dismount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
-
 # PowerShell 5.1 Modules - OSDCloud
 
 $OSDCloudPS5xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
