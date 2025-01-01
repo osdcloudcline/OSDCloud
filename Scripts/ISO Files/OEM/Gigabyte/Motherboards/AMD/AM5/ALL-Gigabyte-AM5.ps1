@@ -265,3 +265,56 @@ Edit-OSDCloudWinPE -DriversPath $AORUSStorage4
 Write-Host
 Write-Verbose "Completed: Integration of Gigabyte AMD AM 5 AORUS Motherboard Drivers..." -Verbose 
 Write-Host
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 Eagle Motherboard Ethernet Drivers..." -Verbose 
+$EagleEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\Ethernet1"
+$EagleEthernet2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\Ethernet2"
+$EagleEthernet3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\Ethernet1"
+$EagleEthernet4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\Ethernet2"
+
+
+Edit-OSDCloudWinPE -DriversPath $EagleEthernet1
+Edit-OSDCloudWinPE -DriversPath $EagleEthernet2
+Edit-OSDCloudWinPE -DriversPath $EagleEthernet3
+Edit-OSDCloudWinPE -DriversPath $EagleEthernet4
+
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 Eagle Motherboard WiFi Drivers..." -Verbose 
+$EagleWiFi1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\WiFi1"
+$EagleWiFi2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\WiFi2"
+$EagleWiFi3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\WiFi1"
+$EagleWiFi4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\WiFi2"
+
+
+Edit-OSDCloudWinPE -DriversPath $EagleWiFi1
+Edit-OSDCloudWinPE -DriversPath $EagleWiFi2
+Edit-OSDCloudWinPE -DriversPath $EagleWiFi3
+Edit-OSDCloudWinPE -DriversPath $EagleWiFi4
+
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 Eagle Motherboard Bluetooth Drivers..." -Verbose 
+$EagleBluetooth1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\Bluetooth"
+$EagleBluetooth2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\Bluetooth1"
+$EagleBluetooth3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\Bluetooth2"
+
+
+Edit-OSDCloudWinPE -DriversPath $EagleBluetooth1
+Edit-OSDCloudWinPE -DriversPath $EagleBluetooth2
+Edit-OSDCloudWinPE -DriversPath $EagleBluetooth3
+
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 Eagle Motherboard Storage Drivers..." -Verbose 
+$EagleStorage1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\Storage\RAID\NVMe"
+$EagleStorage2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\Storage\RAID\NVMe"
+
+
+Edit-OSDCloudWinPE -DriversPath $EagleStorage1
+Edit-OSDCloudWinPE -DriversPath $EagleStorage2
+
+Write-Host
+Write-Verbose "Completed: Integration of Gigabyte AMD AM 5 Eagle Motherboard Drivers..." -Verbose 
+Write-Host
