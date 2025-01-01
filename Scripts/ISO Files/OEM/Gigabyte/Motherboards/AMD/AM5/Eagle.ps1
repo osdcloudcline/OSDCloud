@@ -94,3 +94,54 @@ Get-OSDCloudWorkspace
 
 $AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
 Invoke-Expression $($AddPS7.Content)
+
+# Gigabyte AM 5 Motherboards
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 Eagle Motherboard Ethernet Drivers..." -Verbose 
+$EagleEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\Ethernet1"
+$EagleEthernet2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\Ethernet2"
+$EagleEthernet3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\Ethernet1"
+$EagleEthernet4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\Ethernet2"
+
+
+Edit-OSDCloudWinPE -DriversPath $EagleEthernet1
+Edit-OSDCloudWinPE -DriversPath $EagleEthernet2
+Edit-OSDCloudWinPE -DriversPath $EagleEthernet3
+Edit-OSDCloudWinPE -DriversPath $EagleEthernet4
+
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 Eagle Motherboard WiFi Drivers..." -Verbose 
+$EagleWiFi1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\WiFi1"
+$EagleWiFi2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\WiFi2"
+$EagleWiFi3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\WiFi1"
+$EagleWiFi4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\WiFi2"
+
+
+Edit-OSDCloudWinPE -DriversPath $EagleWiFi1
+Edit-OSDCloudWinPE -DriversPath $EagleWiFi2
+Edit-OSDCloudWinPE -DriversPath $EagleWiFi3
+Edit-OSDCloudWinPE -DriversPath $EagleWiFi4
+
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 Eagle Motherboard Bluetooth Drivers..." -Verbose 
+$EagleBluetooth1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\Bluetooth"
+$EagleBluetooth2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\Bluetooth1"
+$EagleBluetooth3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\Bluetooth2"
+
+
+Edit-OSDCloudWinPE -DriversPath $EagleBluetooth1
+Edit-OSDCloudWinPE -DriversPath $EagleBluetooth2
+Edit-OSDCloudWinPE -DriversPath $EagleBluetooth3
+
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 Eagle Motherboard Storage Drivers..." -Verbose 
+$EagleStorage1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\Storage\RAID\NVMe"
+$EagleStorage2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\Storage\RAID\NVMe"
+
+
+Edit-OSDCloudWinPE -DriversPath $EagleStorage1
+Edit-OSDCloudWinPE -DriversPath $EagleStorage2
