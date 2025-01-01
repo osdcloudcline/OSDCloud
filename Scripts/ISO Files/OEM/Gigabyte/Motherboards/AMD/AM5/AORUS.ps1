@@ -97,3 +97,5 @@ Invoke-Expression $($AddPS7.Content)
 
 # Gigabyte AM 5 Motherboards
 
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 AORUS Motherboard Ethernet Drivers..." -Verbose 
