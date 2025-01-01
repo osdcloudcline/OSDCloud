@@ -99,9 +99,9 @@ Invoke-Expression $($AddPS7.Content)
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AORUS Motherboard Ethernet Drivers..." -Verbose 
-$AORUSEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B659\Ethernet1"
-$AORUSEthernet2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B659\Ethernet2"
-$AORUSEthernet3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B659\Ethernet3"
+$AORUSEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\Ethernet1"
+$AORUSEthernet2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\Ethernet2"
+$AORUSEthernet3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\Ethernet3"
 $AORUSEthernet4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\Ethernet1"
 $AORUSEthernet5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\Ethernet2"
 $AORUSEthernet6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\Ethernet3"
@@ -113,3 +113,77 @@ $AORUSEthernet11 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870\Eth
 $AORUSEthernet12 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870E\Ethernet1"
 $AORUSEthernet13 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870E\Ethernet2"
 
+Edit-OSDCloudWinPE -DriversPath $AORUSEthernet1
+Edit-OSDCloudWinPE -DriversPath $AORUSEthernet2
+Edit-OSDCloudWinPE -DriversPath $AORUSEthernet3
+Edit-OSDCloudWinPE -DriversPath $AORUSEthernet4
+Edit-OSDCloudWinPE -DriversPath $AORUSEthernet5
+Edit-OSDCloudWinPE -DriversPath $AORUSEthernet6
+Edit-OSDCloudWinPE -DriversPath $AORUSEthernet7
+Edit-OSDCloudWinPE -DriversPath $AORUSEthernet8
+Edit-OSDCloudWinPE -DriversPath $AORUSEthernet9
+Edit-OSDCloudWinPE -DriversPath $AORUSEthernet10
+Edit-OSDCloudWinPE -DriversPath $AORUSEthernet11
+Edit-OSDCloudWinPE -DriversPath $AORUSEthernet12
+Edit-OSDCloudWinPE -DriversPath $AORUSEthernet13
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 AORUS Motherboard WiFi Drivers..." -Verbose 
+$AORUSWiFi1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\WiFi1"
+$AORUSWiFi2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\WiFi2"
+$AORUSWiFi3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\WiFi3"
+$AORUSWiFi4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\WiFi1"
+$AORUSWiFi5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\WiFi2"
+$AORUSWiFi6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\WiFi3"
+$AORUSWiFi7 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870\WiFi"
+$AORUSWiFi8 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870E\WiFi1"
+
+
+Edit-OSDCloudWinPE -DriversPath $AORUSWiFi1
+Edit-OSDCloudWinPE -DriversPath $AORUSWiFi2
+Edit-OSDCloudWinPE -DriversPath $AORUSWiFi3
+Edit-OSDCloudWinPE -DriversPath $AORUSWiFi4
+Edit-OSDCloudWinPE -DriversPath $AORUSWiFi5
+Edit-OSDCloudWinPE -DriversPath $AORUSWiFi6
+Edit-OSDCloudWinPE -DriversPath $AORUSWiFi7
+Edit-OSDCloudWinPE -DriversPath $AORUSWiFi8
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 AORUS Motherboard Bluetooth Drivers..." -Verbose 
+$AORUSBluetooth1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\Bluetooth1"
+$AORUSBluetooth2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\Bluetooth2"
+$AORUSBluetooth3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\Bluetooth3"
+$AORUSBluetooth4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\Bluetooth4"
+$AORUSBluetooth5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\Bluetooth1"
+$AORUSBluetooth6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\Bluetooth2"
+$AORUSBluetooth7 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\Bluetooth3"
+$AORUSBluetooth8 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870\Bluetooth1"
+$AORUSBluetooth9 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870\Bluetooth2"
+$AORUSBluetooth10 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870\Bluetooth3"
+$AORUSBluetooth11 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870E\Bluetooth"
+
+
+Edit-OSDCloudWinPE -DriversPath $AORUSBluetooth1
+Edit-OSDCloudWinPE -DriversPath $AORUSBluetooth2
+Edit-OSDCloudWinPE -DriversPath $AORUSBluetooth3
+Edit-OSDCloudWinPE -DriversPath $AORUSBluetooth4
+Edit-OSDCloudWinPE -DriversPath $AORUSBluetooth5
+Edit-OSDCloudWinPE -DriversPath $AORUSBluetooth6
+Edit-OSDCloudWinPE -DriversPath $AORUSBluetooth7
+Edit-OSDCloudWinPE -DriversPath $AORUSBluetooth8
+Edit-OSDCloudWinPE -DriversPath $AORUSBluetooth9
+Edit-OSDCloudWinPE -DriversPath $AORUSBluetooth10
+Edit-OSDCloudWinPE -DriversPath $AORUSBluetooth11
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 AORUS Motherboard Storage Drivers..." -Verbose 
+$AORUSStorage1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\Storage\RAID\NVMe"
+$AORUSStorage2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\Storage\RAID\NVMe"
+$AORUSStorage3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870\Storage\RAID\NVMe"
+$AORUSStorage4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870E\Storage\RAID\NVMe"
+
+
+Edit-OSDCloudWinPE -DriversPath $AORUSStorage1
+Edit-OSDCloudWinPE -DriversPath $AORUSStorage2
+Edit-OSDCloudWinPE -DriversPath $AORUSStorage3
+Edit-OSDCloudWinPE -DriversPath $AORUSStorage4
