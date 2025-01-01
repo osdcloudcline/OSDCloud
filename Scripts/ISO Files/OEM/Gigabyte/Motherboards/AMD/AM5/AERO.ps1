@@ -202,8 +202,6 @@ Write-Host
 
 # VBS Scripting Support
 
-
-
 $OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
 $VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
 $VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
@@ -276,7 +274,8 @@ Write-Host
 Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 # Disount the image
 
-Dismount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
+Dismount-WindowsImage -Path $mountdir -Save
+
 # PowerShell 5.1 Modules - OSDCloud
 
 $OSDCloudPS5xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
