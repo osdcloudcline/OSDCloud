@@ -99,3 +99,17 @@ Invoke-Expression $($AddPS7.Content)
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AORUS Motherboard Ethernet Drivers..." -Verbose 
+$AORUSEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B659\Ethernet1"
+$AORUSEthernet2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B659\Ethernet2"
+$AORUSEthernet3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\B659\Ethernet3"
+$AORUSEthernet4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\Ethernet1"
+$AORUSEthernet5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\Ethernet2"
+$AORUSEthernet6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\Ethernet3"
+$AORUSEthernet7 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\Ethernet4"
+$AORUSEthernet8 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\Ethernet5"
+$AORUSEthernet9 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\Ethernet6"
+$AORUSEthernet10 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870\Ethernet1"
+$AORUSEthernet11 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870\Ethernet2"
+$AORUSEthernet12 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870E\Ethernet1"
+$AORUSEthernet13 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870E\Ethernet2"
+
