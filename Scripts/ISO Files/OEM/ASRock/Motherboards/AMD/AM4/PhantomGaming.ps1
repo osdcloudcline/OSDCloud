@@ -277,7 +277,8 @@ Write-Host
 Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 # Disount the image
 
-Dismount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
+Dismount-WindowsImage -Path $mountdir -Save
+
 # PowerShell 5.1 Modules - OSDCloud
 
 $OSDCloudPS5xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
