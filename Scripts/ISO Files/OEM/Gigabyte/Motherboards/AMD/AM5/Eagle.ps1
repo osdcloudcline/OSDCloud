@@ -145,3 +145,7 @@ $EagleStorage2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\Stora
 
 Edit-OSDCloudWinPE -DriversPath $EagleStorage1
 Edit-OSDCloudWinPE -DriversPath $EagleStorage2
+
+Write-Host
+Write-Verbose "Completed: Integration of Gigabyte AMD AM 5 Eagle Motherboard Drivers..." -Verbose 
+Write-Host
