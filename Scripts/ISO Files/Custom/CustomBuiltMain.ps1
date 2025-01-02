@@ -98,7 +98,7 @@ Write-Host " 2. OSDCloud: Create ISO - Bryan's Desktop"
 Write-Host " 3. OSDCloud: Create ISO - Bryan's Laptop"
 Write-Host " 4. OSDCloud: Create ISO - Dad's Desktop"
 Write-Host " 5. OSDCloud: Create ISO - Mom's Desktop"
-Write-Host " 6. OSDCloud: Create ISO - Dave V. Desktop"
+Write-Host " 6. OSDCloud: Create ISO - Dave and Pat V. PCs"
 Write-Host " 7. OSDCloud: Create ISO - Sean Desktop"
 Write-Host " 8. OSDCloud: Create ISO - Mike Laptop"
 Write-Host " 9. OSDCloud: Create ISO - Other Computers"
@@ -131,8 +131,8 @@ do
     Invoke-Expression $($MomDesktop.Content)
     }
 '6'{cls
-    $DaveVDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/DaveV-PC.ps1")
-    Invoke-Expression $($DaveVDesktop.Content)
+    $DavePatVPCs = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/DavePatV-PCs.ps1")
+    Invoke-Expression $($DavePatVPCs.Content)
     }
 '7'{cls
     $SeanDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/SeanDesktop.ps1")
