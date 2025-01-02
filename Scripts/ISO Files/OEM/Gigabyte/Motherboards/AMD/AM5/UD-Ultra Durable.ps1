@@ -193,3 +193,8 @@ Edit-OSDCloudWinPE -Wallpaper $OSDCloudwallpaper
 Write-Host
 Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
 
+# Gigabyte AM 5 Motherboards
+
+
+
+
