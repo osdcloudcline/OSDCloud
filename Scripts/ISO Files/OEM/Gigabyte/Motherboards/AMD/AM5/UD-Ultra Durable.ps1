@@ -195,9 +195,63 @@ Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
 
 # Gigabyte AM 5 Motherboards
 
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 Ultra Durable Motherboard Ethernet Drivers..." -Verbose 
+$UDEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\A620\Ethernet1"
+$UDEthernet2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\A620\Ethernet2"
+$UDEthernet3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\Ethernet1"
+$UDEthernet4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\Ethernet2"
 
+Edit-OSDCloudWinPE -DriversPath $UDEthernet1
+Edit-OSDCloudWinPE -DriversPath $UDEthernet2
+Edit-OSDCloudWinPE -DriversPath $UDEthernet3
+Edit-OSDCloudWinPE -DriversPath $UDEthernet4
 
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 Ultra Durable Motherboard WiFi Drivers..." -Verbose 
+$UDWiFi1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\A620\WiFi1"
+$UDWiFi2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\A620\WiFi2"
+$UDWiFi3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WiFi1"
+$UDWiFi4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WiFi2"
+$UDWiFi5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WiFi3"
+$UDWiFi6 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WiFi4"
+$UDWiFi7 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WiFi5"
+$UDWiFi8 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WiFi6"
 
+Edit-OSDCloudWinPE -DriversPath $UDWiFi1
+Edit-OSDCloudWinPE -DriversPath $UDWiFi2
+Edit-OSDCloudWinPE -DriversPath $UDWiFi3
+Edit-OSDCloudWinPE -DriversPath $UDWiFi4
+Edit-OSDCloudWinPE -DriversPath $UDWiFi5
+Edit-OSDCloudWinPE -DriversPath $UDWiFi6
+Edit-OSDCloudWinPE -DriversPath $UDWiFi7
+Edit-OSDCloudWinPE -DriversPath $UDWiFi8
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 Ultra Durable Motherboard Bluetooth Drivers..." -Verbose 
+$UDBluetooth1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\A620\Bluetooth1"
+$UDBluetooth2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\A620\Bluetooth2"
+$UDBluetooth3 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\Bluetooth1"
+$UDBluetooth4 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\Bluetooth2"
+$UDBluetooth5 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\Bluetooth3"
+
+Edit-OSDCloudWinPE -DriversPath $UDBluetooth1
+Edit-OSDCloudWinPE -DriversPath $UDBluetooth2
+Edit-OSDCloudWinPE -DriversPath $UDBluetooth3
+Edit-OSDCloudWinPE -DriversPath $UDBluetooth4
+Edit-OSDCloudWinPE -DriversPath $UDBluetooth5
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM 5 Ultra Durable Motherboard Storage Drivers..." -Verbose 
+$UDStorage1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\A620\Storage\RAID\NVMe"
+$UDStorage2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\Storage\RAID\NVMe"
+
+Edit-OSDCloudWinPE -DriversPath $UDStorage1
+Edit-OSDCloudWinPE -DriversPath $UDStorage2
+
+Write-Host
+Write-Verbose "Completed: Integration of Gigabyte AMD AM 5 Ultra Durable Motherboard Drivers..." -Verbose 
+Write-Host
 
 # Virtualization Hypervisors
 
