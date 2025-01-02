@@ -73,6 +73,9 @@ Invoke-Expression $($UPBR.Content)
 $OSDCloudWallpaper = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Wallpaper/OSDCloudWallpaper-Download.ps1")
 Invoke-Expression $($OSDCloudWallpaper.Content) 
 
+$Ghost = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Imaging/Ghost/Ghosting.ps1")
+Invoke-Expression $($Ghost.Content)
+
 Write-Host
 Write-Verbose "Completed: ALL ASRock AM4 Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
@@ -396,6 +399,21 @@ Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
 
 Write-Host
 Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
+$Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
+$GhostExplorerPath = "C:\OSDCloud\GitHub\downloads\Ghost\Ghostexp.exe"
+$GhostServPath = "C:\OSDCloud\GitHub\downloads\Ghost\GhostSrv.exe"
+$GhostDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $Ghost64Path -Destination $GhostDestination -Force
+Copy-Item -Path $GhostExplorerPath -Destination $GhostDestination -Force
+Copy-Item -Path $GhostServPath -Destination $GhostDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Ghost Imaging for OSDCloud..." -Verbose
 Write-Host
 
 Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
