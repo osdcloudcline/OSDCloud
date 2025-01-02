@@ -1,4 +1,4 @@
-$GhostLog = ""
+$GhostLog = "C:\Logs\OSDCloud\Ghost\Ghost.log"
 
 Start-Transcript -Path $GhostLog
 
@@ -12,4 +12,17 @@ $Ghost64URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Ext
 
 $GhostExplorerURL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Imaging/Ghost/Ghostexp.exe"
 
-$GhostServURL = ""
+$GhostServURL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Imaging/Ghost/GhostSrv.exe"
+
+$GhostDestination = "C:\OSDCloud\GitHub\downloads\Ghost"
+
+Write-Verbose "Processing: Ghost 64-bit" -Verbose
+Save-WebFile -SourceUrl $Ghost64URL -DestinationDirectory $GhostDestination
+
+Write-Verbose "Processing: Ghost Explorer" -Verbose
+Save-WebFile -SourceUrl $GhostExplorerURL -DestinationDirectory $GhostDestination
+
+Write-Verbose "Processing: Ghost Server" -Verbose
+Save-WebFile -SourceUrl $GhostServURL -DestinationDirectory $GhostDestination
+
+Stop-Transcript
