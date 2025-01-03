@@ -66,7 +66,9 @@ Write-Host
 Write-Verbose "Completed: ALL ASUS AM4 Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
 
+################################################
 # OSDCloud Template and Workspace configuration
+################################################
 
 Write-Host
 Write-Verbose "Confirming OSDCloud Templates......" -Verbose
