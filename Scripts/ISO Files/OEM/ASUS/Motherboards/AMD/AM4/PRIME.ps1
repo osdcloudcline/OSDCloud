@@ -267,6 +267,23 @@ Write-Host
 Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
 Write-Host
 
+# Ghost - Imaging 
+
+Write-Host
+Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
+$Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
+$GhostExplorerPath = "C:\OSDCloud\GitHub\downloads\Ghost\Ghostexp.exe"
+$GhostServPath = "C:\OSDCloud\GitHub\downloads\Ghost\GhostSrv.exe"
+$GhostDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $Ghost64Path -Destination $GhostDestination -Force
+Copy-Item -Path $GhostExplorerPath -Destination $GhostDestination -Force
+Copy-Item -Path $GhostServPath -Destination $GhostDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Ghost Imaging for OSDCloud..." -Verbose
+Write-Host
+
 # PowerShell 5.1 Modules - OSDCloud
 
 $OSDCloudPS5xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
