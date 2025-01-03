@@ -284,6 +284,11 @@ Write-Host
 Write-Verbose "Completed: Integration of Ghost Imaging for OSDCloud..." -Verbose
 Write-Host
 
+Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
+# Disount the image
+
+Dismount-WindowsImage -Path $mountdir -Save
+
 # PowerShell 5.1 Modules - OSDCloud
 
 $OSDCloudPS5xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
