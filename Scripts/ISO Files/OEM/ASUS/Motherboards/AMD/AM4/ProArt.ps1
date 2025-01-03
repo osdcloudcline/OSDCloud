@@ -57,6 +57,9 @@ Invoke-Expression $($UPBR.Content)
 $OSDCloudWallpaper = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Wallpaper/OSDCloudWallpaper-Download.ps1")
 Invoke-Expression $($OSDCloudWallpaper.Content) 
 
+$Ghost = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Imaging/Ghost/Ghosting.ps1")
+Invoke-Expression $($Ghost.Content)
+
 Write-Host
 Write-Verbose "Completed: ALL ASUS AM4 ProArt Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
