@@ -63,6 +63,9 @@ Invoke-Expression $($OSDCloudWallpaper.Content)
 $Ghost = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Imaging/Ghost/Ghosting.ps1")
 Invoke-Expression $($Ghost.Content)
 
+$DaRT = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/DaRT/DaRT.ps1")
+Invoke-WebRequest $($DaRT.Content)
+
 Write-Host
 Write-Verbose "Completed: ALL ASRock AM4 Fatal1ty Gaming Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
