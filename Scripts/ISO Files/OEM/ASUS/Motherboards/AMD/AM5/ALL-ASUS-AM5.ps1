@@ -166,6 +166,17 @@ Write-Host
 
 # Portable Browsers
 
+Write-Host
+Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verbose 
+$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
+$ChromeDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $ChromePath -Destination $ChromeDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
+Write-Host
+
 # MS DaRT Remote Connections and Troubleshooting
 
 # ServiceUI
