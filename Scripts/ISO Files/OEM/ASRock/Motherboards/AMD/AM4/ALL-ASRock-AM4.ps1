@@ -83,10 +83,6 @@ Write-Host
 # OSDCloud Template and Workspace configuration
 
 Write-Host
-Write-Verbose "Confirming OSDCloud Templates......" -Verbose
-Get-OSDCloudTemplate
-
-Write-Host
 Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
 New-OSDCloudTemplate -Name ASRock-AM4 -WinRE
 
