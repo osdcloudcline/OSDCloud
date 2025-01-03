@@ -207,6 +207,16 @@ Write-Host
 # OSDCloud NEW Wallpaper
 ###########################################
 
+Write-Host
+Write-Verbose "Processing: NEW OSDCloud Wallpaper..." -Verbose 
+$OSDCloudwallpaper = "C:\downloads\OSDCloud\GitHub\wallpaper\winpe.jpg"
+
+Edit-OSDCloudWinPE -Wallpaper $OSDCloudwallpaper
+
+Write-Host
+Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
+Write-Host
+
 ###########################################
 # Create OSDCloud ISO
 ############################################
