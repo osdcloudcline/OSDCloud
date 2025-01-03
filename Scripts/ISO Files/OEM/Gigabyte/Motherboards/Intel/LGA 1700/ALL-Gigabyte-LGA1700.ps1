@@ -92,7 +92,7 @@ Get-OSDCloudTemplate
 
 Write-Host
 Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL ASUS LGA1700 motherboards to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name ASUS-LGA1700 -WinRE
+New-OSDCloudTemplate -Name Gigabyte-LGA1700 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
