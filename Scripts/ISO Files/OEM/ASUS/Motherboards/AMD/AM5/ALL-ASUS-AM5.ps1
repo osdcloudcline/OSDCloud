@@ -160,6 +160,22 @@ Write-Host
 
 # Virtualization Drivers - VMWare ESXI
 
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere Ethernet Drivers..." -Verbose 
+$ESXIEthernet = "C:\OSDCloud\Drivers\Virtualization\ESXI\Network"
+
+Edit-OSDCloudWinPE -DriverPath  $ESXIEthernet
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere Storage Drivers..." -Verbose 
+$ESXIStorage = "C:\OSDCloud\Drivers\Virtualization\ESXI\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $ESXIStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of VMWare ESXI vSphere Network and Storage Drivers..." -Verbose
+Write-Host
+
 # Virtualization Drivers - VMWare Workstation Pro
 
 # Virtualization Drivers - Proxmox
