@@ -26,7 +26,9 @@ Write-Verbose "Processing: Acquiring Microsoft DART Files..." -Verbose
 Save-WebFile -SourceUrl $DART64CABURL -DestinationDirectory $DARTDestination
 Save-WebFile -SourceUrl $DARTConfig8URL -DestinationDirectory $DARTDestination
 
+Write-Host
 Write-Verbose "Processing: Copying Microsoft DART Files..." -Verbose
 Copy-Item -Path "$DARTDestination\Toolsx64.cab" -Destination $DART64CABDestination -Force
 Copy-Item -Path "$DARTDestination\DartConfig8.dat" -Destination $DARTConfig8Destination -Force
+Write-Host
 Stop-Transcript 
