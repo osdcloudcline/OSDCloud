@@ -8,7 +8,7 @@ Get-Date
 ## DART File URL Paths
 ##############################################################
 
-$DART64CABURL = ""
+$DART64CABURL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/DaRT/Toolsx64.cab"
 $DARTConfig8URL = ""
 
 ################################################################
