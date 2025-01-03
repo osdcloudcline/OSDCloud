@@ -63,7 +63,7 @@ $DaRT = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/he
 Invoke-WebRequest $($DaRT.Content)
 
 Write-Host
-Write-Verbose "Completed: ALL ASUS AM4 Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
+Write-Verbose "Completed: ALL ASUS AM5 Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
 
 ################################################
@@ -76,7 +76,7 @@ Get-OSDCloudTemplate
 
 Write-Host
 Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL ASUS AM4 motherboards to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name ASUS-AM4 -WinRE
+New-OSDCloudTemplate -Name ASUS-TUFGaming-AM5 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
