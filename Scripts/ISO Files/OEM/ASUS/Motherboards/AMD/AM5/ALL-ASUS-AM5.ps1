@@ -187,6 +187,16 @@ Write-Host
 
 # User Profile Backup and Restore 
 
+Write-Host
+Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
+$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
+$UBPRDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
+Write-Host
 
 #####################################
 ### ASUS AM 5 Motherboards
