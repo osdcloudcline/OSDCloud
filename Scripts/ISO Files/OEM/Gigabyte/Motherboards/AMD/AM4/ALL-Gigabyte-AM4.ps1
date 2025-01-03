@@ -251,7 +251,11 @@ Invoke-Expression $($OSDCloudPS5xMods.Content)
 $OSDCloudPS7xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
 Invoke-Expression $($OSDCloudPS7xMods.Content)
 
+################################
 # Gigabyte AM 4 Motherboards
+#################################
+
+# AERO motherboards
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 AERO Motherboard Ethernet Drivers..." -Verbose 
@@ -274,6 +278,8 @@ $AEROStorage2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM4\AERO\Storage2"
 
 Edit-OSDCloudWinPE -DriversPath  $AEROStorage1
 Edit-OSDCloudWinPE -DriversPath  $AEROStorage2
+
+# AORUS motherboards
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard Ethernet Drivers..." -Verbose 
@@ -371,6 +377,8 @@ $AORUSBluetooth2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Bluetoo
 Edit-OSDCloudWinPE -DriverPath $AORUSBluetooth1
 Edit-OSDCloudWinPE -DriverPath $AORUSBluetooth2
 
+# Gaming motherboards
+
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 Gaming Motherboard Ethernet Drivers..." -Verbose 
 $GamingEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\B350\Ethernet"
@@ -432,6 +440,8 @@ Edit-OSDCloudWinPE -DriverPath $GamingStorage12
 Edit-OSDCloudWinPE -DriverPath $GamingStorage13
 Edit-OSDCloudWinPE -DriverPath $GamingStorage14
 Edit-OSDCloudWinPE -DriverPath $GamingStorage15
+
+# Ultra Durable motherboards
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 Ultra Durable Motherboard Ethernet Drivers..." -Verbose 
