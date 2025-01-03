@@ -1,4 +1,3 @@
-
 Write-Host
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
 Write-Host
@@ -100,7 +99,12 @@ Get-OSDCloudWorkspace
 $AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
 Invoke-Expression $($AddPS7.Content)
 
+# OSDCloud - Cloud Drivers
+
+########################################
 # 3rd party software and utilities
+########################################
+
 
 # VBS Scripting Support
 
@@ -116,8 +120,31 @@ Invoke-Expression $($AddPS7.Content)
 
 # User Profile Backup and Restore 
 
-# ASUS AM 5 Motherboards
+
+#####################################
+### ASUS AM 5 Motherboards
+#####################################
 
 # Business motherboards
 
 
+
+############################################
+# Other Drivers
+############################################
+
+# Virtualization Drivers - Hyper-V
+
+# Virtualization Drivers - VMWare ESXI
+
+# Virtualization Drivers - VMWare Workstation Pro
+
+# Virtualization Drivers - Proxmox
+
+###########################################
+# OSDCloud NEW Wallpaper
+###########################################
+
+###########################################
+# Create OSDCloud ISO
+############################################
