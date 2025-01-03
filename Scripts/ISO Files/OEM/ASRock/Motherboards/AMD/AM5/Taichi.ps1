@@ -64,7 +64,7 @@ $DaRT = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/he
 Invoke-WebRequest $($DaRT.Content)
 
 Write-Host
-Write-Verbose "Completed: ALL ASRock AM4 Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
+Write-Verbose "Completed: ALL ASRock AM5 Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
 
 ################################################
