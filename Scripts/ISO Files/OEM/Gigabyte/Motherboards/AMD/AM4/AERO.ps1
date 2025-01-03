@@ -63,6 +63,9 @@ Invoke-Expression $($OSDCloudWallpaper.Content)
 $Ghost = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Imaging/Ghost/Ghosting.ps1")
 Invoke-Expression $($Ghost.Content)
 
+$MSTSC = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Remote%20Desktop%20Control/MSTSC.ps1")
+Invoke-Expression $($MSTSC.Content)
+
 Write-Host
 Write-Verbose "Completed: ALL Gigabyte AM4 AERO Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
