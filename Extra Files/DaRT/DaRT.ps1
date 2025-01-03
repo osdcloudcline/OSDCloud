@@ -9,7 +9,7 @@ Get-Date
 ##############################################################
 
 $DART64CABURL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/DaRT/Toolsx64.cab"
-$DARTConfig8URL = ""
+$DARTConfig8URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/DaRT/DartConfig8.dat"
 
 ################################################################
 ## DART File Destination
@@ -21,6 +21,8 @@ $DARTConfig8Destination = ""
 
 Import-Module -Name OSD -Force
 
-Write-Verbose "Processing: Acquiring DART Files..." -Verbose
-Save-WebFile -SourceUrl $DART64CABURL -Destination $DARTDestination
-Save-WebFile -SourceUrl $DARTConfig8URL -Destination $DARTDestination
+Write-Verbose "Processing: Acquiring Microsoft DART Files..." -Verbose
+Save-WebFile -SourceUrl $DART64CABURL -DestinationDirectory $DARTDestination
+Save-WebFile -SourceUrl $DARTConfig8URL -DestinationDirectory $DARTDestination
+
+Stop-Transcript 
