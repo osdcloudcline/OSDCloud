@@ -102,6 +102,15 @@ Invoke-Expression $($AddPS7.Content)
 
 # OSDCloud - Cloud Drivers
 
+Write-Host
+Write-Verbose "Processing: OSDCloud - Cloud Drivers..." -Verbose 
+
+Edit-OSDCloudWinPE -CloudDriver USB,VMware,WiFi
+
+Write-Host
+Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
+Write-Host
+
 ########################################
 # 3rd party software and utilities
 ########################################
