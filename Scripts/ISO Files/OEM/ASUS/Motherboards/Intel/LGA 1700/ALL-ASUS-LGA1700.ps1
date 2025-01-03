@@ -1,4 +1,3 @@
-
 Write-Host
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
 Write-Host
