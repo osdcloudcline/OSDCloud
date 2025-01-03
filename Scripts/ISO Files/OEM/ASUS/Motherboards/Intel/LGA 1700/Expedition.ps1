@@ -240,7 +240,7 @@ $OSDCloudPS7xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud
 Invoke-Expression $($OSDCloudPS7xMods.Content)
 
 ###############################
-# ASUS LGA 1700 Motherboards
+# ASUS LGA 1700 Expedition Motherboards
 ################################
 
 Write-Host
@@ -255,58 +255,99 @@ $ExpeditionStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1700\Expedition\S
 
 Edit-OSDCloudWinPE -DriverPath $ExpeditionStorage
 
-# VM Drivers
+############################################
+# Other Drivers
+############################################
 
-
-
-Write-Host
-Write-Verbose "Completed: Integration of Virtual Machine Drivers..." -Verbose 
-
-# Cloud Drivers
+# Virtualization Drivers - Hyper-V
 
 Write-Host
-Write-Verbose "Processing: OSDCloud Cloud Drivers..." -Verbose 
-Edit-OSDCloudWinPE -CloudDriver USB, VMware, WiFi
-Write-Host
-Write-Verbose "Completed: Integration of Cloud Drivers..." -Verbose 
+Write-Verbose "Processing: Microsoft Hyper-V Ethernet Drivers..." -Verbose 
+$HyperVNetwork = "C:\OSDCloud\Drivers\Virtualization\HyperV\Network"
+
+Edit-OSDCloudWinPE -DriverPath $HyperVNetwork
 
 Write-Host
-Write-Verbose "Processing: Copying OSD PowerShell Module..." -Verbose
-Edit-OSDCloudWinPE -PSModuleCopy OSD
+Write-Verbose "Completed: Integration of Microsoft Hyper-V Network Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - VMWare ESXI
 
 Write-Host
-Write-Verbose "Processing: Extra OSD PowerShell Module..." -Verbose
-Edit-OSDCloudWinPE -PSModuleInstall Azure
-Edit-OSDCloudWinPE -PSModuleInstall AzureAD
-Edit-OSDCloudWinPE -PSModuleInstall Az.Accounts
-Edit-OSDCloudWinPE -PSModuleInstall Az.Storage
-Edit-OSDCloudWinPE -PSModuleInstall Az.Resources
-Edit-OSDCloudWinPE -PSModuleInstall Az.KeyVault
-Edit-OSDCloudWinPE -PSModuleInstall Az.Compute
-Edit-OSDCloudWinPE -PSModuleInstall Az.Automation
-Edit-OSDCloudWinPE -PSModuleInstall Az.Network
-Edit-OSDCloudWinPE -PSModuleInstall Az.ApiManagement
-Edit-OSDCloudWinPE -PSModuleInstall OSDCloudGUI
-Edit-OSDCloudWinPE -PSModuleInstall OSDCloudAzure
-Edit-OSDCloudWinPE -PSModuleInstall OSDUpdate
-Edit-OSDCloudWinPE -PSModuleInstall AutopilotOOBE
-Edit-OSDCloudWinPE -PSModuleInstall OSDDrivers
-Edit-OSDCloudWinPE -PSModuleInstall OSDDeploy
-Edit-OSDCloudWinPE -PSModuleInstall OSDSoftware
-Edit-OSDCloudWinPE -PSModuleInstall OSDCatalog
-Edit-OSDCloudWinPE -PSModuleInstall OSDProgress
-Edit-OSDCloudWinPE -PSModuleInstall PSCloudPC
-Edit-OSDCloudWinPE -PSModuleInstall PSWindowsUpdate
-Edit-OSDCloudWinPE -PSModuleInstall wifiprofilemanagement
+Write-Verbose "Processing: VMWare ESXI vSphere Ethernet Drivers..." -Verbose 
+$ESXIEthernet = "C:\OSDCloud\Drivers\Virtualization\ESXI\Network"
 
-$PortableBrowsers = InvokeWebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Browser/PortableBrowsers.ps1")
-Invoke-Expression $($PortableBrowsers.Content)
+Edit-OSDCloudWinPE -DriverPath  $ESXIEthernet
 
-$VBSScripting = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Scripting%20Support/OSDCloud-VBSScripting.ps1")
-Invoke-Expression $($VBSScripting.Content)
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere Storage Drivers..." -Verbose 
+$ESXIStorage = "C:\OSDCloud\Drivers\Virtualization\ESXI\Storage"
 
-$UPBR = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/User%20Profile%20Backup%20Restore/UPBR.ps1")
-Invoke-Expression $($UPBR.Content)
+Edit-OSDCloudWinPE -DriverPath $ESXIStorage
 
-$OSDCloudWallpaper = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Wallpaper/wallpaper.ps1")
-Invoke-Expression $($OSDCloudWallpaper.Content)
+Write-Host
+Write-Verbose "Completed: Integration of VMWare ESXI vSphere Network and Storage Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - VMWare Workstation Pro
+
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro Ethernet Drivers..." -Verbose 
+$VMWareWorkstationProEthernet = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Network"
+
+Edit-OSDCloudWinPE -DriverPath  $VMWareWorkstationProEthernet
+
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro Storage Drivers..." -Verbose 
+$VMWareWorkstationProStorage = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $VMWareWorkstationProStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of VMWare Workstation Pro Network and Storage Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - Proxmox
+
+Write-Host
+Write-Verbose "Processing: Proxmox Virtual IO Ethernet Drivers..." -Verbose 
+$ProxmoxEthernet1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\Windows11"
+$ProxmoxEthernet2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\WindowsServer2025"
+
+Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet1
+Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet2
+
+Write-Host
+Write-Verbose "Processing: Proxmox Virtual IO Storage Drivers..." -Verbose 
+$ProxmoxStorage1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\Windows11"
+$ProxmoxStorage2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\WindowsServer2025"
+
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage1
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage2
+
+Write-Host
+Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
+Write-Host
+
+###########################################
+# OSDCloud NEW Wallpaper
+###########################################
+
+Write-Host
+Write-Verbose "Processing: NEW OSDCloud Wallpaper..." -Verbose 
+$OSDCloudwallpaper = "C:\downloads\OSDCloud\GitHub\wallpaper\winpe.jpg"
+
+Edit-OSDCloudWinPE -Wallpaper $OSDCloudwallpaper
+
+Write-Host
+Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
+Write-Host
+
+
+##########################################
+# OSDCloud WebScript for Startnet.cmd
+##########################################
+
+###########################################
+# Create OSDCloud ISO
+############################################
