@@ -397,6 +397,8 @@ Write-Host
 Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
 Write-Host
 
+# Ghost - Imaging 
+
 Write-Host
 Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
 $Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
