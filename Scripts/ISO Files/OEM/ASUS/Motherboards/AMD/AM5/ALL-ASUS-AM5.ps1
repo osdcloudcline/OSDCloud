@@ -213,7 +213,11 @@ Write-Host
 Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
 Write-Host
 
+# Disount the image
+Write-Host
+Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
+Dismount-WindowsImage -Path $mountdir -Save
 
 
 #####################################
