@@ -148,6 +148,16 @@ Invoke-Expression $($AddPS7.Content)
 
 # Virtualization Drivers - Hyper-V
 
+Write-Host
+Write-Verbose "Processing: Microsoft Hyper-V Ethernet Drivers..." -Verbose 
+$HyperVNetwork = "C:\OSDCloud\Drivers\Virtualization\HyperV\Network"
+
+Edit-OSDCloudWinPE -DriverPath $HyperVNetwork
+
+Write-Host
+Write-Verbose "Completed: Integration of Microsoft Hyper-V Network Drivers..." -Verbose
+Write-Host
+
 # Virtualization Drivers - VMWare ESXI
 
 # Virtualization Drivers - VMWare Workstation Pro
