@@ -1004,103 +1004,102 @@ Write-Verbose "Attention: MSI does not have any AM 4 motherboard downloads avaib
 Write-Host
 Write-Verbose "Completed: Integration of ALL AMD - Socket AM 4 Motherboard Drivers..." -Verbose 
 
-# OSDCloud Cloud Drivers
+
+############################################
+# Other Drivers
+############################################
+
+# Virtualization Drivers - Hyper-V
 
 Write-Host
-Write-Verbose "Processing: OSDCloud - Cloud Drivers..." -Verbose
+Write-Verbose "Processing: Microsoft Hyper-V Ethernet Drivers..." -Verbose 
+$HyperVNetwork = "C:\OSDCloud\Drivers\Virtualization\HyperV\Network"
 
-Edit-OSDCloudWinPE -CloudDriver USB,VMware,WiFi
-
-Write-Host
-Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose 
-
-
-# Virtual Machine Drivers - ESXI
-Write-Host
-Write-Verbose "Processing: VMWare ESXI Network Drivers..." -Verbose 
-$ESXINetwork = "C:\OSDCloud\Drivers\Virtualization\ESXI\Network"
-
-Edit-OSDCloudWinPE -DriversPath $ESXINetwork
+Edit-OSDCloudWinPE -DriverPath $HyperVNetwork
 
 Write-Host
-Write-Verbose "Completed: Integration of ESXI - Network Drivers..." -Verbose 
+Write-Verbose "Completed: Integration of Microsoft Hyper-V Network Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - VMWare ESXI
 
 Write-Host
-Write-Verbose "Processing: VMWare ESXI Storage Drivers..." -Verbose 
+Write-Verbose "Processing: VMWare ESXI vSphere Ethernet Drivers..." -Verbose 
+$ESXIEthernet = "C:\OSDCloud\Drivers\Virtualization\ESXI\Network"
+
+Edit-OSDCloudWinPE -DriverPath  $ESXIEthernet
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere Storage Drivers..." -Verbose 
 $ESXIStorage = "C:\OSDCloud\Drivers\Virtualization\ESXI\Storage"
 
-Edit-OSDCloudWinPE -DriversPath $ESXIStorage
+Edit-OSDCloudWinPE -DriverPath $ESXIStorage
 
 Write-Host
-Write-Verbose "Completed: Integration of ESXI - Storage Drivers..." -Verbose
-
-# Virtual Machine Drivers - VMWare Workstation
+Write-Verbose "Completed: Integration of VMWare ESXI vSphere Network and Storage Drivers..." -Verbose
 Write-Host
-Write-Verbose "Processing: VMWare Workstation Pro Network Drivers..." -Verbose 
-$VMWareWorkstationProNetwork = "C:\OSDCloud\Drivers\Virtualization\VMWare\Workstation\Network"
 
-Edit-OSDCloudWinPE -DriversPath $VMWareWorkstationProNetwork
+# Virtualization Drivers - VMWare Workstation Pro
 
 Write-Host
-Write-Verbose "Completed: Integration of VMWare Workstation Pro - Network Drivers..." -Verbose
+Write-Verbose "Processing: VMWare Workstation Pro Ethernet Drivers..." -Verbose 
+$VMWareWorkstationProEthernet = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Network"
+
+Edit-OSDCloudWinPE -DriverPath  $VMWareWorkstationProEthernet
 
 Write-Host
 Write-Verbose "Processing: VMWare Workstation Pro Storage Drivers..." -Verbose 
-$VMWareWorkstationProStorage = "C:\OSDCloud\Drivers\Virtualization\VMWare\Workstation\Storage"
+$VMWareWorkstationProStorage = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Storage"
 
-Edit-OSDCloudWinPE -DriversPath $VMWareWorkstationProStorage
-
-Write-Host
-Write-Verbose "Completed: Integration of VMWare Workstation Pro - Storage Drivers..." -Verbose
-
-# Virtual Machine Drivers - Proxmox
-Write-Host
-Write-Verbose "Processing: Proxmox Virtual I/O Network Drivers..." -Verbose 
-$ProxmoxNetwork = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network"
-
-Edit-OSDCloudWinPE -DriversPath $ProxmoxNetwork
+Edit-OSDCloudWinPE -DriverPath $VMWareWorkstationProStorage
 
 Write-Host
-Write-Verbose "Completed: Integration of Proxmox - Network Drivers..." -Verbose
+Write-Verbose "Completed: Integration of VMWare Workstation Pro Network and Storage Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - Proxmox
 
 Write-Host
-Write-Verbose "Processing: Proxmox Storage Drivers..." -Verbose 
-$ProxmoxStorage = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage"
+Write-Verbose "Processing: Proxmox Virtual IO Ethernet Drivers..." -Verbose 
+$ProxmoxEthernet1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\Windows11"
+$ProxmoxEthernet2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\WindowsServer2025"
 
-Edit-OSDCloudWinPE -DriversPath $ProxmoxStorage
-
-Write-Host
-Write-Verbose "Completed: Integration of Proxmox - Storage Drivers..." -Verbose
-
-# Virtual Machine Drivers - Hyper-V
-Write-Host
-Write-Verbose "Processing: Hyper-V Network Drivers..." -Verbose 
-$HyperVNetwork = "C:\OSDCloud\Drivers\Virtualization\HyperV\Network"
-
-Edit-OSDCloudWinPE -DriversPath $HyperVNetwork
+Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet1
+Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet2
 
 Write-Host
-Write-Verbose "Completed: Integration of Microsoft Hyper-V - Network Drivers..." -Verbose
+Write-Verbose "Processing: Proxmox Virtual IO Storage Drivers..." -Verbose 
+$ProxmoxStorage1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\Windows11"
+$ProxmoxStorage2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\WindowsServer2025"
 
-# Add VBS Scripting Support
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage1
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage2
 
-$VBSScripting = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Scripting%20Support/OSDCloud-VBSScripting.ps1")
-Invoke-Expression $($VBSCripting.Content)
+Write-Host
+Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
+Write-Host
 
-# Add UPBR Program
+###########################################
+# OSDCloud NEW Wallpaper
+###########################################
 
-$UBPR = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/User%20Profile%20Backup%20Restore/UPBR.ps1")
-Invoke-Expression $($UPBR.Content)
+Write-Host
+Write-Verbose "Processing: NEW OSDCloud Wallpaper..." -Verbose 
+$OSDCloudwallpaper = "C:\downloads\OSDCloud\GitHub\wallpaper\winpe.jpg"
+
+Edit-OSDCloudWinPE -Wallpaper $OSDCloudwallpaper
+
+Write-Host
+Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
+Write-Host
 
 
-# Add Google Chrome Portable Browser
+##########################################
+# OSDCloud WebScript for Startnet.cmd
+##########################################
 
-$Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Browser/PortableBrowsers.ps1")
-Invoke-Expression $($Chrome.Content)
-
-# Change Wallpaper
-
-$wallpaper = Invoke-WEbRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Wallpaper/wallpaper.ps1")
-Invoke-Expression $($wallpaper.Content)
+###########################################
+# Create OSDCloud ISO
+############################################
 
 
