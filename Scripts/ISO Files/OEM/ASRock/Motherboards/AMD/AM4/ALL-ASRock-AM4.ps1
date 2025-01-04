@@ -27,11 +27,23 @@ Import-Module -Name OSD -Force
 
 
 Write-Host
-Write-Verbose "Processing: ASRock AM4 Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
+Write-Verbose "Processing: Beginning file downloads" -Verbose
 Write-Host 
 
-$PS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/PS7Download.ps1")
+Write-Host
+Write-Verbose "Processing: PowerShell 7.x support downloads" -Verbose
+Write-Host 
+
+$PS7 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/PS7Download.ps1")
 Invoke-Expression $($PS7.Content)
+
+Write-Host
+Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: ASRock AM4 Motherboard driver downloads" -Verbose
+Write-Host
 
 $Extreme = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Extreme%20Motherboards/Extreme.ps1")
 Invoke-Expression $($Extreme.Content)
