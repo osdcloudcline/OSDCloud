@@ -46,6 +46,23 @@ Write-Host
 Write-Verbose "Processing: ASRock AM5 Motherboard driver downloads" -Verbose
 Write-Host 
 
+$PRO = Invoke-WebRequest("")
+Invoke-Expression $($PRO.Content)
+
+$SteelLegend = Invoke-WebRequest("")
+Invoke-Expression $($SteelLegend.Content)
+
+$Taichi = Invoke-WebRequest("")
+Invoke-Expression $($Taichi.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock AM5 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 Motherboard driver downloads" -Verbose
+Write-Host 
+
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
 Get-OSDCloudTemplateNames
