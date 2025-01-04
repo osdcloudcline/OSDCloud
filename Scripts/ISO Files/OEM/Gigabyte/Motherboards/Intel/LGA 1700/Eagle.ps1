@@ -298,11 +298,7 @@ Edit-OSDCloudWinPE -DriversPath $EagleStorage1
 Edit-OSDCloudWinPE -DriversPath $EagleStorage2
 
 Write-Host
-Write-Verbose "Completed: Integration of Gigabyte AMD LGA 1700 Eagle Motherboard Drivers..." -Verbose 
-Write-Host
-
-Write-Host
-Write-Verbose "Completed: Integration of Gigabyte AMD LGA 1700 Eagle Motherboard Drivers..." -Verbose 
+Write-Verbose "Completed: Integration of Gigabyte LGA 1700 Eagle Motherboard Drivers..." -Verbose 
 Write-Host
 
 ############################################
