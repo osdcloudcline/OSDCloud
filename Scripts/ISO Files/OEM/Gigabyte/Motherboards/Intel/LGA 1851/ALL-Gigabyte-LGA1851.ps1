@@ -142,12 +142,12 @@ Write-Host
 # VBS Scripting Support
 
 $OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
-$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
-$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~64~~.cab"
+$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~64~en-us~.cab"
 $VBSName3 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
 $VBSName4 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
-$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
-$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~64~~.cab"
+$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~64~en-us~.cab"
 $VBS3 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
 $VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
 
@@ -290,7 +290,7 @@ Edit-OSDCloudWinPE -DriversPath  $AEROStorage
 # AITOP motherboard
 
 Write-Host
-Write-Verbose "Completed: Integration of Gigabyte AMD LGA 1851 AERO Motherboard Drivers..." -Verbose 
+Write-Verbose "Completed: Integration of Gigabyte  LGA 1851 AERO Motherboard Drivers..." -Verbose 
 
 Write-Host
 Write-Verbose "Processing: Gigabyte LGA 1851 AI TOP Motherboard Ethernet Drivers..." -Verbose 
@@ -321,7 +321,7 @@ Edit-OSDCloudWinPE -DriversPath  $AITOPStorage
 # AORUS motherboard
 
 Write-Host
-Write-Verbose "Completed: Integration of Gigabyte AMD LGA 1851 AI TOP Motherboard Drivers..." -Verbose 
+Write-Verbose "Completed: Integration of Gigabyte LGA 1851 AI TOP Motherboard Drivers..." -Verbose 
 Write-Host
 
 Write-Host
@@ -416,7 +416,7 @@ Edit-OSDCloudWinPE -DriversPath $AORUSStorage3
 Edit-OSDCloudWinPE -DriversPath $AORUSStorage4
 
 Write-Host
-Write-Verbose "Completed: Integration of Gigabyte AMD LGA 1851 AORUS Motherboard Drivers..." -Verbose 
+Write-Verbose "Completed: Integration of Gigabyte LGA 1851 AORUS Motherboard Drivers..." -Verbose 
 Write-Host
 
 # Eagle motherboard
@@ -471,7 +471,7 @@ Edit-OSDCloudWinPE -DriversPath $EagleStorage1
 Edit-OSDCloudWinPE -DriversPath $EagleStorage2
 
 Write-Host
-Write-Verbose "Completed: Integration of Gigabyte AMD LGA 1851 Eagle Motherboard Drivers..." -Verbose 
+Write-Verbose "Completed: Integration of Gigabyte LGA 1851 Eagle Motherboard Drivers..." -Verbose 
 Write-Host
 
 # Gaming motherboard
@@ -560,7 +560,7 @@ Edit-OSDCloudWinPE -DriversPath $GamingStorage3
 Edit-OSDCloudWinPE -DriversPath $GamingStorage4
 
 Write-Host
-Write-Verbose "Completed: Integration of Gigabyte AMD LGA 1851 Gaming Motherboard Drivers..." -Verbose 
+Write-Verbose "Completed: Integration of Gigabyte LGA 1851 Gaming Motherboard Drivers..." -Verbose 
 Write-Host
 
 # Ultra Durable motherboard
@@ -620,7 +620,7 @@ Edit-OSDCloudWinPE -DriversPath $UDStorage1
 Edit-OSDCloudWinPE -DriversPath $UDStorage2
 
 Write-Host
-Write-Verbose "Completed: Integration of Gigabyte AMD LGA 1851 Ultra Durable Motherboard Drivers..." -Verbose 
+Write-Verbose "Completed: Integration of Gigabyte LGA 1851 Ultra Durable Motherboard Drivers..." -Verbose 
 Write-Host
 
 ############################################
