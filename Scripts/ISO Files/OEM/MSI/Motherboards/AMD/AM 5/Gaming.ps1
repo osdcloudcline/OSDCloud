@@ -79,8 +79,8 @@ Write-Verbose "Confirming OSDCloud Templates......" -Verbose
 Get-OSDCloudTemplate
 
 Write-Host
-Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL MSI AM5 motherboards to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name MSI-AM5 -WinRE
+Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL MSI Gaming AM5 motherboards to enable wireless networking support..." -Verbose
+New-OSDCloudTemplate -Name MSI-Gaming-AM5 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
