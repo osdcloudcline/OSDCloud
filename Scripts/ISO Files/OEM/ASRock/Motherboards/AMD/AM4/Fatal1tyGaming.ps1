@@ -49,7 +49,7 @@ $Fatal1tyGaming = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudc
 Invoke-Expression $($Fatal1tyGaming.Content)
 
 Write-Host
-Write-Verbose "Completed: ASRock AM4 Fatal1ty GamingMotherboard driver downloads" -Verbose
+Write-Verbose "Completed: ASRock AM4 Fatal1ty Gaming Motherboard driver downloads" -Verbose
 Write-Host
 
 Write-Host
