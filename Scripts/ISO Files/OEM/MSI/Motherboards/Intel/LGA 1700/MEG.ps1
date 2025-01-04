@@ -33,20 +33,8 @@ Write-Host
 $PS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/PS7Download.ps1")
 Invoke-Expression $($PS7.Content)
 
-$Gaming = Invoke-WebRequest("")
-Invoke-Expression $($Gaming.Content)
-
-$MAG = Invoke-WebRequest("")
-Invoke-Expression $($MAG.Content)
-
 $MEG = Invoke-WebRequest("")
 Invoke-Expression $($MEG.Content)
-
-$MPG = Invoke-WebRequest("")
-Invoke-Expression $($MPG.Content)
-
-$PRO = Invoke-WebRequest("")
-Invoke-Expression $($PRO.Content)
 
 $HyperV = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
 Invoke-Expression $($HyperV.Content)
@@ -91,8 +79,8 @@ Write-Verbose "Confirming OSDCloud Templates......" -Verbose
 Get-OSDCloudTemplate
 
 Write-Host
-Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL MSI LGA1700 motherboards to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name MSI-LGA1700 -WinRE
+Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL MSI MEG LGA1700 motherboards to enable wireless networking support..." -Verbose
+New-OSDCloudTemplate -Name MSI-MEG-LGA1700 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
@@ -258,38 +246,6 @@ Invoke-Expression $($OSDCloudPS7xMods.Content)
 # MSI LGA 1700 Motherboards
 ###############################
 
-# MAG motherboard
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 MAG Motherboard Ethernet Drivers..." -Verbose 
-$MAGEthernet1 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MAG\Ethernet1"
-$MAGEthernet2 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MAG\Ethernet2"
-
-Edit-OSDCloudWinPE -DriversPath $MAGEthernet1
-Edit-OSDCloudWinPE -DriversPath $MAGEthernet2
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 MAG Motherboard WiFi Drivers..." -Verbose 
-$MAGWiFi = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MAG\WiFi"
-
-Edit-OSDCloudWinPE -DriversPath $MAGWiFi
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 MAG Motherboard Bluetooth Drivers..." -Verbose 
-$MAGBluetooth = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MAG\Bluetooth"
-
-Edit-OSDCloudWinPE -DriversPath $MAGBluetooth
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 MAG Motherboard Storage Drivers..." -Verbose 
-$MAGStorage = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MAG\Storage"
-
-Edit-OSDCloudWinPE -DriversPath  $MAGStorage
-
-Write-Host
-Write-Verbose "Completed: Integration of MSI Intel LGA 1700 MAG Motherboard Drivers..." -Verbose 
-Write-Host
-
 # MEG motherboard
 
 Write-Host
@@ -385,210 +341,6 @@ Edit-OSDCloudWinPE -DriversPath $MEGStorage4
 
 Write-Host
 Write-Verbose "Completed: Integration of MSI Intel LGA 1700 MEG Motherboard Drivers..." -Verbose 
-Write-Host
-
-# MPG motherboard
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 MPG Motherboard Ethernet Drivers..." -Verbose 
-$MPGEthernet1 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MPG\B650\Ethernet1"
-$MPGEthernet2 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MPG\B650\Ethernet2"
-$MPGEthernet3 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MPG\X870\Ethernet1"
-$MPGEthernet4 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MPG\X870\Ethernet2"
-
-
-Edit-OSDCloudWinPE -DriversPath $MPGEthernet1
-Edit-OSDCloudWinPE -DriversPath $MPGEthernet2
-Edit-OSDCloudWinPE -DriversPath $MPGEthernet3
-Edit-OSDCloudWinPE -DriversPath $MPGEthernet4
-
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 MPG Motherboard WiFi Drivers..." -Verbose 
-$MPGWiFi1 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MPG\B650\WiFi1"
-$MPGWiFi2 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MPG\B650\WiFi2"
-$MPGWiFi3 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MPG\X870\WiFi1"
-$MPGWiFi4 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MPG\X870\WiFi2"
-
-
-Edit-OSDCloudWinPE -DriversPath $MPGWiFi1
-Edit-OSDCloudWinPE -DriversPath $MPGWiFi2
-Edit-OSDCloudWinPE -DriversPath $MPGWiFi3
-Edit-OSDCloudWinPE -DriversPath $MPGWiFi4
-
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 MPG Motherboard Bluetooth Drivers..." -Verbose 
-$MPGBluetooth1 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MPG\B650\Bluetooth"
-$MPGBluetooth2 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MPG\X870\Bluetooth1"
-$MPGBluetooth3 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MPG\X870\Bluetooth2"
-
-
-Edit-OSDCloudWinPE -DriversPath $MPGBluetooth1
-Edit-OSDCloudWinPE -DriversPath $MPGBluetooth2
-Edit-OSDCloudWinPE -DriversPath $MPGBluetooth3
-
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 MPG Motherboard Storage Drivers..." -Verbose 
-$MPGStorage1 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MPG\B650\Storage\RAID\NVMe"
-$MPGStorage2 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\MPG\X870\Storage\RAID\NVMe"
-
-
-Edit-OSDCloudWinPE -DriversPath $MPGStorage1
-Edit-OSDCloudWinPE -DriversPath $MPGStorage2
-
-Write-Host
-Write-Verbose "Completed: Integration of MSI Intel LGA 1700 MPG Motherboard Drivers..." -Verbose 
-Write-Host
-
-# Gaming motherboard
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 Gaming Motherboard Ethernet Drivers..." -Verbose 
-$GamingEthernet1 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\A620\Ethernet1"
-$GamingEthernet2 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\A620\Ethernet2"
-$GamingEthernet3 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\B650\Ethernet1"
-$GamingEthernet4 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\B650\Ethernet2"
-$GamingEthernet5 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X670\Ethernet1"
-$GamingEthernet6 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X670\Ethernet2"
-$GamingEthernet7 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X870\Ethernet1"
-$GamingEthernet8 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X870\Ethernet2"
-
-
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet1
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet2
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet3
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet4
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet5
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet6
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet7
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet8
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 Gaming Motherboard WiFi Drivers..." -Verbose 
-$GamingWiFi1 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\A620\WiFi1"
-$GamingWiFi2 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\B650\WiFi1"
-$GamingWiFi3 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\B650\WiFi2"
-$GamingWiFi4 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\B650\WiFi3"
-$GamingWiFi5 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X670\WiFi1"
-$GamingWiFi6 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X670\WiFi2"
-$GamingWiFi7 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X870\WiFi1"
-$GamingWiFi8 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X870\WiFi2"
-$GamingWiFi9 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X870\WiFi3"
-$GamingWiFi10 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X870\WiFi4"
-$GamingWiFi11 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X870\WiFi5"
-$GamingWiFi12 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X870\WiFi6"
-
-Edit-OSDCloudWinPE -DriversPath $GamingWiFi1
-Edit-OSDCloudWinPE -DriversPath $GamingWiFi2
-Edit-OSDCloudWinPE -DriversPath $GamingWiFi3
-Edit-OSDCloudWinPE -DriversPath $GamingWiFi4
-Edit-OSDCloudWinPE -DriversPath $GamingWiFi5
-Edit-OSDCloudWinPE -DriversPath $GamingWiFi6
-Edit-OSDCloudWinPE -DriversPath $GamingWiFi7
-Edit-OSDCloudWinPE -DriversPath $GamingWiFi8
-Edit-OSDCloudWinPE -DriversPath $GamingWiFi9
-Edit-OSDCloudWinPE -DriversPath $GamingWiFi10
-Edit-OSDCloudWinPE -DriversPath $GamingWiFi11
-Edit-OSDCloudWinPE -DriversPath $GamingWiFi12
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 Gaming Motherboard Bluetooth Drivers..." -Verbose 
-$GamingBluetooth1 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\A620\Bluetooth"
-$GamingBluetooth2 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\B650\Bluetooth1"
-$GamingBluetooth3 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\B650\Bluetooth2"
-$GamingBluetooth4 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X670\Bluetooth1"
-$GamingBluetooth5 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X670\Bluetooth2"
-$GamingBluetooth6 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X870\Bluetooth1"
-$GamingBluetooth7 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X870\Bluetooth2"
-$GamingBluetooth8 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X870\Bluetooth3"
-
-Edit-OSDCloudWinPE -DriversPath $GamingBluetooth1
-Edit-OSDCloudWinPE -DriversPath $GamingBluetooth2
-Edit-OSDCloudWinPE -DriversPath $GamingBluetooth3
-Edit-OSDCloudWinPE -DriversPath $GamingBluetooth4
-Edit-OSDCloudWinPE -DriversPath $GamingBluetooth5
-Edit-OSDCloudWinPE -DriversPath $GamingBluetooth6
-Edit-OSDCloudWinPE -DriversPath $GamingBluetooth7
-Edit-OSDCloudWinPE -DriversPath $GamingBluetooth8
-
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 Gaming Motherboard Storage Drivers..." -Verbose 
-$GamingStorage1 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\A620\Storage\RAID\NVMe"
-$GamingStorage2 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\B650\Storage\RAID\NVMe"
-$GamingStorage3 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X670\Storage\RAID\NVMe"
-$GamingStorage4 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\Gaming\X870\Storage\RAID\NVMe"
-
-
-Edit-OSDCloudWinPE -DriversPath $GamingStorage1
-Edit-OSDCloudWinPE -DriversPath $GamingStorage2
-Edit-OSDCloudWinPE -DriversPath $GamingStorage3
-Edit-OSDCloudWinPE -DriversPath $GamingStorage4
-
-Write-Host
-Write-Verbose "Completed: Integration of MSI Intel LGA 1700 Gaming Motherboard Drivers..." -Verbose 
-Write-Host
-
-# PRO motherboard
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 PRO Motherboard Ethernet Drivers..." -Verbose 
-$PROEthernet1 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\A620\Ethernet1"
-$PROEthernet2 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\A620\Ethernet2"
-$PROEthernet3 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\B650\Ethernet1"
-$PROEthernet4 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\B650\Ethernet2"
-
-Edit-OSDCloudWinPE -DriversPath $PROEthernet1
-Edit-OSDCloudWinPE -DriversPath $PROEthernet2
-Edit-OSDCloudWinPE -DriversPath $PROEthernet3
-Edit-OSDCloudWinPE -DriversPath $PROEthernet4
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 PRO Motherboard WiFi Drivers..." -Verbose 
-$PROWiFi1 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\A620\WiFi1"
-$PROWiFi2 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\A620\WiFi2"
-$PROWiFi3 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\B650\WiFi1"
-$PROWiFi4 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\B650\WiFi2"
-$PROWiFi5 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\B650\WiFi3"
-$PROWiFi6 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\B650\WiFi4"
-$PROWiFi7 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\B650\WiFi5"
-$PROWiFi8 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\B650\WiFi6"
-
-Edit-OSDCloudWinPE -DriversPath $PROWiFi1
-Edit-OSDCloudWinPE -DriversPath $PROWiFi2
-Edit-OSDCloudWinPE -DriversPath $PROWiFi3
-Edit-OSDCloudWinPE -DriversPath $PROWiFi4
-Edit-OSDCloudWinPE -DriversPath $PROWiFi5
-Edit-OSDCloudWinPE -DriversPath $PROWiFi6
-Edit-OSDCloudWinPE -DriversPath $PROWiFi7
-Edit-OSDCloudWinPE -DriversPath $PROWiFi8
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 PRO Motherboard Bluetooth Drivers..." -Verbose 
-$PROBluetooth1 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\A620\Bluetooth1"
-$PROBluetooth2 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\A620\Bluetooth2"
-$PROBluetooth3 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\B650\Bluetooth1"
-$PROBluetooth4 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\B650\Bluetooth2"
-$PROBluetooth5 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\B650\Bluetooth3"
-
-Edit-OSDCloudWinPE -DriversPath $PROBluetooth1
-Edit-OSDCloudWinPE -DriversPath $PROBluetooth2
-Edit-OSDCloudWinPE -DriversPath $PROBluetooth3
-Edit-OSDCloudWinPE -DriversPath $PROBluetooth4
-Edit-OSDCloudWinPE -DriversPath $PROBluetooth5
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 PRO Motherboard Storage Drivers..." -Verbose 
-$PROStorage1 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\A620\Storage\RAID\NVMe"
-$PROStorage2 = "C:\OSDCloud\Drivers\Motherboards\MSI\LGA1700\PRO\B650\Storage\RAID\NVMe"
-
-Edit-OSDCloudWinPE -DriversPath $PROStorage1
-Edit-OSDCloudWinPE -DriversPath $PROStorage2
-
-Write-Host
-Write-Verbose "Completed: Integration of MSI Intel LGA 1700 PRO Motherboard Drivers..." -Verbose 
 Write-Host
 
 ############################################
