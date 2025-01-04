@@ -184,13 +184,12 @@ Write-Host
 $OSDCloudWallpaper = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Wallpaper/OSDCloudWallpaper-Download.ps1")
 Invoke-Expression $($OSDCloudWallpaper.Content) 
 
-
-
-
+################################################
+# OSDCloud Template and Workspace configuration
+################################################
 
 Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
 New-OSDCloudTemplate -Name OSDCloud-AM4 -WinRE
-
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
