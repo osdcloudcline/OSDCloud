@@ -63,6 +63,41 @@ Write-Host
 Write-Verbose "Processing: ASUS AM5 Motherboard driver downloads" -Verbose
 Write-Host 
 
+$Business = Invoke-WebRequest("")
+Invoke-Expression $($Business.Content)
+
+$CSM = Invoke-WebRequest("")
+Invoke-Expression $($CSM.Content)
+
+$Expedition = Invoke-WebRequest("")
+Invoke-Expression $($Expedition.Content)
+
+$Others = Invoke-WebRequest("")
+Invoke-Expression $($Others.Content)
+
+$PRIME = Invoke-WebRequest("")
+Invoke-Expression $($PRIME.Content)
+
+$CSM = Invoke-WebRequest("")
+Invoke-Expression $($CSM.Content)
+
+$ProArt = Invoke-WebRequest("")
+Invoke-Expression $($ProArt.Content)
+
+$ROG = Invoke-WebRequest("")
+Invoke-Expression $($ROG.Content)
+
+$TUFGaming = Invoke-WebRequest("")
+Invoke-Expression $($TUFGaming.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS AM5 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM5 Motherboard driver downloads" -Verbose
+Write-Host
+
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
 Get-OSDCloudTemplateNames
