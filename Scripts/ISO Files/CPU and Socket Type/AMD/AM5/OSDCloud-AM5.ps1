@@ -213,6 +213,13 @@ Write-Host
 Write-Verbose "Completed: OSDCloud wallpaper download" -Verbose
 Write-Host
 
+################################################
+# OSDCloud Template and Workspace configuration
+################################################
+
+Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
+New-OSDCloudTemplate -Name OSDCloud-AM5 -WinRE
+
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
 Get-OSDCloudTemplateNames
@@ -222,16 +229,41 @@ Write-Verbose "Retriving OSDCloud Workspaces..." -Verbose
 Get-OSDCloudWorkspace
 
 Write-Host
-Write-Verbose "Configuring new OSDCloud Workspace Path..." -Verbose
+Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
 $WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
+Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
 Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
-# ASRock AM5 motherboards
+#################################
+# Adding PowerShell 7 to OSDCloud 
+#################################
 
+$AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
+Invoke-Expression $($AddPS7.Content)
+
+#################################
+# OSDCloud - Cloud Drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: OSDCloud - Cloud Drivers..." -Verbose 
+
+Edit-OSDCloudWinPE -CloudDriver USB,VMware,WiFi
+
+Write-Host
+Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
+Write-Host
+
+
+#########################################################################
+#  AM5 motherboards
+##########################################################################
+
+# ASRock AM5 PRO motherboards
 Write-Host
 Write-Verbose "Processing: ASRock AM 5 PRO Motherboard Ethernet Drivers..." -Verbose 
 $PROEthernet = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\PRO\Ethernet"
@@ -254,6 +286,7 @@ Write-Host
 Write-Verbose "Processing: ASRock AM 5 PRO Motherboard Storage Drivers..." -Verbose 
 $PROStorage = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\PRO\Storage"
 
+# ASRock AM5 Steel Legend motherboards
 Write-Host
 Write-Verbose "Processing: ASRock AM 5 Steel Legend Motherboard Ethernet Drivers..." -Verbose 
 $SteelLegendEthernet = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\SteelLegend\Ethernet"
@@ -278,6 +311,7 @@ $SteelLegendStorage = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\SteelLegend\S
 
 Edit-OSDCloudWinPE -DriversPath $SteelLegendStorage
 
+# ASRock AM5 TaiChi motherboards
 Write-Host
 Write-Verbose "Processing: ASRock AM 5 Taichi Motherboard Ethernet Drivers..." -Verbose 
 $TaichiEthernet = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\Taichi\Ethernet"
@@ -305,3 +339,16 @@ $TaichiStorage = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\Taichi\Storage"
 Edit-OSDCloudWinPE -DriversPath $TaichiStorage
 
 # ASUS AM5 motherboards
+
+
+
+
+
+
+# Gigabyte AM5 motherboards
+
+
+
+
+
+# MSI AM5 motherboards
