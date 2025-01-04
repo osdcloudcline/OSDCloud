@@ -25,26 +25,187 @@ Write-Host '                                                                    
 pause
 Clear-Host
 
-Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name WinRE -WinRE
+Write-Host
+Write-Verbose "Processing: PowerShell 7.x support downloads" -Verbose
+Write-Host 
 
+$PS7 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/PS7Download.ps1")
+Invoke-Expression $($PS7.Content)
 
 Write-Host
-Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
-Get-OSDCloudTemplateNames
+Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
+Write-Host
 
 Write-Host
-Write-Verbose "Retriving OSDCloud Workspaces..." -Verbose
-Get-OSDCloudWorkspace
+Write-Verbose "Processing: ASRock AM4 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$Extreme = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Extreme%20Motherboards/Extreme.ps1")
+Invoke-Expression $($Extreme.Content)
+
+$Fatal1tyGaming = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Fatal1ty%20Gaming%20Motherboards/Fatal1tyGaming.ps1")
+Invoke-Expression $($Fatal1tyGaming.Content)
+
+$PRO = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/PRO%20Motherboards/PRO.ps1")
+Invoke-Expression $($PRO.Content)
+
+$PhantomGaming = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Phantom%20Gaming%20Motherboards/PhantomGaming.ps1")
+Invoke-Expression $($PhantomGaming.Content)
+
+$SteelLegend = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Steel%20Legend%20Motherboards/SteelLegend.ps1")
+Invoke-Expression $($SteelLegend.Content)
+
+$Taichi = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Taichi%20Motherboards/Taichi.ps1")
+Invoke-Expression $($Taichi.Content)
 
 Write-Host
-Write-Verbose "Configuring new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
-New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
+Write-Verbose "Completed: ASRock AM4 Motherboard driver downloads" -Verbose
+Write-Host 
 
 Write-Host
-Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
-Get-OSDCloudWorkspace
+Write-Verbose "Processing: ASUS AM4 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$Business = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/Business%20Motherboards/Business.ps1")
+Invoke-Expression $($Business.Content)
+
+$CSM = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/CSM%20Motherboards/CSM.ps1")
+Invoke-Expression $($CSM.Content)
+
+$Others = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/Other%20Motherboards/Others.ps1")
+Invoke-Expression $($Others.Content)
+
+$PRIME = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/PRIME%20Motherboards/PRIME.ps1")
+Invoke-Expression $($PRIME.Content)
+
+$ProArt = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/ProArt%20Motherboards/ProArt.ps1")
+Invoke-Expression $($ProArt.Content)
+
+$ROG = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/ROG%20-%20Republic%20of%20Gamers%20Motherboards/ROG%20-%20Republic%20of%20Gamers.ps1")
+Invoke-Expression $($ROG.Content)
+
+$TUFGaming = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/TUF%20Gaming%20Motherboards/TUF%20Gaming.ps1")
+Invoke-Expression $($TUFGaming.Content)
+
+$Workstation = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/Workstation%20Motherboards/Workstation.ps1")
+Invoke-Expression $($Workstation.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS AM4 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM4 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$AERO = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/AERO/AERO.ps1")
+Invoke-Expression $($AERO.Content)
+
+$AORUS = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/AORUS/AORUS.ps1")
+Invoke-Expression $($AORUS.Content)
+
+$Gaming = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/Gaming/Gaming.ps1")
+Invoke-Expression $($Gaming.Content)
+
+$UD = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/Ultra%20Durable/UltraDurable.ps1")
+Invoke-Expression $($UD.Content)
+
+Write-Host
+Write-Verbose "Completed: Gigabyte AM4 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: ALL Virtualization driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Microsoft Hyper-V virtualization driver downloads" -Verbose
+Write-Host 
+
+$HyperV = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
+Invoke-Expression $($HyperV.Content)
+
+Write-Host
+Write-Verbose "Processing: Proxmox virtualization driver downloads" -Verbose
+Write-Host
+
+$Proxmox = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/Proxmox/Proxmox.ps1")
+Invoke-Expression $($Proxmox.Content)
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere virtualization driver downloads" -Verbose
+Write-Host
+
+$ESXI = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/VMWare%20ESXI/ESXI-Drivers.ps1")
+Invoke-Expression $($ESXI.Content)
+
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro virtualization driver downloads" -Verbose
+Write-Host
+
+$VMWareWSPro = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/VMWare%20Workstation/VMWare-WorkstationPRO-Drivers.ps1")
+Invoke-Expression $($VMWareWSPro.Content)
+
+Write-Host
+Write-Verbose "Completed: ALL Virtualization driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Additional OSDCloud scripting support downloads" -Verbose
+Write-Host
+
+$VBS = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Scripting%20Support/VBS%20Scripting/VBSScriptingSupport-Download.ps1")
+Invoke-Expression $($VBS.Content)
+
+Write-Host
+Write-Verbose "Completed: Additional OSDCloud scripting support downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Google Chrome - portable browser" -Verbose
+Write-Host
+
+$PortableBrowser = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Browser/PortableBrowser-Download.ps1")
+Invoke-WebRequest $($PortableBrowser.Content)
+
+Write-Host
+Write-Verbose "Processing: User Profile Backup and Restore" -Verbose
+Write-Host
+
+$UPBR = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/User%20Profile%20Backup%20Restore/UPBR-Download.ps1")
+Invoke-Expression $($UPBR.Content)
+
+Write-Host
+Write-Verbose "Processing: System Imaging utilities" -Verbose
+Write-Host
+
+$Ghost = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Imaging/Ghost/Ghosting.ps1")
+Invoke-Expression $($Ghost.Content)
+
+Write-Host
+Write-Verbose "Processing: Microsoft DaRT and Remote Desktop Connections" -Verbose
+Write-Host
+
+$DaRT = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/DaRT/DaRT.ps1")
+Invoke-WebRequest $($DaRT.Content)
+
+$MSTSC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Remote%20Desktop%20Control/MSTSC.ps1")
+Invoke-Expression $($MSTSC.Content)
+
+Write-Host
+Write-Verbose "Completed: Download of Extra OSDCloud ISO Utilities" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: NEW OSDCloud wallpaper" -Verbose
+Write-Host
+
+$OSDCloudWallpaper = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Wallpaper/OSDCloudWallpaper-Download.ps1")
+Invoke-Expression $($OSDCloudWallpaper.Content) 
+
+Write-Host
+Write-Verbose "Completed: OSDCloud wallpaper download" -Verbose
+Write-Host
 
 
 # AM4 CPU Socket
