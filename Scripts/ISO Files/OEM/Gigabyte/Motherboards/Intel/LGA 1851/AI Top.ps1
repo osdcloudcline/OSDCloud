@@ -278,7 +278,7 @@ $AITOPStorage = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\LGA1851\AI-TOP\Storag
 Edit-OSDCloudWinPE -DriversPath  $AITOPStorage
 
 Write-Host
-Write-Verbose "Completed: Integration of Gigabyte AMD LGA 1851 AI TOP Motherboard Drivers..." -Verbose 
+Write-Verbose "Completed: Integration of Gigabyte LGA 1851 AI TOP Motherboard Drivers..." -Verbose 
 Write-Host
 
 ############################################
