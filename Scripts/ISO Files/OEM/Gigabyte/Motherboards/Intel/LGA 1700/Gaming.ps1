@@ -332,7 +332,7 @@ Edit-OSDCloudWinPE -DriversPath $GamingStorage3
 Edit-OSDCloudWinPE -DriversPath $GamingStorage4
 
 Write-Host
-Write-Verbose "Completed: Integration of Gigabyte AMD LGA 1700 Gaming Motherboard Drivers..." -Verbose 
+Write-Verbose "Completed: Integration of Gigabyte LGA 1700 Gaming Motherboard Drivers..." -Verbose 
 Write-Host
 
 ############################################
