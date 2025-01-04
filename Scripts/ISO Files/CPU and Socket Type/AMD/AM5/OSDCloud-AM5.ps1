@@ -39,7 +39,9 @@ Write-Host
 Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
 Write-Host
 
-
+Write-Host
+Write-Verbose "Processing: ASRock AM5 Motherboard driver downloads" -Verbose
+Write-Host 
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
