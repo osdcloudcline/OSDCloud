@@ -1,6 +1,6 @@
 $MSTSCLog = "C:\Logs\OSDCloud\MSTSC\MSTSC.log"
 
-Start-Process -Path $MSTSCLog
+Start-Transcript -Path $MSTSCLog
 
 Get-Date
 
