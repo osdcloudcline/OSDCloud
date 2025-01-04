@@ -200,16 +200,164 @@ Write-Verbose "Retriving OSDCloud Workspaces..." -Verbose
 Get-OSDCloudWorkspace
 
 Write-Host
-Write-Verbose "Configuring new OSDCloud Workspace Path..." -Verbose
+Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
 $WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
+Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
 Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
+#################################
+# Adding PowerShell 7 to OSDCloud 
+#################################
+
+$AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
+Invoke-Expression $($AddPS7.Content)
+
+#################################
+# OSDCloud - Cloud Drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: OSDCloud - Cloud Drivers..." -Verbose 
+
+Edit-OSDCloudWinPE -CloudDriver USB,VMware,WiFi
+
+Write-Host
+Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
+Write-Host
+
+######################################
+## Extra Scripting Support
+######################################
+
+# VBS Scripting Support
+
+$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
+$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBSName3 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBSName4 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBS3 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+
+$sourceWIMDir = "\Media\sources"
+$WorkspacePath = Get-OSDCloudWorkspace
+$WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
+$mountdir = "C:\Mount"
+
+Write-Verbose "Processing: Mounting OSDCloud boot.wim" -Verbose
+# Mount the image
+
+Mount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
+
+Write-Host
+Write-Verbose "Processing: VBS Scripting Support..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing Item: $VBSName1..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName2..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName3..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName4..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
+
+Write-Host
+Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
+Write-Host
+
+########################################
+# 3rd party software and utilities
+########################################
+
+# Portable Browsers
+
+Write-Host
+Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verbose 
+$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
+$ChromeDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $ChromePath -Destination $ChromeDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
+Write-Host
+
+# MS DaRT Remote Connections and Troubleshooting
+
+# ServiceUI
+
+# CMTrace 
+
+# Ghost Imaging
+
+Write-Host
+Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
+$Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
+$GhostExplorerPath = "C:\OSDCloud\GitHub\downloads\Ghost\Ghostexp.exe"
+$GhostServPath = "C:\OSDCloud\GitHub\downloads\Ghost\GhostSrv.exe"
+$GhostDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $Ghost64Path -Destination $GhostDestination -Force
+Copy-Item -Path $GhostExplorerPath -Destination $GhostDestination -Force
+Copy-Item -Path $GhostServPath -Destination $GhostDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Ghost Imaging for OSDCloud..." -Verbose
+Write-Host
+
+# User Profile Backup and Restore 
+
+Write-Host
+Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
+$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
+$UBPRDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
+Write-Host
+
+# Disount the image
+Write-Host
+Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
+
+Dismount-WindowsImage -Path $mountdir -Save
+
+######################################
+## Extra PowerShell Modules - OSDCloud
+######################################
+
+# PowerShell 5.1 Modules - OSDCloud
+
+$OSDCloudPS5xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS5xMods.Content)
+
+# PowerShell 7.x Modules - OSDCloud
+
+$OSDCloudPS7xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS7xMods.Content)
+
+############################################################################################################
+#######    ALL AMD Socket AM 4 Motherboards
+############################################################################################################
+
 # ASUS AM 4 Motherboards
 
+# ASUS Business AM4 motherboard
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 Business Motherboard Ethernet Drivers..." -Verbose 
 $BusinessEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Business\Ethernet1"
@@ -224,6 +372,7 @@ $BusinessStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Business\Storage"
 
 Edit-OSDCloudWinPE -DriverPath $BusinessStorage
 
+# ASUS CSM AM4 motherboard
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 CSM Motherboard Ethernet Drivers..." -Verbose 
 $CSMEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\CSM\Ethernet"
@@ -238,6 +387,7 @@ $CSMStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\CSM\Storage2"
 Edit-OSDCloudWinPE -DriverPath $CSMStorage1
 Edit-OSDCloudWinPE -DriverPath $CSMStorage2
 
+# ASUS Others AM4 motherboard
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 Other Motherboard Ethernet Drivers..." -Verbose 
 $OtherEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Other\Ethernet"
@@ -260,6 +410,7 @@ Edit-OSDCloudWinPE -DriverPath $PRIMEEthernet1
 Edit-OSDCloudWinPE -DriverPath $PRIMEEthernet2
 Edit-OSDCloudWinPE -DriverPath $PRIMEEthernet3
 
+# ASUS PRIME AM4 motherboard
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 PRIME Motherboard WiFi Drivers..." -Verbose 
 $PRIMEWiFi = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\PRIME\WiFi"
@@ -278,6 +429,7 @@ Edit-OSDCloudWinPE -DriverPath $PRIMEStorage2
 Edit-OSDCloudWinPE -DriverPath $PRIMEStorage3
 Edit-OSDCloudWinPE -DriverPath $PRIMEStorage4
 
+# ASUS ProArt AM4 motherboard
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 ProArt Motherboard Ethernet Drivers..." -Verbose 
 $ProArtEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ProArt\Ethernet"
@@ -296,6 +448,7 @@ $ProArtStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ProArt\Storage"
 
 Edit-OSDCloudWinPE -DriverPath $ProArtStorage
 
+# ASUS ROG - Republic of Gamers AM4 motherboard
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 ROG - Republic of Gamers Motherboard Bluetooth Drivers..." -Verbose 
 $ROGBluetooth = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ROG\Bluetooth"
@@ -337,6 +490,7 @@ $ROGStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\ROG\Storage"
 Edit-OSDCloudWinPE -DriverPath $ROGStorage1
 Edit-OSDCloudWinPE -DriverPath $ROGStorage2
 
+# ASUS TUF Gaming  AM4 motherboard
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 TUF Gaming Motherboard Bluetooth Drivers..." -Verbose 
 $TUFBluetooth = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\Bluetooth"
@@ -379,6 +533,7 @@ $TUFStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\TUF\Storage2"
 Edit-OSDCloudWinPE -DriverPath $TUFStorage1
 Edit-OSDCloudWinPE -DriverPath $TUFStorage2
 
+# ASUS Workstations AM4 motherboard
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 Workstation Motherboard Ethernet Drivers..." -Verbose 
 $WorkstationEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Workstation\Ethernet"
@@ -394,11 +549,15 @@ Edit-OSDCloudWinPE -DriverPath $WorkstationStorage1
 Edit-OSDCloudWinPE -DriverPath $WorkstationStorage2
 
 Write-Host
-Write-Verbose "Completed: Integration of ASUS Intel AM 4 Motherboard Drivers..." -Verbose 
+Write-Verbose "Completed: Integration of ASUS AMD AM 4 Motherboard Drivers..." -Verbose 
 
 # ASRock AM 4 Motherboards
 
 Write-Host
+Write-Verbose "Processing: Integration of ASRock AMD AM 4 Motherboard Drivers..." -Verbose 
+Write-Host
+
+# ASRock Extreme AM4 motherboards
 Write-Verbose "Processing: ASRock AM 4 Extreme Motherboard Ethernet Drivers..." -Verbose 
 $ExtremeEthernet = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Extreme\Ethernet"
 
@@ -412,6 +571,7 @@ $ExtremeStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Extreme\Storage2
 Edit-OSDCloudWinPE -DriversPath $ExtremeStorage1
 Edit-OSDCloudWinPE -DriversPath $ExtremeStorage2
 
+# ASRock PRO AM4 motherboards
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 PRO Motherboard Ethernet Drivers..." -Verbose 
 $PROEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PRO\Ethernet1"
@@ -432,6 +592,7 @@ $PROStorage = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PRO\Storage"
 
 Edit-OSDCloudWinPE -DriversPath $PROStorage
 
+# ASRock Phantom Gaming AM4 motherboards
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Phantom Gaming Motherboard Ethernet Drivers..." -Verbose 
 $PhantomGamingEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PhantomGaming\Ethernet1"
@@ -460,6 +621,7 @@ $PhantomGamingStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PhantomGam
 Edit-OSDCloudWinPE -DriversPath $PhantomGamingStorage1
 Edit-OSDCloudWinPE -DriversPath $PhantomGamingStorage2
 
+# ASRock Steel Legend AM4 motherboards
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Steel Legend Motherboard Ethernet Drivers..." -Verbose 
 $SteelLegendEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\SteelLegend\Ethernet1"
@@ -486,6 +648,7 @@ $SteelLegendStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\SteelLegend\
 Edit-OSDCloudWinPE -DriversPath $SteelLegendStorage1
 Edit-OSDCloudWinPE -DriversPath $SteelLegendStorage2
 
+# ASRock Taichi AM4 motherboards
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Taichi Motherboard Ethernet Drivers..." -Verbose 
 $TaichiEthernet = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Taichi\Ethernet"
