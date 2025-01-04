@@ -315,11 +315,11 @@ $MAGStorage = "C:\OSDCloud\Drivers\Motherboards\MSI\AM5\MAG\Storage"
 
 Edit-OSDCloudWinPE -DriversPath  $MAGStorage
 
-# MEG motherboard
-
 Write-Host
 Write-Verbose "Completed: Integration of MSI AMD AM 5 MAG Motherboard Drivers..." -Verbose 
 Write-Host
+
+# MEG motherboard
 
 Write-Host
 Write-Verbose "Processing: MSI AM 5 MEG Motherboard Ethernet Drivers..." -Verbose 
