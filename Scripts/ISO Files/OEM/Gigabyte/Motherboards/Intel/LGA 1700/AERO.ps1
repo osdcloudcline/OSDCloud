@@ -272,6 +272,9 @@ $AEROStorage = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\LGA1700\AERO\Storage"
 
 Edit-OSDCloudWinPE -DriversPath  $AEROStorage
 
+Write-Host
+Write-Verbose "Completed: Gigabyte LGA 1700 AERO Motherboard Drivers..." -Verbose
+Write-Host
 ############################################
 # Other Drivers
 ############################################
