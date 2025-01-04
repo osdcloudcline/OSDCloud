@@ -284,37 +284,6 @@ $AEROStorage = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\LGA1700\AERO\Storage"
 
 Edit-OSDCloudWinPE -DriversPath  $AEROStorage
 
-# AITOP motherboard
-
-Write-Host
-Write-Verbose "Completed: Integration of Gigabyte AMD LGA 1700 AERO Motherboard Drivers..." -Verbose 
-
-Write-Host
-Write-Verbose "Processing: Gigabyte LGA 1700 AI TOP Motherboard Ethernet Drivers..." -Verbose 
-$AITOPEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\LGA1700\AI-TOP\Ethernet1"
-$AITOPEthernet2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\LGA1700\AI-TOP\Ethernet2"
-
-Edit-OSDCloudWinPE -DriversPath $AITOPEthernet1
-Edit-OSDCloudWinPE -DriversPath $AITOPEthernet2
-
-Write-Host
-Write-Verbose "Processing: Gigabyte LGA 1700 AI TOP Motherboard WiFi Drivers..." -Verbose 
-$AITOPWiFi = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\LGA1700\AI-TOP\WiFi"
-
-Edit-OSDCloudWinPE -DriversPath $AITOPWiFi
-
-Write-Host
-Write-Verbose "Processing: Gigabyte LGA 1700 AI TOP Motherboard Bluetooth Drivers..." -Verbose 
-$AITOPBluetooth = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\LGA1700\AI-TOP\Bluetooth"
-
-Edit-OSDCloudWinPE -DriversPath $AITOPBluetooth
-
-Write-Host
-Write-Verbose "Processing: Gigabyte LGA 1700 AI TOP Motherboard Storage Drivers..." -Verbose 
-$AITOPStorage = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\LGA1700\AI-TOP\Storage"
-
-Edit-OSDCloudWinPE -DriversPath  $AITOPStorage
-
 # AORUS motherboard
 
 Write-Host
