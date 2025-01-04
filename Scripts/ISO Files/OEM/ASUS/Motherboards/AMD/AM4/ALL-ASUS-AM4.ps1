@@ -40,6 +40,10 @@ Write-Host
 Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
 Write-Host
 
+Write-Host
+Write-Verbose "Processing: ASUS AM4 motherboard driver downloads" -Verbose
+Write-Host 
+
 $Business = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/Business%20Motherboards/Business.ps1")
 Invoke-Expression $($Business.Content)
 
@@ -63,6 +67,10 @@ Invoke-Expression $($TUFGaming.Content)
 
 $Workstation = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/Workstation%20Motherboards/Workstation.ps1")
 Invoke-Expression $($Workstation.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS AM4 motherboard driver downloads" -Verbose
+Write-Host 
 
 Write-Host
 Write-Verbose "Processing: ALL Virtualization driver downloads" -Verbose
