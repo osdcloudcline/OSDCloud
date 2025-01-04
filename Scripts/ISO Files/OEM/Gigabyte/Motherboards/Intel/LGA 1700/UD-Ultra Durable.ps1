@@ -303,7 +303,7 @@ Edit-OSDCloudWinPE -DriversPath $UDStorage1
 Edit-OSDCloudWinPE -DriversPath $UDStorage2
 
 Write-Host
-Write-Verbose "Completed: Integration of Gigabyte AMD LGA 1700 Ultra Durable Motherboard Drivers..." -Verbose 
+Write-Verbose "Completed: Integration of Gigabyte LGA 1700 Ultra Durable Motherboard Drivers..." -Verbose 
 Write-Host
 
 ############################################
