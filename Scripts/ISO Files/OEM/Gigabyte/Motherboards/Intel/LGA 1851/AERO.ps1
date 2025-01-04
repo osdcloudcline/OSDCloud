@@ -272,7 +272,9 @@ $AEROStorage = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\LGA1851\AERO\Storage"
 
 Edit-OSDCloudWinPE -DriversPath  $AEROStorage
 
-
+Write-Host
+Write-Verbose "Completed: Integration of Gigabyte LGA 1851 AERO Motherboard Drivers..." -Verbose 
+Write-Host
 
 ############################################
 # Other Drivers
