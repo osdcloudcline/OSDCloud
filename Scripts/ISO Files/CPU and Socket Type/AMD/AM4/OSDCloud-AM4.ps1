@@ -621,6 +621,38 @@ $PhantomGamingStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\PhantomGam
 Edit-OSDCloudWinPE -DriversPath $PhantomGamingStorage1
 Edit-OSDCloudWinPE -DriversPath $PhantomGamingStorage2
 
+# ASRock Fatal1ty Gaming AM4 motherboards
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Fatal1ty Gaming Motherboard Ethernet Drivers..." -Verbose 
+$Fatal1tyGamingEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Fatal1tyGaming\Ethernet1"
+$Fatal1tyGamingEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Fatal1tyGaming\Ethernet2"
+
+Edit-OSDCloudWinPE -DriversPath $Fatal1tyGamingEthernet1
+Edit-OSDCloudWinPE -DriversPath $Fatal1tyGamingEthernet2
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Fatal1ty Gaming Motherboard WiFi Drivers..." -Verbose 
+$Fatal1tyGamingWiFi1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Fatal1tyGaming\WiFi1"
+$Fatal1tyGamingWiFi2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Fatal1tyGaming\WiFi2"
+
+Edit-OSDCloudWinPE -DriversPath $Fatal1tyGamingWiFi1
+Edit-OSDCloudWinPE -DriversPath $Fatal1tyGamingWiFi2
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Fatal1ty Gaming Motherboard Bluetooth Drivers..." -Verbose 
+$Fatal1tyGamingBluetooth = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Fatal1tyGaming\Bluetooth"
+
+Edit-OSDCloudWinPE -DriversPath $Fatal1tyGamingBluetooth
+
+Write-Host
+Write-Verbose "Processing: ASRock AM 4 Extreme Motherboard Storage Drivers..." -Verbose 
+$Fatal1tyGamingStorage1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Fatal1tyGaming\Storage1"
+$Fatal1tyGamingStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Fatal1tyGaming\Storage2"
+
+Edit-OSDCloudWinPE -DriversPath $Fatal1tyGamingStorage1
+Edit-OSDCloudWinPE -DriversPath $Fatal1tyGamingStorage2
+
+
 # ASRock Steel Legend AM4 motherboards
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Steel Legend Motherboard Ethernet Drivers..." -Verbose 
@@ -676,6 +708,11 @@ Write-Verbose "Completed: Integration of ASRock AMD AM 4 Motherboard Drivers..."
 # Gigabyte AM 4 Motherboards
 
 Write-Host
+Write-Verbose "Processing: Integration of Gigabyte AMD AM 4 Motherboard Drivers..." -Verbose 
+Write-Host
+
+# Gigabyte AERO AM4 motherboards
+Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 AERO Motherboard Ethernet Drivers..." -Verbose 
 $AEROEthernet = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM4\AERO\Ethernet"
 
@@ -689,6 +726,7 @@ $AEROWiFi2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM4\AERO\WiFi2"
 Edit-OSDCloudWinPE -DriversPath $AEROWiFi1
 Edit-OSDCloudWinPE -DriversPath $AEROWiFi2
 
+# Gigabyte AORUS AM4 motherboards
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 AERO Motherboard Storage Drivers..." -Verbose 
 $AEROStorage1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AM4\AERO\Storage1"
@@ -793,6 +831,7 @@ $AORUSBluetooth2 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\AORUS\X570\Bluetoo
 Edit-OSDCloudWinPE -DriverPath $AORUSBluetooth1
 Edit-OSDCloudWinPE -DriverPath $AORUSBluetooth2
 
+# Gigabyte Gaming AM4 motherboards
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 Gaming Motherboard Ethernet Drivers..." -Verbose 
 $GamingEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Gaming\B350\Ethernet"
@@ -855,6 +894,7 @@ Edit-OSDCloudWinPE -DriverPath $GamingStorage13
 Edit-OSDCloudWinPE -DriverPath $GamingStorage14
 Edit-OSDCloudWinPE -DriverPath $GamingStorage15
 
+# Gigabyte Ultra Durable AM4 motherboards
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 Ultra Durable Motherboard Ethernet Drivers..." -Verbose 
 $UDEthernet1 = "C:\OSDCloud\Drivers\Motherboards\Gigabyte\Ultra Durable\A520\Ethernet1"
@@ -960,6 +1000,9 @@ Write-Verbose "Completed: Integration of Gigabyte AMD AM 4 Motherboard Drivers..
 
 Write-Host
 Write-Verbose "Attention: MSI does not have any AM 4 motherboard downloads avaible on their website..." -Verbose 
+
+Write-Host
+Write-Verbose "Completed: Integration of ALL AMD - Socket AM 4 Motherboard Drivers..." -Verbose 
 
 # OSDCloud Cloud Drivers
 
