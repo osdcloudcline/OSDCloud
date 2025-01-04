@@ -37,6 +37,10 @@ Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
 Write-Host
 
 Write-Host
+Write-Verbose "Processing: AMD Socket AM4 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
 Write-Verbose "Processing: ASRock AM4 Motherboard driver downloads" -Verbose
 Write-Host 
 
@@ -112,6 +116,278 @@ Invoke-Expression $($UD.Content)
 
 Write-Host
 Write-Verbose "Completed: Gigabyte AM4 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Completed: AMD Socket AM4 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: AMD Socket AM5 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: ASRock AM5 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$ASRockPROAM5 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockPROAM5.Content)
+
+$ASRockSteelLegendAM5 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockSteelLegendAM5.Content)
+
+$ASRockTaichiAM5 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockTaichiAM5.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock AM5 Motherboard driver downloads" -Verbose
+Write-Host 
+
+Write-Host
+Write-Verbose "Processing: ASUS AM5 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$ASUSBusinessAM5 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSBusinessAM5.Content)
+
+$ASUSCSMAM5 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSCSMAM5.Content)
+
+$ASUSExpeditionAM5 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSExpeditionAM5.Content)
+
+$ASUSOthersAM5 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSOthersAM5.Content)
+
+$ASUSPRIMEAM5 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSPRIMEAM5.Content)
+
+$ASUSProArtAM5 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSProArtAM5.Content)
+
+$ASUSROGAM5 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSROGAM5.Content)
+
+$ASUSTUFGamingAM5 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSTUFGamingAM5.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS AM5 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AM5 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$GigabyteAEROAM5 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteAEROAM5.Content)
+
+$GigabyteAITOPAM5 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteAITOPAM5.Content)
+
+$GigabyteAORUSAM5 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteAORUSAM5.Content)
+
+$GigabyteEagleAM5 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteEagleAM5.Content)
+
+$GigabyteGamingAM5 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteGamingAM5.Content)
+
+$GigabyteUDAM5 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteUDAM5.Content)
+
+Write-Host
+Write-Verbose "Completed: Gigabyte AM5 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: MSI AM5 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$MSIAMEGAM5 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMEGAM5.Content)
+
+$MSIMPGAM5 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMPGAM5.Content)
+
+$MSIMAGAM5 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMAGAM5.Content)
+
+$MSIPROAM5 = Invoke-WebRequest("")
+Invoke-Expression $($MSIPROAM5.Content)
+
+$MSIGamingAM5 = Invoke-WebRequest("")
+Invoke-Expression $($MSIGamingAM5.Content)
+
+Write-Host
+Write-Verbose "Completed: MSI AM5 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: ASRock Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$ASRockAQUALGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockAQUALGA1700.Content)
+
+$ASRockExtremeLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockExtremeLGA1700.Content)
+
+$ASRockPROLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockPROLGA1700.Content)
+
+$ASRockPhantomGamingLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockPhantomGamingLGA1700.Content)
+
+$ASRockSteelLegendLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockSteelLegendLGA1700.Content)
+
+$ASRockTaichiLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockTaichiLGA1700.Content)
+
+
+
+
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host 
+
+Write-Host
+Write-Verbose "Processing: ASUS Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$ASUSBusinessLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSBusinessLGA1700.Content)
+
+$ASUSCSMLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSCSMLGA1700.Content)
+
+$ASUSExpeditionLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSExpeditionLGA1700.Content)
+
+$ASUSOthersLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSOthersLGA1700.Content)
+
+$ASUSPRIMELGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSPRIMELGA1700.Content)
+
+$ASUSProArtLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSProArtLGA1700.Content)
+
+$ASUSROGLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSROGLGA1700.Content)
+
+$ASUSTUFGamingLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSTUFGamingLGA1700.Content)
+
+$ASUSWorkstationLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSWorkstationLGA1700.Content)
+
+
+
+Write-Host
+Write-Verbose "Completed: ASUS Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$GigabyteAEROLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteAEROLGA1700.Content)
+
+$GigabyteAORUSLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteAORUSLGA1700.Content)
+
+$GigabyteEagleLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteEagleLGA1700.Content)
+
+$GigabyteGamingLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteGamingLGA1700.Content)
+
+$GigabyteUDLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteUDLGA1700.Content)
+
+Write-Host
+Write-Verbose "Completed: Gigabyte Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: MSI Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host 
+
+
+
+
+
+Write-Host
+Write-Verbose "Completed: MSI Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Completed: Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host
+
+
+Write-Host
+Write-Verbose "Processing: Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: ASRock Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host 
+
+
+
+
+
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host 
+
+Write-Host
+Write-Verbose "Processing: ASUS Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host 
+
+
+
+
+
+Write-Host
+Write-Verbose "Completed: ASUS Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host 
+
+
+
+
+
+Write-Host
+Write-Verbose "Completed: Gigabyte Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: MSI Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host 
+
+
+
+
+
+Write-Host
+Write-Verbose "Completed: MSI Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Completed: Intel LGA 1851 Motherboard driver downloads" -Verbose
 Write-Host
 
 Write-Host
@@ -207,6 +483,172 @@ Write-Host
 Write-Verbose "Completed: OSDCloud wallpaper download" -Verbose
 Write-Host
 
+################################################
+# OSDCloud Template and Workspace configuration
+################################################
+
+Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
+New-OSDCloudTemplate -Name OSDCloud-ALLCPU -WinRE
+
+Write-Host
+Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
+Get-OSDCloudTemplateNames
+
+Write-Host
+Write-Verbose "Retriving OSDCloud Workspaces..." -Verbose
+Get-OSDCloudWorkspace
+
+Write-Host
+Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
+$WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
+New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
+Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
+
+Write-Host
+Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
+Get-OSDCloudWorkspace
+
+#################################
+# Adding PowerShell 7 to OSDCloud 
+#################################
+
+$AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
+Invoke-Expression $($AddPS7.Content)
+
+#################################
+# OSDCloud - Cloud Drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: OSDCloud - Cloud Drivers..." -Verbose 
+
+Edit-OSDCloudWinPE -CloudDriver USB,VMware,WiFi
+
+Write-Host
+Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
+Write-Host
+
+######################################
+## Extra Scripting Support
+######################################
+
+# VBS Scripting Support
+
+$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
+$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBSName3 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBSName4 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBS3 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+
+$sourceWIMDir = "\Media\sources"
+$WorkspacePath = Get-OSDCloudWorkspace
+$WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
+$mountdir = "C:\Mount"
+
+Write-Verbose "Processing: Mounting OSDCloud boot.wim" -Verbose
+# Mount the image
+
+Mount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
+
+Write-Host
+Write-Verbose "Processing: VBS Scripting Support..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing Item: $VBSName1..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName2..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName3..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName4..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
+
+Write-Host
+Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
+Write-Host
+
+########################################
+# 3rd party software and utilities
+########################################
+
+# Portable Browsers
+
+Write-Host
+Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verbose 
+$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
+$ChromeDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $ChromePath -Destination $ChromeDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
+Write-Host
+
+# MS DaRT Remote Connections and Troubleshooting
+
+# ServiceUI
+
+# CMTrace 
+
+# Ghost Imaging
+
+Write-Host
+Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
+$Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
+$GhostExplorerPath = "C:\OSDCloud\GitHub\downloads\Ghost\Ghostexp.exe"
+$GhostServPath = "C:\OSDCloud\GitHub\downloads\Ghost\GhostSrv.exe"
+$GhostDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $Ghost64Path -Destination $GhostDestination -Force
+Copy-Item -Path $GhostExplorerPath -Destination $GhostDestination -Force
+Copy-Item -Path $GhostServPath -Destination $GhostDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Ghost Imaging for OSDCloud..." -Verbose
+Write-Host
+
+# User Profile Backup and Restore 
+
+Write-Host
+Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
+$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
+$UBPRDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
+Write-Host
+
+# Disount the image
+Write-Host
+Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
+
+Dismount-WindowsImage -Path $mountdir -Save
+
+######################################
+## Extra PowerShell Modules - OSDCloud
+######################################
+
+# PowerShell 5.1 Modules - OSDCloud
+
+$OSDCloudPS5xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS5xMods.Content)
+
+# PowerShell 7.x Modules - OSDCloud
+
+$OSDCloudPS7xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS7xMods.Content)
 
 # AM4 CPU Socket
 
