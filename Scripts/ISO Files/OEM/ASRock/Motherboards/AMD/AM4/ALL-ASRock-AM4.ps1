@@ -63,6 +63,12 @@ Invoke-Expression $($SteelLegend.Content)
 $Taichi = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Taichi%20Motherboards/Taichi.ps1")
 Invoke-Expression $($Taichi.Content)
 
+
+
+Write-Host
+Write-Verbose "Processing: ALL Virtualization driver downloads" -Verbose
+Write-Host
+
 $HyperV = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
 Invoke-Expression $($HyperV.Content)
 
