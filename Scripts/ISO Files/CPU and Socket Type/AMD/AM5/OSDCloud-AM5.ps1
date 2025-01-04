@@ -10,6 +10,9 @@ Write-Host
 Write-Host '                                                                                              ' -BackgroundColor White                                                              
 Write-Host '    This scripts creates an OSCloud Deployment ISO with the following:                        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Networking and Storage: ASRock AM5 motherboard drivers                                 ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Networking and Storage: ASUS AM5 motherboard drivers                                   ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Networking and Storage: Gigabyte AM5 Motherboard drivers                               ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Networking and Storage: MSI AM5 Motherboard drivers                               ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Networking and Storage: VM drivers for ESXI, Hyper-V, VMWare Workstation and Proxmox   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - VBS Scripting Support                                                                  ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Wireless networking support                                                            ' -ForegroundColor DarkBlue -BackgroundColor White
