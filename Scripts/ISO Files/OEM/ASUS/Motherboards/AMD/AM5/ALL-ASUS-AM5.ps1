@@ -33,6 +33,33 @@ Write-Host
 $PS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/PS7Download.ps1")
 Invoke-Expression $($PS7.Content)
 
+$Business = Invoke-WebRequest("")
+Invoke-Expression $($Business.Content)
+
+$CSM = Invoke-WebRequest("")
+Invoke-Expression $($CSM.Content)
+
+$Expedition = Invoke-WebRequest("")
+Invoke-Expression $($Expedition.Content)
+
+$Others = Invoke-WebRequest("")
+Invoke-Expression $($Others.Content)
+
+$PRIME = Invoke-WebRequest("")
+Invoke-Expression $($PRIME.Content)
+
+$CSM = Invoke-WebRequest("")
+Invoke-Expression $($CSM.Content)
+
+$ProArt = Invoke-WebRequest("")
+Invoke-Expression $($ProArt.Content)
+
+$ROG = Invoke-WebRequest("")
+Invoke-Expression $($ROG.Content)
+
+$TUFGaming = Invoke-WebRequest("")
+Invoke-Expression $($TUFGaming.Content)
+
 $HyperV = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
 Invoke-Expression $($HyperV.Content)
 
