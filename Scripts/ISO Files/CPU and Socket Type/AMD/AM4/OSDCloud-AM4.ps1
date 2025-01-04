@@ -23,7 +23,7 @@ pause
 Clear-Host
 
 Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name WinRE -WinRE
+New-OSDCloudTemplate -Name OSDCloud-AM4 -WinRE
 
 
 Write-Host
