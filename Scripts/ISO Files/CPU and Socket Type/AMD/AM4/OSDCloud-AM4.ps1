@@ -142,6 +142,10 @@ $VMWareWSPro = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrive
 Invoke-Expression $($VMWareWSPro.Content)
 
 Write-Host
+Write-Verbose "Completed: ALL Virtualization driver downloads" -Verbose
+Write-Host
+
+Write-Host
 Write-Verbose "Processing: Additional OSDCloud scripting support downloads" -Verbose
 Write-Host
 
@@ -180,11 +184,19 @@ $MSTSC = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/h
 Invoke-Expression $($MSTSC.Content)
 
 Write-Host
+Write-Verbose "Completed: Download of Extra OSDCloud ISO Utilities" -Verbose
+Write-Host
+
+Write-Host
 Write-Verbose "Processing: NEW OSDCloud wallpaper" -Verbose
 Write-Host
 
 $OSDCloudWallpaper = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Wallpaper/OSDCloudWallpaper-Download.ps1")
 Invoke-Expression $($OSDCloudWallpaper.Content) 
+
+Write-Host
+Write-Verbose "Completed: OSDCloud wallpaper download" -Verbose
+Write-Host
 
 ################################################
 # OSDCloud Template and Workspace configuration
