@@ -1,17 +1,3 @@
-$MSIAMEGLGA1851 = Invoke-WebRequest("")
-Invoke-Expression $($MSIMEGLGA1851.Content)
-
-$MSIMPGLGA1851 = Invoke-WebRequest("")
-Invoke-Expression $($MSIMPGLGA1851.Content)
-
-$MSIMAGLGA1851 = Invoke-WebRequest("")
-Invoke-Expression $($MSIMAGLGA1851.Content)
-
-$MSIPROLGA1851 = Invoke-WebRequest("")
-Invoke-Expression $($MSIPROLGA1851.Content)
-
-$MSIGamingLGA1851 = Invoke-WebRequest("")
-Invoke-Expression $($MSIGamingLGA185Write-Host
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
 Write-Host
 $Date = Get-Date
