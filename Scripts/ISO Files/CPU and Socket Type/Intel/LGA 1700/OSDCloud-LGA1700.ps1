@@ -35,3 +35,120 @@ Invoke-Expression $($PS7.Content)
 Write-Host
 Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
 Write-Host
+
+Write-Host
+Write-Verbose "Processing: Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: ASRock Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$ASRockAQUALGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockAQUALGA1700.Content)
+
+$ASRockExtremeLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockExtremeLGA1700.Content)
+
+$ASRockPROLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockPROLGA1700.Content)
+
+$ASRockPhantomGamingLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockPhantomGamingLGA1700.Content)
+
+$ASRockSteelLegendLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockSteelLegendLGA1700.Content)
+
+$ASRockTaichiLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockTaichiLGA1700.Content)
+
+
+
+
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host 
+
+Write-Host
+Write-Verbose "Processing: ASUS Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$ASUSBusinessLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSBusinessLGA1700.Content)
+
+$ASUSCSMLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSCSMLGA1700.Content)
+
+$ASUSExpeditionLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSExpeditionLGA1700.Content)
+
+$ASUSOthersLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSOthersLGA1700.Content)
+
+$ASUSPRIMELGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSPRIMELGA1700.Content)
+
+$ASUSProArtLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSProArtLGA1700.Content)
+
+$ASUSROGLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSROGLGA1700.Content)
+
+$ASUSTUFGamingLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSTUFGamingLGA1700.Content)
+
+$ASUSWorkstationLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSWorkstationLGA1700.Content)
+
+
+
+Write-Host
+Write-Verbose "Completed: ASUS Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$GigabyteAEROLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteAEROLGA1700.Content)
+
+$GigabyteAORUSLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteAORUSLGA1700.Content)
+
+$GigabyteEagleLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteEagleLGA1700.Content)
+
+$GigabyteGamingLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteGamingLGA1700.Content)
+
+$GigabyteUDLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteUDLGA1700.Content)
+
+Write-Host
+Write-Verbose "Completed: Gigabyte Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: MSI Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$MSIMEGLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMEGLGA1700.Content)
+
+$MSIMPGLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMPGLGA1700.Content)
+
+$MSIMAGLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMAGLGA1700.Content)
+
+$MSIPROLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($MSIPROLGA1700.Content)
+
+Write-Host
+Write-Verbose "Completed: MSI Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Completed: Intel LGA 1700 Motherboard driver downloads" -Verbose
+Write-Host
