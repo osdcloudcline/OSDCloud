@@ -15,20 +15,21 @@ $DARTConfig8URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main
 ## DART File Destination
 ################################################################
 
-$DARTDestination = "C:\OSDCloud\GitHub\downloads\DART"
+$DARTDestination = "C:\OSDCloud\downloads\GitHub\DART"
 $DART64CABDestination = "C:\Program Files\Microsoft DaRT\v10"
 $DARTConfig8Destination = "C:\Program Files\Microsoft Deployment Toolkit\Templates"
 
 Import-Module -Name OSD -Force
 
 Write-Host
-Write-Verbose "Processing: Acquiring Microsoft DART Files..." -Verbose
+Write-Verbose "Processing: Acquiring Microsoft DART files..." -Verbose
+Write-Host
+
 Save-WebFile -SourceUrl $DART64CABURL -DestinationDirectory $DARTDestination
 Save-WebFile -SourceUrl $DARTConfig8URL -DestinationDirectory $DARTDestination
 
 Write-Host
-Write-Verbose "Processing: Copying Microsoft DART Files..." -Verbose
-Copy-Item -Path "$DARTDestination\Toolsx64.cab" -Destination $DART64CABDestination -Force
-Copy-Item -Path "$DARTDestination\DartConfig8.dat" -Destination $DARTConfig8Destination -Force
+Write-Verbose "Completed: Microsoft DART files have been downloaded..." -Verbose
 Write-Host
+
 Stop-Transcript 
