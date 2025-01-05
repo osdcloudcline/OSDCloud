@@ -25,16 +25,27 @@ Clear-Host
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name OSD -Force
 
-
 Write-Host
-Write-Verbose "Processing: Gigabyte AM5 AERO Motherboard drivers, Virtualization drivers, scripting support and other utilities file downloads" -Verbose
+Write-Verbose "Processing: PowerShell 7.x support downloads" -Verbose
 Write-Host 
 
 $PS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/PS7Download.ps1")
 Invoke-Expression $($PS7.Content)
 
+Write-Host
+Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Gigabyte AMD AM5 motherboard driver downloads" -Verbose
+Write-Host  
+
 $AERO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM5/AERO/AERO.ps1")
 Invoke-Expression $($AERO.Content)
+
+Write-Host
+Write-Verbose "Completed: Gigabyte AMD AM5 motherboard driver downloads" -Verbose
+Write-Host 
 
 $HyperV = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
 Invoke-Expression $($HyperV.Content)
@@ -79,8 +90,8 @@ Write-Verbose "Confirming OSDCloud Templates......" -Verbose
 Get-OSDCloudTemplate
 
 Write-Host
-Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL ASUS AM4 motherboards to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name ASUS-AERO-AM5 -WinRE
+Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL Gigabyte AERO AM5 motherboards to enable wireless networking support..." -Verbose
+New-OSDCloudTemplate -Name Gigabyte-AERO-AM5 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
