@@ -1,4 +1,17 @@
-Write-Host
+$MSIAMEGLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMEGLGA1851.Content)
+
+$MSIMPGLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMPGLGA1851.Content)
+
+$MSIMAGLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMAGLGA1851.Content)
+
+$MSIPROLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIPROLGA1851.Content)
+
+$MSIGamingLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIGamingLGA185Write-Host
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
 Write-Host
 $Date = Get-Date
@@ -10,22 +23,248 @@ Write-Host
 Write-Host '                                                                                              ' -BackgroundColor White                                                              
 Write-Host '    This scripts creates an OSCloud Deployment ISO with the following:                        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Networking and Storage: ASUS LGA 1851 motherboard drivers                              ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Networking and Storage: MSI LGA 1851 Motherboard drivers                               ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Networking and Storage: MSI  LGA 1851 Motherboard drivers                              ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Networking and Storage: Gigabyte LGA 1851 Motherboard drivers                          ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Networking and Storage: ASRock LGA 1851 Motherboard drivers                            ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Networking and Storage: ASRock   LGA 1851 Motherboard drivers                          ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Networking and Storage: VM drivers for ESXI, Hyper-V, VMWare Workstation and Proxmox   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - VBS Scripting Support                                                                  ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Wireless networking support                                                            ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - FOR SYSTEM REFRESH: User Profile Backup and Restore for data backup                    ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Google Chrome portable browser                                                         ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - PowerShell Modules: Version 5.x and 7.x                                                ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Imaging Tools: Symantec Ghost                                                          ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - System Rescue/Troubleshooting: Microsoft DaRT Support                                  ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                                              ' -BackgroundColor White
 pause
 Clear-Host
 
+Write-Host
+Write-Verbose "Processing: PowerShell 7.x support downloads" -Verbose
+Write-Host 
 
-Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name WinRE -WinRE
+$PS7 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/PS7Download.ps1")
+Invoke-Expression $($PS7.Content)
 
+Write-Host
+Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: ASRock Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$ASRockAQUALGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockAQUALGA1851.Content)
+
+$ASRockExtremeLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockExtremeLGA1851.Content)
+
+$ASRockPROLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockPROLGA1851.Content)
+
+$ASRockPhantomGamingLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockPhantomGamingLGA1851.Content)
+
+$ASRockSteelLegendLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockSteelLegendLGA1851.Content)
+
+$ASRockTaichiLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockTaichiLGA1851.Content)
+
+
+
+
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host 
+
+Write-Host
+Write-Verbose "Processing: ASUS Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$ASUSBusinessLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSBusinessLGA1851.Content)
+
+$ASUSCSMLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSCSMLGA1851.Content)
+
+$ASUSExpeditionLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSExpeditionLGA1851.Content)
+
+$ASUSOthersLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSOthersLGA1851.Content)
+
+$ASUSPRIMELGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSPRIMELGA1851.Content)
+
+$ASUSProArtLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSProArtLGA1851.Content)
+
+$ASUSROGLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSROGLGA1851.Content)
+
+$ASUSTUFGamingLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSTUFGamingLGA1851.Content)
+
+$ASUSWorkstationLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSWorkstationLGA1851.Content)
+
+
+
+Write-Host
+Write-Verbose "Completed: ASUS Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$GigabyteAEROLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteAEROLGA1851.Content)
+
+$GigabyteAORUSLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteAORUSLGA1851.Content)
+
+$GigabyteEagleLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteEagleLGA1851.Content)
+
+$GigabyteGamingLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteGamingLGA1851.Content)
+
+$GigabyteUDLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteUDLGA1851.Content)
+
+Write-Host
+Write-Verbose "Completed: Gigabyte Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: MSI Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host 
+
+$MSIMEGLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMEGLGA1851.Content)
+
+$MSIMPGLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMPGLGA1851.Content)
+
+$MSIMAGLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMAGLGA1851.Content)
+
+$MSIPROLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIPROLGA1851.Content)
+
+Write-Host
+Write-Verbose "Completed: MSI Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Completed: Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: ALL Virtualization driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Microsoft Hyper-V virtualization driver downloads" -Verbose
+Write-Host 
+
+$HyperV = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
+Invoke-Expression $($HyperV.Content)
+
+Write-Host
+Write-Verbose "Processing: Proxmox virtualization driver downloads" -Verbose
+Write-Host
+
+$Proxmox = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/Proxmox/Proxmox.ps1")
+Invoke-Expression $($Proxmox.Content)
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere virtualization driver downloads" -Verbose
+Write-Host
+
+$ESXI = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/VMWare%20ESXI/ESXI-Drivers.ps1")
+Invoke-Expression $($ESXI.Content)
+
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro virtualization driver downloads" -Verbose
+Write-Host
+
+$VMWareWSPro = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/VMWare%20Workstation/VMWare-WorkstationPRO-Drivers.ps1")
+Invoke-Expression $($VMWareWSPro.Content)
+
+Write-Host
+Write-Verbose "Completed: ALL Virtualization driver downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Additional OSDCloud scripting support downloads" -Verbose
+Write-Host
+
+$VBS = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Scripting%20Support/VBS%20Scripting/VBSScriptingSupport-Download.ps1")
+Invoke-Expression $($VBS.Content)
+
+Write-Host
+Write-Verbose "Completed: Additional OSDCloud scripting support downloads" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: Google Chrome - portable browser" -Verbose
+Write-Host
+
+$PortableBrowser = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Browser/PortableBrowser-Download.ps1")
+Invoke-WebRequest $($PortableBrowser.Content)
+
+Write-Host
+Write-Verbose "Processing: User Profile Backup and Restore" -Verbose
+Write-Host
+
+$UPBR = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/User%20Profile%20Backup%20Restore/UPBR-Download.ps1")
+Invoke-Expression $($UPBR.Content)
+
+Write-Host
+Write-Verbose "Processing: System Imaging utilities" -Verbose
+Write-Host
+
+$Ghost = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Imaging/Ghost/Ghosting.ps1")
+Invoke-Expression $($Ghost.Content)
+
+Write-Host
+Write-Verbose "Processing: Microsoft DaRT and Remote Desktop Connections" -Verbose
+Write-Host
+
+$DaRT = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/DaRT/DaRT.ps1")
+Invoke-WebRequest $($DaRT.Content)
+
+$MSTSC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Remote%20Desktop%20Control/MSTSC.ps1")
+Invoke-Expression $($MSTSC.Content)
+
+Write-Host
+Write-Verbose "Completed: Download of Extra OSDCloud ISO Utilities" -Verbose
+Write-Host
+
+Write-Host
+Write-Verbose "Processing: NEW OSDCloud wallpaper" -Verbose
+Write-Host
+
+$OSDCloudWallpaper = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Wallpaper/OSDCloudWallpaper-Download.ps1")
+Invoke-Expression $($OSDCloudWallpaper.Content) 
+
+Write-Host
+Write-Verbose "Completed: OSDCloud wallpaper download" -Verbose
+Write-Host
+
+################################################
+# OSDCloud Template and Workspace configuration
+################################################
+
+Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support for Intel Socket LGA 1851 systems..." -Verbose
+New-OSDCloudTemplate -Name OSDCloud-LGA1851 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
@@ -36,224 +275,292 @@ Write-Verbose "Retriving OSDCloud Workspaces..." -Verbose
 Get-OSDCloudWorkspace
 
 Write-Host
-Write-Verbose "Configuring new OSDCloud Workspace Path..." -Verbose
+Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
 $WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
+Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
 Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
+#################################
+# Adding PowerShell 7 to OSDCloud 
+#################################
 
+$AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
+Invoke-Expression $($AddPS7.Content)
 
-# ASUS LGA 1851 Motherboards
-
-Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 Business Motherboard Ethernet Drivers..." -Verbose 
-$BusinessEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\Business\Ethernet"
-
-Edit-OSDCloudWinPE -DriverPath $BusinessEthernet
-
-Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 Business Motherboard WiFi Drivers..." -Verbose 
-$BusinessWiFi = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\Business\WiFi"
-
-Edit-OSDCloudWinPE -DriverPath $BusinessWiFi
+#################################
+# OSDCloud - Cloud Drivers
+#################################
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 Business Motherboard Storage Drivers..." -Verbose 
-$BusinessStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\Business\Storage"
+Write-Verbose "Processing: OSDCloud - Cloud Drivers..." -Verbose 
 
-Edit-OSDCloudWinPE -DriverPath $BusinessStorage
-
-Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 CSM Motherboard Ethernet Drivers..." -Verbose 
-$CSMEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\CSM\Ethernet"
-
-Edit-OSDCloudWinPE -DriverPath $CSMEthernet
+Edit-OSDCloudWinPE -CloudDriver USB,VMware,WiFi
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 CSM Motherboard WiFi Drivers..." -Verbose 
-$CSMWiFi = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\CSM\WiFi"
+Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
+Write-Host
 
-Edit-OSDCloudWinPE -DriverPath $CSMWiFi
+######################################
+## Extra Scripting Support
+######################################
+
+# VBS Scripting Support
+
+$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
+$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBSName3 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBSName4 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBS3 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+
+$sourceWIMDir = "\Media\sources"
+$WorkspacePath = Get-OSDCloudWorkspace
+$WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
+$mountdir = "C:\Mount"
+
+Write-Verbose "Processing: Mounting OSDCloud boot.wim" -Verbose
+# Mount the image
+
+Mount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 CSM Motherboard Storage Drivers..." -Verbose 
-$CSMStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\CSM\Storage"
-
-Edit-OSDCloudWinPE -DriverPath $CSMStorage
+Write-Verbose "Processing: VBS Scripting Support..." -Verbose 
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 Other Motherboard Ethernet Drivers..." -Verbose 
-$OtherEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\Other\Ethernet"
+Write-Verbose "Processing Item: $VBSName1..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
+Write-Host
 
-Edit-OSDCloudWinPE -DriverPath $OtherEthernet
+Write-Verbose "Processing Item: $VBSName2..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName3..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName4..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 Other Motherboard WiFi Drivers..." -Verbose 
-$OtherWiFi = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\Other\WiFi"
+Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
+Write-Host
 
-Edit-OSDCloudWinPE -DriverPath $OtherWiFi
+########################################
+# 3rd party software and utilities
+########################################
+
+# Portable Browsers
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 Other Motherboard Storage Drivers..." -Verbose 
-$OtherStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\Other\Storage"
+Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verbose 
+$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
+$ChromeDestination = "$mountdir\Windows\System32"
 
-Edit-OSDCloudWinPE -DriverPath $OtherStorage
-
-Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 PRIME Motherboard Ethernet Drivers..." -Verbose 
-$PRIMEEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\PRIME\Ethernet"
-
-Edit-OSDCloudWinPE -DriverPath $PRIMEEthernet
+Copy-Item -Path $ChromePath -Destination $ChromeDestination -Force
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 PRIME Motherboard WiFi Drivers..." -Verbose 
-$PRIMEWiFi = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\PRIME\WiFi"
+Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
+Write-Host
 
-Edit-OSDCloudWinPE -DriverPath $PRIMEWiFi
+# MS DaRT Remote Connections and Troubleshooting
+
+# ServiceUI
+
+# CMTrace 
+
+# Ghost Imaging
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 PRIME Motherboard Storage Drivers..." -Verbose 
-$PRIMEStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\PRIME\Storage"
+Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
+$Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
+$GhostExplorerPath = "C:\OSDCloud\GitHub\downloads\Ghost\Ghostexp.exe"
+$GhostServPath = "C:\OSDCloud\GitHub\downloads\Ghost\GhostSrv.exe"
+$GhostDestination = "$mountdir\Windows\System32"
 
-Edit-OSDCloudWinPE -DriverPath $PRIMEStorage
-
-Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 ProArt Motherboard Ethernet Drivers..." -Verbose 
-$ProArtEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ProArt\Ethernet"
-
-Edit-OSDCloudWinPE -DriverPath $ProArtEthernet
-
-Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 ProArt Motherboard WiFi Drivers..." -Verbose 
-$ProArtWiFi1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ProArt\WiFi1"
-$ProArtWiFi2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ProArt\WiFi2"
-$ProArtWiFi3 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ProArt\WiFi3"
-$ProArtWiFi4 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ProArt\WiFi4"
-
-Edit-OSDCloudWinPE -DriverPath $ProArtWiFi1
-Edit-OSDCloudWinPE -DriverPath $ProArtWiFi2
-Edit-OSDCloudWinPE -DriverPath $ProArtWiFi3
-Edit-OSDCloudWinPE -DriverPath $ProArtWiFi4
+Copy-Item -Path $Ghost64Path -Destination $GhostDestination -Force
+Copy-Item -Path $GhostExplorerPath -Destination $GhostDestination -Force
+Copy-Item -Path $GhostServPath -Destination $GhostDestination -Force
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 ProArt Motherboard Storage Drivers..." -Verbose 
-$ProArtStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ProArt\Storage"
+Write-Verbose "Completed: Integration of Ghost Imaging for OSDCloud..." -Verbose
+Write-Host
 
-Edit-OSDCloudWinPE -DriverPath $ProArtStorage
+# User Profile Backup and Restore 
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 ROG - Republic of Gamers Motherboard Ethernet Drivers..." -Verbose 
-$ROGEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ROG\Ethernet1"
-$ROGEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ROG\Ethernet2"
-$ROGEthernet3 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ROG\Ethernet3"
+Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
+$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
+$UBPRDestination = "$mountdir\Windows\System32"
 
-Edit-OSDCloudWinPE -DriverPath $ROGEthernet1
-Edit-OSDCloudWinPE -DriverPath $ROGEthernet2
-Edit-OSDCloudWinPE -DriverPath $ROGEthernet3
+Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 ROG - Republic of Gamers Motherboard WiFi Drivers..." -Verbose 
-$ROGWiFi1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ROG\WiFi1"
-$ROGWiFi2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ROG\WiFi2"
-$ROGWiFi3 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ROG\WiFi3"
-$ROGWiFi4 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ROG\WiFi4"
-$ROGWiFi5 = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ROG\WiFi5"
+Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
+Write-Host
 
-Edit-OSDCloudWinPE -DriverPath $ROGWiFi1
-Edit-OSDCloudWinPE -DriverPath $ROGWiFi2
-Edit-OSDCloudWinPE -DriverPath $ROGWiFi3
-Edit-OSDCloudWinPE -DriverPath $ROGWiFi4
-Edit-OSDCloudWinPE -DriverPath $ROGWiFi5
+# Disount the image
+Write-Host
+Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
+
+Dismount-WindowsImage -Path $mountdir -Save
+
+######################################
+## Extra PowerShell Modules - OSDCloud
+######################################
+
+# PowerShell 5.1 Modules - OSDCloud
+
+$OSDCloudPS5xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS5xMods.Content)
+
+# PowerShell 7.x Modules - OSDCloud
+
+$OSDCloudPS7xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS7xMods.Content)
+
+#############################################
+# INTEL LGA 1851 Driver Integration - ASRock
+#############################################
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 ROG - Republic of Gamers Motherboard Storage Drivers..." -Verbose 
-$ROGStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\ROG\Storage"
+Write-Verbose "Processing: ASRock LGA 1851 drivers" -Verbose
+Write-Host
 
-Edit-OSDCloudWinPE -DriverPath $ROGStorage
+#############################################
+# INTEL LGA 1851 Driver Integration - ASUS
+#############################################
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 TUF Gaming Motherboard Ethernet Drivers..." -Verbose 
-$TUFEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\TUF\Ethernet"
+Write-Verbose "Processing: ASUS LGA 1851 drivers" -Verbose
+Write-Host
 
-Edit-OSDCloudWinPE -DriverPath $TUFEthernet
+
+
+###############################################
+# INTEL LGA 1851 Driver Integration - Gigabyte
+###############################################
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 TUF Gaming Motherboard WiFi Drivers..." -Verbose 
-$TUFWiFi = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\TUF\WiFi"
+Write-Verbose "Processing: Gigabyte LGA 1851 drivers" -Verbose
+Write-Host
 
-Edit-OSDCloudWinPE -DriverPath $TUFWiFi
+#############################################
+# INTEL LGA 1851 Driver Integration - MSI
+#############################################
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 TUF Gaming Motherboard Storage Drivers..." -Verbose 
-$TUFStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\LGA1851\TUF\Storage"
-
-Edit-OSDCloudWinPE -DriverPath $TUFStorage
-
+Write-Verbose "Processing: MSI LGA 1851 drivers" -Verbose
 Write-Host
-Write-Verbose "Completed: Integration of ASUS Intel LGA 1851 Motherboard Drivers..." -Verbose 
 
-# MSI LGA 1851 Motherboards
-
-
-Write-Host
-Write-Verbose "Completed: Integration of MSI Intel LGA 1851 Motherboard Drivers..." -Verbose 
-
-# Gigabyte LGA 1851 Motherboards
-
-
-Write-Host
-Write-Verbose "Completed: Integration of Gigabyte Intel LGA 1851 Motherboard Drivers..." -Verbose 
-
-# ASRock LGA 1851 Motherboards
-
-Write-Host
-Write-Verbose "Completed: Integration of ASRock Intel LGA 1851 Motherboard Drivers..." -Verbose 
-
-# VM Drivers
 
 
 
 Write-Host
-Write-Verbose "Completed: Integration of Virtual Machine Drivers..." -Verbose 
+Write-Verbose "Completed: Integration of ALL Intel Socket LGA 1851 drivers for OSDCloud..." -Verbose
+Write-Host
 
-# Cloud Drivers
+
+############################################
+# Other Drivers
+############################################
+
+# Virtualization Drivers - Hyper-V
 
 Write-Host
-Write-Verbose "Processing: OSDCloud Cloud Drivers..." -Verbose 
-Edit-OSDCloudWinPE -CloudDriver USB, VMware, WiFi
-Write-Host
-Write-Verbose "Completed: Integration of Cloud Drivers..." -Verbose 
+Write-Verbose "Processing: Microsoft Hyper-V Ethernet Drivers..." -Verbose 
+$HyperVNetwork = "C:\OSDCloud\Drivers\Virtualization\HyperV\Network"
+
+Edit-OSDCloudWinPE -DriverPath $HyperVNetwork
 
 Write-Host
-Write-Verbose "Processing: Copying OSD PowerShell Module..." -Verbose
-Edit-OSDCloudWinPE -PSModuleCopy OSD
+Write-Verbose "Completed: Integration of Microsoft Hyper-V Network Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - VMWare ESXI
 
 Write-Host
-Write-Verbose "Processing: Extra OSD PowerShell Module..." -Verbose
-Edit-OSDCloudWinPE -PSModuleInstall Azure
-Edit-OSDCloudWinPE -PSModuleInstall AzureAD
-Edit-OSDCloudWinPE -PSModuleInstall Az.Accounts
-Edit-OSDCloudWinPE -PSModuleInstall Az.Storage
-Edit-OSDCloudWinPE -PSModuleInstall Az.Resources
-Edit-OSDCloudWinPE -PSModuleInstall Az.KeyVault
-Edit-OSDCloudWinPE -PSModuleInstall Az.Compute
-Edit-OSDCloudWinPE -PSModuleInstall Az.Automation
-Edit-OSDCloudWinPE -PSModuleInstall Az.Network
-Edit-OSDCloudWinPE -PSModuleInstall Az.ApiManagement
-Edit-OSDCloudWinPE -PSModuleInstall OSDCloudGUI
-Edit-OSDCloudWinPE -PSModuleInstall OSDCloudAzure
-Edit-OSDCloudWinPE -PSModuleInstall OSDUpdate
-Edit-OSDCloudWinPE -PSModuleInstall AutopilotOOBE
-Edit-OSDCloudWinPE -PSModuleInstall OSDDrivers
-Edit-OSDCloudWinPE -PSModuleInstall OSDDeploy
-Edit-OSDCloudWinPE -PSModuleInstall OSDSoftware
-Edit-OSDCloudWinPE -PSModuleInstall OSDCatalog
-Edit-OSDCloudWinPE -PSModuleInstall OSDProgress
-Edit-OSDCloudWinPE -PSModuleInstall PSCloudPC
-Edit-OSDCloudWinPE -PSModuleInstall PSWindowsUpdate
-Edit-OSDCloudWinPE -PSModuleInstall wifiprofilemanagement
+Write-Verbose "Processing: VMWare ESXI vSphere Ethernet Drivers..." -Verbose 
+$ESXIEthernet = "C:\OSDCloud\Drivers\Virtualization\ESXI\Network"
+
+Edit-OSDCloudWinPE -DriverPath  $ESXIEthernet
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere Storage Drivers..." -Verbose 
+$ESXIStorage = "C:\OSDCloud\Drivers\Virtualization\ESXI\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $ESXIStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of VMWare ESXI vSphere Network and Storage Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - VMWare Workstation Pro
+
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro Ethernet Drivers..." -Verbose 
+$VMWareWorkstationProEthernet = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Network"
+
+Edit-OSDCloudWinPE -DriverPath  $VMWareWorkstationProEthernet
+
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro Storage Drivers..." -Verbose 
+$VMWareWorkstationProStorage = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $VMWareWorkstationProStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of VMWare Workstation Pro Network and Storage Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - Proxmox
+
+Write-Host
+Write-Verbose "Processing: Proxmox Virtual IO Ethernet Drivers..." -Verbose 
+$ProxmoxEthernet1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\Windows11"
+$ProxmoxEthernet2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\WindowsServer2025"
+
+Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet1
+Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet2
+
+Write-Host
+Write-Verbose "Processing: Proxmox Virtual IO Storage Drivers..." -Verbose 
+$ProxmoxStorage1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\Windows11"
+$ProxmoxStorage2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\WindowsServer2025"
+
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage1
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage2
+
+Write-Host
+Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
+Write-Host
+
+###########################################
+# OSDCloud NEW Wallpaper
+###########################################
+
+Write-Host
+Write-Verbose "Processing: NEW OSDCloud Wallpaper..." -Verbose 
+$OSDCloudwallpaper = "C:\downloads\OSDCloud\GitHub\wallpaper\winpe.jpg"
+
+Edit-OSDCloudWinPE -Wallpaper $OSDCloudwallpaper
+
+Write-Host
+Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
+Write-Host
 
 
+##########################################
+# OSDCloud WebScript for Startnet.cmd
+##########################################
+
+###########################################
+# Create OSDCloud ISO
+#########################################
