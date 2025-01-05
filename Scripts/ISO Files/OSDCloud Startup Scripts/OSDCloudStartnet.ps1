@@ -67,3 +67,49 @@ cls
        Write-Verbose "Network Name: $NetName" -Verbose
        Write-Verbose "System Gateway/DNS Server: $GatewayDNS" -Verbose
        Write-Verbose "WAN or External IP Address: $ExternalIP" -Verbose
+
+
+Write-Host
+Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
+Write-Host
+$Date = Get-Date
+Write-Host "Today is:" "$Date"
+Write-Host
+Write-Host
+Write-Host 
+Write-Host '                                                                              ' -BackgroundColor White                                                              
+Write-Host '                  Welcome to OSDCloud!                                        ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                              ' -BackgroundColor White  
+Write-Host '   OSDCloud allows you to install Windows directly from the internet.         ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '    Within this bootable environment contains the  following:                 ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Ethernet, Storage, WiFi and Bluetooth drivers                          ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Scripting: PowerShell 7 support and VBS Scripting Support              ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Imaging/Recovery Tools: MS DaRT, Symantec Ghost and CloneZilla         ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Remote Connections: MS Remote Desktop                                  ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Data Backup: User Profile Backup/Restore                               ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Log Viewer: MECM CM Trace                                              ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Text Editor: Notepad ++                                                ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - File Explorer: Explorer ++                                             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Portable Web Browser: Google Chrome                                    ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                              ' -BackgroundColor White
+pause
+Clear-Host
+
+Write-Host
+Write-Host 
+Write-Host '                                                                              ' -BackgroundColor White                                                              
+Write-Host '                  Welcome to OSDCloud!                                        ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                              ' -BackgroundColor White  
+Write-Host '   This OSDCloud Startnet.ps1 script will allow you to perform the following: ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                              ' -BackgroundColor White
+Write-Host '     - ZTI Installations of Windows 11 Enterprise and Professional            ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - ZTI Installations of Windows 12                                        ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - ZTI Installations of Windows Server 2025                               ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OS Installations via CLI using Start-OSDCloud PowerShell command       ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OS Installations via GUI using Start-OSDCloudGUI PowerShell command    ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OS Installations via Azure using Start-OSDCloudAzure PowerShell cmd    ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OS Installations via custom image                                      ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Accessing utilities from Windows PE OSDCloud environment               ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - View list of OSDCloud functions - AKA OSDCloud HELP                    ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                              ' -BackgroundColor White
+pause
