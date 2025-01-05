@@ -321,9 +321,17 @@ Write-Host
 Write-Verbose "Processing: MSI Intel LGA 1700 Motherboard driver downloads" -Verbose
 Write-Host 
 
+$MSIMEGLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMEGLGA1700.Content)
 
+$MSIMPGLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMPGLGA1700.Content)
 
+$MSIMAGLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMAGLGA1700.Content)
 
+$MSIPROLGA1700 = Invoke-WebRequest("")
+Invoke-Expression $($MSIPROLGA1700.Content)
 
 Write-Host
 Write-Verbose "Completed: MSI Intel LGA 1700 Motherboard driver downloads" -Verbose
@@ -333,7 +341,6 @@ Write-Host
 Write-Verbose "Completed: Intel LGA 1700 Motherboard driver downloads" -Verbose
 Write-Host
 
-
 Write-Host
 Write-Verbose "Processing: Intel LGA 1851 Motherboard driver downloads" -Verbose
 Write-Host
@@ -342,9 +349,17 @@ Write-Host
 Write-Verbose "Processing: ASRock Intel LGA 1851 Motherboard driver downloads" -Verbose
 Write-Host 
 
+$ASRockAQUALGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockAQUALGA1851.Content)
 
+$ASRockPROLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockPROLGA1851.Content)
 
+$ASRockSteelLegendLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockSteelLegendLGA1851.Content)
 
+$ASRockTaichiLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASRockTaichiLGA1851.Content)
 
 Write-Host
 Write-Verbose "Completed: ASRock Intel LGA 1851 Motherboard driver downloads" -Verbose
@@ -354,7 +369,29 @@ Write-Host
 Write-Verbose "Processing: ASUS Intel LGA 1851 Motherboard driver downloads" -Verbose
 Write-Host 
 
+$ASUSBusinessLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSBusinessLGA1851.Content)
 
+$ASUSCSMLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSCSMLGA1851.Content)
+
+$ASUSOthersLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSOthersLGA1851.Content)
+
+$ASUSPRIMELGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSPRIMELGA1851.Content)
+
+$ASUSProArtLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSProArtLGA1851.Content)
+
+$ASUSROGLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSROGLGA1851.Content)
+
+$ASUSTUFGamingLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSTUFGamingLGA1851.Content)
+
+$ASUSWorkstationLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSWorkstationLGA1851.Content)
 
 
 
@@ -366,8 +403,23 @@ Write-Host
 Write-Verbose "Processing: Gigabyte Intel LGA 1851 Motherboard driver downloads" -Verbose
 Write-Host 
 
+$GigabyteAEROLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteAEROLGA1851.Content)
 
+$GigabyteAITOPLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteAITOPLGA1851.Content)
 
+$GigabyteAORUSLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteAORUSLGA1851.Content)
+
+$GigabyteEagleLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteEagleLGA1851.Content)
+
+$GigabyteGamingLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteGamingLGA1851.Content)
+
+$GigabyteUDLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($GigabyteUDLGA1851.Content)
 
 
 Write-Host
@@ -378,8 +430,20 @@ Write-Host
 Write-Verbose "Processing: MSI Intel LGA 1851 Motherboard driver downloads" -Verbose
 Write-Host 
 
+$MSIAMEGLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMEGLGA1851.Content)
 
+$MSIMPGLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMPGLGA1851.Content)
 
+$MSIMAGLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIMAGLGA1851.Content)
+
+$MSIPROLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIPROLGA1851.Content)
+
+$MSIGamingLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($MSIGamingLGA1851.Content)
 
 
 Write-Host
