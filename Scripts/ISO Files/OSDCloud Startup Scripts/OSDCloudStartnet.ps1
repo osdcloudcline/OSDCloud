@@ -57,3 +57,13 @@ cls
        Write-Verbose "Motherboard: $Baseboard1 $Baseboard2" -Verbose
        Write-Verbose "Manufacturer: $PCManufacturer" -Verbose
        Write-Verbose "System BIOS: $BIOS1 $BIOS2" -Verbose
+       
+       Write-Host 
+       Write-Host         "Network Connection Info:" -ForegroundColor Green 
+       Write-Verbose "System Hostname: $PCName" -Verbose
+       Write-Verbose "System IP Address 1: $IP1" -Verbose
+       Write-Verbose "System IP Address 2: $IP2" -Verbose
+       Write-Verbose "System IP Address 3: $IP3" -Verbose
+       Write-Verbose "Network Name: $NetName" -Verbose
+       Write-Verbose "System Gateway/DNS Server: $GatewayDNS" -Verbose
+       Write-Verbose "WAN or External IP Address: $ExternalIP" -Verbose
