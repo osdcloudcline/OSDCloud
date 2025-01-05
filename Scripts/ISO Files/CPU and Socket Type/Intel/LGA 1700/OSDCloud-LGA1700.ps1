@@ -412,3 +412,44 @@ Invoke-Expression $($OSDCloudPS5xMods.Content)
 
 $OSDCloudPS7xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
 Invoke-Expression $($OSDCloudPS7xMods.Content)
+
+#############################################
+# INTEL LGA 1700 Driver Integration - ASRock
+#############################################
+
+Write-Host
+Write-Verbose "Processing: ASRock LGA 1700 drivers" -Verbose
+Write-Host
+
+#############################################
+# INTEL LGA 1700 Driver Integration - ASUS
+#############################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1700 drivers" -Verbose
+Write-Host
+
+
+
+###############################################
+# INTEL LGA 1700 Driver Integration - Gigabyte
+###############################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte LGA 1700 drivers" -Verbose
+Write-Host
+
+#############################################
+# INTEL LGA 1700 Driver Integration - MSI
+#############################################
+
+Write-Host
+Write-Verbose "Processing: MSI LGA 1700 drivers" -Verbose
+Write-Host
+
+
+
+
+Write-Host
+Write-Verbose "Completed: Integration of ALL Intel Socket LGA 1700 drivers for OSDCloud..." -Verbose
+Write-Host
