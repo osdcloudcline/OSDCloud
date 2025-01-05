@@ -469,6 +469,10 @@ Write-Host
 Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
 Write-Host
 
+##########################################
+# OSDCloud WebScript for Startnet.cmd
+##########################################
+
 ###########################################
 # Create OSDCloud ISO
 ############################################
