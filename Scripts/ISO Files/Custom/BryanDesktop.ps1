@@ -37,14 +37,14 @@ Write-Verbose "Processing: Intel LGA 1851 Motherboard driver downloads" -Verbose
 Write-Host
 
 Write-Host
-Write-Verbose "Processing: ASUS Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Verbose "Processing: ASUS Intel LGA 1851 ROG - Republic of Gamers STRIX-A WiFi 7 DDR5 Motherboard driver downloads" -Verbose
 Write-Host 
 
-$ASUSROGLGA1851 = Invoke-WebRequest("")
-Invoke-Expression $($ASUSROGLGA1851.Content)
+$ASUSROGStrixLGA1851 = Invoke-WebRequest("")
+Invoke-Expression $($ASUSROGStrixLGA1851.Content)
 
 Write-Host
-Write-Verbose "Completed: ASUS Intel LGA 1851 Motherboard driver downloads" -Verbose
+Write-Verbose "Completed: ASUS Intel LGA 1851 ROG - Republic of Gamers STRIX-A WiFi 7 DDR5 Motherboard driver downloads" -Verbose
 Write-Host
 
 Write-Host
