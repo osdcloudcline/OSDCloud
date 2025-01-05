@@ -179,8 +179,8 @@ Write-Verbose "Confirming OSDCloud Templates......" -Verbose
 Get-OSDCloudTemplate
 
 Write-Host
-Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL ASUS AM4 motherboards to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name ASUS-Gaming-AM5 -WinRE
+Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL Gigabyte AM5 Gaming motherboards to enable wireless networking support..." -Verbose
+New-OSDCloudTemplate -Name Gigabyte-Gaming-AM5 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
