@@ -44,7 +44,7 @@ $TUFGaming = Invoke-WebRequest("")
 Invoke-Expression $($TUFGaming.Content)
 
 Write-Host
-Write-Verbose "Completed: ASRUS AMD AM5 TUF Gaming motherboard driver downloads" -Verbose
+Write-Verbose "Completed: ASUS AMD AM5 TUF Gaming motherboard driver downloads" -Verbose
 Write-Host 
 
 Write-Host
