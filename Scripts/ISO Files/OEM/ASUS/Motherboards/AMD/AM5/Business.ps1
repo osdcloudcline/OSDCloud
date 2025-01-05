@@ -37,14 +37,14 @@ Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
 Write-Host
 
 Write-Host
-Write-Verbose "Processing: ASUS AMD AM5 motherboard driver downloads" -Verbose
+Write-Verbose "Processing: ASUS AMD AM5 Business motherboard driver downloads" -Verbose
 Write-Host  
 
 $Business = Invoke-WebRequest("")
 Invoke-Expression $($Business.Content)
 
 Write-Host
-Write-Verbose "Completed: ASUS AMD AM5 motherboard driver downloads" -Verbose
+Write-Verbose "Completed: ASUS AMD AM5 Business motherboard driver downloads" -Verbose
 Write-Host 
 
 Write-Host
