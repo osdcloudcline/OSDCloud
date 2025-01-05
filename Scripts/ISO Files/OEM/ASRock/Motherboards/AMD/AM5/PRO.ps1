@@ -66,6 +66,29 @@ Invoke-WebRequest $($DaRT.Content)
 $MSTSC = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Remote%20Desktop%20Control/MSTSC.ps1")
 Invoke-Expression $($MSTSC.Content)
 
+$CloudPC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Remote%20Desktop%20-%20Cloud%20PC/CloudPC%20-%20Download.ps1")
+Invoke-Expression $($CloudPC.Content) 
+
+Write-Host
+Write-Verbose "Processing: Notepad ++" -Verbose
+Write-Host
+
+$NotepadPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Text%20Editor/NotepadPP.ps1")
+Invoke-Expression $($NotepadPP.Content)
+
+Write-Host
+Write-Verbose "Processing: Explorer ++" -Verbose
+Write-Host
+
+$ExplorerPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/File%20Explorer/ExplorerPP.ps1")
+Invoke-Expression $($ExplorerPP.Content)
+
+Write-Host
+Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer - CM Trace" -Verbose
+Write-Host
+
+$CMTrace = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Log%20Viewer/CMTrace.ps1")
+Invoke-Expression $($CMTrace.Content)
 Write-Host
 Write-Verbose "Completed: ALL ASRock AM5 Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
