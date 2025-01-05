@@ -205,94 +205,16 @@ Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
+################################
 # Adding PowerShell 7 to OSDCloud 
+##################################
 
 $AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
 Invoke-Expression $($AddPS7.Content)
 
-# ASUS AM 4 Motherboards
-
-Write-Host
-Write-Verbose "Processing: ASUS AM 4 Other Motherboard Ethernet Drivers..." -Verbose 
-$OtherEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Other\Ethernet"
-
-Edit-OSDCloudWinPE -DriverPath $OtherEthernet
-
-Write-Host
-Write-Verbose "Processing: ASUS AM 4 Other Motherboard Storage Drivers..." -Verbose 
-$OtherStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Other\Storage"
-
-Edit-OSDCloudWinPE -DriverPath $OtherStorage
-
-Write-Host
-Write-Verbose "Completed: Integration of ASUS AMD AM4 Motherboard Drivers..." -Verbose 
-Write-Host
-
-# Virtualization Hypervisors
-
-Write-Host
-Write-Verbose "Processing: Microsoft Hyper-V Ethernet Drivers..." -Verbose 
-$HyperVNetwork = "C:\OSDCloud\Drivers\Virtualization\HyperV\Network"
-
-Edit-OSDCloudWinPE -DriverPath $HyperVNetwork
-
-Write-Host
-Write-Verbose "Completed: Integration of Microsoft Hyper-V Network Drivers..." -Verbose
-Write-Host
-
-Write-Host
-Write-Verbose "Processing: Proxmox Virtual IO Ethernet Drivers..." -Verbose 
-$ProxmoxEthernet1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\Windows11"
-$ProxmoxEthernet2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\WindowsServer2025"
-
-Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet1
-Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet2
-
-Write-Host
-Write-Verbose "Processing: Proxmox Virtual IO Storage Drivers..." -Verbose 
-$ProxmoxStorage1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\Windows11"
-$ProxmoxStorage2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\WindowsServer2025"
-
-Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage1
-Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage2
-
-Write-Host
-Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
-Write-Host
-
-Write-Host
-Write-Verbose "Processing: VMWare ESXI vSphere Ethernet Drivers..." -Verbose 
-$ESXIEthernet = "C:\OSDCloud\Drivers\Virtualization\ESXI\Network"
-
-Edit-OSDCloudWinPE -DriverPath  $ESXIEthernet
-
-Write-Host
-Write-Verbose "Processing: VMWare ESXI vSphere Storage Drivers..." -Verbose 
-$ESXIStorage = "C:\OSDCloud\Drivers\Virtualization\ESXI\Storage"
-
-Edit-OSDCloudWinPE -DriverPath $ESXIStorage
-
-Write-Host
-Write-Verbose "Completed: Integration of VMWare ESXI vSphere Network and Storage Drivers..." -Verbose
-Write-Host
-
-Write-Host
-Write-Verbose "Processing: VMWare Workstation Pro Ethernet Drivers..." -Verbose 
-$VMWareWorkstationProEthernet = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Network"
-
-Edit-OSDCloudWinPE -DriverPath  $VMWareWorkstationProEthernet
-
-Write-Host
-Write-Verbose "Processing: VMWare Workstation Pro Storage Drivers..." -Verbose 
-$VMWareWorkstationProStorage = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Storage"
-
-Edit-OSDCloudWinPE -DriverPath $VMWareWorkstationProStorage
-
-Write-Host
-Write-Verbose "Completed: Integration of VMWare Workstation Pro Network and Storage Drivers..." -Verbose
-Write-Host
-
-# OSDCloud Cloud Drivers
+#################################
+# OSDCloud - Cloud Drivers
+#################################
 
 Write-Host
 Write-Verbose "Processing: OSDCloud - Cloud Drivers..." -Verbose 
@@ -302,6 +224,10 @@ Edit-OSDCloudWinPE -CloudDriver USB,VMware,WiFi
 Write-Host
 Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
 Write-Host
+
+######################################
+## Extra Scripting Support
+######################################
 
 # VBS Scripting Support
 
@@ -348,7 +274,11 @@ Write-Host
 Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
 Write-Host
 
-# Google Chrome Portable Browser - OSDCloud
+########################################
+# 3rd party software and utilities
+########################################
+
+# Portable Browsers
 
 Write-Host
 Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verbose 
@@ -361,20 +291,29 @@ Write-Host
 Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
 Write-Host
 
-# User Profile Backup and Restore for OSDCloud
+# MS DaRT Remote Connections and Troubleshooting
+
+# CloudPC
 
 Write-Host
-Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
-$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
-$UBPRDestination = "$mountdir\Windows\System32"
+Write-Verbose "Processing: Microsoft Remote Desktop - Cloud PC for OSDCloud..." -Verbose 
+$CloudPCPath1 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files"
+$CloudPCPath2 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files\en-us"
+$CloudPCDestination1 = "$mountdir\Windows\System32"
+$CloudPCDestination2 = "$mountdir\Windows\System32\en-US"
 
-Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
+Copy-Item -Path "$CloudPCPath1\*" -Destination $CloudPCDestination1  -Force
+Copy-Item -Path "$CloudPCPath2\*" -Destination $CloudPCDestination2  -Force
 
-Write-Host
-Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
-Write-Host
+# CMTrace 
 
-# Ghost - Imaging 
+Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer CM Trace for OSDCloud..." -Verbose 
+$CMTracePath = "C:\OSDCloud\downloads\GitHub\MECM-LogViewer"
+$CMTraceDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force 
+
+# Ghost Imaging
 
 Write-Host
 Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
@@ -391,10 +330,28 @@ Write-Host
 Write-Verbose "Completed: Integration of Ghost Imaging for OSDCloud..." -Verbose
 Write-Host
 
-Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
+# User Profile Backup and Restore 
+
+Write-Host
+Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
+$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
+$UBPRDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
+Write-Host
+
 # Disount the image
+Write-Host
+Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
+
+######################################
+## Extra PowerShell Modules - OSDCloud
+######################################
 
 # PowerShell 5.1 Modules - OSDCloud
 
@@ -406,13 +363,23 @@ Invoke-Expression $($OSDCloudPS5xMods.Content)
 $OSDCloudPS7xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
 Invoke-Expression $($OSDCloudPS7xMods.Content)
 
-# OSDCloud wallpaper
+#################################
+# ASUS AM 4 Motherboards
+#################################
 
 Write-Host
-Write-Verbose "Processing: NEW OSDCloud Wallpaper..." -Verbose 
-$OSDCloudwallpaper = "C:\downloads\OSDCloud\GitHub\wallpaper\winpe.jpg"
+Write-Verbose "Processing: ASUS AM 4 Other Motherboard Ethernet Drivers..." -Verbose 
+$OtherEthernet = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Other\Ethernet"
 
-Edit-OSDCloudWinPE -Wallpaper $OSDCloudwallpaper
+Edit-OSDCloudWinPE -DriverPath $OtherEthernet
 
 Write-Host
-Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
+Write-Verbose "Processing: ASUS AM 4 Other Motherboard Storage Drivers..." -Verbose 
+$OtherStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Other\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $OtherStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of ASUS AMD AM4 Motherboard Drivers..." -Verbose 
+Write-Host
+
