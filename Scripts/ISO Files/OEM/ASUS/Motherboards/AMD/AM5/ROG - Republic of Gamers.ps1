@@ -44,7 +44,7 @@ $ROG = Invoke-WebRequest("")
 Invoke-Expression $($ROG.Content)
 
 Write-Host
-Write-Verbose "Completed: ASRUS AMD AM5 ROG - Republic of Gamers motherboard driver downloads" -Verbose
+Write-Verbose "Completed: ASUS AMD AM5 ROG - Republic of Gamers motherboard driver downloads" -Verbose
 Write-Host 
 
 Write-Host
