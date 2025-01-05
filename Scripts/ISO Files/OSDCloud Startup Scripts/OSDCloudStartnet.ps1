@@ -213,7 +213,4 @@ do
      until ($selection -eq '12'){ShowMainMenu}
     }
 
-
-}
-
 Show-MainMenu
