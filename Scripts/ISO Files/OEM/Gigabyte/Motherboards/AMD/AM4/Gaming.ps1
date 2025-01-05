@@ -126,6 +126,30 @@ Invoke-WebRequest $($DaRT.Content)
 $MSTSC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Remote%20Desktop%20Control/MSTSC.ps1")
 Invoke-Expression $($MSTSC.Content)
 
+$CloudPC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Remote%20Desktop%20-%20Cloud%20PC/CloudPC%20-%20Download.ps1")
+Invoke-Expression $($CloudPC.Content) 
+
+Write-Host
+Write-Verbose "Processing: Notepad ++" -Verbose
+Write-Host
+
+$NotepadPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Text%20Editor/NotepadPP.ps1")
+Invoke-Expression $($NotepadPP.Content)
+
+Write-Host
+Write-Verbose "Processing: Explorer ++" -Verbose
+Write-Host
+
+$ExplorerPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/File%20Explorer/ExplorerPP.ps1")
+Invoke-Expression $($ExplorerPP.Content)
+
+Write-Host
+Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer - CM Trace" -Verbose
+Write-Host
+
+$CMTrace = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Log%20Viewer/CMTrace.ps1")
+Invoke-Expression $($CMTrace.Content)
+
 Write-Host
 Write-Verbose "Completed: Download of Extra OSDCloud ISO Utilities" -Verbose
 Write-Host
@@ -142,8 +166,7 @@ Write-Verbose "Completed: OSDCloud wallpaper download" -Verbose
 Write-Host
 
 Write-Host
-Write-Verbose "Completed: ALL Gigabyte AM4 Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
-Write-Host
+Write-Verbose "Completed: All downloads" -Verbose
 
 ################################################
 # OSDCloud Template and Workspace configuration
@@ -154,8 +177,8 @@ Write-Verbose "Confirming OSDCloud Templates......" -Verbose
 Get-OSDCloudTemplate
 
 Write-Host
-Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL ASUS AM4 motherboards to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name ASUS-Gaming-AM4 -WinRE
+Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL Gigabyte Gaming AM4 motherboards to enable wireless networking support..." -Verbose
+New-OSDCloudTemplate -Name Gigabyte-Gaming-AM4 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
