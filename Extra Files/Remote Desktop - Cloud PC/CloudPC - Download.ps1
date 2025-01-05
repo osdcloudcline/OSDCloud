@@ -113,8 +113,8 @@ Save-WebFile -SourceUrl $CloudPCFile39URL -DestinationDirectory $CloudPCDestinat
 Save-WebFile -SourceUrl $CloudPCFile40URL -DestinationDirectory $CloudPCDestination1
 Save-WebFile -SourceUrl $CloudPCFile41URL -DestinationDirectory $CloudPCDestination1
 Save-WebFile -SourceUrl $CloudPCFile42URL -DestinationDirectory $CloudPCDestination1
-Save-WebFile -SourceUrl $CloudPCFile430URL -DestinationDirectory $CloudPCDestination1
-Save-WebFile -SourceUrl $CloudPCFile441URL -DestinationDirectory $CloudPCDestination1
+Save-WebFile -SourceUrl $CloudPCFile43URL -DestinationDirectory $CloudPCDestination1
+Save-WebFile -SourceUrl $CloudPCFile44URL -DestinationDirectory $CloudPCDestination1
 
 Save-WebFile -SourceUrl $CloudPCenusFile1URL -DestinationDirectory $CloudPCDestination2
 Save-WebFile -SourceUrl $CloudPCenusFile2URL -DestinationDirectory $CloudPCDestination2
