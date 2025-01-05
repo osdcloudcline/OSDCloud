@@ -113,6 +113,8 @@ Write-Host '     - Accessing utilities from Windows PE OSDCloud environment     
 Write-Host '     - View list of OSDCloud functions - AKA OSDCloud HELP                    ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                              ' -BackgroundColor White
 pause
+Clear-Host
+
 
 
 }
