@@ -115,6 +115,103 @@ Write-Host '                                                                    
 pause
 Clear-Host
 
+Write-Host "======= $Title ======"
+Write-Host " 1. ZTI Installation: Windows 11 Enterprise"
+Write-Host " 2. ZTI Installation: Windows 11 Professional"
+Write-Host " 3. ZTI Installation: Windows 12 Enterprise"
+Write-Host " 4. ZTI Installation: Windows 12 Professional"
+Write-Host " 5. ZTI Installation: Windows Server 2025"
+Write-Host " 6. OSDCloud CLI Installation"
+Write-Host " 7. OSDCloud GUI Installation"
+Write-Host " 8. OSDCloud Azure Installation"
+Write-Host " 9. OSDCloud Custom Image Installation"
+Write-Host " 10. Access Utilities"
+Write-Host " 11. OSDCloud: Get Help"
+Write-Host " 12. Return to Main Menu"
+
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+'1'{cls
+    Write-Host "Updating OSD PowerShell Module..." -ForegroundColor Cyan
+    Install-Module -Name OSD -Force
+    Write-Host "Importing OSD PowerShell Module..." -ForegroundColor Cyan
+    Import-Module -Name OSD -Force
+    Start-OSDCloud -OSLanguage en-us -OSBuild 24H2 -OSEdition Enterprise -ZTI
+    }
+'2'{cls
+    Write-Host "Updating OSD PowerShell Module..." -ForegroundColor Cyan
+    Install-Module -Name OSD -Force
+    Write-Host "Importing OSD PowerShell Module..." -ForegroundColor Cyan
+    Import-Module -Name OSD -Force
+    Start-OSDCloud -OSLanguage en-us -OSBuild 24H2 -OSEdition Professional -ZTI
+    }
+'3'{cls
+    Write-Host "Updating OSD PowerShell Module..." -ForegroundColor Cyan
+    Install-Module -Name OSD -Force
+    Write-Host "Importing OSD PowerShell Module..." -ForegroundColor Cyan
+    Import-Module -Name OSD -Force
+    }
+'4'{cls
+     Write-Host "Updating OSD PowerShell Module..." -ForegroundColor Cyan
+    Install-Module -Name OSD -Force
+    Write-Host "Importing OSD PowerShell Module..." -ForegroundColor Cyan
+    Import-Module -Name OSD -Force
+    }
+ '5'{cls
+     Write-Host "Updating OSD PowerShell Module..." -ForegroundColor Cyan
+    Install-Module -Name OSD -Force
+    Write-Host "Importing OSD PowerShell Module..." -ForegroundColor Cyan
+    Import-Module -Name OSD -Force
+    
+    }
+'6'{cls
+    Write-Host "Updating OSD PowerShell Module..." -ForegroundColor Cyan
+    Install-Module -Name OSD -Force
+    Write-Host "Importing OSD PowerShell Module..." -ForegroundColor Cyan
+    Import-Module -Name OSD -Force
+    Start-OSDCloud
+    }
+'7'{cls
+    Write-Host "Updating OSD PowerShell Module..." -ForegroundColor Cyan
+    Install-Module -Name OSD -Force
+    Write-Host "Importing OSD PowerShell Module..." -ForegroundColor Cyan
+    Import-Module -Name OSD -Force
+    Start-OSDCloudGUI
+    }
+'8'{cls
+    Write-Host "Updating OSD PowerShell Module..." -ForegroundColor Cyan
+    Install-Module -Name OSD -Force
+    Write-Host "Importing OSD PowerShell Module..." -ForegroundColor Cyan
+    Import-Module -Name OSD -Force
+    Start-OSDCloudAzure
+    }
+'9'{cls
+    Write-Host "Updating OSD PowerShell Module..." -ForegroundColor Cyan
+    Install-Module -Name OSD -Force
+    Write-Host "Importing OSD PowerShell Module..." -ForegroundColor Cyan
+    Import-Module -Name OSD -Force
+    Write-Host
+    Write-Host "Detecting if there are custom OS images..." -ForegroundColor Cyan 
+    Start-OSDCloudGUI
+    }
+'10'{cls
+     Show-UtilitiesMenu
+    }
+'11'{cls
+    Get-Command osdcloud*
+    pause
+    Show-MainMenu
+    }
+'12'{cls
+    Show-MainMenu
+   }
+    }
+    }
+     until ($selection -eq '12'){ShowMainMenu}
+    }
 
 
 }
