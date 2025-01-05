@@ -44,7 +44,7 @@ $Others = Invoke-WebRequest("")
 Invoke-Expression $($Others.Content)
 
 Write-Host
-Write-Verbose "Completed: ASRUS AMD AM5 motherboard driver downloads" -Verbose
+Write-Verbose "Completed: ASUS AMD AM5 motherboard driver downloads" -Verbose
 Write-Host 
 
 Write-Host
