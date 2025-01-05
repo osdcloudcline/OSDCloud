@@ -532,6 +532,30 @@ Invoke-WebRequest $($DaRT.Content)
 $MSTSC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Remote%20Desktop%20Control/MSTSC.ps1")
 Invoke-Expression $($MSTSC.Content)
 
+$CloudPC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Remote%20Desktop%20-%20Cloud%20PC/CloudPC%20-%20Download.ps1")
+Invoke-Expression $($CloudPC.Content) 
+
+Write-Host
+Write-Verbose "Processing: Notepad ++" -Verbose
+Write-Host
+
+$NotepadPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Text%20Editor/NotepadPP.ps1")
+Invoke-Expression $($NotepadPP.Content)
+
+Write-Host
+Write-Verbose "Processing: Explorer ++" -Verbose
+Write-Host
+
+$ExplorerPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/File%20Explorer/ExplorerPP.ps1")
+Invoke-Expression $($ExplorerPP.Content)
+
+Write-Host
+Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer - CM Trace" -Verbose
+Write-Host
+
+$CMTrace = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Log%20Viewer/CMTrace.ps1")
+Invoke-Expression $($CMTrace.Content)
+
 Write-Host
 Write-Verbose "Completed: Download of Extra OSDCloud ISO Utilities" -Verbose
 Write-Host
@@ -660,9 +684,38 @@ Write-Host
 
 # MS DaRT Remote Connections and Troubleshooting
 
-# ServiceUI
+
+# MSTSC
+
+Write-Host
+Write-Verbose "Processing: Microsoft Remote Desktop Client for OSDCloud..." -Verbose 
+$MSTSCPath1 = "C:\OSDCloud\downloads\GitHub\MSTSC\Sys32Files"
+$MSTSCPath2 = "C:\OSDCloud\downloads\GitHub\MSTSC\Sys32Files\en-us"
+$MSTSCDestination1 = "$mountdir\Windows\System32"
+$MSTSCDestination2 = "$mountdir\Windows\System32\en-US"
+
+Copy-Item -Path $MSTSCPath1 -Destination $MSTSCDestination1 -Recurse -Force
+Copy-Item -Path $MSTSCPath2 -Destination $MSTSCDestination2 -Recurse -Force
+
+# CloudPC
+
+Write-Host
+Write-Verbose "Processing: Microsoft Remote Desktop - Cloud PC for OSDCloud..." -Verbose 
+$CloudPCPath1 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files"
+$CloudPCPath2 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files\en-us"
+$CloudPCDestination1 = "$mountdir\Windows\System32"
+$CloudPCDestination2 = "$mountdir\Windows\System32\en-US"
+
+Copy-Item -Path $CloudPCPath1 -Destination $CloudPCDestination1 -Recurse -Force
+Copy-Item -Path $CloudPCPath2 -Destination $CloudPCDestination2 -Recurse -Force
 
 # CMTrace 
+
+Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer CM Trace for OSDCloud..." -Verbose 
+$CMTracePath = "C:\OSDCloud\downloads\GitHub\CMTrace"
+$CMTraceDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force
 
 # Ghost Imaging
 
