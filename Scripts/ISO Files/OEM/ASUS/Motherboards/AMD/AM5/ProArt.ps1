@@ -37,7 +37,7 @@ Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
 Write-Host
 
 Write-Host
-Write-Verbose "Processing: ASUS AMD AM5 motherboard driver downloads" -Verbose
+Write-Verbose "Processing: ASUS AMD AM5 ProArt motherboard driver downloads" -Verbose
 Write-Host  
 
 $ProArt = Invoke-WebRequest("")
