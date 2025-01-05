@@ -706,13 +706,13 @@ $CloudPCPath2 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files\en-us"
 $CloudPCDestination1 = "$mountdir\Windows\System32"
 $CloudPCDestination2 = "$mountdir\Windows\System32\en-US"
 
-Copy-Item -Path $CloudPCPath1 -Destination $CloudPCDestination1 -Recurse -Force
-Copy-Item -Path $CloudPCPath2 -Destination $CloudPCDestination2 -Recurse -Force
+Copy-Item -Path "$CloudPCPath1\*" -Destination $CloudPCDestination1  -Force
+Copy-Item -Path "$CloudPCPath2\*" -Destination $CloudPCDestination2  -Force
 
 # CMTrace 
 
 Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer CM Trace for OSDCloud..." -Verbose 
-$CMTracePath = "C:\OSDCloud\downloads\GitHub\CMTrace"
+$CMTracePath = "C:\OSDCloud\downloads\GitHub\MECM-LogViewer"
 $CMTraceDestination = "$mountdir\Windows\System32"
 
 Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force
