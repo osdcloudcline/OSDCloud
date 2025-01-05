@@ -24,3 +24,8 @@ $CMTraceDestination = "C:\OSDCloud\downloads\GitHub\MECM-LogViewer"
 Write-Verbose "Processing: Acquiring CM Trace for integration to OSDCloud..." -Verbose
 Write-Host
 Save-WebFile -SourceUrl $CMTraceFile1URL -DestinationDirectory $CMTraceDestination
+
+Write-Host
+Write-Verbose "Completed: Download of CM Trace for integration to OSDCloud..." -Verbose
+
+Stop-Transcript
