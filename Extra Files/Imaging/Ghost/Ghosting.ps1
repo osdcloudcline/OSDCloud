@@ -14,7 +14,7 @@ $GhostExplorerURL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/ma
 
 $GhostServURL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Imaging/Ghost/GhostSrv.exe"
 
-$GhostDestination = "C:\OSDCloud\GitHub\downloads\Ghost"
+$GhostDestination = "C:\OSDCloud\downloads\GitHub\Ghost"
 
 Write-Verbose "Processing: Ghost 64-bit" -Verbose
 Save-WebFile -SourceUrl $Ghost64URL -DestinationDirectory $GhostDestination
@@ -24,5 +24,9 @@ Save-WebFile -SourceUrl $GhostExplorerURL -DestinationDirectory $GhostDestinatio
 
 Write-Verbose "Processing: Ghost Server" -Verbose
 Save-WebFile -SourceUrl $GhostServURL -DestinationDirectory $GhostDestination
+
+Write-Host
+Write-Verbose "Completed: Symantec Ghost file downloads" -Verbose
+Write-Host
 
 Stop-Transcript
