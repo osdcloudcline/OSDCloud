@@ -460,6 +460,7 @@ $WIMFile = Join-Path -Path $WindowsImage -ChildPath $sourceWIM
 $Destination = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
 Write-Verbose "Creating Custom WIM OS folder..." -Verbose
 New-Item -Path $Destination -ItemType Directory -Force
+Write-Verbose "Exporting WIM File..." -Verbose
 Export-WindowsImage -SourceImagePath "sourceWIM\install.wim" 
 
 Write-Verbose "Copying Windows Image to OSDCloud..." -Verbose
