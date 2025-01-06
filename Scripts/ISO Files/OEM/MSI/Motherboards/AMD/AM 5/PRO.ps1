@@ -168,6 +168,7 @@ Write-Host
 Write-Host
 Write-Verbose "Completed: All downloads" -Verbose
 Write-Host
+
 ################################################
 # OSDCloud Template and Workspace configuration
 ################################################
