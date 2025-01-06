@@ -36,7 +36,7 @@ Write-Host
 Write-Verbose "Processing: Dell Alienware M18R2 Motherboard driver downloads" -Verbose
 Write-Host
 
-$DELLAWM18R2 = Invoke-WebRequest("")
+$DELLAWM18R2 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Custom/Mike%20Laptop/Mike-AlienwareM18R2.ps1")
 Invoke-Expression $($DELLAWM18R2.Content)
 
 Write-Host
@@ -344,13 +344,39 @@ $OSDCloudPS7xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdclou
 Invoke-Expression $($OSDCloudPS7xMods.Content)
 
 #############################################
-# INTEL LGA 1851 Driver Integration - ASUS
+# Alienware M18 R2 - Mike Laptop
 #############################################
 
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 drivers" -Verbose
+Write-Verbose "Processing: Alienware M18 R2 drivers" -Verbose
 Write-Host
 
+Write-Verbose "Processing: Alienware M18 R2 Ethernet Driver..." -Verbose
+$EthernetDriver = "C:\OSDCloud\Drivers\Custom\Mike Laptops\Alienware M18 R2\Ethernet"
+
+Edit-OSDCloudWinPE -DriverPath $EthernetDriver
+
+Write-Host
+Write-Verbose "Processing: Alienware M18 R2 Bluetooth Driver..." -Verbose
+$BluetoothDriver = "C:\OSDCloud\Drivers\Custom\Mike Laptops\Alienware M18 R2\Bluetooth"
+
+Edit-OSDCloudWinPE -DriverPath $BluetoothDriver
+
+Write-Host
+Write-Verbose "Processing: Alienware M18 R2 WiFi Driver..." -Verbose
+$WiFiDriver = "C:\OSDCloud\Drivers\Custom\Mike Laptops\Alienware M18 R2\WiFi"
+
+Edit-OSDCloudWinPE -DriverPath $WiFiDriver 
+
+Write-Host
+Write-Verbose "Processing: Alienware M18 R2 Storage Driver..." -Verbose
+$StorageDriver = "C:\OSDCloud\Drivers\Custom\Mike Laptops\Alienware M18 R2\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $StorageDriver 
+
+Write-Host
+Write-Verbose "Completed: Integration of Alienware M18 R2 drivers into OSDCloud" -Verbose
+Write-Host
 
 ############################################
 # Other Drivers
