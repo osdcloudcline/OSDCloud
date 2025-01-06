@@ -138,7 +138,7 @@ Write-Host
 
 Write-Host
 Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name ALL-Virtual -WinRE
+New-OSDCloudTemplate -Name ESXI-Virtual -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
