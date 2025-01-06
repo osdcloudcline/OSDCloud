@@ -451,7 +451,7 @@ Write-Host
 ##########################################
 # Add Custom WIM Image
 ##########################################
-$Question = Read-Host -Prompt 'Do you want or need to add an additional baseline or custom Windows Installation WIM file?'
+$Question = Read-Host -Prompt 'Do you want or need to add an additional Windows Installation WIM file?'
 $ExtractWIM = Read-Host 'Do you need to extract a WIM Image before copying to OSDCloud?'
 If(($Question -eq "yes") -or ($Question -eq "Yes") -or ($Question -eq "y") -or ($Question -eq "Y")) -and (($ExtractWIM -eq "yes") -or ($ExtractWIM -eq "Yes") -or ($ExtractWIM -eq "y") -or ($ExtractWIM -eq "Y")){
 $WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
@@ -460,9 +460,11 @@ $WIMFile = Join-Path -Path $WindowsImage -ChildPath $sourceWIM
 $Destination = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
 Write-Verbose "Creating Custom WIM OS folder..." -Verbose
 New-Item -Path $Destination -ItemType Directory -Force
-Write-Verbose "Exporting WIM File..." -Verbose
-Export-WindowsImage -SourceImagePath "sourceWIM\install.wim" 
-
+Write-Verbose "Exporting Client WIM File..." -Verbose
+Get-WindowsImage -ImagePath $WIMFile | Format-Table ImageIndex, ImageName
+$Index = Read-Host -Prompt ' Select edition'
+$ExportWIMFileName = Read-Host -Prompt 'Please specify a file name for the exported WIM file, including the file extension (EG: Windows11ProWorkstations.wim)'
+Export-WindowsImage -SourceImagePath "sourceWIM\install.wim" -SourceIndex $Index -DestinationImagePath "$Destination\$ExportWIMFileName" -DestinationName "Windows 11 Pro for Workstations - Bryan Desktop" 
 Write-Verbose "Copying Windows Image to OSDCloud..." -Verbose
 Copy-Item -Path $WindowsImage -Destrination
 
