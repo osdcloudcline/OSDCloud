@@ -314,3 +314,48 @@ Invoke-Expression $($OSDCloudPS5xMods.Content)
 
 $OSDCloudPS7xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
 Invoke-Expression $($OSDCloudPS7xMods.Content)
+
+############################################
+# Other Drivers
+############################################
+
+# Virtualization Drivers - VMWare ESXI
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere Ethernet Drivers..." -Verbose 
+$ESXIEthernet = "C:\OSDCloud\Drivers\Virtualization\ESXI\Network"
+
+Edit-OSDCloudWinPE -DriverPath  $ESXIEthernet
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere Storage Drivers..." -Verbose 
+$ESXIStorage = "C:\OSDCloud\Drivers\Virtualization\ESXI\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $ESXIStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of VMWare ESXI vSphere Network and Storage Drivers..." -Verbose
+Write-Host
+
+###########################################
+# OSDCloud NEW Wallpaper
+###########################################
+
+Write-Host
+Write-Verbose "Processing: NEW OSDCloud Wallpaper..." -Verbose 
+$OSDCloudwallpaper = "C:\downloads\OSDCloud\GitHub\wallpaper\winpe.jpg"
+
+Edit-OSDCloudWinPE -Wallpaper $OSDCloudwallpaper
+
+Write-Host
+Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
+Write-Host
+
+##########################################
+# OSDCloud WebScript for Startnet.cmd
+##########################################
+
+
+###########################################
+# Create OSDCloud ISO
+############################################
