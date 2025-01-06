@@ -764,7 +764,7 @@ Invoke-Expression $($OSDCloudPS5xMods.Content)
 
 # PowerShell 7.x Modules - OSDCloud
 
-$OSDCloudPS7xMods = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
+$OSDCloudPS7xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
 Invoke-Expression $($OSDCloudPS7xMods.Content)
 
 # AM4 CPU Socket
