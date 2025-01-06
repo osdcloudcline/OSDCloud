@@ -192,8 +192,8 @@ Write-Verbose "Confirming OSDCloud Templates......" -Verbose
 Get-OSDCloudTemplate
 
 Write-Host
-Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL ASUS AM4 motherboards to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name ASUS-AM5 -WinRE
+Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL Gigabyte AM5 motherboards to enable wireless networking support..." -Verbose
+New-OSDCloudTemplate -Name Gigabyte-AM5 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
@@ -301,9 +301,25 @@ Write-Host
 
 # MS DaRT Remote Connections and Troubleshooting
 
-# ServiceUI
+# CloudPC
+
+Write-Host
+Write-Verbose "Processing: Microsoft Remote Desktop - Cloud PC for OSDCloud..." -Verbose 
+$CloudPCPath1 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files"
+$CloudPCPath2 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files\en-us"
+$CloudPCDestination1 = "$mountdir\Windows\System32"
+$CloudPCDestination2 = "$mountdir\Windows\System32\en-US"
+
+Copy-Item -Path "$CloudPCPath1\*" -Destination $CloudPCDestination1  -Force
+Copy-Item -Path "$CloudPCPath2\*" -Destination $CloudPCDestination2  -Force
 
 # CMTrace 
+
+Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer CM Trace for OSDCloud..." -Verbose 
+$CMTracePath = "C:\OSDCloud\downloads\GitHub\MECM-LogViewer"
+$CMTraceDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force 
 
 # Ghost Imaging
 
