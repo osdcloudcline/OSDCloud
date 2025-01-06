@@ -8,7 +8,7 @@ Get-Date
 # Explorer + +  File URLs
 ############################################
 
-$ExplorerPPFile1URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Log%20Viewer/CMTrace.exe"
+$ExplorerPPFile1URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/File%20Explorer/Explorer++.exe"
 
 Import-Module -Name OSD -Force
 
