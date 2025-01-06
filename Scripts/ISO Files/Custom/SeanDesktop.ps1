@@ -36,7 +36,7 @@ Write-Host
 Write-Verbose "Processing: Dell Alienware M18R2 Motherboard driver downloads" -Verbose
 Write-Host
 
-$DELLAWM18R2 = Invoke-WebRequest("")
+$DELLAWM18R2 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Custom/Sean's%20Laptop/Sean-AlienwareM18R2.ps1")
 Invoke-Expression $($DELLAWM18R2.Content)
 
 Write-Host
@@ -508,6 +508,7 @@ ElseIf(($Question -eq "no" -and $ExtractWIM -eq "no") -or ($Question -eq "Nes"-a
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
 ##########################################
+
 Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
 Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1
 Write-Host
