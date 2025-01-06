@@ -451,7 +451,15 @@ Write-Host
 ##########################################
 # Add Custom WIM Image
 ##########################################
-
+$Question = Read-Host -Prompt 'Do you want or need to add an additional baseline or custom Windows Installation WIM file?'
+If(($Question -eq "yes") -or ($Question -eq "Yes") -or ($Question -eq "y") -or ($Question -eq "Y")){
+$WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud'
+$WIMFile1 = 
+$Destination = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
+Write-Verbose "Creating Custom WIM OS folder..." -Verbose
+New-Item -Path $Destination -ItemType Directory -Force
+Write-Verbose "Copying Windows Image to OSDCloud..." -Verbose
+Copy-Item -Path $WindowsImage -Destrination
 
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
