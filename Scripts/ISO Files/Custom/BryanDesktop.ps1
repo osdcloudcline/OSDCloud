@@ -448,6 +448,10 @@ Write-Host
 Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
 Write-Host
 
+##########################################
+# Add Custom WIM Image
+##########################################
+
 
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
