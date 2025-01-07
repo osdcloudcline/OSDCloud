@@ -37,11 +37,11 @@ do
   switch($selection)
   {
 '1'{cls
-    $LGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1851/LGA1851-Main.ps1")
+    $LGA1851 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1851/LGA1851-Main.ps1")
     Invoke-Expression $($LGA1851.Content)
     }
 '2'{cls
-    $LGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1700/LGA1700-Main.ps1")
+    $LGA1700 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1700/LGA1700-Main.ps1")
     Invoke-Expression $($LGA1700.Content)
     }
 '5'{cls
@@ -51,7 +51,7 @@ do
     Show-MainMenu
     }
 '6'{cls
-    $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
+    $OSDCloudMain = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
