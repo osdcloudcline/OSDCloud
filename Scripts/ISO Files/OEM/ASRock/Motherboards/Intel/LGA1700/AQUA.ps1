@@ -76,7 +76,7 @@ Write-Host
 
 Write-Host
 Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name ASRock-LGA1700 -WinRE
+New-OSDCloudTemplate -Name ASRock-AQUA-LGA1700 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
@@ -108,9 +108,37 @@ Invoke-Expression $($AddPS7.Content)
 #################################
 
 Write-Host
-Write-Verbose "Processing: OSDCloud - Cloud Drivers..." -Verbose 
+Write-Verbose "Integrating OSDCloud - Cloud Drivers..." -Verbose
+Write-Host
 
-Edit-OSDCloudWinPE -CloudDriver USB,VMware,WiFi
+Write-Verbose "Processing: OSDCloud Dell Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPE -CloudDriver Dell
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Intel Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPE -CloudDriver IntelNet
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Nutanix Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPE -CloudDriver Nutanix
+
+Write-Host
+Write-Verbose "Processing: OSDCloud USB Cloud Drivers..." --Verbose
+
+Edit-OSDCloudWinPE -CloudDriver USB
+
+Write-Host
+Write-Verbose "Processing: OSDCloud WiFi Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPE -CloudDriver WiFi
+
+Write-Host
+Write-Verbose "Processing: OSDCloud VMWare Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPE -CloudDriver VMWare
 
 Write-Host
 Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
