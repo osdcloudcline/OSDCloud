@@ -511,6 +511,16 @@ Write-Verbose "Copying Windows Image to OSDCloud..." -Verbose
 Copy-Item -Path "$WIMFile" -Destination "$Destination" -Force
 Stop-Transcript
 }
+ElseIf(($Question -eq "no" -and $ExtractWIM -eq "no") -or ($Question -eq "No"-and $ExtractWIM -eq "No") -or ($Question -eq "n" -and $ExtractWIM -eq "n") -or ($Question -eq "N"-and $ExtractWIM -eq "N")){
+
+##########################################
+# OSDCloud WebScript for Startnet.cmd
+##########################################
+
+Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
+Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1
+Write-Host
+}
 }
 Show-CustomImage
 
