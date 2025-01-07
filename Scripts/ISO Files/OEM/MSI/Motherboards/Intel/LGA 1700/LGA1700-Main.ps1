@@ -62,7 +62,6 @@ do
     $PRO = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/Intel/LGA%201700/PRO.ps1")
     Invoke-Expression $($PRO.Content)
     }
-
 '6'{cls
     $ALLMSI = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/Intel/LGA%201700/ALL-MSI-LGA1700.ps1")
     Invoke-Expression $($ALLMSI.Content)
