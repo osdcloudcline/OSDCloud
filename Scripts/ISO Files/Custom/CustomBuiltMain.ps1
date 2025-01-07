@@ -111,35 +111,35 @@ do
   switch($selection)
   {
 '1'{cls
-    $BillyPC = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/BillyPC.ps1")
+    $BillyPC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Custom/BillyPC.ps1")
     Invoke-Expression $($BillyPC.Content)
     }
 '2'{cls
-    $BryanDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/BryanDesktop.ps1")
+    $BryanDesktop = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Custom/BryanDesktop.ps1")
     Invoke-Expression $($BryanDesktop.Content)
     }
 '3'{cls
-    $BryanLaptop = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/BryanDesktop.ps1")
+    $BryanLaptop = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Custom/BryanLaptop.ps1")
     Invoke-Expression $($BryanLaptop.Content)
     }
 '4'{cls
-    $DadDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/DadDesktop.ps1")
+    $DadDesktop = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Custom/DadDesktop.ps1")
     Invoke-Expression $($DadDesktop.Content)
     }
 '5'{cls
-    $MomDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/MomDesktop.ps1")
+    $MomDesktop = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Custom/MomDesktop.ps1")
     Invoke-Expression $($MomDesktop.Content)
     }
 '6'{cls
-    $DavePatVPCs = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/DavePatV-PCs.ps1")
+    $DavePatVPCs = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Custom/DavePatV-PCs.ps1")
     Invoke-Expression $($DavePatVPCs.Content)
     }
 '7'{cls
-    $SeanDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/SeanDesktop.ps1")
+    $SeanDesktop = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Custom/SeanDesktop.ps1")
     Invoke-Expression $($SeanDesktop.Content)
     }
 '8'{cls
-    $MikePC = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/MikeLaptop.ps1")
+    $MikePC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Custom/MikeLaptop.ps1")
     Invoke-Expression $($MikePC.Content)
     }
 '9'{cls
@@ -153,7 +153,7 @@ do
     Show-MainMenu
     }
 '11'{cls
-    $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
+    $OSDCloudMain = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
