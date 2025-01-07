@@ -109,20 +109,20 @@ do
   switch($selection)
   {
 '1'{cls
-    $ASUSMotherboards = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/ASUSMain.ps1")
+    $ASUSMotherboards = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/ASUSMain.ps1")
     Invoke-Expression $($ASUSMotherboards.Content)
     }
 '2'{cls
-    $MSIMotherboards = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/MSIMain.ps1")
+    $MSIMotherboards = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/MSIMain.ps1")
     Invoke-Expression $($MSIMotherboards.Content)
     }
 '3'{cls
-    $GigabyteMotherboards = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/GigabyteMain.ps1")
+    $GigabyteMotherboards = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/GigabyteMain.ps1")
     Invoke-Expression $($GigabyteMotherboards.Content)
     }
 '4'{cls
-    $AsrockMotherboards = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/ASRockMain.ps1")
-    Invoke-Expression $($AsrockMotherboards.Content)
+    $ASRockMotherboards = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/ASRockMain.ps1")
+    Invoke-Expression $($ASRockMotherboards.Content)
     }
 '5'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
@@ -131,7 +131,7 @@ do
     Show-MainMenu
     }
 '6'{cls
-    $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
+    $OSDCloudMain = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
