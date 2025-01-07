@@ -114,19 +114,19 @@ do
   switch($selection)
   {
 '1'{cls
-    $ESXI8 = Invoke-WebRequest("")
+    $ESXI8 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Virtualization/ESXI.ps1")
     Invoke-Expression $($ESXI8.Content)
     }
 '2'{cls
-    $HyperV = Invoke-WebRequest("")
+    $HyperV = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Virtualization/HyperV.ps1")
     Invoke-Expression $($HyperV.Content)
     }
 '3'{cls
-    $VMWWorkstationPro = Invoke-WebRequest("")
+    $VMWWorkstationPro = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Virtualization/VMWareWorkstationPro.ps1")
     Invoke-Expression $($VMWWorkstationPro.Content)
     }
 '4'{cls
-    $Proxmox = Invoke-WebRequest("")
+    $Proxmox = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Virtualization/Proxmox.ps1")
     Invoke-Expression $($Proxmox.Content)
     }
 '5'{cls
@@ -134,7 +134,7 @@ do
     Invoke-Expression $($Docker.Content)
     }
 '6'{cls
-    $ALLVirt = Invoke-WebRequest("")
+    $ALLVirt = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Virtualization/ALL-VT.ps1")
     Invoke-Expression $($ALLVirt.Content)
     }
 '7'{cls
