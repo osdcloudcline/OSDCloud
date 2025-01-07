@@ -531,7 +531,7 @@ Write-Verbose "Copying Windows Image to OSDCloud..." -Verbose
 Copy-Item -Path "$WIMFile" -Destination "$Destination" -Force
 Stop-Transcript
 }
-ElseIf(($Question -eq "no" -and $ExtractWIM -eq "no") -or ($Question -eq "Nes"-and $ExtractWIM -eq "No") -or ($Question -eq "n" -and $ExtractWIM -eq "n") -or ($Question -eq "Y"-and $ExtractWIM -eq "N")){
+ElseIf(($Question -eq "no" -and $ExtractWIM -eq "no") -or ($Question -eq "No"-and $ExtractWIM -eq "No") -or ($Question -eq "n" -and $ExtractWIM -eq "n") -or ($Question -eq "N"-and $ExtractWIM -eq "N")){
 
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
