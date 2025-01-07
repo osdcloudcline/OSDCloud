@@ -111,27 +111,27 @@ do
   switch($selection)
   {
 '1'{cls
-    $DesktopMotherboards = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/DesktopMotherboardsMain.ps1")
+    $DesktopMotherboards = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/DesktopMotherboardsMain.ps1")
     Invoke-Expression $($DesktopMotherboards.Content)
     }
 '2'{cls
-    $CustomBuilt = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/CustomBuiltMain.ps1")
+    $CustomBuilt = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Custom/CustomBuiltMain.ps1")
     Invoke-Expression $($CustomBuilt.Content)
     }
 '3'{cls
-    $OEM = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM%20Pre-Built%20Systems/OEMPreBuilt-Main.ps1")
-    Invoke-Expression $($OEM.Content)
+    $OEMPreBuilt = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM%20Pre-Built%20Systems/OEMPreBuilt-Main.ps1")
+    Invoke-Expression $($OEMPreBuilt.Content)
     }
 '4'{cls
-    $Virtualization = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/VirtualizationMain.ps1")
+    $Virtualization = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Virtualization/VirtualizationMain.ps1")
     Invoke-Expression $($Virtualization.Content)
     }
 '5'{cls
-    $CPUSocket = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/CPUSocketMain.ps1")
+    $CPUSocket = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/CPUSocketMain.ps1")
     Invoke-Expression $($CPUSocket.Content)
     }
 '6'{cls
-    $DriversDL = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/main/OSDCloudDriversMain.ps1")
+    $DriversDL = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/OSDCloudDriversMain.ps1")
     Invoke-Expression $($DriversDL.Content)
     }
 '7'{cls
