@@ -510,6 +510,7 @@ $WIMFile = Join-Path -Path $WindowsImage '\Sources\install.wim'
 $Destination = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
 Write-Verbose "Creating Custom WIM OS folder..." -Verbose
 New-Item -Path $Destination -ItemType Directory -Force
+Write-Host
 Write-Verbose "Exporting Client WIM File and copying Windows Image to OSDCloud..." -Verbose
 Get-WindowsImage -ImagePath $WIMFile | Format-Table ImageIndex, ImageName
 $Index = Read-Host -Prompt ' Select edition'
@@ -537,8 +538,23 @@ Show-CustomImage
 ##########################################
 # Remove Built In Apps
 ##########################################
+$mountdir = C:\Mount
+$WIMPath = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
+$WIMFile = Join-Path -Path $WIMPath '\install.wim'
+Get-WindowsImage -ImagePath $WIMFile | Format-Table ImageIndex, ImageName
+$Index = Read-Host -Prompt ' Select edition'
+Write-Host
+Write-Verbose "Mounting WIM File..." -Verbose
+Mount-WindowsImage -ImagePath $WIMFile -Index $Index -Path $mountdir 
 
+Write-Host 
+Write-Verbose "Removing built-in pre-provisioned apps based on OSDCloudCline's Cloud Appx Apps source list..." 
+$AppsRemoval = Invoke-WebRequest ("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Apps%20Removal/Client%20OS/Windows%2011/24H2/Remove24H2Apps.ps1")
+Invoke-Expression $($AppsRemoval.Content)
 
+Write-Host
+Write-Verbose "Saving modified Windows WIM File..." -Verbose
+Dismount-WindowsImage -Path $mountdir -Save
 
 ##########################################
 # OSDCloud WebScript for ZTI Installs
