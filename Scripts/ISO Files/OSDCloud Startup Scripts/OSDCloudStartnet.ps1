@@ -264,29 +264,175 @@ do
     
     }
 '2'{cls
-   
+    $Ghost64Path = "X:\Windows\System32\Ghost64.exe"
+    Start-Process -FilePath $Ghost64Path
     }
 '3'{cls
+    Write-Verbose "Processing: Registering neccessary DLL Files. Please be patient" -Verbose
+   
     
+    $MSTSCPath = "X:\Windows\System32\"
+    Start-Process -FilePath $MSTSCPath
     }
 '4'{cls
-     
+    Write-Verbose "Processing: Registering neccessary DLL Files. Please be patient" -Verbose
+    Write-Host
+
+    $DLLMainDir = "X:\Windows\System32"
+    $CloudPCDLL1 = "$DLLMainDir\CommonServiceLocator.dll"
+    $CloudPCDLL2 = "$DLLMainDir\CommonServiceLocator.dll"
+    $CloudPCDLL3 = "$DLLMainDir\Microsoft.SlimCV.VBM.dll"
+    $CloudPCDLL4 = "$DLLMainDir\MsMmrDVCPlugin.dll"
+    $CloudPCDLL5 = "$DLLMainDir\MsRdcWebRTCAddIn.dll"
+    $CloudPCDLL6 = "$DLLMainDir\MsTeamsPluginAvd.dll"
+    $CloudPCDLL7 = "$DLLMainDir\Newtonsoft.Json.dll"
+    $CloudPCDLL8 = "$DLLMainDir\Prism.Unity.Wpf.dll"
+    $CloudPCDLL9 = "$DLLMainDir\Prism.Wpf.dll"
+    $CloudPCDLL10 = "$DLLMainDir\Prism.dll"
+    $CloudPCDLL11 = "$DLLMainDir\RDClient.Logging.dll"
+    $CloudPCDLL12 = "$DLLMainDir\RdClient.Common.dll"
+    $CloudPCDLL13 = "$DLLMainDir\RdClient.Contracts.dll"
+    $CloudPCDLL14 = "$DLLMainDir\RdClient.Diagnostics.dll"
+    $CloudPCDLL15 = "$DLLMainDir\RdClient.Helpers.dll"
+    $CloudPCDLL16 = "$DLLMainDir\RdClient.Instrumentation.dll"
+    $CloudPCDLL17 = "$DLLMainDir\RdClient.PlatformAbstractions.dll"
+    $CloudPCDLL18 = "$DLLMainDir\RdClient.RemoteFeedClient.dll"
+    $CloudPCDLL19 = "$DLLMainDir\RdClient.Tracing.dll"
+    $CloudPCDLL20 = "$DLLMainDir\RdClient.UpdateLib.dll"
+    $CloudPCDLL21 = "$DLLMainDir\RdClient.Utilities.dll"
+    $CloudPCDLL22 = "$DLLMainDir\RdClient.WPF.Core.dll"
+    $CloudPCDLL23 = "$DLLMainDir\RdClient.WPF.Win10.dll"
+    $CloudPCDLL24 = "$DLLMainDir\RdpWinStlHelper.dll"
+    $CloudPCDLL25 = "$DLLMainDir\System.Diagnostics.DiagnosticSource.dll"
+    $CloudPCDLL26 = "$DLLMainDir\System.Net.Http.dll"
+    $CloudPCDLL27 = "$DLLMainDir\System.Runtime.CompilerServices.Unsafe.dll"
+    $CloudPCDLL28 = "$DLLMainDir\System.ValueTuple.dll"
+    $CloudPCDLL29 = "$DLLMainDir\System.Windows.Interactivity.dll"
+    $CloudPCDLL30 = "$DLLMainDir\Unity.Abstractions.dll"
+    $CloudPCDLL31 = "$DLLMainDir\Unity.Container.dll"
+    $CloudPCDLL32 = "$DLLMainDir\concrt140.dll"
+    $CloudPCDLL33 = "$DLLMainDir\msvcp140.dll"
+    $CloudPCDLL34 = "$DLLMainDir\msvcp140_1.dll"
+    $CloudPCDLL35 = "$DLLMainDir\msvcp140_2.dll"
+    $CloudPCDLL36 = "$DLLMainDir\msvcp140_atomic_wait.dll"
+    $CloudPCDLL37 = "$DLLMainDir\msvcp140_codecvt_ids.dll"
+    $CloudPCDLL38 = "$DLLMainDir\rdclientax.dll"
+    $CloudPCDLL39 = "$DLLMainDir\rdpnanoTransport.dll"
+    $CloudPCDLL40 = "$DLLMainDir\vccorlib140.dll"
+    $CloudPCDLL41 = "$DLLMainDir\vcruntime140.dll"
+    $CloudPCDLL42 = "$DLLMainDir\vcruntime140_1.dll"
+
+   $arguments1 = "/s", $CloudPCDLL1
+   $arguments2 = "/s", $CloudPCDLL2
+   $arguments3 = "/s", $CloudPCDLL3
+   $arguments4 = "/s", $CloudPCDLL4
+   $arguments5 = "/s", $CloudPCDLL5
+   $arguments6 = "/s", $CloudPCDLL6
+   $arguments7 = "/s", $CloudPCDLL7
+   $arguments8 = "/s", $CloudPCDLL8
+   $arguments9 = "/s", $CloudPCDLL9
+   $arguments10 = "/s", $CloudPCDLL0
+   $arguments11 = "/s", $CloudPCDLL11
+   $arguments12 = "/s", $CloudPCDLL12
+   $arguments13 = "/s", $CloudPCDLL13
+   $arguments14 = "/s", $CloudPCDLL14
+   $arguments15 = "/s", $CloudPCDLL15
+   $arguments16 = "/s", $CloudPCDLL16
+   $arguments17 = "/s", $CloudPCDLL17
+   $arguments18 = "/s", $CloudPCDLL18
+   $arguments19 = "/s", $CloudPCDLL19
+   $arguments20 = "/s", $CloudPCDLL20
+   $arguments21 = "/s", $CloudPCDLL21
+   $arguments22 = "/s", $CloudPCDLL22
+   $arguments23 = "/s", $CloudPCDLL23
+   $arguments24 = "/s", $CloudPCDLL24
+   $arguments25 = "/s", $CloudPCDLL25
+   $arguments26 = "/s", $CloudPCDLL26
+   $arguments27 = "/s", $CloudPCDLL27
+   $arguments28 = "/s", $CloudPCDLL28
+   $arguments29 = "/s", $CloudPCDLL29
+   $arguments30 = "/s", $CloudPCDLL30
+   $arguments31 = "/s", $CloudPCDLL31
+   $arguments32 = "/s", $CloudPCDLL32
+   $arguments33 = "/s", $CloudPCDLL33
+   $arguments34 = "/s", $CloudPCDLL34
+   $arguments35 = "/s", $CloudPCDLL35
+   $arguments36 = "/s", $CloudPCDLL36
+   $arguments37 = "/s", $CloudPCDLL37
+   $arguments38 = "/s", $CloudPCDLL38
+   $arguments39 = "/s", $CloudPCDLL39
+   $arguments40 = "/s", $CloudPCDLL40
+   $arguments41 = "/s", $CloudPCDLL41
+   $arguments42 = "/s", $CloudPCDLL42
+
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments1 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments2 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments3 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments4 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments5 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments6 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments7 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments8 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments9 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments10 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments11 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments12 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments13 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments14 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments15 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments16 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments17 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments18 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments19 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments20 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments21 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments22 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments23 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments24 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments25 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments26 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments27 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments28 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments29 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments30 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments31 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments32 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments33 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments34 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments35 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments36 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments37 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments38 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments39 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments40 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments41 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments42 -Wait -NoNewWindow -PassThru
+
+   Write-Verbose "Completed: Registering neccessary DLL Files." -Verbose
+   Write-Host
+    
+    $CloudPCPath = "X:\Windows\System32\msrdcw.exe"
+    Start-Process -FilePath $CloudPCPath
     }
  '5'{cls
-    
-    
+    $ExplorerPPPath = "X:\Windows\System32\Explorer++.exe"
+    Start-Process -FilePath $ExplorerPPPath
     }
 '6'{cls
-    
+    $NotepadPPPath = "X:\Windows\System32\notepad++.exe"
+    Start-Process -FilePath $NotepadPPPath
     }
 '7'{cls
-   
+   $BrowserPath = "X:\Windows\System32\Chrome.exe"
+   Start-Process -FilePath $BrowserPath
     }
 '8'{cls
-   
+   $UPBRPath = "X:\Windows\System32\UserProfileBackupRestore.exe"
+   Start-Process -FilePath $UPBRPath
     }
 '9'{cls
-    
+    $LogViewerPath = "X:\Windows\System32\CMTrace.exe"
+   Start-Process -FilePath $LogViewerPath
     }
 '10'{cls
     Get-Command osdcloud*
