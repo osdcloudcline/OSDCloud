@@ -42,35 +42,35 @@ do
   switch($selection)
   {
 '1'{cls
-    $ALLASUSLGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/ALL-ASUS-LGA1851.ps1")
+    $ALLASUSLGA1851 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/ALL-ASUS-LGA1851.ps1")
     Invoke-Expression $($ALLASUSLGA1851.Content)
     }
 '2'{cls
-    $Business1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/Business.ps1")
+    $Business1851 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/Business.ps1")
     Invoke-Expression $($Business1851.Content)
     }
 '3'{cls
-    $CSM1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/CSM.ps1")
+    $CSM1851 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/CSM.ps1")
     Invoke-Expression $($CSM1851.Content)
     }
 '4'{cls
-    $Other1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/Other.ps1")
+    $Other1851 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/Other.ps1")
     Invoke-Expression $($Other1851.Content)
     }
 '5'{cls
-    $PRIME1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/PRIME.ps1")
+    $PRIME1851 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/PRIME.ps1")
     Invoke-Expression $($PRIME1851.Content)
     }
 '6'{cls
-    $ProArt1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/ProArt.ps1")
+    $ProArt1851 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/ProArt.ps1")
     Invoke-Expression $($ProArt1851.Content)
     }
 '7'{cls
-    $ROG1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/ROG%20-%20Republic%20of%20Gamers.ps1")
+    $ROG1851 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/ROG%20-%20Republic%20of%20Gamers.ps1")
     Invoke-Expression $($ROG1851.Content)
     }
 '8'{cls
-    $TUF1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/TUF%20Gaming.ps1")
+    $TUF1851 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/TUF%20Gaming.ps1")
     Invoke-Expression $($TUF1851.Content)
     }
 '9'{cls
@@ -80,7 +80,7 @@ do
     Show-MainMenu
     }
 '10'{cls
-    $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
+    $OSDCloudMain = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
