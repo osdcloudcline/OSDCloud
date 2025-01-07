@@ -101,9 +101,10 @@ Write-Host " 2. OSDCloud: Custom Built Systems"
 Write-Host " 3. OSDCloud: OEM Pre-Built Systems"
 Write-Host " 4. OSDCloud: Virtualization"
 Write-Host " 5. OSDCloud: By Processor and Motherboard Socket Type"
-Write-Host " 6. OSDCloud: Download Drivers ONLY"
-Write-Host " 7. OSDCloud: Get Help"
-Write-Host " 8. Return to Main Menu"
+Write-Host " 6. OSDCloud: Create ZTI Installation Media"
+Write-Host " 7. OSDCloud: Download Drivers ONLY"
+Write-Host " 8. OSDCloud: Get Help"
+Write-Host " 9. Return to Main Menu"
 
 do 
 {
@@ -131,22 +132,26 @@ do
     Invoke-Expression $($CPUSocket.Content)
     }
 '6'{cls
+    $ZTIMain = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud-ZTI%20ISO%20Files/ZTI%20Installations-MainMenu.ps1")
+    Invoke-Expression $($ZTIMain.Content)
+    }
+'7'{cls
     $DriversDL = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/OSDCloudDriversMain.ps1")
     Invoke-Expression $($DriversDL.Content)
     }
-'7'{cls
+'8'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
-'8'{cls
+'9'{cls
     $OSDSYSTEMMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
     Invoke-Expression $($OSDSYSTEMMain.Content)
    }
     }
     }
-     until ($selection -eq '8'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '9'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
