@@ -1,7 +1,7 @@
 Function Show-MainMenu{
    [CmdletBinding()]
    param(
-   [string]$Title = 'OSD Cloud - Gigabyte AMD Main Menu',
+   [string]$Title = 'OSD Cloud - Gigabyte Intel Main Menu',
    [string]$Question = 'What type of action do you need to do?' 
    )
 cls
@@ -12,29 +12,29 @@ Write-Host
 Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
 Write-Host
 Write-Host 
-Write-Host '                                                                              ' -BackgroundColor White                                                              
-Write-Host '            This OSDCloud section allows the user to perform:                 ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '          - Creating ISO images for Gigabyte LGA1851 Desktop motherboards         ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '                                                                              ' -BackgroundColor White
-Write-Host '          - Gigabyte: AMD LGA1851 AORUS motherboards                              ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '          - Gigabyte: AMD LGA1851 AI TOP motherboards                             ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '          - Gigabyte: AMD LGA1851 Gaming motherboards                             ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '          - Gigabyte: AMD LGA1851 UD - Ultra Durable motherboards                 ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '          - Gigabyte: AMD LGA1851 AERO motherboards                               ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '          - Gigabyte: AMD LGA1851 Eagle motherboards                              ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '          - Gigabyte: ALL AMD LGA1851 motherboards                                ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '                                                                              ' -BackgroundColor White
+Write-Host '                                                                                    ' -BackgroundColor White                                                              
+Write-Host '            This OSDCloud section allows the user to perform:                       ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - Creating ISO images for Gigabyte LGA1851 Desktop motherboards           ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                                    ' -BackgroundColor White
+Write-Host '          - Gigabyte: Intel LGA1851 AORUS motherboards                              ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - Gigabyte: Intel LGA1851 AI TOP motherboards                             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - Gigabyte: Intel LGA1851 Gaming motherboards                             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - Gigabyte: Intel LGA1851 UD - Ultra Durable motherboards                 ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - Gigabyte: Intel LGA1851 AERO motherboards                               ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - Gigabyte: Intel LGA1851 Eagle motherboards                              ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - Gigabyte: ALL Intel LGA1851 motherboards                                ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                                    ' -BackgroundColor White
 pause
 Clear-Host
 
 Write-Host "======= $Title ======"
-Write-Host " 1. OSDCloud: Create ISO - Gigabyte AMD LGA 1851 AORUS motherboards"
-Write-Host " 2. OSDCloud: Create ISO - Gigabyte AMD LGA 1851 AI TOP motherboards"
-Write-Host " 3. OSDCloud: Create ISO - Gigabyte AMD LGA 1851 Gaming motherboards"
-Write-Host " 4. OSDCloud: Create ISO - Gigabyte AMD LGA 1851 UD - Ultra Durable motherboards"
-Write-Host " 5. OSDCloud: Create ISO - Gigabyte AMD LGA 1851 AERO motherboards"
-Write-Host " 6. OSDCloud: Create ISO - Gigabyte AMD LGA 1851 Eagle motherboards"
-Write-Host " 7. OSDCloud: Create ISO - ALL Gigabyte AMD LGA 1851 motherboards"
+Write-Host " 1. OSDCloud: Create ISO - Gigabyte Intel LGA 1851 AORUS motherboards"
+Write-Host " 2. OSDCloud: Create ISO - Gigabyte Intel LGA 1851 AI TOP motherboards"
+Write-Host " 3. OSDCloud: Create ISO - Gigabyte Intel LGA 1851 Gaming motherboards"
+Write-Host " 4. OSDCloud: Create ISO - Gigabyte Intel LGA 1851 UD - Ultra Durable motherboards"
+Write-Host " 5. OSDCloud: Create ISO - Gigabyte Intel LGA 1851 AERO motherboards"
+Write-Host " 6. OSDCloud: Create ISO - Gigabyte Intel LGA 1851 Eagle motherboards"
+Write-Host " 7. OSDCloud: Create ISO - ALL Gigabyte Intel LGA 1851 motherboards"
 Write-Host " 8. OSDCloud: Get Help"
 Write-Host " 9. Return to Main Menu"
 
