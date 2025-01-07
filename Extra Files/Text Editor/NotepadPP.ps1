@@ -8,7 +8,7 @@ Get-Date
 # Notepad + +  File URLs
 ############################################
 
-$NotepadPPFile1URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/File%20Explorer/Explorer++.exe"
+$NotepadPPFile1URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Text%20Editor/notepad++.exe"
 
 Import-Module -Name OSD -Force
 
