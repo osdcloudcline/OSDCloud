@@ -28,13 +28,13 @@ pause
 Clear-Host
 
 Write-Host "======= $Title ======"
-Write-Host " 1. OSDCloMPG: Create ISO - MSI Intel LGA 1700 MAG motherboards"
-Write-Host " 2. OSDCloMPG: Create ISO - MSI Intel LGA 1700 MEG motherboards"
-Write-Host " 3. OSDCloMPG: Create ISO - MSI Intel LGA 1700 Gaming motherboards"
-Write-Host " 4. OSDCloMPG: Create ISO - MSI Intel LGA 1700 MPG motherboards"
-Write-Host " 5. OSDCloMPG: Create ISO - MSI Intel LGA 1700 PRO motherboards"
-Write-Host " 6. OSDCloMPG: Create ISO - ALL MSI Intel LGA 1700 motherboards"
-Write-Host " 7. OSDCloMPG: Get Help"
+Write-Host " 1. OSDCloud: Create ISO - MSI Intel LGA 1700 MAG motherboards"
+Write-Host " 2. OSDCloud: Create ISO - MSI Intel LGA 1700 MEG motherboards"
+Write-Host " 3. OSDCloud: Create ISO - MSI Intel LGA 1700 Gaming motherboards"
+Write-Host " 4. OSDCloud: Create ISO - MSI Intel LGA 1700 MPG motherboards"
+Write-Host " 5. OSDCloud: Create ISO - MSI Intel LGA 1700 PRO motherboards"
+Write-Host " 6. OSDCloud: Create ISO - ALL MSI Intel LGA 1700 motherboards"
+Write-Host " 7. OSDCloud: Get Help"
 Write-Host " 8. Return to Main Menu"
 
 do 
