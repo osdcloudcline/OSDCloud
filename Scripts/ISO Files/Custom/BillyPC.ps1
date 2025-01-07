@@ -8,7 +8,7 @@ Write-Host
 Write-Host 
 Write-Host '                                                                                              ' -BackgroundColor White                                                              
 Write-Host '    This scripts creates an OSCloud Deployment ISO with the following:                        ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Networking and Storage: Billy's PC motherboard drivers                                 ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Networking and Storage: Billy PC motherboard drivers                                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Networking and Storage: VM drivers for ESXI, Hyper-V, VMWare Workstation and Proxmox   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - VBS Scripting Support                                                                  ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Wireless networking support                                                            ' -ForegroundColor DarkBlue -BackgroundColor White
@@ -37,7 +37,7 @@ Write-Verbose "Processing: Intel LGA 1851 Motherboard driver downloads" -Verbose
 Write-Host
 
 Write-Host
-Write-Verbose "Processing: Billy's computers motherboard driver downloads" -Verbose
+Write-Verbose "Processing: Billy computers motherboard driver downloads" -Verbose
 Write-Host 
 
 $BillyPC1 = Invoke-WebRequest("")
@@ -47,7 +47,7 @@ $BillyPC2 = Invoke-WebRequest("")
 Invoke-Expression $($BillyPC2.Content)
 
 Write-Host
-Write-Verbose "Completed: Billy's computers motherboard driver downloads" -Verbose
+Write-Verbose "Completed: Billy computers motherboard driver downloads" -Verbose
 Write-Host
 
 Write-Host
