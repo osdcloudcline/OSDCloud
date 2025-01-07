@@ -5,7 +5,7 @@
 Function Show-MainMenu{
    [CmdletBinding()]
    param(
-   [string]$Title = 'OSD Cloud - ISO Creation ASUS LGA 1700 Main Menu',
+   [string]$Title = 'OSD Cloud - ISO Creation ASUS Intel LGA 1700 Main Menu',
    [string]$Question = 'What type of action do you need to do?' 
    )
 cls
@@ -26,16 +26,16 @@ pause
 Clear-Host
 
 Write-Host "======= $Title ======"
-Write-Host " 1. OSDCloud: ASUS ALL LGA 1700 motherboards"
-Write-Host " 2. OSDCloud: ASUS LGA 1700 Business motherboards"
-Write-Host " 3. OSDCloud: ASUS LGA 1700 CSM motherboards"
-Write-Host " 4. OSDCloud: ASUS LGA 1700 Other motherboards"
-Write-Host " 5. OSDCloud: ASUS LGA 1700 PRIME motherboards"
-Write-Host " 6. OSDCloud: ASUS LGA 1700 ProArt motherboards"
-Write-Host " 7. OSDCloud: ASUS LGA 1700 ROG motherboards"
-Write-Host " 8. OSDCloud: ASUS LGA 1700 TUF Gaming motherboards"
-Write-Host " 9. OSDCloud: ASUS LGA 1700 Expedition motherboards"
-Write-Host " 10. OSDCloud: ASUS LGA 1700 Workstation motherboards"
+Write-Host " 1. OSDCloud: ASUS ALL Intel LGA 1700 motherboards"
+Write-Host " 2. OSDCloud: ASUS Intel LGA 1700 Business motherboards"
+Write-Host " 3. OSDCloud: ASUS Intel LGA 1700 CSM motherboards"
+Write-Host " 4. OSDCloud: ASUS Intel LGA 1700 Other motherboards"
+Write-Host " 5. OSDCloud: ASUS Intel LGA 1700 PRIME motherboards"
+Write-Host " 6. OSDCloud: ASUS Intel LGA 1700 ProArt motherboards"
+Write-Host " 7. OSDCloud: ASUS Intel LGA 1700 ROG motherboards"
+Write-Host " 8. OSDCloud: ASUS Intel LGA 1700 TUF Gaming motherboards"
+Write-Host " 9. OSDCloud: ASUS Intel LGA 1700 Expedition motherboards"
+Write-Host " 10. OSDCloud: ASUS Intel LGA 1700 Workstation motherboards"
 Write-Host " 11. OSDCloud: Get Help"
 Write-Host " 12. Return to Main Menu"
 do 
