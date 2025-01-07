@@ -13,7 +13,7 @@ Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
 Write-Host
 Write-Host 
 Write-Host '                                                                              ' -BackgroundColor White                                                              
-Write-Host '            This OSDCloMPG section allows the user to perform:                ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '            This OSDCloud section allows the user to perform:                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '          - Creating ISO images for MSI AM5 Desktop motherboards              ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                              ' -BackgroundColor White
 Write-Host '          - MSI: AMD AM5 MAG motherboards                                     ' -ForegroundColor DarkBlue -BackgroundColor White
@@ -27,13 +27,13 @@ pause
 Clear-Host
 
 Write-Host "======= $Title ======"
-Write-Host " 1. OSDCloMPG: Create ISO - MSI AMD AM 5 MAG motherboards"
-Write-Host " 2. OSDCloMPG: Create ISO - MSI AMD AM 5 MEG motherboards"
-Write-Host " 3. OSDCloMPG: Create ISO - MSI AMD AM 5 Gaming motherboards"
-Write-Host " 4. OSDCloMPG: Create ISO - MSI AMD AM 5 MPG motherboards"
-Write-Host " 5. OSDCloMPG: Create ISO - MSI AMD AM 5 PRO motherboards"
-Write-Host " 6. OSDCloMPG: Create ISO - ALL MSI AMD AM 5 motherboards"
-Write-Host " 7. OSDCloMPG: Get Help"
+Write-Host " 1. OSDCloud: Create ISO - MSI AMD AM 5 MAG motherboards"
+Write-Host " 2. OSDCloud: Create ISO - MSI AMD AM 5 MEG motherboards"
+Write-Host " 3. OSDCloud: Create ISO - MSI AMD AM 5 Gaming motherboards"
+Write-Host " 4. OSDCloud: Create ISO - MSI AMD AM 5 MPG motherboards"
+Write-Host " 5. OSDCloud: Create ISO - MSI AMD AM 5 PRO motherboards"
+Write-Host " 6. OSDCloud: Create ISO - ALL MSI AMD AM 5 motherboards"
+Write-Host " 7. OSDCloud: Get Help"
 Write-Host " 8. Return to Main Menu"
 
 do 
