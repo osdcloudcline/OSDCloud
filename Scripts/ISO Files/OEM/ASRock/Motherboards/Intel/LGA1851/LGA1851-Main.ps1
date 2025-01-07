@@ -18,9 +18,9 @@ Write-Host
 Write-Host 
 Write-Host '                                                                              ' -BackgroundColor White                                                              
 Write-Host '            This OSDCloud section allows the user to perform:                 ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '          - Creating ISO images for Desktop mPROboards                      ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - Creating ISO images for Desktop mPROboards                        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                 for the following manufacturers:                             ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '          - ASRock: Intel LGA 1851 socket types                                 ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - ASRock: Intel LGA 1851 socket types                               ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                              ' -BackgroundColor White
 pause
 Clear-Host
