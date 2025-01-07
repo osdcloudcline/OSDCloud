@@ -457,11 +457,31 @@ Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
 Write-Host
 
 ##########################################
-# OSDCloud WebScript for Startnet.cmd
+# Remove Built In Apps
 ##########################################
+$mountdir = C:\Mount
+$WIMPath = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
+$WIMFile = Join-Path -Path $WIMPath '\install.wim'
+Get-WindowsImage -ImagePath $WIMFile | Format-Table ImageIndex, ImageName
+$Index = Read-Host -Prompt ' Select edition'
+Write-Host
+Write-Verbose "Mounting WIM File..." -Verbose
+Mount-WindowsImage -ImagePath $WIMFile -Index $Index -Path $mountdir 
 
-Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
-Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1
+Write-Host 
+Write-Verbose "Removing built-in pre-provisioned apps based on OSDCloudCline's Cloud Appx Apps source list..." 
+$AppsRemoval = Invoke-WebRequest ("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Apps%20Removal/Client%20OS/Windows%2011/24H2/RemoveVDIApps.ps1")
+Invoke-Expression $($AppsRemoval.Content)
+
+Write-Host
+Write-Verbose "Saving modified Windows WIM File..." -Verbose
+Dismount-WindowsImage -Path $mountdir -Save
+
+##########################################
+# OSDCloud WebScript for ZTI Installs
+##########################################
+Write-Verbose "Adding a customized PowerShell script for ZTI, AKA Zero Touch Installation..." -Verbose
+Edit-OSDCloudWinPE -WebPSScript 
 Write-Host
 
 ###########################################
