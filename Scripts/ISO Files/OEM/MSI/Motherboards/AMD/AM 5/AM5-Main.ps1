@@ -1,1 +1,85 @@
+Function Show-MainMenu{
+   [CmdletBinding()]
+   param(
+   [string]$Title = 'OSD CloMPG - MSI AMD Main Menu',
+   [string]$Question = 'What type of action do you need to do?' 
+   )
+cls
 
+$Date = Get-Date
+Write-Host "Today is:" "$Date"
+Write-Host
+Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
+Write-Host
+Write-Host 
+Write-Host '                                                                              ' -BackgroundColor White                                                              
+Write-Host '            This OSDCloMPG section allows the user to perform:                ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - Creating ISO images for MSI AM5 Desktop motherboards              ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                              ' -BackgroundColor White
+Write-Host '          - MSI: AMD AM5 MAG motherboards                                     ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - MSI: AMD AM5 MEG motherboards                                     ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - MSI: AMD AM5 Gaming motherboards                                  ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - MSI: AMD AM5 MPG motherboards                                     ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - MSI: AMD AM5 PRO motherboards                                     ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          - MSI: ALL AMD AM5 motherboards                                     ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                              ' -BackgroundColor White
+pause
+Clear-Host
+
+Write-Host "======= $Title ======"
+Write-Host " 1. OSDCloMPG: Create ISO - MSI AMD AM 5 MAG motherboards"
+Write-Host " 2. OSDCloMPG: Create ISO - MSI AMD AM 5 MEG motherboards"
+Write-Host " 3. OSDCloMPG: Create ISO - MSI AMD AM 5 Gaming motherboards"
+Write-Host " 4. OSDCloMPG: Create ISO - MSI AMD AM 5 MPG motherboards"
+Write-Host " 5. OSDCloMPG: Create ISO - MSI AMD AM 5 PRO motherboards"
+Write-Host " 6. OSDCloMPG: Create ISO - ALL MSI AMD AM 5 motherboards"
+Write-Host " 7. OSDCloMPG: Get Help"
+Write-Host " 8. Return to Main Menu"
+
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+'1'{cls
+    $MAG = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/AMD/AM%205/MAG.ps1")
+    Invoke-Expression $($MAG.Content)
+    }
+'2'{cls
+    $MEG = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/AMD/AM%205/MEG.ps1")
+    Invoke-Expression $($MEG.Content)
+    }
+'3'{cls
+    $Gaming = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/AMD/AM%205/Gaming.ps1")
+    Invoke-Expression $($Gaming.Content)
+    }
+'4'{cls
+    $MPG = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/AMD/AM%205/MPG.ps1")
+    Invoke-Expression $($MPG.Content)
+    }  
+'5'{cls
+    $PRO = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/AMD/AM%205/PRO.ps1")
+    Invoke-Expression $($PRO.Content)
+    }
+
+'6'{cls
+    $ALLMSI = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/AMD/AM%205/ALL-MSI-AM5.ps1")
+    Invoke-Expression $($ALLMSI.Content)
+    }
+'7'{cls
+    Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloMPG\Help\Commands\OSD\OSDFunctions.txt"
+    Start-Process -FilePath "C:\OSDCloMPG\Help\Commands\OSD\OSDFunctions.txt"
+    pause
+    Show-MainMenu
+    }
+'8'{cls
+    $OSDCloMPGMain = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloMPGcline/OSDCloMPG/refs/heads/main/Scripts/NEW-OSDCloMPGMain.ps1")
+    Invoke-Expression $($OSDCloMPGMain.Content)
+   }
+    }
+    }
+     until ($selection -eq '8'){Invoke-Expression $($OSDCloMPGMain.Content)}
+    }
+
+    
+Show-MainMenu
