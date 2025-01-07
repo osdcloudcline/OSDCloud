@@ -269,10 +269,41 @@ do
     }
 '3'{cls
     Write-Verbose "Processing: Registering neccessary DLL Files. Please be patient" -Verbose
+Write-Host
+
+    $DLLMainDir = "X:\Windows\System32"
+    $MSTSCDLL1 = "$DLLMainDir\d3d10.dll"
+    $MSTSCDLL2 = "$DLLMainDir\d3d10_1.dll"
+    $MSTSCDLL3 = "$DLLMainDir\d3d10_1core.dll"
+    $MSTSCDLL4 = "$DLLMainDir\d3d10core.dll"
+    $MSTSCDLL5 = "$DLLMainDir\d3d10level9.dll"
+    $MSTSCDLL6 = "$DLLMainDir\dxgi.dll"
+    $MSTSCDLL7 = "$DLLMainDir\msacm.dll"
+    $MSTSCDLL8 = "$DLLMainDir\msacm32.dll"
+    $MSTSCDLL9 = "$DLLMainDir\mstscax.dll"
+
+   $arguments1 = "/s", $MSTSCDLL1
+   $arguments2 = "/s", $MSTSCDLL2
+   $arguments3 = "/s", $MSTSCDLL3
+   $arguments4 = "/s", $MSTSCDLL4
+   $arguments5 = "/s", $MSTSCDLL5
+   $arguments6 = "/s", $MSTSCDLL6
+   $arguments7 = "/s", $MSTSCDLL7
+   $arguments8 = "/s", $MSTSCDLL8
+   $arguments9 = "/s", $MSTSCDLL9
    
-    
-    $MSTSCPath = "X:\Windows\System32\"
-    Start-Process -FilePath $MSTSCPath
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments1 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments2 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments3 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments4 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments5 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments6 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments7 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments8 -Wait -NoNewWindow -PassThru
+   Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments9 -Wait -NoNewWindow -PassThru
+   
+   $MSTSCPath = "X:\Windows\System32\"
+   Start-Process -FilePath $MSTSCPath
     }
 '4'{cls
     Write-Verbose "Processing: Registering neccessary DLL Files. Please be patient" -Verbose
