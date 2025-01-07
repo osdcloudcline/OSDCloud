@@ -33,10 +33,6 @@ Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
 Write-Host
 
 Write-Host
-Write-Verbose "Processing: Intel LGA 1851 Motherboard driver downloads" -Verbose
-Write-Host
-
-Write-Host
 Write-Verbose "Processing: Billy computers motherboard driver downloads" -Verbose
 Write-Host 
 
