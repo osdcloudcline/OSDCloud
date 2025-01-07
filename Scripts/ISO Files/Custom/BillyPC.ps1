@@ -198,3 +198,330 @@ Get-OSDCloudWorkspace
 
 $AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
 Invoke-Expression $($AddPS7.Content)
+
+#################################
+# OSDCloud - Cloud Drivers
+#################################
+
+Write-Host
+Write-Verbose "Integrating OSDCloud - Cloud Drivers..." -Verbose
+Write-Host
+
+Write-Verbose "Processing: OSDCloud Dell Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPE -CloudDriver Dell
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Intel Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPE -CloudDriver IntelNet
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Nutanix Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPE -CloudDriver Nutanix
+
+Write-Host
+Write-Verbose "Processing: OSDCloud USB Cloud Drivers..." --Verbose
+
+Edit-OSDCloudWinPE -CloudDriver USB
+
+Write-Host
+Write-Verbose "Processing: OSDCloud WiFi Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPE -CloudDriver WiFi
+
+Write-Host
+Write-Verbose "Processing: OSDCloud VMWare Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPE -CloudDriver VMWare
+
+Write-Host
+Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
+Write-Host
+
+######################################
+## Extra Scripting Support
+######################################
+
+# VBS Scripting Support
+
+$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
+$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBSName3 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBSName4 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBS3 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+
+$sourceWIMDir = "\Media\sources"
+$WorkspacePath = Get-OSDCloudWorkspace
+$WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
+$mountdir = "C:\Mount"
+
+Write-Verbose "Processing: Mounting OSDCloud boot.wim" -Verbose
+# Mount the image
+
+Mount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
+
+Write-Host
+Write-Verbose "Processing: VBS Scripting Support..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing Item: $VBSName1..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName2..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName3..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName4..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
+
+Write-Host
+Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
+Write-Host
+
+########################################
+# 3rd party software and utilities
+########################################
+
+# Portable Browsers
+
+Write-Host
+Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verbose 
+$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
+$ChromeDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $ChromePath -Destination $ChromeDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
+Write-Host
+
+# MS DaRT Remote Connections and Troubleshooting
+
+# CloudPC
+
+Write-Host
+Write-Verbose "Processing: Microsoft Remote Desktop - Cloud PC for OSDCloud..." -Verbose 
+$CloudPCPath1 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files"
+$CloudPCPath2 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files\en-us"
+$CloudPCDestination1 = "$mountdir\Windows\System32"
+$CloudPCDestination2 = "$mountdir\Windows\System32\en-US"
+
+Copy-Item -Path "$CloudPCPath1\*" -Destination $CloudPCDestination1  -Force
+Copy-Item -Path "$CloudPCPath2\*" -Destination $CloudPCDestination2  -Force
+
+# CMTrace 
+
+Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer CM Trace for OSDCloud..." -Verbose 
+$CMTracePath = "C:\OSDCloud\downloads\GitHub\MECM-LogViewer"
+$CMTraceDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force
+
+# Ghost Imaging
+
+Write-Host
+Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
+$Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
+$GhostExplorerPath = "C:\OSDCloud\GitHub\downloads\Ghost\Ghostexp.exe"
+$GhostServPath = "C:\OSDCloud\GitHub\downloads\Ghost\GhostSrv.exe"
+$GhostDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $Ghost64Path -Destination $GhostDestination -Force
+Copy-Item -Path $GhostExplorerPath -Destination $GhostDestination -Force
+Copy-Item -Path $GhostServPath -Destination $GhostDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Ghost Imaging for OSDCloud..." -Verbose
+Write-Host
+
+# User Profile Backup and Restore 
+
+Write-Host
+Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
+$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
+$UBPRDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
+Write-Host
+
+# Disount the image
+Write-Host
+Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
+
+Dismount-WindowsImage -Path $mountdir -Save
+
+######################################
+## Extra PowerShell Modules - OSDCloud
+######################################
+
+# PowerShell 5.1 Modules - OSDCloud
+
+$OSDCloudPS5xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS5xMods.Content)
+
+# PowerShell 7.x Modules - OSDCloud
+
+$OSDCloudPS7xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS7xMods.Content)
+
+#############################################
+# INTEL LGA 1851 Driver Integration - ASUS
+#############################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 drivers" -Verbose
+Write-Host
+
+
+############################################
+# Other Drivers
+############################################
+
+# Virtualization Drivers - Hyper-V
+
+Write-Host
+Write-Verbose "Processing: Microsoft Hyper-V Ethernet Drivers..." -Verbose 
+$HyperVNetwork = "C:\OSDCloud\Drivers\Virtualization\HyperV\Network"
+
+Edit-OSDCloudWinPE -DriverPath $HyperVNetwork
+
+Write-Host
+Write-Verbose "Completed: Integration of Microsoft Hyper-V Network Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - VMWare ESXI
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere Ethernet Drivers..." -Verbose 
+$ESXIEthernet = "C:\OSDCloud\Drivers\Virtualization\ESXI\Network"
+
+Edit-OSDCloudWinPE -DriverPath  $ESXIEthernet
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere Storage Drivers..." -Verbose 
+$ESXIStorage = "C:\OSDCloud\Drivers\Virtualization\ESXI\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $ESXIStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of VMWare ESXI vSphere Network and Storage Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - VMWare Workstation Pro
+
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro Ethernet Drivers..." -Verbose 
+$VMWareWorkstationProEthernet = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Network"
+
+Edit-OSDCloudWinPE -DriverPath  $VMWareWorkstationProEthernet
+
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro Storage Drivers..." -Verbose 
+$VMWareWorkstationProStorage = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $VMWareWorkstationProStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of VMWare Workstation Pro Network and Storage Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - Proxmox
+
+Write-Host
+Write-Verbose "Processing: Proxmox Virtual IO Ethernet Drivers..." -Verbose 
+$ProxmoxEthernet1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\Windows11"
+$ProxmoxEthernet2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\WindowsServer2025"
+
+Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet1
+Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet2
+
+Write-Host
+Write-Verbose "Processing: Proxmox Virtual IO Storage Drivers..." -Verbose 
+$ProxmoxStorage1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\Windows11"
+$ProxmoxStorage2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\WindowsServer2025"
+
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage1
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage2
+
+Write-Host
+Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
+Write-Host
+
+###########################################
+# OSDCloud NEW Wallpaper
+###########################################
+
+Write-Host
+Write-Verbose "Processing: NEW OSDCloud Wallpaper..." -Verbose 
+$OSDCloudwallpaper = "C:\downloads\OSDCloud\GitHub\wallpaper\winpe.jpg"
+
+Edit-OSDCloudWinPE -Wallpaper $OSDCloudwallpaper
+
+Write-Host
+Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
+Write-Host
+
+##########################################
+# Add Custom WIM Image
+##########################################
+Function Show-CustomImage{
+$CustomImageLog = "C:\Logs\OSDCloud\Images\AddCustom.log"
+Start-Transcript -Path $CustomImageLog
+$Question = Read-Host -Prompt 'Do you want or need to add an additional Windows Installation WIM file?'
+$ExtractWIM = Read-Host 'Do you need to extract a WIM Image before copying to OSDCloud?'
+If(($Question -and $ExtractWIM -eq "yes") -or ($Question -and $ExtractWIM -eq "Yes") -or ($Question -and $ExtractWIM -eq "y") -or ($Question -and $ExtractWIM -eq "Y")){
+$WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
+$sourceWIM = "\sources\install.wim"
+$WIMFile = Join-Path -Path $WindowsImage '\Sources\install.wim'
+$Destination = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
+Write-Verbose "Creating Custom WIM OS folder..." -Verbose
+New-Item -Path $Destination -ItemType Directory -Force
+Write-Verbose "Exporting Client WIM File and copying Windows Image to OSDCloud..." -Verbose
+Get-WindowsImage -ImagePath $WIMFile | Format-Table ImageIndex, ImageName
+$Index = Read-Host -Prompt ' Select edition'
+$ExportWIMFileName = Read-Host -Prompt 'Please specify a file name for the exported WIM file, including the file extension (EG: Windows11ProWorkstations.wim)'
+$DescriptionName = Read-Host -Prompt 'Please enter a descriptive name for the image'
+Export-WindowsImage -SourceImagePath "$WIMFile" -SourceIndex $Index -DestinationImagePath "$Destination\$ExportWIMFileName" -DescriptionName "$DescriptionName" 
+Stop-Transcript
+}
+ElseIf (($Question -eq "yes" -and $ExtractWIM -eq "no") -or ($Question -eq "Yes"-and $ExtractWIM -eq "No") -or ($Question -eq "y" -and $ExtractWIM -eq "n") -or ($Question -eq "Y"-and $ExtractWIM -eq "N")){
+$CustomImageLog = "C:\Logs\OSDCloud\Images\AddCustom.log"
+Start-Transcript -Path $CustomImageLog
+$WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
+$sourceWIM = "\sources\install.wim"
+$WIMFile = Join-Path -Path $WindowsImage -ChildPath $sourceWIM
+$Destination = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
+Write-Verbose "Creating Custom WIM OS folder..." -Verbose
+New-Item -Path $Destination -ItemType Directory -Force
+Write-Verbose "Copying Windows Image to OSDCloud..." -Verbose
+Copy-Item -Path "$WIMFile" -Destination "$Destination" -Force
+Stop-Transcript
+}
+}
+Show-CustomImage
+
+##########################################
+# OSDCloud WebScript for Startnet.cmd
+##########################################
+
+Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
+Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1
+Write-Host
+
+###########################################
+# Create OSDCloud ISO
+#########################################
