@@ -104,11 +104,11 @@ do
   switch($selection)
   {
 '1'{cls
-    $Intel = Invoke-WebRequest("")
+    $Intel = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/Intel/MSI-IntelMain.ps1")
     Invoke-Expression $($Intel.Content)
     }
 '3'{cls
-    $AMD = Invoke-WebRequest("")
+    $AMD = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/AMD/MSI-AMDMain.ps1")
     Invoke-Expression $($AMD.Content)
     }
 '3'{cls
@@ -118,7 +118,7 @@ do
     Show-MainMenu
     }
 '4'{cls
-    $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
+    $OSDCloudMain = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
