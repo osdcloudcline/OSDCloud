@@ -97,7 +97,7 @@ Begin {
 
     # Black List of Appx Provisioned Packages to Remove for All Users
     $BlackListedAppsURL = $null
-    $BlackListedAppsURL = "https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Apps%20Removal/Client%20OS/Windows%2011/24H2/AppsBlacklist.txt"
+    $BlackListedAppsURL = "https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Apps%20Removal/Client%20OS/Windows%2011/24H2/VDIAppsBlacklist.txt"
     Write-LogEntry -Value "BlackListedAppsURL:$($BlackListedAppsURL)"
 
     #Attempt to obtain list of BlackListedApps
