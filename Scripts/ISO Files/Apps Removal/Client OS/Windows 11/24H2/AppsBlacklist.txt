@@ -1,1 +1,11 @@
+Built-in apps listed below thare have a # next to it will be removed
+
+#Clipchamp.Clipchamp
+#Microsoft.BingNews
+#Microsoft.BingSearch
+#Microsoft.BingWeather
+#Microsoft.MicrosoftOfficeHub
+#Microsoft.WindowsFeedbackHub
+#Microsoft.YourPhone
+#Microsoft.ZuneMusic
 
