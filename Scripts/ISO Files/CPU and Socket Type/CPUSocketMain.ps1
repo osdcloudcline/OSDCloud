@@ -106,27 +106,27 @@ do
   switch($selection)
   {
 '1'{cls
-    $LGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/Intel/LGA%201851/OSDCloud-LGA1851.ps1")
+    $LGA1851 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/Intel/LGA%201851/OSDCloud-LGA1851.ps1")
     Invoke-Expression $($LGA1851.Content)
     }
 '2'{cls
-    $LGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/Intel/LGA%201700/OSDCloud-LGA1700.ps1")
+    $LGA1700 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/Intel/LGA%201700/OSDCloud-LGA1700.ps1")
     Invoke-Expression $($LGA1700.Content)
     }
 '3'{cls
-    $AM4 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/AMD/AM4/OSDCloud-AM4.ps1")
+    $AM4 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/AMD/AM4/OSDCloud-AM4.ps1")
     Invoke-Expression $($AM4.Content)
     }
 '4'{cls
-    $AM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/AMD/AM5/OSDCloud-AM5.ps1")
+    $AM5 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/AMD/AM5/OSDCloud-AM5.ps1")
     Invoke-Expression $($AM5.Content)
     }
 '5'{cls
-    $Snapdragon = Invoke-WebRequest("")
+    $Snapdragon = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/Qualcomm/Snapdragon/OSDCloud-Snapdragon.ps1")
     Invoke-Expression $($Snapdragon.Content)
     }
 '6'{cls
-    $ALLCPU = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/ALL%20CPU/ALL-CPU.ps1")
+    $ALLCPU = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/ALL%20CPU/ALL-CPU.ps1")
     Invoke-Expression $($ALLCPU.Content)
     }
 '7'{cls
@@ -136,7 +136,7 @@ do
     Show-MainMenu
     }
 '8'{cls
-    $OSDSYSTEMMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
+    $OSDSYSTEMMain = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDSYSTEMMain.Content)
    }
     }
