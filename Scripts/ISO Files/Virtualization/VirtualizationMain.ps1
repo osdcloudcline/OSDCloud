@@ -91,7 +91,6 @@ Write-Host '     - VMWare ESXI 8.0                                              
 Write-Host '     - Microsoft Hyper-V                                                      ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - VMWare Workstation Pro                                                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Proxmox                                                                ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Docker Environment                                                     ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - ALL Virtualization                                                     ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                              ' -ForegroundColor White
 Write-Host '                                                                              ' -BackgroundColor White
@@ -103,10 +102,9 @@ Write-Host " 1. OSDCloud: Create ISO - VMWare ESXI 8.0"
 Write-Host " 2. OSDCloud: Create ISO - Microsoft Hyper-V"
 Write-Host " 3. OSDCloud: Create ISO - VMWare Workstation Pro"
 Write-Host " 4. OSDCloud: Create ISO - Proxmox"
-Write-Host " 5. OSDCloud: Create ISO - Docker Environment"
-Write-Host " 6. OSDCloud: Create ISO - ALL Virtualization"
-Write-Host " 7. OSDCloud: Get Help"
-Write-Host " 8. Return to Main Menu"
+Write-Host " 5. OSDCloud: Create ISO - ALL Virtualization"
+Write-Host " 6. OSDCloud: Get Help"
+Write-Host " 7. Return to Main Menu"
 
 do 
 {
@@ -130,26 +128,22 @@ do
     Invoke-Expression $($Proxmox.Content)
     }
 '5'{cls
-    $Docker = Invoke-WebRequest("")
-    Invoke-Expression $($Docker.Content)
-    }
-'6'{cls
     $ALLVirt = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Virtualization/ALL-VT.ps1")
     Invoke-Expression $($ALLVirt.Content)
     }
-'7'{cls
+'6'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
-'8'{cls
+'7'{cls
     $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
     }
-     until ($selection -eq '8'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '7'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
