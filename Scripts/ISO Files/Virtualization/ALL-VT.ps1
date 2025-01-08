@@ -323,12 +323,10 @@ Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force
 # Ghost Imaging
 Write-Host
 Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
-
+$GhostPath = "C:\OSDCloud\downloads\GitHub\Ghost"
 $GhostDestination = "$mountdir\Windows\System32"
 
-Copy-Item -Path $Ghost64Path -Destination $GhostDestination -Force
-Copy-Item -Path $GhostExplorerPath -Destination $GhostDestination -Force
-Copy-Item -Path $GhostServPath -Destination $GhostDestination -Force
+Copy-Item -Path "$Ghost64Path\*" -Recurse -Destination $GhostDestination -Force
 
 Write-Host
 Write-Verbose "Completed: Integration of Ghost Imaging for OSDCloud..." -Verbose
