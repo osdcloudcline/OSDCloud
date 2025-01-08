@@ -81,7 +81,7 @@ Write-Host
 Write-Verbose "Processing: Additional OSDCloud scripting support downloads" -Verbose
 Write-Host
 
-$VBS = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Scripting%20Support/VBS%20Scripting/VBSScriptingSupport-Download.ps1")
+$VBS = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Scripting%20Support/VBS%20Scripting/VBSScriptingSupport-Download.ps1")
 Invoke-Expression $($VBS.Content)
 
 Write-Host
@@ -99,14 +99,14 @@ Write-Host
 Write-Verbose "Processing: User Profile Backup and Restore" -Verbose
 Write-Host
 
-$UPBR = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/User%20Profile%20Backup%20Restore/UPBR-Download.ps1")
+$UPBR = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/User%20Profile%20Backup%20Restore/UPBR-Download.ps1")
 Invoke-Expression $($UPBR.Content)
 
 Write-Host
 Write-Verbose "Processing: System Imaging utilities" -Verbose
 Write-Host
 
-$Ghost = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Imaging/Ghost/Ghosting.ps1")
+$Ghost = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Imaging/Ghost/Ghosting.ps1")
 Invoke-Expression $($Ghost.Content)
 
 Write-Host
@@ -116,10 +116,10 @@ Write-Host
 $DaRT = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/DaRT/DaRT.ps1")
 Invoke-WebRequest $($DaRT.Content)
 
-$MSTSC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Remote%20Desktop%20Control/MSTSC.ps1")
+$MSTSC = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Remote%20Desktop%20Control/MSTSC.ps1")
 Invoke-Expression $($MSTSC.Content)
 
-$CloudPC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Remote%20Desktop%20-%20Cloud%20PC/CloudPC%20-%20Download.ps1")
+$CloudPC = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Remote%20Desktop%20-%20Cloud%20PC/CloudPC%20-%20Download.ps1")
 Invoke-Expression $($CloudPC.Content) 
 
 Write-Host
@@ -151,7 +151,7 @@ Write-Host
 Write-Verbose "Processing: NEW OSDCloud wallpaper" -Verbose
 Write-Host
 
-$OSDCloudWallpaper = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Wallpaper/OSDCloudWallpaper-Download.ps1")
+$OSDCloudWallpaper = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Wallpaper/OSDCloudWallpaper-Download.ps1")
 Invoke-Expression $($OSDCloudWallpaper.Content) 
 
 Write-Host
@@ -176,7 +176,7 @@ Get-OSDCloudWorkspace
 
 Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
+$WorkspacePath = "C:\OSDCloud\All-VT"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
@@ -340,7 +340,7 @@ Write-Host
 
 Write-Host
 Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
-$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
+$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UPBR.exe"
 $UBPRDestination = "$mountdir\Windows\System32"
 
 Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
@@ -466,12 +466,11 @@ Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/
 Write-Host
 
 ###########################################
-# Create OSDCloud ISO
+# Rename OSDCloud ISO
 #########################################
 
-Write-Verbose "Processing: Creating new OSDCloud ISO Image..." -Verbose
+$OSDCloudISOPath = "C:\OSDCloud\All-VT"
 
-New-OSDCloudISO
-
-Write-Host
-Write-Verbose "Completed: Creating new OSDCloud ISO Image..." -Verbose
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\All-VT\OSDCloud-ALL-Virtualization.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\All-VT\OSDCloud-ALL-Virtualization_NoPrompt.iso" -Force
