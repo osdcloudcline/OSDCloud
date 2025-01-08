@@ -46,7 +46,7 @@ Write-Host
 Write-Verbose "Processing: ASRock AM4 PRO Motherboard driver downloads" -Verbose
 Write-Host
 
-$PRO = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/PRO%20Motherboards/PRO.ps1")
+$PRO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/PRO%20Motherboards/PRO.ps1")
 Invoke-Expression $($PRO.Content)
 
 Write-Host
