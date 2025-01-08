@@ -26,6 +26,12 @@ Write-Host
 Write-Verbose "Processing: PowerShell 7.x support downloads" -Verbose
 Write-Host 
 
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name OSD -Force
+
+Install-Module -Name 7Zip4Powershell -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name 7Zip4Powershell -Force
+
 $PS7 = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/PS7Download.ps1")
 Invoke-Expression $($PS7.Content)
 
