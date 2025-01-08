@@ -24,7 +24,8 @@ Clear-Host
 
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name OSD -Force
-
+Install-Module -Name 7Zip4Powershell -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name 7Zip4Powershell -Force
 
 Write-Host
 Write-Verbose "Processing: Beginning file downloads" -Verbose
