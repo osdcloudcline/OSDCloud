@@ -45,7 +45,7 @@ do
     }
 '3'{cls
     $ZTIOEMWin12RTM = Invoke-WebRequest("")
-    Invoke-Expression $(ZTIOEMWin12RTM.Content)
+    Invoke-Expression $($ZTIOEMWin12RTM.Content)
     }
 '4'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
