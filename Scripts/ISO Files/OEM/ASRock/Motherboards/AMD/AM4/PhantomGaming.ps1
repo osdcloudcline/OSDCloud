@@ -46,7 +46,7 @@ Write-Host
 Write-Verbose "Processing: ASRock AM4 Phantom Gaming Motherboard driver downloads" -Verbose
 Write-Host
 
-$PhantomGaming = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Phantom%20Gaming%20Motherboards/PhantomGaming.ps1")
+$PhantomGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Phantom%20Gaming%20Motherboards/PhantomGaming.ps1")
 Invoke-Expression $($PhantomGaming.Content)
 
 Write-Host
