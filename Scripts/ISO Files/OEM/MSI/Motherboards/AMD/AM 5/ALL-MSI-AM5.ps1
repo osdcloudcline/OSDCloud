@@ -9,7 +9,7 @@ Write-Host
 Write-Host 
 Write-Host '                                                                                              ' -BackgroundColor White                                                              
 Write-Host '    This scripts creates an OSCloud Deployment ISO with the following:                        ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Networking and Storage: MSI AM5 motherboard drivers                               ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Networking and Storage: MSI AM5 motherboard drivers                                    ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Networking and Storage: VM drivers for ESXI, Hyper-V, VMWare Workstation and Proxmox   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - VBS Scripting Support                                                                  ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Wireless networking support                                                            ' -ForegroundColor DarkBlue -BackgroundColor White
@@ -25,6 +25,8 @@ Clear-Host
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name OSD -Force
 
+Install-Module -Name 7Zip4Powershell -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name 7Zip4Powershell -Force
 
 Write-Host
 Write-Verbose "Processing: PowerShell 7.x support downloads" -Verbose
