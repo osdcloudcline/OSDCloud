@@ -46,7 +46,7 @@ Write-Host
 Write-Verbose "Processing: ASRock AM4 Extreme Motherboard driver downloads" -Verbose
 Write-Host
 
-$Extreme = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Extreme%20Motherboards/Extreme.ps1")
+$Extreme = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Extreme%20Motherboards/Extreme.ps1")
 Invoke-Expression $($Extreme.Content)
 
 Write-Host
