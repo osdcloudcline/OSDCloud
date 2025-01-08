@@ -9,7 +9,8 @@ pause
 ######################################################################################
 ####    OSDCloud Web Browser URL                                                 #######
 ######################################################################################
-$OSDBrowser = "https://github.com/osdcloudcline/OSDCloud/raw/main/Extra%20Files/Browser/Chrome.exe"
+$OSDBrowser = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Browser/Chrome.exe"
+
 
 ######################################################################################
 ####    OSDCloud Chrome Browser EXTRACTION LOCATION                            #######
