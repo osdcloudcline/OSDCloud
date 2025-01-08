@@ -26,18 +26,8 @@ Clear-Host
 Write-Host "======= $Title ======"
 Write-Host " 1. OSDCloud: Create ISO - ZTI - Client OS"
 Write-Host " 2. OSDCloud: Create ISO - ZTI - Server OS"
-
-Write-Host " 1. OSDCloud: Create ISO - Customized ZTI - Windows 11 24H2"
-Write-Host " 2. OSDCloud: Create ISO - Untouched ZTI  - Windows 11 24H2"
-Write-Host " 3. OSDCloud: Create ISO - OEM Pre-Built ZTI  - Windows 11 24H2"
-Write-Host " 4. OSDCloud: Create ISO - Customized ZTI - Windows 11 25H2"
-Write-Host " 5. OSDCloud: Create ISO - Untouched ZTI  - Windows 11 25H2"
-Write-Host " 6. OSDCloud: Create ISO - OEM Pre-Built ZTI  - Windows 11 25H2"
-Write-Host " 7. OSDCloud: Create ISO - Customized ZTI - Windows 12 RTM"
-Write-Host " 8. OSDCloud: Create ISO - Untouched ZTI  - Windows 12 RTM"
-Write-Host " 9. OSDCloud: Create ISO - OEM Pre-Built ZTI  - Windows 12 RTM"
-Write-Host " 13. OSDCloud: Get Help"
-Write-Host " 14. Return to Main Menu"
+Write-Host " 3. OSDCloud: Get Help"
+Write-Host " 4. Return to Main Menu"
 
 do 
 {
@@ -45,30 +35,26 @@ do
   switch($selection)
   {
 '1'{cls
-    $ZTICustom = Invoke-WebRequest("")
-    Invoke-Expression $($ZTICustomMain.Content)
+    $ZTIClientMain = Invoke-WebRequest("")
+    Invoke-Expression $($ZTIClientMain.Content)
     }
 '2'{cls
-    $ZTIUntouchedMain = Invoke-WebRequest("")
-    Invoke-Expression $($ZTIUntouchedMain.Content)
+    $ZTIServerMain = Invoke-WebRequest("")
+    Invoke-Expression $($ZTIServerMain.Content)
     }
 '3'{cls
-    $ZTIOEMMain = Invoke-WebRequest("")
-    Invoke-Expression $($ZTIOEMMain.Content)
-    }
-'4'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
-'5'{cls
+'4'{cls
     $OSDCloudMain = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
     }
-     until ($selection -eq '5'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '4'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
