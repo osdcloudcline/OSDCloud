@@ -8,7 +8,7 @@ Import-Module -Name OSD -Force
 
 # File Paths
 $PS7Source = "https://github.com/PowerShell/PowerShell/releases/download/v7.4.6/PowerShell-7.4.6-win-x64.zip"
-$PS7Destination = "C:\downloads\OSDCloud"
+$PS7Destination = "C:\OSDCloud\GitHub\downloads\PowerShell\7"
 
 Write-Verbose "Processing: Windows PowerShell 7 Download" -Verbose
 Write-Host
