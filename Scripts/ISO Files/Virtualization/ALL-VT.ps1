@@ -429,11 +429,11 @@ Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet2
 
 Write-Host
 Write-Verbose "Processing: Proxmox Virtual IO Storage Drivers..." -Verbose 
-$ProxmoxStorage1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\Windows11"
-$ProxmoxStorage2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\WindowsServer2025"
+$ProxmoxStorage3 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\Windows11"
+$ProxmoxStorage4 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\WindowsServer2025"
 
-Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage1
-Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage2
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage3
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage4
 
 Write-Host
 Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
