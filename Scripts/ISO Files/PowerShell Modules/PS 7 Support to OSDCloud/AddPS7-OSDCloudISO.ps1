@@ -3,7 +3,11 @@ $PS7ToOSDCloudISOLog = "C:\Logs\OSDCloud\PowerShell 7 Support\AddToISO.log"
 Start-Transcript -Path $PS7ToOSDCloudISOLog
 
 
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name OSD -Force
+
+Install-Module -Name 7Zip4Powershell -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name 7Zip4Powershell -Force
 
 
 # Settings and File Paths
