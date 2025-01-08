@@ -12,7 +12,7 @@ pause
 #######################################################################################
 
 $OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
-$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+$OSDCloudGHdownloads = "C:\OSDCloud\downloads\GitHub\VBS-Scripting"
 
 #######################################################################################
 ####               VBS SCRIPT SUPPORT URL                             #################
