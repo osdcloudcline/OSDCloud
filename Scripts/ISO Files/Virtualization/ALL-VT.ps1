@@ -289,7 +289,7 @@ Write-Host
 
 Write-Host
 Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verbose 
-$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
+$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome\Chrome.exe"
 $ChromeDestination = "$mountdir\Windows\System32"
 
 Copy-Item -Path $ChromePath -Destination $ChromeDestination -Force
@@ -323,9 +323,7 @@ Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force
 # Ghost Imaging
 Write-Host
 Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
-$Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
-$GhostExplorerPath = "C:\OSDCloud\GitHub\downloads\Ghost\Ghostexp.exe"
-$GhostServPath = "C:\OSDCloud\GitHub\downloads\Ghost\GhostSrv.exe"
+
 $GhostDestination = "$mountdir\Windows\System32"
 
 Copy-Item -Path $Ghost64Path -Destination $GhostDestination -Force
