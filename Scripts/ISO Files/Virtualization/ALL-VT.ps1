@@ -466,4 +466,11 @@ Write-Host
 
 ###########################################
 # Create OSDCloud ISO
-############################################
+#########################################
+
+Write-Verbose "Processing: Creating new OSDCloud ISO Image..." -Verbose
+
+New-OSDCloudISO
+
+Write-Host
+Write-Verbose "Completed: Creating new OSDCloud ISO Image..." -Verbose
