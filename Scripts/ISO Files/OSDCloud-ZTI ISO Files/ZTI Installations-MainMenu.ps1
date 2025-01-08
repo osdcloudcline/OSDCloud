@@ -24,11 +24,10 @@ pause
 Clear-Host
 
 Write-Host "======= $Title ======"
-Write-Host " 1. OSDCloud: Create ISO - Customized ZTI Installations"
-Write-Host " 2. OSDCloud: Create ISO - Untouched ZTI Installations"
-Write-Host " 3. OSDCloud: Create ISO - OEM Pre-Built ZTI Installations"
-Write-Host " 4. OSDCloud: Get Help"
-Write-Host " 5. Return to Main Menu"
+Write-Host " 1. OSDCloud: Create ISO - ZTI - Client OS"
+Write-Host " 2. OSDCloud: Create ISO - ZTI - Server OS"
+Write-Host " 3. OSDCloud: Get Help"
+Write-Host " 4. Return to Main Menu"
 
 do 
 {
@@ -36,30 +35,26 @@ do
   switch($selection)
   {
 '1'{cls
-    $ZTICustomMain = Invoke-WebRequest("")
-    Invoke-Expression $($ZTICustomMain.Content)
+    $ZTIClientMain = Invoke-WebRequest("")
+    Invoke-Expression $($ZTIClientMain.Content)
     }
 '2'{cls
-    $ZTIUntouchedMain = Invoke-WebRequest("")
-    Invoke-Expression $($ZTIUntouchedMain.Content)
+    $ZTIServerMain = Invoke-WebRequest("")
+    Invoke-Expression $($ZTIServerMain.Content)
     }
 '3'{cls
-    $ZTIOEMMain = Invoke-WebRequest("")
-    Invoke-Expression $($ZTIOEMMain.Content)
-    }
-'4'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
-'5'{cls
+'4'{cls
     $OSDCloudMain = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
     }
-     until ($selection -eq '5'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '4'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
