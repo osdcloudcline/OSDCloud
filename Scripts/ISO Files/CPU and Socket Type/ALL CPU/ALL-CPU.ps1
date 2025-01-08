@@ -136,13 +136,13 @@ Write-Host
 Write-Verbose "Processing: ASRock AM5 Motherboard driver downloads" -Verbose
 Write-Host 
 
-$ASRockPROAM5 = Invoke-WebRequest("")
+$ASRockPROAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM5/PRO%20Motherboards/PRO.ps1")
 Invoke-Expression $($ASRockPROAM5.Content)
 
-$ASRockSteelLegendAM5 = Invoke-WebRequest("")
+$ASRockSteelLegendAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM5/Steel%20Legend%20Motherboards/SteelLegend.ps1")
 Invoke-Expression $($ASRockSteelLegendAM5.Content)
 
-$ASRockTaichiAM5 = Invoke-WebRequest("")
+$ASRockTaichiAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM5/Taichi%20Motherboards/Taichi.ps1")
 Invoke-Expression $($ASRockTaichiAM5.Content)
 
 Write-Host
@@ -153,7 +153,7 @@ Write-Host
 Write-Verbose "Processing: ASUS AM5 Motherboard driver downloads" -Verbose
 Write-Host 
 
-$ASUSBusinessAM5 = Invoke-WebRequest("")
+$ASUSBusinessAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/Business%20Motherboards/Business.ps1")
 Invoke-Expression $($ASUSBusinessAM5.Content)
 
 $ASUSCSMAM5 = Invoke-WebRequest("")
