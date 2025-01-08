@@ -9,16 +9,19 @@ pause
 ######################################################################################
 ####    OSDCloud Web Browser URL                                                 #######
 ######################################################################################
-$OSDBrowser = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Browser/Chrome.exe"
+$OSDBrowser = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Browser/Chrome.zip"
 
 
 ######################################################################################
 ####    OSDCloud Chrome Browser EXTRACTION LOCATION                            #######
 ######################################################################################
-$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
+$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome"
+$ChromeDownloadPath = "C:\OSDCloud\GitHub\downloads\Browsers\Chrome" 
 
-Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name OSD -Force
+Import-Module -Name 7Zip4PowerShell -Force
 
 Write-Verbose "Acquiring Google Chrome Portable Web Browser from GitHub repository..." -Verbose
-Save-WebFile -SourceUrl $OSDBrowser DestinationDirectory $OSDCloudGHdownloads
+Save-WebFile -SourceUrl $OSDBrowser DestinationDirectory $ChromeDownloadPath 
+Write-Verbose "Expanding Google Chrome Portable Web Browser ..." -Verbose
+Expand-7Zip -ArchiveFileName "$ChromeDownloadPath\Chrome.zip" -Destination $ChromePath -ErrorAction SilentlyContinue 
