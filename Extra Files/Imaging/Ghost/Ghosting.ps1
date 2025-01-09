@@ -8,7 +8,9 @@ Import-Module -Name OSD -Force
 ## Ghost EXE download URL
 ################################################
 
-$GhostURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/Imaging/Ghost/Ghost.zip"
+$GhostURL1 = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/Imaging/Ghost/Ghost.zip"
+$GhostURL1 = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/Imaging/Ghost/Ghost.zip"
+$GhostURL1 = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/Imaging/Ghost/Ghost.zip"
 
 $GhostDestination = "C:\OSDCloud\downloads\GitHub\Ghost"
 
