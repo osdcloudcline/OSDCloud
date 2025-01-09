@@ -449,6 +449,7 @@ $ExportWIMFileName = Read-Host -Prompt 'Please specify a file name for the expor
 $DescriptionName = Read-Host -Prompt 'Please enter a descriptive name for the image'
 Export-WindowsImage -SourceImagePath "$WIMFile" -SourceIndex $Index -DestinationImagePath "$Destination\$ExportWIMFileName" -DescriptionName "$DescriptionName" 
 New-OSDCloudISO
+
 Stop-Transcript
 }
 ElseIf (($Question -eq "yes" -and $ExtractWIM -eq "no") -or ($Question -eq "Yes"-and $ExtractWIM -eq "No") -or ($Question -eq "y" -and $ExtractWIM -eq "n") -or ($Question -eq "Y"-and $ExtractWIM -eq "N")){
@@ -482,7 +483,7 @@ Show-CustomImage
 # Rename OSDCloud ISO
 #########################################
 
-$OSDCloudISOPath = "C:\OSDCloud\VMWare-WorkstationPro"
+$OSDCloudISOPath = "C:\OSDCloud\MikeLaptop-AlienwareM18R2"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\MikeLaptop-AlienwareM18R2\OSDCloud-MikeLaptop-AlienwareM18R2.iso" -Force
