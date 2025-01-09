@@ -396,4 +396,4 @@ $OSDCloudISOPath = "C:\OSDCloud\VMWare-WorkstationPro"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\VMWare-WorkstationPro\OSDCloud-VMWare-WorkstationPro.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\VMWare-WorkstationPro\OSDCloud-VMWare-WorkstationPro.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\VMWare-WorkstationPro\OSDCloud-VMWare-WorkstationPro_NoPrompt.iso" -Force
