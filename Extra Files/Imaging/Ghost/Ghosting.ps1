@@ -30,10 +30,10 @@ $Ghost2 = Test-Path -Path "$GhostDestination\Ghost64.exe"
 $Ghost3 = Test-Path -Path "$GhostDestination\GhostSrv.exe"
 $Ghost4 = Test-Path -Path "$GhostDestination\Ghostexp.exe"
 
-If($Ghost -eq $true ){
+If($Ghost -and $Ghost2 -and $Ghost3 -and $Ghost4 -eq $true ){
 Write-Host "Symantec Ghost successfully downloaded" -ForegroundColor Cyan
 }
-ElseIf($Ghost -eq $false){
+ElseIf($Ghost -and $Ghost2 -and $Ghost3 -and $Ghost4 -eq $false){
 Write-Verbose "Acquiring Symantec Ghost from GitHub repository..." -Verbose
 
 Save-WebFile -SourceUrl $GhostURL2 -DestinationDirectory $GhostDestination
