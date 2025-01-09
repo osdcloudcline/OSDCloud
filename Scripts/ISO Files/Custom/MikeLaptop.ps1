@@ -452,7 +452,7 @@ $ExtractWIM = Read-Host 'Do you need to extract a WIM Image before copying to OS
 If(($Question -and $ExtractWIM -eq "yes") -or ($Question -and $ExtractWIM -eq "Yes") -or ($Question -and $ExtractWIM -eq "y") -or ($Question -and $ExtractWIM -eq "Y")){
 $WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
 $sourceWIM = "\sources\install.wim"
-$WIMFile = Join-Path -Path $WindowsImage '\Sources\install.wim'
+$WIMFile = Join-Path -Path $WindowsImage '\sources\install.wim'
 $Destination = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
 Write-Verbose "Creating Custom WIM OS folder..." -Verbose
 New-Item -Path $Destination -ItemType Directory -Force
