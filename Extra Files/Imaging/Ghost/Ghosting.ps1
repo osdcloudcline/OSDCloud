@@ -32,7 +32,6 @@ $Ghost4 = Test-Path -Path "$GhostDestination\Ghostexp.exe"
 
 If($Ghost -eq $true ){
 Write-Host "Symantec Ghost successfully downloaded" -ForegroundColor Cyan
-
 }
 ElseIf($Ghost -eq $false){
 Write-Verbose "Acquiring Symantec Ghost from GitHub repository..." -Verbose
@@ -45,4 +44,5 @@ Write-Host
 Write-Verbose "Completed: Symantec Ghost has been downloaded..." -Verbose
 Write-Host
 }
+
 Stop-Transcript
