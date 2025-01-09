@@ -151,7 +151,7 @@ Get-OSDCloudWorkspace
 
 Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
+$WorkspacePath = "C:\OSDCloud\VMWare-WorkstationPro"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
@@ -389,5 +389,11 @@ Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/
 Write-Host
 
 ###########################################
-# Create OSDCloud ISO
-############################################
+# Rename OSDCloud ISO
+#########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\VMWare-WorkstationPro"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\VMWare-WorkstationPro\OSDCloud-VMWare-WorkstationPro.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\VMWare-WorkstationPro\OSDCloud-VMWare-WorkstationPro.iso" -Force
