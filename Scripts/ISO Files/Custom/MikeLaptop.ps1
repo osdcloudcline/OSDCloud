@@ -462,6 +462,7 @@ $Index = Read-Host -Prompt ' Select edition'
 $ExportWIMFileName = Read-Host -Prompt 'Please specify a file name for the exported WIM file, including the file extension (EG: Windows11ProWorkstations.wim)'
 $DescriptionName = Read-Host -Prompt 'Please enter a descriptive name for the image'
 Export-WindowsImage -SourceImagePath "$WIMFile" -SourceIndex $Index -DestinationImagePath "$Destination\$ExportWIMFileName" -DescriptionName "$DescriptionName" 
+New-OSDCloudISO
 Stop-Transcript
 }
 ElseIf (($Question -eq "yes" -and $ExtractWIM -eq "no") -or ($Question -eq "Yes"-and $ExtractWIM -eq "No") -or ($Question -eq "y" -and $ExtractWIM -eq "n") -or ($Question -eq "Y"-and $ExtractWIM -eq "N")){
@@ -475,6 +476,7 @@ Write-Verbose "Creating Custom WIM OS folder..." -Verbose
 New-Item -Path $Destination -ItemType Directory -Force
 Write-Verbose "Copying Windows Image to OSDCloud..." -Verbose
 Copy-Item -Path "$WIMFile" -Destination "$Destination" -Force
+New-OSDCloudISO
 Stop-Transcript
 }
 ElseIf(($Question -eq "no" -and $ExtractWIM -eq "no") -or ($Question -eq "No"-and $ExtractWIM -eq "No") -or ($Question -eq "n" -and $ExtractWIM -eq "n") -or ($Question -eq "N"-and $ExtractWIM -eq "N")){
