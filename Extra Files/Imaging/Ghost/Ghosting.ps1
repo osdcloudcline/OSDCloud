@@ -14,7 +14,7 @@ $GhostDestination = "C:\OSDCloud\downloads\GitHub\Ghost"
 
 Write-Verbose "Processing: Symantec Ghost " -Verbose
 Save-WebFile -SourceUrl $GhostURL -DestinationDirectory $GhostDestination
-Expand-7Zip -ArchiveFileName "$GhostDestination\Ghost.zip" -Destination $GhostDestination
+Expand-7Zip -ArchiveFileName "$GhostDestination\Ghost.zip" -TargetPath $GhostDestination
 Write-Host
 Write-Verbose "Completed: Symantec Ghost file downloads" -Verbose
 Write-Host
