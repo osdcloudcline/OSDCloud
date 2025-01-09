@@ -101,13 +101,13 @@ Write-Verbose "Processing: Google Chrome - portable browser" -Verbose
 Write-Host
 
 $PortableBrowser = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Browser/PortableBrowser-Download.ps1")
-Invoke-WebRequest $($PortableBrowser.Content)
+Invoke-Expression $($PortableBrowser.Content)
 
 Write-Host
 Write-Verbose "Processing: User Profile Backup and Restore" -Verbose
 Write-Host
 
-$UPBR = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/User%20Profile%20Backup%20Restore/UPBR-Download.ps1")
+$UPBR = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/User%20Profile%20Backup%20Restore/UPBR-Download.ps1")
 Invoke-Expression $($UPBR.Content)
 
 Write-Host
