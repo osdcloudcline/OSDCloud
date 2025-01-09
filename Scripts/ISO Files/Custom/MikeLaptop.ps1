@@ -418,27 +418,13 @@ $WiFiDriver = "C:\OSDCloud\Drivers\Custom\Mike Laptops\Alienware M18 R2\WiFi"
 Edit-OSDCloudWinPE -DriverPath $WiFiDriver 
 
 Write-Host
-Write-Verbose "Processing: Alienware M18 R2 Storage Driver..." -Verbose
-$StorageDriver = "C:\OSDCloud\Drivers\Custom\Mike Laptops\Alienware M18 R2\Storage"
+Write-Verbose "Processing: Alienware M18 R2 ALL Drivers..." -Verbose
+$ALLDriver = "C:\OSDCloud\Drivers\Custom\Mike Laptops\Alienware M18 R2\ALL"
 
-Edit-OSDCloudWinPE -DriverPath $StorageDriver 
+Edit-OSDCloudWinPE -DriverPath $ALLDriver 
 
 Write-Host
 Write-Verbose "Completed: Integration of Alienware M18 R2 drivers into OSDCloud" -Verbose
-Write-Host
-
-###########################################
-# OSDCloud NEW Wallpaper
-###########################################
-
-Write-Host
-Write-Verbose "Processing: NEW OSDCloud Wallpaper..." -Verbose 
-$OSDCloudwallpaper = "C:\downloads\OSDCloud\GitHub\wallpaper\winpe.jpg"
-
-Edit-OSDCloudWinPE -Wallpaper $OSDCloudwallpaper
-
-Write-Host
-Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
 Write-Host
 
 ##########################################
