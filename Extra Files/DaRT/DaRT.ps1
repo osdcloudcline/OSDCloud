@@ -32,12 +32,12 @@ Write-Host
 Write-Verbose "Completed: Microsoft DART files have been downloaded..." -Verbose
 Write-Host
 
-Write-Verbose "Confirming successful download of Google Chrome Portable Browser..." -Verbose
+Write-Verbose "Confirming successful download of Microsoft Diagnostics and Recovery Tools..." -Verbose
 $DARTTP1 = Test-Path -Path "$DARTDestination\Toolsx64.cab"
 $DARTTP2 = Test-Path -Path "$DARTDestination\DartConfig8.dat"
 
 If($DARTTP1 -and $DARTTP2 -eq $true ){
-Write-Host "Microsoft Diagnostics and Recovery Tools successfully downloaded"
+Write-Host "Microsoft Diagnostics and Recovery Tools successfully downloaded" -ForegroundColor Cyan
 }
 ElseIf($DARTTP1 -and $DARTTP2 -eq $false){
 Write-Verbose "Acquiring Microsoft Diagnostics and Recovery Tools from GitHub repository..." -Verbose
