@@ -15,7 +15,7 @@ $UPBR_URL = "https://github.com/osdcloudcline/OSDCloud/raw/main/Extra%20Files/Us
 ######################################################################################
 ####    USER PROFILE BACKUP AND RESTORE EXTRACTION LOCATION                    #######
 ######################################################################################
-$UPBRFilePath = "C:\OSDCloud\downloads\GitHub\ProfileBackupRestore\UserProfileBackupRestore.exe"
+$UPBRFilePath = "C:\OSDCloud\downloads\GitHub\ProfileBackupRestore"
 
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name OSD -Force
