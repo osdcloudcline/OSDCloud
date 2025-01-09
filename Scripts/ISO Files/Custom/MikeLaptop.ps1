@@ -171,7 +171,7 @@ Write-Host
 ################################################
 
 Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support for Intel Socket LGA 1851 systems..." -Verbose
-New-OSDCloudTemplate -Name OSDCloud-SeanPC -WinRE
+New-OSDCloudTemplate -Name OSDCloud-MikeLaptop-AlienwareM18R2 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
