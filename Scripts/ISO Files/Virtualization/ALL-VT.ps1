@@ -93,7 +93,7 @@ Write-Verbose "Processing: Google Chrome - portable browser" -Verbose
 Write-Host
 
 $PortableBrowser = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Browser/PortableBrowser-Download.ps1")
-Invoke-WebRequest $($PortableBrowser.Content)
+Invoke-Expression $($PortableBrowser.Content)
 
 Write-Host
 Write-Verbose "Processing: User Profile Backup and Restore" -Verbose
