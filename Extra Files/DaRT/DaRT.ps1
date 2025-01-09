@@ -32,5 +32,22 @@ Write-Host
 Write-Verbose "Completed: Microsoft DART files have been downloaded..." -Verbose
 Write-Host
 
+Write-Verbose "Confirming successful download of Google Chrome Portable Browser..." -Verbose
+$DARTTP1 = Test-Path -Path "$DARTDestination\Toolsx64.cab"
+$DARTTP2 = Test-Path -Path "$DARTDestination\DartConfig8.dat"
+
+If($DARTTP1 -and $DARTTP2 -eq $true ){
+Write-Host "Microsoft Diagnostics and Recovery Tools successfully downloaded"
+}
+ElseIf($DARTTP1 -and $DARTTP2 -eq $false){
+Write-Verbose "Acquiring Microsoft Diagnostics and Recovery Tools from GitHub repository..." -Verbose
+
+Save-WebFile -SourceUrl $DART64CAB_URL -DestinationDirectory $DARTDestination
+Save-WebFile -SourceUrl $DARTConfig8_URL -DestinationDirectory $DARTDestination
+
+Write-Host
+Write-Verbose "Completed: Microsoft DART files have been downloaded..." -Verbose
+Write-Host
+}
 
 Stop-Transcript 
