@@ -40,6 +40,7 @@ Edit-OSDCloudWinPE -PSModuleInstall Az.ApplicationInsights
 Edit-OSDCloudWinPE -PSModuleInstall Az.Cdn
 Edit-OSDCloudWinPE -PSModuleInstall Az.Batch
 Edit-OSDCloudWinPE -PSModuleInstall Az.Monitor
+Edit-OSDCloudWinPE -PSModuleInstall Microsoft.Graph
 
 Write-Host
 Write-Verbose "Completed: Adding Azure/Cloud-related PowerShell 5.1 modules to OSDCloud ISO..." -Verbose
