@@ -11,6 +11,7 @@ Import-Module -Name OSD -Force
 $GhostURL1 = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/Imaging/Ghost/Ghost.zip"
 $GhostURL2 = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Imaging/Ghost/Ghost64.exe"
 $GhostURL3 = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Imaging/Ghost/GhostSrv.exe"
+$GhostURL4 = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Imaging/Ghost/GhostSrv.exe"
 
 $GhostDestination = "C:\OSDCloud\downloads\GitHub\Ghost"
 
