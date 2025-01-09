@@ -86,6 +86,7 @@ Write-Host
 Write-Host '                                                                              ' -BackgroundColor White       
 Write-Host '                                                                              ' -BackgroundColor White   
 Write-Host '            This OSDCloud section allows the user to perform:                 ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                              ' -BackgroundColor White 
 Write-Host '     - Creating ISO images for                                                ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - VMWare ESXI 8.0                                                        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Microsoft Hyper-V                                                      ' -ForegroundColor DarkBlue -BackgroundColor White
