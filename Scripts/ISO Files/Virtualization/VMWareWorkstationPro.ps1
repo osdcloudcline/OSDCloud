@@ -275,6 +275,17 @@ Write-Host
 
 # MS DaRT Remote Connections and Troubleshooting
 
+Write-Host
+Write-Verbose "Processing: Copying Microsoft DART files..." -Verbose
+Write-Host
+
+Copy-Item -Path "$DARTDestination\Toolsx64.cab" -Destination $DART64CABDestination -Force
+Copy-Item -Path "$DARTDestination\DartConfig8.dat" -Destination $DARTConfig8Destination -Force
+
+Write-Host
+Write-Verbose "Completed: Microsoft DART files have been copied..." -Verbose
+Write-Host
+
 # CloudPC
 
 Write-Host
