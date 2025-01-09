@@ -92,7 +92,7 @@ Write-Host '     - Microsoft Hyper-V                                            
 Write-Host '     - VMWare Workstation Pro                                                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Proxmox                                                                ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - ALL Virtualization                                                     ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '                                                                              ' -ForegroundColor White
+Write-Host '                                                                              ' -BackgroundColor White
 Write-Host '                                                                              ' -BackgroundColor White
 pause
 Clear-Host
