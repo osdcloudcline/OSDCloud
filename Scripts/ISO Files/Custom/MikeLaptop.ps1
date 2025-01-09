@@ -307,6 +307,21 @@ Write-Host
 
 # MS DaRT Remote Connections and Troubleshooting
 
+$DARTDestination = "C:\OSDCloud\downloads\GitHub\DART"
+$DART64CABDestination = "C:\Program Files\Microsoft DaRT\v10"
+$DARTConfig8Destination = "C:\Program Files\Microsoft Deployment Toolkit\Templates"
+
+Write-Host
+Write-Verbose "Processing: Copying Microsoft DART files..." -Verbose
+Write-Host
+
+Copy-Item -Path "$DARTDestination\Toolsx64.cab" -Destination $DART64CABDestination -Force
+Copy-Item -Path "$DARTDestination\DartConfig8.dat" -Destination $DARTConfig8Destination -Force
+
+Write-Host
+Write-Verbose "Completed: Microsoft DART files have been copied..." -Verbose
+Write-Host
+
 # CloudPC
 
 Write-Host
