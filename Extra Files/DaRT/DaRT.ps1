@@ -25,8 +25,8 @@ Write-Host
 Write-Verbose "Processing: Acquiring Microsoft DART files..." -Verbose
 Write-Host
 
-Save-WebFile -SourceUrl $DART64CABURL -DestinationDirectory $DARTDestination
-Save-WebFile -SourceUrl $DARTConfig8URL -DestinationDirectory $DARTDestination
+Save-WebFile -SourceUrl $DART64CAB_URL -DestinationDirectory $DARTDestination
+Save-WebFile -SourceUrl $DARTConfig8_URL -DestinationDirectory $DARTDestination
 
 Write-Host
 Write-Verbose "Completed: Microsoft DART files have been downloaded..." -Verbose
