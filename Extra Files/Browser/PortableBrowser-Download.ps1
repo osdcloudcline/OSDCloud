@@ -24,4 +24,4 @@ Import-Module -Name 7Zip4PowerShell -Force
 Write-Verbose "Acquiring Google Chrome Portable Web Browser from GitHub repository..." -Verbose
 Save-WebFile -SourceUrl $OSDBrowser DestinationDirectory $ChromeDownloadPath 
 Write-Verbose "Expanding Google Chrome Portable Web Browser ..." -Verbose
-Expand-7Zip -ArchiveFileName "$ChromeDownloadPath\Chrome.zip" -Destination $ChromePath -ErrorAction SilentlyContinue 
+Expand-7Zip -ArchiveFileName "$ChromeDownloadPath\Chrome.zip" -TargetPath $ChromePath -ErrorAction SilentlyContinue 
