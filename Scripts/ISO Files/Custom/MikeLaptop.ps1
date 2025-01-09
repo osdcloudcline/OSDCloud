@@ -434,5 +434,11 @@ Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/
 Write-Host
 
 ###########################################
-# Create OSDCloud ISO
+# Rename OSDCloud ISO
 #########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\VMWare-WorkstationPro"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\MikeLaptop-AlienwareM18R2\OSDCloud-MikeLaptop-AlienwareM18R2.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\MikeLaptop-AlienwareM18R2\OSDCloud-MikeLaptop-AlienwareM18R2_NoPrompt.iso" -Force
