@@ -417,11 +417,6 @@ $WiFiDriver = "C:\OSDCloud\Drivers\Custom\Mike Laptops\Alienware M18 R2\WiFi"
 
 Edit-OSDCloudWinPE -DriverPath $WiFiDriver 
 
-Write-Host
-Write-Verbose "Processing: Alienware M18 R2 ALL Drivers..." -Verbose
-$ALLDriver = "C:\OSDCloud\Drivers\Custom\Mike Laptops\Alienware M18 R2\ALL"
-
-Edit-OSDCloudWinPE -DriverPath $ALLDriver 
 
 Write-Host
 Write-Verbose "Completed: Integration of Alienware M18 R2 drivers into OSDCloud" -Verbose
