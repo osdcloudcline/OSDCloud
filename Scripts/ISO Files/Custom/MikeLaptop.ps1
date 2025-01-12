@@ -417,6 +417,29 @@ $WiFiDriver = "C:\OSDCloud\Drivers\Custom\Mike Laptops\Alienware M18 R2\WiFi"
 
 Edit-OSDCloudWinPE -DriverPath $WiFiDriver 
 
+Write-Verbose "Processing: Alienware M18 R2 Ethernet Driver - Cloud Driver..." -Verbose
+
+Edit-OSDCloudWinPE -DriverHWID 'VEN_10EC&DEV_5000&CC_0200','VEN_10EC&DEV_5000&CC_020000','VEN_10EC&DEV_5000&SUBSYS_0C9D1028','VEN_10EC&DEV_5000&SUBSYS_0C9D1028&REV_02'
+
+
+Write-Host
+Write-Verbose "Processing: Alienware M18 R2 WiFi Driver - Cloud Driver..." -Verbose
+
+Edit-OSDCloudWinPE -DriverHWID 'VEN_8086&DEV_272B&CC_0280','VEN_8086&DEV_272B&CC_028000','VEN_8086&DEV_272B&SUBSYS_17741A56','VEN_8086&DEV_272B&SUBSYS_17741A56&REV_1A' 
+
+Write-Host
+Write-Verbose "Processing: Alienware M18 R2 Bluetooth Driver - Cloud Driver..." -Verbose
+
+
+Edit-OSDCloudWinPE -DriverHWID
+
+Write-Host
+
+Write-Verbose "Processing: Alienware M18 R2 SK HYNIX M.2 SSD Storage Driver - Cloud Driver..." -Verbose
+
+
+Edit-OSDCloudWinPE -DriverHWID
+
 
 Write-Host
 Write-Verbose "Completed: Integration of Alienware M18 R2 drivers into OSDCloud" -Verbose
