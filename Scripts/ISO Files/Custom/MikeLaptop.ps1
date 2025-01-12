@@ -495,3 +495,19 @@ $OSDCloudISOPath = "C:\OSDCloud\MikeLaptop-AlienwareM18R2"
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\MikeLaptop-AlienwareM18R2\OSDCloud-MikeLaptop-AlienwareM18R2.iso" -Force
 Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\MikeLaptop-AlienwareM18R2\OSDCloud-MikeLaptop-AlienwareM18R2_NoPrompt.iso" -Force
+
+###########################################
+# Copy OSDCloud ISO
+#########################################
+
+Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
+
+$ISODestination = "C:\ISO Files\OSDCloud"
+$LogsDestination = "C:\ISO Files\Logs"
+Copy-Item -Path "$OSDCloudISOPath\OSDCloud-MikeLaptop-AlienwareM18R2" -Destination $ISODestination -Force
+Copy-Item -Path "$OSDCloudISOPath\OSDCloud-MikeLaptop-AlienwareM18R2_NoPrompt.iso" -Destination $ISODestination -Force
+Copy-Item -Path "$OSDCloudISOPath\Logs" -Destination $LogsDestination -Recurse -Force
+
+###########################################
+# Cleanup
+#########################################
