@@ -472,7 +472,7 @@ ElseIf(($Question -eq "no" -and $ExtractWIM -eq "no") -or ($Question -eq "No"-an
 ###################################################
 
 Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
-Edit-OSDCloudWinPE -StartURL 'https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1'
+Edit-OSDCloudWinPE -StartURL 'https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/Imaging/CaptureImage.ps1'
 Write-Host
 }
 }
@@ -483,7 +483,7 @@ Show-CustomImage
 ###################################################
 
 Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
-Edit-OSDCloudWinPE -StartURL 'https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1'
+Edit-OSDCloudWinPE -StartURL 'https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/Imaging/CaptureImage.ps1'
 Write-Host
 
 ###########################################
