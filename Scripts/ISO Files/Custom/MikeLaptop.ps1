@@ -400,23 +400,6 @@ Write-Host
 Write-Verbose "Processing: Alienware M18 R2 drivers" -Verbose
 Write-Host
 
-Write-Verbose "Processing: Alienware M18 R2 Ethernet Driver..." -Verbose
-$EthernetDriver = "C:\OSDCloud\Drivers\Custom\Mike Laptops\Alienware M18 R2\Ethernet"
-
-Edit-OSDCloudWinPE -DriverPath $EthernetDriver
-
-Write-Host
-Write-Verbose "Processing: Alienware M18 R2 Bluetooth Driver..." -Verbose
-$BluetoothDriver = "C:\OSDCloud\Drivers\Custom\Mike Laptops\Alienware M18 R2\Bluetooth"
-
-Edit-OSDCloudWinPE -DriverPath $BluetoothDriver
-
-Write-Host
-Write-Verbose "Processing: Alienware M18 R2 WiFi Driver..." -Verbose
-$WiFiDriver = "C:\OSDCloud\Drivers\Custom\Mike Laptops\Alienware M18 R2\WiFi"
-
-Edit-OSDCloudWinPE -DriverPath $WiFiDriver 
-
 Write-Verbose "Processing: Alienware M18 R2 Ethernet Driver - Cloud Driver..." -Verbose
 
 Edit-OSDCloudWinPE -DriverHWID 'VEN_10EC&DEV_5000&CC_0200','VEN_10EC&DEV_5000&CC_020000','VEN_10EC&DEV_5000&SUBSYS_0C9D1028','VEN_10EC&DEV_5000&SUBSYS_0C9D1028&REV_02'
@@ -430,16 +413,14 @@ Edit-OSDCloudWinPE -DriverHWID 'VEN_8086&DEV_272B&CC_0280','VEN_8086&DEV_272B&CC
 Write-Host
 Write-Verbose "Processing: Alienware M18 R2 Bluetooth Driver - Cloud Driver..." -Verbose
 
-
-Edit-OSDCloudWinPE -DriverHWID
+Edit-OSDCloudWinPE -DriverHWID 'VID_8087&PID_0036&REV_000', 'VID_8087&PID_0036'
 
 Write-Host
 
 Write-Verbose "Processing: Alienware M18 R2 SK HYNIX M.2 SSD Storage Driver - Cloud Driver..." -Verbose
 
 
-Edit-OSDCloudWinPE -DriverHWID
-
+Edit-OSDCloudWinPE -DriverHWID 'PVC10_SK_hynix_1024GB61001171', 'PVC10_SK_hynix_1024GB'
 
 Write-Host
 Write-Verbose "Completed: Integration of Alienware M18 R2 drivers into OSDCloud" -Verbose
