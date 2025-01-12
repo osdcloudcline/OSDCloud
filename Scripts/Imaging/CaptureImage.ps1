@@ -97,3 +97,7 @@ Write-Host "Beginning capture of internal system drive..." -ForegroundColor Cyan
 New-WindowsImage -ImagePath "$ImagePath" -CapturePath "$SystemDrive" -Name "$ImageName" -CompressionType Max
 Write-Host 
 Write-Host "Completed: Image Capture of $SystemDrive to $Destination" -ForegroundColor Green 
+
+
+$OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1")
+Invoke-Expression $($OSDCloudMain.Content)
