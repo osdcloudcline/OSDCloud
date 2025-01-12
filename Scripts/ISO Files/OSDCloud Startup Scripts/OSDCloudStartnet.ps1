@@ -68,6 +68,8 @@ cls
        Write-Verbose "System Gateway/DNS Server: $GatewayDNS" -Verbose
        Write-Verbose "WAN or External IP Address: $ExternalIP" -Verbose
 
+$WiFiConnect = "X:\Windows\WirelessConnect.exe"
+Start-Process -FilePath $WiFiConnect
 
 Write-Host
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
