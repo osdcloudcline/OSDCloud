@@ -88,12 +88,12 @@ Start-Process -FilePath $Notepad
 pause
 
 $SystemDrive = Read-Host -Prompt 'Please enter the letter of your system drive (or drive letter that you want to SAVE or CAPTURE)' 
-$Destination = Read-Host -Prompt 'Please enter the Drive letter and path or folder, if any, to save the image TO'
+$Destination = Read-Host -Prompt 'Please enter the mandated Drive letter and optional path or folder to save the image TO'
 $ImageName = Read-Host -Prompt 'Please enter a filename, including .wim, for your image (EG: custom.wim)' 
 $ImagePath = Join-Path -Path $Destination -ChildPath $ImageName
 
 
 Write-Host "Beginning capture of internal system drive..." -ForegroundColor Cyan 
-New-WindowsImage -ImagePath $ImagePath -CapturePath "$SystemDrive" -Name "$ImageName" -CompressionType Max
+New-WindowsImage -ImagePath "$ImagePath" -CapturePath "$SystemDrive" -Name "$ImageName" -CompressionType Max
 Write-Host 
 Write-Host "Completed: Image Capture of $SystemDrive to $Destination" -ForegroundColor Green 
