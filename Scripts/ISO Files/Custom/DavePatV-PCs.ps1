@@ -386,3 +386,32 @@ Invoke-Expression $($OSDCloudPS7xMods.Content)
 # PC Hardware Drivers
 ########################################
 
+Write-Host
+Write-Verbose "Processing: PC Hardware drivers" -Verbose
+Write-Host
+
+Write-Verbose "Processing: PC Ethernet Driver - Cloud Driver..." -Verbose
+
+Edit-OSDCloudWinPE -DriverHWID 
+
+
+Write-Host
+Write-Verbose "Processing: PC WiFi Driver - Cloud Driver..." -Verbose
+
+Edit-OSDCloudWinPE -DriverHWID 
+
+Write-Host
+Write-Verbose "Processing: PC Bluetooth Driver - Cloud Driver..." -Verbose
+
+Edit-OSDCloudWinPE -DriverHWID 
+
+Write-Host
+
+Write-Verbose "Processing: PC M.2 SSD Storage Driver - Cloud Driver..." -Verbose
+
+
+Edit-OSDCloudWinPE -DriverHWID 
+
+Write-Host
+Write-Verbose "Completed: Integration of PC drivers into OSDCloud" -Verbose
+Write-Host
