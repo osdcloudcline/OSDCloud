@@ -160,7 +160,7 @@ Write-Host
 ################################################
 
 Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support for Intel Socket LGA 1851 systems..." -Verbose
-New-OSDCloudTemplate -Name OSDCloud-MikeLaptop-AlienwareM18R2 -WinRE
+New-OSDCloudTemplate -Name OSDCloud-DavePat -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
@@ -415,3 +415,156 @@ Edit-OSDCloudWinPE -DriverHWID
 Write-Host
 Write-Verbose "Completed: Integration of PC drivers into OSDCloud" -Verbose
 Write-Host
+
+##########################################
+# Add Custom WIM Image
+##########################################
+Function Show-CustomImage{
+$CustomImageLog = "C:\Logs\OSDCloud\Images\AddCustom.log"
+Start-Transcript -Path $CustomImageLog
+$Question = Read-Host -Prompt 'Do you want or need to add an additional Windows Installation WIM file?'
+$ExtractWIM = Read-Host 'Do you need to extract a WIM Image before copying to OSDCloud?'
+If(($Question -and $ExtractWIM -eq "yes") -or ($Question -and $ExtractWIM -eq "Yes") -or ($Question -and $ExtractWIM -eq "y") -or ($Question -and $ExtractWIM -eq "Y")){
+$WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
+$sourceWIM = "\sources\install.wim"
+$WIMFile = Join-Path -Path $WindowsImage '\sources\install.wim'
+$Destination = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
+Write-Verbose "Creating Custom WIM OS folder..." -Verbose
+New-Item -Path $Destination -ItemType Directory -Force
+Write-Verbose "Exporting Client WIM File and copying Windows Image to OSDCloud..." -Verbose
+Get-WindowsImage -ImagePath $WIMFile | Format-Table ImageIndex, ImageName
+$Index = Read-Host -Prompt ' Select edition'
+$ExportWIMFileName = Read-Host -Prompt 'Please specify a file name for the exported WIM file, including the file extension (EG: Windows11ProWorkstations.wim)'
+$DescriptionName = Read-Host -Prompt 'Please enter a descriptive name for the image'
+Export-WindowsImage -SourceImagePath "$WIMFile" -SourceIndex $Index -DestinationImagePath "$Destination\$ExportWIMFileName" -DescriptionName "$DescriptionName" 
+New-OSDCloudISO
+
+Stop-Transcript
+}
+ElseIf (($Question -eq "yes" -and $ExtractWIM -eq "no") -or ($Question -eq "Yes"-and $ExtractWIM -eq "No") -or ($Question -eq "y" -and $ExtractWIM -eq "n") -or ($Question -eq "Y"-and $ExtractWIM -eq "N")){
+$CustomImageLog = "C:\Logs\OSDCloud\Images\AddCustom.log"
+Start-Transcript -Path $CustomImageLog
+$WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
+$sourceWIM = "\sources\install.wim"
+$WIMFile = Join-Path -Path $WindowsImage -ChildPath $sourceWIM
+$Destination = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
+Write-Verbose "Creating Custom WIM OS folder..." -Verbose
+New-Item -Path $Destination -ItemType Directory -Force
+Write-Verbose "Copying Windows Image to OSDCloud..." -Verbose
+Copy-Item -Path "$WIMFile" -Destination "$Destination" -Force
+New-OSDCloudISO
+Stop-Transcript
+}
+ElseIf(($Question -eq "no" -and $ExtractWIM -eq "no") -or ($Question -eq "No"-and $ExtractWIM -eq "No") -or ($Question -eq "n" -and $ExtractWIM -eq "n") -or ($Question -eq "N"-and $ExtractWIM -eq "N")){
+
+##################################################
+# OSDCloud WebScript for customized Startup script
+###################################################
+
+Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
+Edit-OSDCloudWinPE -StartURL 'https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/Imaging/CaptureImage.ps1'
+Write-Host
+}
+}
+Show-CustomImage
+
+##################################################
+# OSDCloud WebScript for customized Startup script
+###################################################
+
+Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
+Edit-OSDCloudWinPE -StartURL 'https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/Imaging/CaptureImage.ps1'
+Write-Host
+
+###########################################
+# Rename OSDCloud ISO
+#########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\MikeLaptop-AlienwareM18R2"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\DavePat\OSDCloud-DavePat.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\DavePat\OSDCloud-##########################################
+# Add Custom WIM Image
+##########################################
+Function Show-CustomImage{
+$CustomImageLog = "C:\Logs\OSDCloud\Images\AddCustom.log"
+Start-Transcript -Path $CustomImageLog
+$Question = Read-Host -Prompt 'Do you want or need to add an additional Windows Installation WIM file?'
+$ExtractWIM = Read-Host 'Do you need to extract a WIM Image before copying to OSDCloud?'
+If(($Question -and $ExtractWIM -eq "yes") -or ($Question -and $ExtractWIM -eq "Yes") -or ($Question -and $ExtractWIM -eq "y") -or ($Question -and $ExtractWIM -eq "Y")){
+$WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
+$sourceWIM = "\sources\install.wim"
+$WIMFile = Join-Path -Path $WindowsImage '\sources\install.wim'
+$Destination = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
+Write-Verbose "Creating Custom WIM OS folder..." -Verbose
+New-Item -Path $Destination -ItemType Directory -Force
+Write-Verbose "Exporting Client WIM File and copying Windows Image to OSDCloud..." -Verbose
+Get-WindowsImage -ImagePath $WIMFile | Format-Table ImageIndex, ImageName
+$Index = Read-Host -Prompt ' Select edition'
+$ExportWIMFileName = Read-Host -Prompt 'Please specify a file name for the exported WIM file, including the file extension (EG: Windows11ProWorkstations.wim)'
+$DescriptionName = Read-Host -Prompt 'Please enter a descriptive name for the image'
+Export-WindowsImage -SourceImagePath "$WIMFile" -SourceIndex $Index -DestinationImagePath "$Destination\$ExportWIMFileName" -DescriptionName "$DescriptionName" 
+New-OSDCloudISO
+
+Stop-Transcript
+}
+ElseIf (($Question -eq "yes" -and $ExtractWIM -eq "no") -or ($Question -eq "Yes"-and $ExtractWIM -eq "No") -or ($Question -eq "y" -and $ExtractWIM -eq "n") -or ($Question -eq "Y"-and $ExtractWIM -eq "N")){
+$CustomImageLog = "C:\Logs\OSDCloud\Images\AddCustom.log"
+Start-Transcript -Path $CustomImageLog
+$WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
+$sourceWIM = "\sources\install.wim"
+$WIMFile = Join-Path -Path $WindowsImage -ChildPath $sourceWIM
+$Destination = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
+Write-Verbose "Creating Custom WIM OS folder..." -Verbose
+New-Item -Path $Destination -ItemType Directory -Force
+Write-Verbose "Copying Windows Image to OSDCloud..." -Verbose
+Copy-Item -Path "$WIMFile" -Destination "$Destination" -Force
+New-OSDCloudISO
+Stop-Transcript
+}
+ElseIf(($Question -eq "no" -and $ExtractWIM -eq "no") -or ($Question -eq "No"-and $ExtractWIM -eq "No") -or ($Question -eq "n" -and $ExtractWIM -eq "n") -or ($Question -eq "N"-and $ExtractWIM -eq "N")){
+
+##################################################
+# OSDCloud WebScript for customized Startup script
+###################################################
+
+Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
+Edit-OSDCloudWinPE -StartURL 'https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/Imaging/CaptureImage.ps1'
+Write-Host
+}
+}
+Show-CustomImage
+
+##################################################
+# OSDCloud WebScript for customized Startup script
+###################################################
+
+Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
+Edit-OSDCloudWinPE -StartURL 'https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/Imaging/CaptureImage.ps1'
+Write-Host
+
+###########################################
+# Rename OSDCloud ISO
+#########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\DavePat"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\DavePat\OSDCloud-DavePat.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\DavePat\OSDCloud-DavePat_NoPrompt.iso" -Force
+
+###########################################
+# Copy OSDCloud ISO
+#########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\DavePat"
+
+Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
+
+$ISODestination = "C:\ISO Files\OSDCloud"
+$LogsDestination = "C:\ISO Files\Logs"
+Copy-Item -Path "$OSDCloudISOPath\OSDCloud-DavePat.iso" -Destination $ISODestination -Force
+Copy-Item -Path "$OSDCloudISOPath\OSDCloud-DavePat_NoPrompt.iso" -Destination $ISODestination -Force
+Copy-Item -Path "$OSDCloudISOPath\Logs" -Destination $LogsDestination -Recurse -Force_NoPrompt.iso" -Force
+
