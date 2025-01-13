@@ -500,6 +500,8 @@ Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud
 # Copy OSDCloud ISO
 #########################################
 
+$OSDCloudISOPath = "C:\OSDCloud\MikeLaptop-AlienwareM18R2"
+
 Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
 
 $ISODestination = "C:\ISO Files\OSDCloud"
