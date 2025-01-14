@@ -422,12 +422,6 @@ Write-Verbose "Processing: Alienware M18 R2 SK HYNIX M.2 SSD Storage Driver - Cl
 
 Edit-OSDCloudWinPE -DriverHWID 'PVC10_SK_hynix_1024GB61001171', 'PVC10_SK_hynix_1024GB'
 
-Write-Host
-Write-Verbose "Processing: Alienware M18 R2 Base System Device Driver - Cloud Driver..." -Verbose
-
-
-Edit-OSDCloudWinPE -DriverHWID 'VEN__8086&DEV_A74F&SUBSYS_0C9D1028&REV_01\3&11583659&0&40'
-
 
 Write-Host
 Write-Verbose "Completed: Integration of Alienware M18 R2 drivers into OSDCloud" -Verbose
