@@ -39,22 +39,14 @@ Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
 Write-Host
 
 Write-Host
-Write-Verbose "Processing: Intel LGA 1851 Motherboard driver downloads" -Verbose
-Write-Host
-
-Write-Host
 Write-Verbose "Processing: ASUS Intel LGA 1851 ROG - Republic of Gamers STRIX-A WiFi 7 DDR5 Motherboard driver downloads" -Verbose
 Write-Host 
 
-$ASUSROGStrixLGA1851 = Invoke-WebRequest("")
+$ASUSROGStrixLGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Custom/Bryan's%20Desktop%20-%20Intel%20Core%20Ultra%209/Bryan-NewDesktop.ps1")
 Invoke-Expression $($ASUSROGStrixLGA1851.Content)
 
 Write-Host
 Write-Verbose "Completed: ASUS Intel LGA 1851 ROG - Republic of Gamers STRIX-A WiFi 7 DDR5 Motherboard driver downloads" -Verbose
-Write-Host
-
-Write-Host
-Write-Verbose "Completed: Intel LGA 1851 Motherboard driver downloads" -Verbose
 Write-Host
 
 Write-Host
