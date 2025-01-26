@@ -381,10 +381,37 @@ Invoke-Expression $($OSDCloudPS7xMods.Content)
 # INTEL LGA 1851 Driver Integration - ASUS
 #############################################
 
+$EthernetDrivers = "C:\OSDCloud\Drivers\Custom\Bryan Desktop\ASUS Z890-A STRIX\LGA1851\Ethernet"
+$WiFiDrivers = "C:\OSDCloud\Drivers\Custom\Bryan Desktop\ASUS Z890-A STRIX\LGA1851\WLAN"
+$BluetoothDrivers = "C:\OSDCloud\Drivers\Custom\Bryan Desktop\ASUS Z890-A STRIX\LGA1851\Bluetooth"
+$StorageDrivers = "C:\OSDCloud\Drivers\Custom\Bryan Desktop\ASUS Z890-A STRIX\LGA1851\Storage"
+
 Write-Host
-Write-Verbose "Processing: ASUS LGA 1851 drivers" -Verbose
+Write-Verbose "Processing: ASUS Republic of Gamers ROG Z890-A STRIX Ethernet drivers" -Verbose
 Write-Host
 
+Edit-OSDCloudWinPE -DriverPath $EthernetDrivers
+
+Write-Host
+Write-Verbose "Processing: ASUS Republic of Gamers ROG Z890-A STRIX WLAN drivers" -Verbose
+Write-Host
+
+Edit-OSDCloudWinPE -DriverPath $WiFiDrivers
+
+Write-Host
+Write-Verbose "Processing: ASUS Republic of Gamers ROG Z890-A STRIX Bluetooth drivers" -Verbose
+Write-Host
+
+Edit-OSDCloudWinPE -DriverPath $BluetoothDrivers
+
+Write-Host
+Write-Verbose "Processing: ASUS Republic of Gamers ROG Z890-A STRIX Storage drivers" -Verbose
+Write-Host
+
+Edit-OSDCloudWinPE -DriverPath $StorageDrivers
+
+Write-Host
+Write-Verbose "Completed: ASUS Republic of Gamers ROG Z890-A STRIX driver integration" -Verbose
 
 ############################################
 # Other Drivers
