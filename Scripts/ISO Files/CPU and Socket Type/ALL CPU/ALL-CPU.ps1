@@ -324,16 +324,16 @@ Write-Host
 Write-Verbose "Processing: MSI Intel LGA 1700 Motherboard driver downloads" -Verbose
 Write-Host 
 
-$MSIMEGLGA1700 = Invoke-WebRequest("")
-Invoke-Expression $($MSIMEGLGA1700.Content)
-
-$MSIMPGLGA1700 = Invoke-WebRequest("")
-Invoke-Expression $($MSIMPGLGA1700.Content)
-
-$MSIMAGLGA1700 = Invoke-WebRequest("")
+$MSIMAGLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/MAG%20Series/MAG.ps1")
 Invoke-Expression $($MSIMAGLGA1700.Content)
 
-$MSIPROLGA1700 = Invoke-WebRequest("")
+$MSIMEGLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/MEG%20Series/MEG.ps1")
+Invoke-Expression $($MSIMEGLGA1700.Content)
+
+$MSIMPGLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/MPG%20Series/MPG.ps1")
+Invoke-Expression $($MSIMPGLGA1700.Content)
+
+$MSIPROLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/PRO%20Series/PRO.ps1")
 Invoke-Expression $($MSIPROLGA1700.Content)
 
 Write-Host
@@ -352,16 +352,16 @@ Write-Host
 Write-Verbose "Processing: ASRock Intel LGA 1851 Motherboard driver downloads" -Verbose
 Write-Host 
 
-$ASRockAQUALGA1851 = Invoke-WebRequest("")
+$ASRockAQUALGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/AQUA%20Motherboards/AQUA.ps1")
 Invoke-Expression $($ASRockAQUALGA1851.Content)
 
-$ASRockPROLGA1851 = Invoke-WebRequest("")
+$ASRockPROLGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/PRO%20Motherboards/PRO.ps1")
 Invoke-Expression $($ASRockPROLGA1851.Content)
 
-$ASRockSteelLegendLGA1851 = Invoke-WebRequest("")
+$ASRockSteelLegendLGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/Steel%20Legend%20Motherboards/SteelLegend.ps1")
 Invoke-Expression $($ASRockSteelLegendLGA1851.Content)
 
-$ASRockTaichiLGA1851 = Invoke-WebRequest("")
+$ASRockTaichiLGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/Taichi%20Motherboards/Taichi.ps1")
 Invoke-Expression $($ASRockTaichiLGA1851.Content)
 
 Write-Host
@@ -431,20 +431,20 @@ Write-Host
 Write-Verbose "Processing: MSI Intel LGA 1851 Motherboard driver downloads" -Verbose
 Write-Host 
 
-$MSIAMEGLGA1851 = Invoke-WebRequest("")
-Invoke-Expression $($MSIMEGLGA1851.Content)
+$MSIGamingLGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201851/Gaming%20Series/Gaming.ps1")
+Invoke-Expression $($MSIGamingLGA1851.Content)
 
-$MSIMPGLGA1851 = Invoke-WebRequest("")
-Invoke-Expression $($MSIMPGLGA1851.Content)
-
-$MSIMAGLGA1851 = Invoke-WebRequest("")
+$MSIMAGLGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201851/MAG%20Series/MAG.ps1")
 Invoke-Expression $($MSIMAGLGA1851.Content)
 
-$MSIPROLGA1851 = Invoke-WebRequest("")
-Invoke-Expression $($MSIPROLGA1851.Content)
+$MSIAMEGLGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201851/MEG%20Series/MEG.ps1")
+Invoke-Expression $($MSIMEGLGA1851.Content)
 
-$MSIGamingLGA1851 = Invoke-WebRequest("")
-Invoke-Expression $($MSIGamingLGA1851.Content)
+$MSIMPGLGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201851/MPG%20Series/MPG.ps1")
+Invoke-Expression $($MSIMPGLGA1851.Content)
+
+$MSIPROLGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201851/PRO%20Series/PRO.ps1")
+Invoke-Expression $($MSIPROLGA1851.Content)
 
 
 Write-Host
@@ -1559,6 +1559,5 @@ Write-Verbose "Completed: Integration of AMD AM5 Motherboard Drivers..." -Verbos
 
 # LGA 1851 motherboards
 
-# OSDCloud - Cloud Drivers
 
 # Virtualization Drivers
