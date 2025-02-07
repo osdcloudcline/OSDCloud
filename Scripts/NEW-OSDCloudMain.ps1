@@ -136,7 +136,7 @@ do
     Invoke-Expression $($ZTIMain.Content)
     }
 '7'{cls
-    $DriversDL = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/OSDCloudDriversMain.ps1")
+    $DriversDL = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/OSDCloudDriversDownload.ps1")
     Invoke-Expression $($DriversDL.Content)
     }
 '8'{cls
