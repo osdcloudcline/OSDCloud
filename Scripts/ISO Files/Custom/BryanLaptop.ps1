@@ -50,10 +50,6 @@ Write-Verbose "Completed: DELL Inspiron 17R 7720SE driver downloads" -Verbose
 Write-Host
 
 Write-Host
-Write-Verbose "Completed: Intel LGA 1851 Motherboard driver downloads" -Verbose
-Write-Host
-
-Write-Host
 Write-Verbose "Processing: ALL Virtualization driver downloads" -Verbose
 Write-Host
 
@@ -187,7 +183,7 @@ Get-OSDCloudWorkspace
 
 Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
+$WorkspacePath = "C:\OSDCloud\BryanLaptop"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
@@ -563,7 +559,13 @@ Write-Host
 ##########################################
 
 ###########################################
-# Create OSDCloud ISO
+# Rename OSDCloud ISO
 #########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\BryanLaptop"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\BryanLaptop\OSDCloud-BryanLaptop.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\BryanLaptop\OSDCloud-BryanLaptop_NoPrompt.iso" -Force
 
 
