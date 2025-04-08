@@ -172,7 +172,7 @@ Get-OSDCloudWorkspace
 
 Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = "C:\OSDCloud\MikeLaptop-AlienwareM18R2"
+$WorkspacePath = "C:\OSDCloud\DavePatV-PCs"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
@@ -627,17 +627,17 @@ Write-Host
 # Rename OSDCloud ISO
 #########################################
 
-$OSDCloudISOPath = "C:\OSDCloud\DavePat"
+$OSDCloudISOPath = "C:\OSDCloud\DavePatV-PCs"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\DavePat\OSDCloud-DavePat.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\DavePat\OSDCloud-DavePat_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\DavePatV-PCs\OSDCloud-DavePatV-PCs.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\DavePatV-PCs\OSDCloud-DavePatV-PCs_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO
 #########################################
 
-$OSDCloudISOPath = "C:\OSDCloud\DavePat"
+$OSDCloudISOPath = "C:\OSDCloud\DavePatV-PCs"
 
 Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
 
