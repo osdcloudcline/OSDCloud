@@ -292,7 +292,7 @@ Get-OSDCloudWorkspace
 
 Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
+$WorkspacePath = "C:\OSDCloud\LGA1700"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
@@ -701,5 +701,11 @@ Write-Host
 ##########################################
 
 ###########################################
-# Create OSDCloud ISO
+# Rename OSDCloud ISO
 #########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\LGA1700"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\LGA1700\OSDCloud-LGA1700.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\LGA1700\OSDCloud-LGA1700_NoPrompt.iso" -Force
