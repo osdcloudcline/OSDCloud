@@ -628,6 +628,12 @@ Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/
 Write-Host
 
 ###########################################
-# Create OSDCloud ISO
+# Rename OSDCloud ISO
 #########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\BryanDesktop-LGA1851"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\BryanDesktop-LGA1851\OSDCloud-BryanDesktop-LGA1851.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\BryanDesktop-LGA1851\OSDCloud-BryanDesktop-LGA1851_NoPrompt.iso" -Force
 
