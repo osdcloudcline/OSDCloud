@@ -614,12 +614,11 @@ Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/
 Write-Host
 
 ###########################################
-# Create OSDCloud ISO
+# Rename OSDCloud ISO
 #########################################
 
-Write-Verbose "Processing: Creating new OSDCloud ISO Image..." -Verbose
+$OSDCloudISOPath = "C:\OSDCloud\BillyDesktop"
 
-New-OSDCloudISO
-
-Write-Host
-Write-Verbose "Completed: Creating new OSDCloud ISO Image..." -Verbose
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\BillyDesktop\OSDCloud-BillyDesktop.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\BillyDesktop\OSDCloud-BillyDesktop_NoPrompt.iso" -Force
