@@ -89,7 +89,7 @@ Get-OSDCloudWorkspace
 
 Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
+$WorkspacePath = "C:\OSDCloud\ASRock-ExtremeMotherboards-LGA1700"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
@@ -97,12 +97,38 @@ Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
 
+
 #################################
 # Adding PowerShell 7 to OSDCloud 
 #################################
 
 $AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
 Invoke-Expression $($AddPS7.Content)
+
+############################################
+# ASRock LGA 1700 Extreme motherboards
+############################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Intel LGA 1700 Extreme Motherboard drivers..." -Verbose
+Write-Host
+
+$ExtremeEthernetPath1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\Extreme\Ethernet1"
+$ExtremeEthernetPath2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\Extreme\Ethernet2"
+$ExtremeEthernetPath3 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\Extreme\Ethernet3"
+$ExtremeEthernetPath4 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\Extreme\Ethernet4"
+$ExtremeEthernetPath5 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\Extreme\Ethernet5"
+$ExtremeStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\Extreme\Storage"
+$ExtremeWLANPath1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\Extreme\WLAN1"
+
+
+Edit-OSDCloudWinPe -DriverPath $ExtremeEthernetPath1
+Edit-OSDCloudWinPe -DriverPath $ExtremeEthernetPath2
+Edit-OSDCloudWinPe -DriverPath $ExtremeEthernetPath3
+Edit-OSDCloudWinPe -DriverPath $ExtremeEthernetPath4
+Edit-OSDCloudWinPe -DriverPath $ExtremeEthernetPath5
+Edit-OSDCloudWinPe -DriverPath $ExtremeStoragePath
+Edit-OSDCloudWinPe -DriverPath $ExtremeWLANPath1
 
 #################################
 # OSDCloud - Cloud Drivers
@@ -450,6 +476,12 @@ Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/
 Write-Host
 
 ###########################################
-# Create OSDCloud ISO
-############################################
+# Rename OSDCloud ISO
+#########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\ASRock-ExtremeMotherboards-LGA1700"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASRock-ExtremeMotherboards-LGA1700\OSDCloud-ASRock-ExtremeMotherboards-LGA1700.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASRock-ExtremeMotherboards-LGA1700\OSDCloud-ASRock-ExtremeMotherboards-LGA1700_NoPrompt.iso" -Force
 
