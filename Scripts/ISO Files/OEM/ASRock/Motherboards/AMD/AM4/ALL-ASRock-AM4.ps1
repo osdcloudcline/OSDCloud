@@ -207,7 +207,7 @@ Get-OSDCloudWorkspace
 
 Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
+$WorkspacePath = "C:\OSDCloud\ALL-ASRock-AM4"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
@@ -731,5 +731,11 @@ Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/
 Write-Host
 
 ###########################################
-# Create OSDCloud ISO
-############################################
+# Rename OSDCloud ISO
+#########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\ALL-ASRock-AM4"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ALL-ASRock-AM4C\OSDCloud-ALL-ASRock-AM4.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ALL-ASRock-AM4\OSDCloud-ALL-ASRock-AM4.iso" -Force
