@@ -183,7 +183,7 @@ Get-OSDCloudWorkspace
 
 Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
+$WorkspacePath = "C:\OSDCloud\SeansPC"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
@@ -632,7 +632,13 @@ Show-CustomImage
 
 
 ###########################################
-# Create OSDCloud ISO
+# Rename OSDCloud ISO
 #########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\SeansPC"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\SeansPC\OSDCloud-SeansPC.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\SeansPC\OSDCloud-SeansPC_NoPrompt.iso" -Force
 
 
