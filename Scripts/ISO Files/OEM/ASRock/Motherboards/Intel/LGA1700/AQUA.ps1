@@ -475,6 +475,6 @@ Write-Host
 $OSDCloudISOPath = "C:\OSDCloud\ASRock-AQUAMotherboards-LGA1700"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASRock-AQUAMotherboards-LGA1700\OSDCloud-ASRock-AQUAMotherboards-LGA170.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASRock-AQUAMotherboards-LGA1700\OSDCloud-ASRock-AQUAMotherboards-LGA170_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASRock-AQUAMotherboards-LGA1700\OSDCloud-ASRock-AQUAMotherboards-LGA1700.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASRock-AQUAMotherboards-LGA1700\OSDCloud-ASRock-AQUAMotherboards-LGA1700_NoPrompt.iso" -Force
 
