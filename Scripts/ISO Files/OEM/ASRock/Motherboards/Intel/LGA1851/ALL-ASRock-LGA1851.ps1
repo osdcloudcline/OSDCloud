@@ -161,8 +161,8 @@ Write-Host
 Write-Verbose "Processing: ASRock Intel LGA1851 LiveMixer Motherboard drivers..." -Verbose
 Write-Host
 
-$LiveMixerBluetoothPath1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\LiveMixer\Bluetooth"
-$LiveMixerEthernetPath1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\LiveMixer\Ethernet"
+$LiveMixerBluetoothPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\LiveMixer\Bluetooth"
+$LiveMixerEthernetPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\LiveMixer\Ethernet"
 $LiveMixerStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\LiveMixer\Storage"
 $LiveMixerWLANPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\LiveMixer\WLAN"
 
