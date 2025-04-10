@@ -116,13 +116,9 @@ Write-Verbose "Processing: ASRock Intel LGA1851 PRO Motherboard drivers..." -Ver
 Write-Host
 
 $PROBluetoothPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\PRO\Bluetooth"
-
-$PROEthernetPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\PRO\Ethernet1"
-
+$PROEthernetPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\PRO\Ethernet"
 $PROStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\PRO\Storage"
-
 $PROWLANPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\PRO\WLAN"
-
 
 Edit-OSDCloudWinPe -DriverPath $PROBluetoothPath
 Edit-OSDCloudWinPe -DriverPath $PROEthernetPath
