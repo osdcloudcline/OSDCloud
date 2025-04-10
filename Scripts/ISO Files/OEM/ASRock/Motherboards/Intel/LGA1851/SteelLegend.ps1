@@ -34,6 +34,9 @@ Write-Host
 $PS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/PS7Download.ps1")
 Invoke-Expression $($PS7.Content)
 
+$SteelLegend = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/Steel%20Legend%20Motherboards/SteelLegend.ps1")
+Invoke-Expression $($SteelLegend.Content)
+
 $HyperV = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
 Invoke-Expression $($HyperV.Content)
 
@@ -89,7 +92,7 @@ Get-OSDCloudWorkspace
 
 Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = Read-Host -Prompt 'Please enter custom path for new OSDCloud Workspace'
+$WorkspacePath = "C:\OSDCloud\ASRock-SteelLegendMotherboards-LGA1851"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
@@ -103,6 +106,31 @@ Get-OSDCloudWorkspace
 
 $AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
 Invoke-Expression $($AddPS7.Content)
+
+############################################
+# ASRock LGA 1851 Steel Legend motherboards
+############################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Intel LGA1851 Steel Legend Motherboard drivers..." -Verbose
+Write-Host
+
+$SteelLegendBluetoothPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\Bluetooth"
+
+$SteelLegendEthernetPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\Ethernet"
+
+$SteelLegendStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\Storage"
+
+$SteelLegendWLANPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\WLAN"
+
+Edit-OSDCloudWinPe -DriverPath $SteelLegendBluetoothPath
+Edit-OSDCloudWinPe -DriverPath $SteelLegendEthernetPath
+Edit-OSDCloudWinPe -DriverPath $SteelLegendStoragePath
+Edit-OSDCloudWinPe -DriverPath $SteelLegendWLANPath
+
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA1851 Steel Legend Motherboard drivers..." -Verbose
+Write-Host
 
 #################################
 # OSDCloud - Cloud Drivers
@@ -222,6 +250,80 @@ Edit-OSDCloudWinPe -DriverPath $VMWareCloudDriverPath3
 
 Write-Host
 Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
+Write-Host
+
+############################################
+# Other Drivers
+############################################
+
+# Virtualization Drivers - Hyper-V
+
+Write-Host
+Write-Verbose "Processing: Microsoft Hyper-V Ethernet Drivers..." -Verbose 
+$HyperVNetwork = "C:\OSDCloud\Drivers\Virtualization\HyperV\Network"
+
+Edit-OSDCloudWinPE -DriverPath $HyperVNetwork
+
+Write-Host
+Write-Verbose "Completed: Integration of Microsoft Hyper-V Network Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - VMWare ESXI
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere Ethernet Drivers..." -Verbose 
+$ESXIEthernet = "C:\OSDCloud\Drivers\Virtualization\ESXI\Network"
+
+Edit-OSDCloudWinPE -DriverPath  $ESXIEthernet
+
+Write-Host
+Write-Verbose "Processing: VMWare ESXI vSphere Storage Drivers..." -Verbose 
+$ESXIStorage = "C:\OSDCloud\Drivers\Virtualization\ESXI\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $ESXIStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of VMWare ESXI vSphere Network and Storage Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - VMWare Workstation Pro
+
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro Ethernet Drivers..." -Verbose 
+$VMWareWorkstationProEthernet = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Network"
+
+Edit-OSDCloudWinPE -DriverPath  $VMWareWorkstationProEthernet
+
+Write-Host
+Write-Verbose "Processing: VMWare Workstation Pro Storage Drivers..." -Verbose 
+$VMWareWorkstationProStorage = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Storage"
+
+Edit-OSDCloudWinPE -DriverPath $VMWareWorkstationProStorage
+
+Write-Host
+Write-Verbose "Completed: Integration of VMWare Workstation Pro Network and Storage Drivers..." -Verbose
+Write-Host
+
+# Virtualization Drivers - Proxmox
+
+Write-Host
+Write-Verbose "Processing: Proxmox Virtual IO Ethernet Drivers..." -Verbose 
+$ProxmoxEthernet1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\Windows11"
+$ProxmoxEthernet2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\WindowsServer2025"
+
+Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet1
+Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet2
+
+Write-Host
+Write-Verbose "Processing: Proxmox Virtual IO Storage Drivers..." -Verbose 
+$ProxmoxStorage1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\Windows11"
+$ProxmoxStorage2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\WindowsServer2025"
+
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage1
+Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage2
+
+Write-Host
+Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
 Write-Host
 
 ######################################
@@ -345,87 +447,6 @@ Invoke-Expression $($OSDCloudPS5xMods.Content)
 $OSDCloudPS7xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
 Invoke-Expression $($OSDCloudPS7xMods.Content)
 
-
-############################################
-# ASRock LGA 1851 Steel Legend motherboards
-############################################
-
-
-
-############################################
-# Other Drivers
-############################################
-
-# Virtualization Drivers - Hyper-V
-
-Write-Host
-Write-Verbose "Processing: Microsoft Hyper-V Ethernet Drivers..." -Verbose 
-$HyperVNetwork = "C:\OSDCloud\Drivers\Virtualization\HyperV\Network"
-
-Edit-OSDCloudWinPE -DriverPath $HyperVNetwork
-
-Write-Host
-Write-Verbose "Completed: Integration of Microsoft Hyper-V Network Drivers..." -Verbose
-Write-Host
-
-# Virtualization Drivers - VMWare ESXI
-
-Write-Host
-Write-Verbose "Processing: VMWare ESXI vSphere Ethernet Drivers..." -Verbose 
-$ESXIEthernet = "C:\OSDCloud\Drivers\Virtualization\ESXI\Network"
-
-Edit-OSDCloudWinPE -DriverPath  $ESXIEthernet
-
-Write-Host
-Write-Verbose "Processing: VMWare ESXI vSphere Storage Drivers..." -Verbose 
-$ESXIStorage = "C:\OSDCloud\Drivers\Virtualization\ESXI\Storage"
-
-Edit-OSDCloudWinPE -DriverPath $ESXIStorage
-
-Write-Host
-Write-Verbose "Completed: Integration of VMWare ESXI vSphere Network and Storage Drivers..." -Verbose
-Write-Host
-
-# Virtualization Drivers - VMWare Workstation Pro
-
-Write-Host
-Write-Verbose "Processing: VMWare Workstation Pro Ethernet Drivers..." -Verbose 
-$VMWareWorkstationProEthernet = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Network"
-
-Edit-OSDCloudWinPE -DriverPath  $VMWareWorkstationProEthernet
-
-Write-Host
-Write-Verbose "Processing: VMWare Workstation Pro Storage Drivers..." -Verbose 
-$VMWareWorkstationProStorage = "C:\OSDCloud\Drivers\Virtualization\VMWareWSPRO\Storage"
-
-Edit-OSDCloudWinPE -DriverPath $VMWareWorkstationProStorage
-
-Write-Host
-Write-Verbose "Completed: Integration of VMWare Workstation Pro Network and Storage Drivers..." -Verbose
-Write-Host
-
-# Virtualization Drivers - Proxmox
-
-Write-Host
-Write-Verbose "Processing: Proxmox Virtual IO Ethernet Drivers..." -Verbose 
-$ProxmoxEthernet1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\Windows11"
-$ProxmoxEthernet2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Network\WindowsServer2025"
-
-Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet1
-Edit-OSDCloudWinPE -DriverPath  $ProxmoxEthernet2
-
-Write-Host
-Write-Verbose "Processing: Proxmox Virtual IO Storage Drivers..." -Verbose 
-$ProxmoxStorage1 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\Windows11"
-$ProxmoxStorage2 = "C:\OSDCloud\Drivers\Virtualization\Proxmox\Storage\WindowsServer2025"
-
-Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage1
-Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage2
-
-Write-Host
-Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
-Write-Host
-
 ###########################################
 # OSDCloud NEW Wallpaper
 ###########################################
@@ -450,6 +471,12 @@ Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/
 Write-Host
 
 ###########################################
-# Create OSDCloud ISO
-############################################
+# Rename OSDCloud ISO
+#########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\ASRock-SteelLegendMotherboards-LGA1851"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASRock-SteelLegendMotherboards-LGA1851\OSDCloud-ASRock-SteelLegendMotherboards-LGA1851.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASRock-SteelLegendMotherboards-LGA1851\OSDCloud-ASRock-SteelLegendMotherboards-LGA1851_NoPrompt.iso" -Force
 
