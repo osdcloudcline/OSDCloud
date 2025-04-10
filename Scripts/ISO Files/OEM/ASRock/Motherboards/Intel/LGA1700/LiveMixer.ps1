@@ -122,6 +122,9 @@ $LiveMixerStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\LiveMix
 Edit-OSDCloudWinPe -DriverPath $LiveMixerEthernetPath
 Edit-OSDCloudWinPe -DriverPath $LiveMixerStoragePath
 
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA 1700 LiveMixer Motherboard drivers..." -Verbose
+Write-Host
 
 #################################
 # OSDCloud - Cloud Drivers
