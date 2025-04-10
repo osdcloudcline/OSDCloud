@@ -43,6 +43,9 @@ Invoke-Expression $($Extreme.Content)
 $LiveMixer = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/Live%20Mixer%20Motherboards/LiveMixer.ps1")
 Invoke-Expression $($LiveMixer.Content)
 
+$PRO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/PRO%20Motherboards/PRO.ps1")
+Invoke-Expression $($PRO.Content)
+
 
 
 $HyperV = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
