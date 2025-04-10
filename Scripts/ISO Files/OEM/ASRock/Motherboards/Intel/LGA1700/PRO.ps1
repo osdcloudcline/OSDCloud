@@ -131,6 +131,10 @@ Edit-OSDCloudWinPe -DriverPath $PROEthernetPath5
 Edit-OSDCloudWinPe -DriverPath $PROEthernetPath6
 Edit-OSDCloudWinPe -DriverPath $PROStoragePath
 
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA 1700 PRO Motherboard drivers..." -Verbose
+Write-Host
+
 #################################
 # OSDCloud - Cloud Drivers
 #################################
