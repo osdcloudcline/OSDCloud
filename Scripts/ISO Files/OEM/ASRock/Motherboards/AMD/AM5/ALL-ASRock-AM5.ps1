@@ -211,6 +211,25 @@ Invoke-Expression $($AddPS7.Content)
 
 # PRO motherboards
 
+Write-Host
+Write-Verbose "Processing: ASRock AMD AM5 PRO Motherboard drivers..." -Verbose
+Write-Host
+
+$PROBluetoothPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\PRO\Bluetooth"
+$PROEthernetPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\PRO\Ethernet"
+$PROStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\PRO\Storage"
+$PROWLANPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\PRO\WLAN"
+
+
+Edit-OSDCloudWinPe -DriverPath $PROBluetoothPath
+Edit-OSDCloudWinPe -DriverPath $PROEthernetPath
+Edit-OSDCloudWinPe -DriverPath $PROStoragePath
+Edit-OSDCloudWinPe -DriverPath $PROWLANPath
+
+Write-Host
+Write-Verbose "Completed: ASRock AMD AM5 PRO Motherboard drivers..." -Verbose
+Write-Host
+
 # Steel Legend motherboards
 
 # Taichi motherboards
