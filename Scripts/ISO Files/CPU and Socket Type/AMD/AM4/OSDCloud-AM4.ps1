@@ -271,263 +271,6 @@ Get-OSDCloudWorkspace
 $AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
 Invoke-Expression $($AddPS7.Content)
 
-#################################
-# OSDCloud - Cloud Drivers
-#################################
-
-Write-Host
-Write-Verbose "Integrating OSDCloud - Cloud Drivers..." -Verbose
-Write-Host
-
-$DellCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Dell%20Drivers/Dell-CloudDrivers.ps1")
-Invoke-Expression $($DellCloudDrivers.Content)
-
-$DellCloudDriverPath1 = "C:\Drivers\Cloud Drivers\Dell\Network\Windows10\1836"
-$DellCloudDriverPath2 = "C:\Drivers\Cloud Drivers\Dell\Network\Windows10\22000"
-$DellCloudDriverPath3 = "C:\Drivers\Cloud Drivers\Dell\Network\Windows11\Extract"
-$DellCloudDriverPath4 = "C:\Drivers\Cloud Drivers\Dell\Windows PE\Extract"
-$DellCloudDriverPath5 = "C:\Drivers\Cloud Drivers\Dell\Storage\Other\Extract"
-$DellCloudDriverPath6 = "C:\Drivers\Cloud Drivers\Dell\Storage\Windows10\Extract"
-$DellCloudDriverPath7 = "C:\Drivers\Cloud Drivers\Dell\Storage\Windows11\Extract"
-
-Write-Verbose "Processing: Integrating OSDCloud Dell Cloud Drivers..." -Verbose
-
-Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath1
-Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath2
-Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath3
-Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath4
-Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath5
-Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath6
-Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath7
-
-Write-Host
-
-$IntelCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Intel%20Ethernet%20Driver%20Pack/Intel-CloudDrivers.ps1")
-Invoke-Expression $($IntelCloudDrivers.Content)
-
-$IntelCloudDriverPath1 = "C:\Drivers\Cloud Drivers\Intel\Network\Client OS"
-$IntelCloudDriverPath2 = "C:\Drivers\Cloud Drivers\Intel\Network\Server OS"
-$IntelCloudDriverPath3 = "C:\Drivers\Cloud Drivers\Intel\Network\Other\1"
-$IntelCloudDriverPath4 = "C:\Drivers\Cloud Drivers\Intel\Network\Other\2"
-
-Write-Verbose "Processing: Integrating OSDCloud Intel Cloud Drivers..." -Verbose
-
-Edit-OSDCloudWinPe -DriverPath $IntelCloudDriverPath1
-Edit-OSDCloudWinPe -DriverPath $IntelCloudDriverPath2
-Edit-OSDCloudWinPe -DriverPath $IntelCloudDriverPath3
-Edit-OSDCloudWinPe -DriverPath $IntelCloudDriverPath4
-
-$SurfaceCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Microsoft%20Surface%20Drivers/Surface-CloudDrivers.ps1")
-Invoke-Expression $($SurfaceCloudDrivers.Content)
-
-$SurfaceCloudDriverPath = "C:\Drivers\Cloud Drivers\Surface\Extract"
-
-Write-Host
-Write-Verbose "Processing: Integrating OSDCloud Microsoft Surface Tablet Cloud Drivers..." -Verbose
-
-Edit-OSDCloudWinPe -DriverPath $SurfaceCloudDriverPath
-
-$NutanixCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Nutanix%20Drivers/Nutanix-CloudDrivers.ps1")
-Invoke-Expression $($NutanixCloudDrivers.Content)
-
-$NutanixCloudDriverPath1 = "C:\Drivers\Cloud Drivers\Nutanix\Extract\1"
-$NutanixCloudDriverPath2 = "C:\Drivers\Cloud Drivers\Nutanix\Extract\2"
-$NutanixCloudDriverPath3 = "C:\Drivers\Cloud Drivers\Nutanix\Extract\3"
-
-Write-Host
-Write-Verbose "Processing: Integrating OSDCloud Nutanix Cloud Drivers..." -Verbose
-
-Edit-OSDCloudWinPe -DriverPath $NutanixCloudDriverPath1
-Edit-OSDCloudWinPe -DriverPath $NutanixCloudDriverPath2
-Edit-OSDCloudWinPe -DriverPath $NutanixCloudDriverPath3
-
-
-$USBCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/USB%20Drivers/USB-CloudDrivers.ps1")
-Invoke-Expression $($USBCloudDrivers.Content)
-
-$USBCloudDriverPath1 = "C:\Drivers\Cloud Drivers\USB\Extract\1"
-$USBCloudDriverPath2 = "C:\Drivers\Cloud Drivers\USB\Extract\2"
-$USBCloudDriverPath3 = "C:\Drivers\Cloud Drivers\USB\Extract\3"
-$USBCloudDriverPath1 = "C:\Drivers\Cloud Drivers\USB\Extract\4"
-$USBCloudDriverPath2 = "C:\Drivers\Cloud Drivers\USB\Extract\5"
-$USBCloudDriverPath3 = "C:\Drivers\Cloud Drivers\USB\Extract\6"
-
-Write-Host
-Write-Verbose "Processing: Integrating OSDCloud USB Cloud Drivers..." --Verbose
-
-Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath1
-Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath2
-Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath3
-Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath4
-Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath5
-Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath6
-
-$WLANCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/WLAN%20Drivers/WLAN-CloudDrivers.ps1")
-Invoke-Expression $($WLANCloudDrivers.Content)
-
-$WLANCloudDriverPath = "C:\Drivers\Cloud Drivers\WLAN\Extract"
-
-Write-Host
-Write-Verbose "Processing: Integrating OSDCloud WiFi Cloud Drivers..." -Verbose
-
-Edit-OSDCloudWinPe -DriverPath $WLANCloudDriverPath
-
-$VMWareCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/VMWare%20Drivers/VMWare-CloudDrivers.ps1")
-Invoke-Expression $($VMWareCloudDrivers.Content)
-
-$VMWareCloudDriverPath1 = "C:\Drivers\Cloud Drivers\VMWare\Extract\1"
-$VMWareCloudDriverPath2 = "C:\Drivers\Cloud Drivers\VMWare\Extract\2"
-$VMWareCloudDriverPath3 = "C:\Drivers\Cloud Drivers\VMWare\Extract\3"
-
-Write-Host
-Write-Verbose "Processing: Integrating OSDCloud VMWare Cloud Drivers..." -Verbose
-
-Edit-OSDCloudWinPe -DriverPath $VMWareCloudDriverPath1
-Edit-OSDCloudWinPe -DriverPath $VMWareCloudDriverPath2
-Edit-OSDCloudWinPe -DriverPath $VMWareCloudDriverPath3
-
-Write-Host
-Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
-Write-Host
-
-######################################
-## Extra Scripting Support
-######################################
-
-# VBS Scripting Support
-
-$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
-$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
-$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
-$VBSName3 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
-$VBSName4 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
-$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
-$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
-$VBS3 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
-$VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
-
-$sourceWIMDir = "\Media\sources"
-$WorkspacePath = Get-OSDCloudWorkspace
-$WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
-$mountdir = "C:\Mount"
-
-Write-Verbose "Processing: Mounting OSDCloud boot.wim" -Verbose
-# Mount the image
-
-Mount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
-
-Write-Host
-Write-Verbose "Processing: VBS Scripting Support..." -Verbose 
-
-Write-Host
-Write-Verbose "Processing Item: $VBSName1..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
-Write-Host
-
-Write-Verbose "Processing Item: $VBSName2..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
-Write-Host
-
-Write-Verbose "Processing Item: $VBSName3..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
-Write-Host
-
-Write-Verbose "Processing Item: $VBSName4..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
-
-Write-Host
-Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
-Write-Host
-
-########################################
-# 3rd party software and utilities
-########################################
-
-# Portable Browsers
-
-Write-Host
-Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verbose 
-$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
-$ChromeDestination = "$mountdir\Windows\System32"
-
-Copy-Item -Path $ChromePath -Destination $ChromeDestination -Force
-
-Write-Host
-Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
-Write-Host
-
-# MS DaRT Remote Connections and Troubleshooting
-
-# CloudPC
-
-Write-Host
-Write-Verbose "Processing: Microsoft Remote Desktop - Cloud PC for OSDCloud..." -Verbose 
-$CloudPCPath1 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files"
-$CloudPCPath2 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files\en-us"
-$CloudPCDestination1 = "$mountdir\Windows\System32"
-$CloudPCDestination2 = "$mountdir\Windows\System32\en-US"
-
-Copy-Item -Path "$CloudPCPath1\*" -Destination $CloudPCDestination1  -Force
-Copy-Item -Path "$CloudPCPath2\*" -Destination $CloudPCDestination2  -Force
-
-# CMTrace 
-
-Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer CM Trace for OSDCloud..." -Verbose 
-$CMTracePath = "C:\OSDCloud\downloads\GitHub\MECM-LogViewer"
-$CMTraceDestination = "$mountdir\Windows\System32"
-
-Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force
-
-# Ghost Imaging
-
-Write-Host
-Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
-$Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
-$GhostExplorerPath = "C:\OSDCloud\GitHub\downloads\Ghost\Ghostexp.exe"
-$GhostServPath = "C:\OSDCloud\GitHub\downloads\Ghost\GhostSrv.exe"
-$GhostDestination = "$mountdir\Windows\System32"
-
-Copy-Item -Path $Ghost64Path -Destination $GhostDestination -Force
-Copy-Item -Path $GhostExplorerPath -Destination $GhostDestination -Force
-Copy-Item -Path $GhostServPath -Destination $GhostDestination -Force
-
-Write-Host
-Write-Verbose "Completed: Integration of Ghost Imaging for OSDCloud..." -Verbose
-Write-Host
-
-# User Profile Backup and Restore 
-
-Write-Host
-Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
-$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
-$UBPRDestination = "$mountdir\Windows\System32"
-
-Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
-
-Write-Host
-Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
-Write-Host
-
-# Disount the image
-Write-Host
-Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
-
-Dismount-WindowsImage -Path $mountdir -Save
-
-######################################
-## Extra PowerShell Modules - OSDCloud
-######################################
-
-# PowerShell 5.1 Modules - OSDCloud
-
-$OSDCloudPS5xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
-Invoke-Expression $($OSDCloudPS5xMods.Content)
-
-# PowerShell 7.x Modules - OSDCloud
-
-$OSDCloudPS7xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
-Invoke-Expression $($OSDCloudPS7xMods.Content)
-
 ############################################################################################################
 #######    ALL AMD Socket AM 4 Motherboards
 ############################################################################################################
@@ -1181,6 +924,124 @@ Write-Verbose "Attention: MSI does not have any AM 4 motherboard downloads avaib
 Write-Host
 Write-Verbose "Completed: Integration of ALL AMD - Socket AM 4 Motherboard Drivers..." -Verbose 
 
+#################################
+# OSDCloud - Cloud Drivers
+#################################
+
+Write-Host
+Write-Verbose "Integrating OSDCloud - Cloud Drivers..." -Verbose
+Write-Host
+
+$DellCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Dell%20Drivers/Dell-CloudDrivers.ps1")
+Invoke-Expression $($DellCloudDrivers.Content)
+
+$DellCloudDriverPath1 = "C:\Drivers\Cloud Drivers\Dell\Network\Windows10\1836"
+$DellCloudDriverPath2 = "C:\Drivers\Cloud Drivers\Dell\Network\Windows10\22000"
+$DellCloudDriverPath3 = "C:\Drivers\Cloud Drivers\Dell\Network\Windows11\Extract"
+$DellCloudDriverPath4 = "C:\Drivers\Cloud Drivers\Dell\Windows PE\Extract"
+$DellCloudDriverPath5 = "C:\Drivers\Cloud Drivers\Dell\Storage\Other\Extract"
+$DellCloudDriverPath6 = "C:\Drivers\Cloud Drivers\Dell\Storage\Windows10\Extract"
+$DellCloudDriverPath7 = "C:\Drivers\Cloud Drivers\Dell\Storage\Windows11\Extract"
+
+Write-Verbose "Processing: Integrating OSDCloud Dell Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath1
+Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath2
+Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath3
+Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath4
+Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath5
+Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath6
+Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath7
+
+Write-Host
+
+$IntelCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Intel%20Ethernet%20Driver%20Pack/Intel-CloudDrivers.ps1")
+Invoke-Expression $($IntelCloudDrivers.Content)
+
+$IntelCloudDriverPath1 = "C:\Drivers\Cloud Drivers\Intel\Network\Client OS"
+$IntelCloudDriverPath2 = "C:\Drivers\Cloud Drivers\Intel\Network\Server OS"
+$IntelCloudDriverPath3 = "C:\Drivers\Cloud Drivers\Intel\Network\Other\1"
+$IntelCloudDriverPath4 = "C:\Drivers\Cloud Drivers\Intel\Network\Other\2"
+
+Write-Verbose "Processing: Integrating OSDCloud Intel Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPe -DriverPath $IntelCloudDriverPath1
+Edit-OSDCloudWinPe -DriverPath $IntelCloudDriverPath2
+Edit-OSDCloudWinPe -DriverPath $IntelCloudDriverPath3
+Edit-OSDCloudWinPe -DriverPath $IntelCloudDriverPath4
+
+$SurfaceCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Microsoft%20Surface%20Drivers/Surface-CloudDrivers.ps1")
+Invoke-Expression $($SurfaceCloudDrivers.Content)
+
+$SurfaceCloudDriverPath = "C:\Drivers\Cloud Drivers\Surface\Extract"
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud Microsoft Surface Tablet Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPe -DriverPath $SurfaceCloudDriverPath
+
+$NutanixCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Nutanix%20Drivers/Nutanix-CloudDrivers.ps1")
+Invoke-Expression $($NutanixCloudDrivers.Content)
+
+$NutanixCloudDriverPath1 = "C:\Drivers\Cloud Drivers\Nutanix\Extract\1"
+$NutanixCloudDriverPath2 = "C:\Drivers\Cloud Drivers\Nutanix\Extract\2"
+$NutanixCloudDriverPath3 = "C:\Drivers\Cloud Drivers\Nutanix\Extract\3"
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud Nutanix Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPe -DriverPath $NutanixCloudDriverPath1
+Edit-OSDCloudWinPe -DriverPath $NutanixCloudDriverPath2
+Edit-OSDCloudWinPe -DriverPath $NutanixCloudDriverPath3
+
+
+$USBCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/USB%20Drivers/USB-CloudDrivers.ps1")
+Invoke-Expression $($USBCloudDrivers.Content)
+
+$USBCloudDriverPath1 = "C:\Drivers\Cloud Drivers\USB\Extract\1"
+$USBCloudDriverPath2 = "C:\Drivers\Cloud Drivers\USB\Extract\2"
+$USBCloudDriverPath3 = "C:\Drivers\Cloud Drivers\USB\Extract\3"
+$USBCloudDriverPath1 = "C:\Drivers\Cloud Drivers\USB\Extract\4"
+$USBCloudDriverPath2 = "C:\Drivers\Cloud Drivers\USB\Extract\5"
+$USBCloudDriverPath3 = "C:\Drivers\Cloud Drivers\USB\Extract\6"
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud USB Cloud Drivers..." --Verbose
+
+Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath1
+Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath2
+Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath3
+Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath4
+Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath5
+Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath6
+
+$WLANCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/WLAN%20Drivers/WLAN-CloudDrivers.ps1")
+Invoke-Expression $($WLANCloudDrivers.Content)
+
+$WLANCloudDriverPath = "C:\Drivers\Cloud Drivers\WLAN\Extract"
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud WiFi Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPe -DriverPath $WLANCloudDriverPath
+
+$VMWareCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/VMWare%20Drivers/VMWare-CloudDrivers.ps1")
+Invoke-Expression $($VMWareCloudDrivers.Content)
+
+$VMWareCloudDriverPath1 = "C:\Drivers\Cloud Drivers\VMWare\Extract\1"
+$VMWareCloudDriverPath2 = "C:\Drivers\Cloud Drivers\VMWare\Extract\2"
+$VMWareCloudDriverPath3 = "C:\Drivers\Cloud Drivers\VMWare\Extract\3"
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud VMWare Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPe -DriverPath $VMWareCloudDriverPath1
+Edit-OSDCloudWinPe -DriverPath $VMWareCloudDriverPath2
+Edit-OSDCloudWinPe -DriverPath $VMWareCloudDriverPath3
+
+Write-Host
+Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
+Write-Host
 
 ############################################
 # Other Drivers
@@ -1256,6 +1117,144 @@ Write-Host
 Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
 Write-Host
 
+######################################
+## Extra Scripting Support
+######################################
+
+# VBS Scripting Support
+
+$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
+$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBSName3 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBSName4 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBS3 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+
+$sourceWIMDir = "\Media\sources"
+$WorkspacePath = Get-OSDCloudWorkspace
+$WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
+$mountdir = "C:\Mount"
+
+Write-Verbose "Processing: Mounting OSDCloud boot.wim" -Verbose
+# Mount the image
+
+Mount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
+
+Write-Host
+Write-Verbose "Processing: VBS Scripting Support..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing Item: $VBSName1..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName2..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName3..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName4..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
+
+Write-Host
+Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
+Write-Host
+
+########################################
+# 3rd party software and utilities
+########################################
+
+# Portable Browsers
+
+Write-Host
+Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verbose 
+$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
+$ChromeDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $ChromePath -Destination $ChromeDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
+Write-Host
+
+# MS DaRT Remote Connections and Troubleshooting
+
+# CloudPC
+
+Write-Host
+Write-Verbose "Processing: Microsoft Remote Desktop - Cloud PC for OSDCloud..." -Verbose 
+$CloudPCPath1 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files"
+$CloudPCPath2 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files\en-us"
+$CloudPCDestination1 = "$mountdir\Windows\System32"
+$CloudPCDestination2 = "$mountdir\Windows\System32\en-US"
+
+Copy-Item -Path "$CloudPCPath1\*" -Destination $CloudPCDestination1  -Force
+Copy-Item -Path "$CloudPCPath2\*" -Destination $CloudPCDestination2  -Force
+
+# CMTrace 
+
+Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer CM Trace for OSDCloud..." -Verbose 
+$CMTracePath = "C:\OSDCloud\downloads\GitHub\MECM-LogViewer"
+$CMTraceDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force
+
+# Ghost Imaging
+
+Write-Host
+Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
+$Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
+$GhostExplorerPath = "C:\OSDCloud\GitHub\downloads\Ghost\Ghostexp.exe"
+$GhostServPath = "C:\OSDCloud\GitHub\downloads\Ghost\GhostSrv.exe"
+$GhostDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $Ghost64Path -Destination $GhostDestination -Force
+Copy-Item -Path $GhostExplorerPath -Destination $GhostDestination -Force
+Copy-Item -Path $GhostServPath -Destination $GhostDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Ghost Imaging for OSDCloud..." -Verbose
+Write-Host
+
+# User Profile Backup and Restore 
+
+Write-Host
+Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
+$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
+$UBPRDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
+Write-Host
+
+# Disount the image
+Write-Host
+Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
+
+Dismount-WindowsImage -Path $mountdir -Save
+
+######################################
+## Extra PowerShell Modules - OSDCloud
+######################################
+
+# PowerShell 5.1 Modules - OSDCloud
+
+$OSDCloudPS5xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS5xMods.Content)
+
+# PowerShell 7.x Modules - OSDCloud
+
+$OSDCloudPS7xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS7xMods.Content)
+
 ###########################################
 # OSDCloud NEW Wallpaper
 ###########################################
@@ -1274,6 +1273,10 @@ Write-Host
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
 ##########################################
+
+Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
+Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1
+Write-Host
 
 ###########################################
 # Rename OSDCloud ISO
