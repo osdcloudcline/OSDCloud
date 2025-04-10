@@ -184,6 +184,28 @@ Write-Host
 
 # PRO motherboards
 
+Write-Host
+Write-Verbose "Processing: ASRock Intel LGA1851 PRO Motherboard drivers..." -Verbose
+Write-Host
+
+$PROBluetoothPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\PRO\Bluetooth"
+
+$PROEthernetPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\PRO\Ethernet1"
+
+$PROStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\PRO\Storage"
+
+$PROWLANPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\PRO\WLAN"
+
+
+Edit-OSDCloudWinPe -DriverPath $PROBluetoothPath
+Edit-OSDCloudWinPe -DriverPath $PROEthernetPath
+Edit-OSDCloudWinPe -DriverPath $PROStoragePath
+Edit-OSDCloudWinPe -DriverPath $PROWLANPath
+
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA1851 PRO Motherboard drivers..." -Verbose
+Write-Host
+
 # Steel Legend motherboards
 
 # Taichi motherboards
