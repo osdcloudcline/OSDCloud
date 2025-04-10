@@ -508,11 +508,17 @@ Write-Host
 Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
 Write-Host
 
-# MS DaRT Remote Connections and Troubleshooting
-
 # ServiceUI
 
 # CMTrace 
+
+Write-Host
+Write-Verbose "Processing: CMTrace Log Viewer for OSDCloud..." -Verbose 
+
+$CMTracePath = "C:\OSDCloud\downloads\GitHub\MECM-LogViewer\CMTrace.exe"
+$CMTraceDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force
 
 # Ghost Imaging
 Write-Host
