@@ -42,7 +42,7 @@ Write-Host
 Write-Verbose "Processing: ASRock AMD AM5 Taichi motherboard driver downloads" -Verbose
 Write-Host 
 
-$Taichi = Invoke-WebRequest("")
+$Taichi = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM5/Taichi%20Motherboards/Taichi.ps1")
 Invoke-Expression $($Taichi.Content)
 
 Write-Host
