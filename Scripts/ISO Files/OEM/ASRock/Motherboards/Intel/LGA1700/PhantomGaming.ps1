@@ -135,6 +135,10 @@ Edit-OSDCloudWinPe -DriverPath $PhantomGamingStoragePath
 Edit-OSDCloudWinPe -DriverPath $PhantomGamingWLANPath1
 Edit-OSDCloudWinPe -DriverPath $PhantomGamingWLANPath2
 
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA 1700 Phantom Gaming Motherboard drivers..." -Verbose
+Write-Host
+
 #################################
 # OSDCloud - Cloud Drivers
 #################################
