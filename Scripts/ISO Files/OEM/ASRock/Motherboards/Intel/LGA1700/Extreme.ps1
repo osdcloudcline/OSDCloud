@@ -133,6 +133,10 @@ Edit-OSDCloudWinPe -DriverPath $ExtremeEthernetPath5
 Edit-OSDCloudWinPe -DriverPath $ExtremeStoragePath
 Edit-OSDCloudWinPe -DriverPath $ExtremeWLANPath1
 
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA 1700 Extreme Motherboard drivers..." -Verbose
+Write-Host
+
 #################################
 # OSDCloud - Cloud Drivers
 #################################
