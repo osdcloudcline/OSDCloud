@@ -232,6 +232,25 @@ Write-Host
 
 # Steel Legend motherboards
 
+Write-Host
+Write-Verbose "Processing: ASRock AMD AM5 SteelLegend Motherboard drivers..." -Verbose
+Write-Host
+
+$SteelLegendBluetoothPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\SteelLegend\Bluetooth"
+$SteelLegendEthernetPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\SteelLegend\Ethernet"
+$SteelLegendStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\SteelLegend\Storage"
+$SteelLegendWLANPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM5\SteelLegend\WLAN"
+
+
+Edit-OSDCloudWinPe -DriverPath $SteelLegendBluetoothPath
+Edit-OSDCloudWinPe -DriverPath $SteelLegendEthernetPath
+Edit-OSDCloudWinPe -DriverPath $SteelLegendStoragePath
+Edit-OSDCloudWinPe -DriverPath $SteelLegendWLANPath
+
+Write-Host
+Write-Verbose "Completed: ASRock AMD AM5 SteelLegend Motherboard drivers..." -Verbose
+Write-Host
+
 # Taichi motherboards
 
 #################################
