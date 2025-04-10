@@ -129,6 +129,10 @@ Edit-OSDCloudWinPe -DriverPath $AQUAStoragePath
 Edit-OSDCloudWinPe -DriverPath $AQUAWLANPath1
 Edit-OSDCloudWinPe -DriverPath $AQUAWLANPath2
 
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA 1700 AQUA Motherboard drivers..." -Verbose
+Write-Host
+
 #################################
 # OSDCloud - Cloud Drivers
 #################################
