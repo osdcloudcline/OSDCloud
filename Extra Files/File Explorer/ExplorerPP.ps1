@@ -35,13 +35,13 @@ $ExplorerPP = Test-Path -Path "$ExplorerPPDestination\Explorer++.exe"
 If($ExplorerPP -eq $true ){
 Write-Host "Explorer + + successfully downloaded" -ForegroundColor Cyan
 }
-ElseIf(ExplorerPP -eq $false){
+ElseIf($ExplorerPP -eq $false){
 Write-Verbose "Acquiring Explorer + + from GitHub repository..." -Verbose
 
 Save-WebFile -SourceUrl $ExplorerPPFile1URL -DestinationDirectory $ExplorerPPDestination
 
 Write-Host
-Write-Verbose "Completed: Explorer + +s have been downloaded..." -Verbose
+Write-Verbose "Completed: Explorer + + have been downloaded..." -Verbose
 Write-Host
 }
 
