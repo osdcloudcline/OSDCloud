@@ -492,7 +492,7 @@ Write-Host
 Write-Host
 Write-Verbose "Processing: HWiNFO Portable for OSDCloud..." -Verbose 
 
-$HWiNFOZIPPath = "C:\OSDCloud\downloads\GitHub\HWInfo\HWiNFO.zip"
+$HWiNFOZIPPath = "C:\OSDCloud\downloads\GitHub\HWInfo"
 $HWInfoDestination = "$mountdir\Windows\System32\HWiNFO"
 
 Expand-Archive -Path "$HWiNFOZIPPath\HWiNFO.zip" -DestinationPath "$HWInfoDestination" -Force
