@@ -18,3 +18,29 @@ Import-Module -Name OSD -Force
 ####################################################################
 
 $HWInfoDestination = "C:\OSDCloud\downloads\GitHub\HWInfo"
+
+Write-Verbose "Processing: Acquiring HWiNFO Portable for integration to OSDCloud..." -Verbose
+Write-Host
+Save-WebFile -SourceUrl $HWInfoFile1URL -DestinationDirectory $HWInfoDestination
+
+Write-Host
+Write-Verbose "Completed: Download of HWiNFO Portable for integration to OSDCloud..." -Verbose
+
+Write-Verbose "Confirming successful download of HWiNFO Portable..." -Verbose
+$HWInfo = Test-Path -Path "$HWInfoDestination\HWiNFOPortable.exe"
+
+
+If($HWInfo -eq $true ){
+Write-Host "HWiNFO Portable successfully downloaded" -ForegroundColor Cyan
+}
+ElseIf($HWInfo -eq $false){
+Write-Verbose "Acquiring HWiNFOPortable from GitHub repository..." -Verbose
+
+Save-WebFile -SourceUrl $HWInfoFile1URL -DestinationDirectory $HWInfoDestination
+
+Write-Host
+Write-Verbose "Completed: HWiNFO Portable have been downloaded..." -Verbose
+Write-Host
+}
+
+Stop-Transcript
