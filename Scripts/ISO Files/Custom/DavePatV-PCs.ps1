@@ -380,22 +380,27 @@ Write-Host
 Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
 Write-Host
 
-# MS DaRT Remote Connections and Troubleshooting
-
-$DARTDestination = "C:\OSDCloud\downloads\GitHub\DART"
-$DART64CABDestination = "C:\Program Files\Microsoft DaRT\v10"
-$DARTConfig8Destination = "C:\Program Files\Microsoft Deployment Toolkit\Templates"
+# CMTrace 
 
 Write-Host
-Write-Verbose "Processing: Copying Microsoft DART files..." -Verbose
-Write-Host
+Write-Verbose "Processing: CMTrace Log Viewer for OSDCloud..." -Verbose 
 
-Copy-Item -Path "$DARTDestination\Toolsx64.cab" -Destination $DART64CABDestination -Force
-Copy-Item -Path "$DARTDestination\DartConfig8.dat" -Destination $DARTConfig8Destination -Force
+$CMTracePath = "C:\OSDCloud\downloads\GitHub\MECM-LogViewer\CMTrace.exe"
+$CMTraceDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force
+
+# MSTSC
 
 Write-Host
-Write-Verbose "Completed: Microsoft DART files have been copied..." -Verbose
-Write-Host
+Write-Verbose "Processing: Microsoft Remote Desktop for OSDCloud..." -Verbose 
+$MSTSCPath1 = "C:\OSDCloud\downloads\GitHub\MSTSC\Sys32Files"
+$MSTSCPath2 = "C:\OSDCloud\downloads\GitHub\MSTSC\Sys32Files\en-us"
+$MSTSCDestination1 = "$mountdir\Windows\System32"
+$MSTSCDestination2 = "$mountdir\Windows\System32\en-US"
+
+Copy-Item -Path "$MSTSCPath1\*" -Destination $MSTSCDestination1 -Recurse  -Force
+Copy-Item -Path "$MSTSCPath2\*" -Destination $MSTSCDestination2  -Recurse -Force
 
 # CloudPC
 
@@ -406,16 +411,8 @@ $CloudPCPath2 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files\en-us"
 $CloudPCDestination1 = "$mountdir\Windows\System32"
 $CloudPCDestination2 = "$mountdir\Windows\System32\en-US"
 
-Copy-Item -Path "$CloudPCPath1\*" -Destination $CloudPCDestination1  -Force
-Copy-Item -Path "$CloudPCPath2\*" -Destination $CloudPCDestination2  -Force
-
-# CMTrace 
-
-Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer CM Trace for OSDCloud..." -Verbose 
-$CMTracePath = "C:\OSDCloud\downloads\GitHub\MECM-LogViewer"
-$CMTraceDestination = "$mountdir\Windows\System32"
-
-Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force
+Copy-Item -Path "$CloudPCPath1\*" -Destination $CloudPCDestination1  -Recurse -Force
+Copy-Item -Path "$CloudPCPath2\*" -Destination $CloudPCDestination2  -Recurse -Force
 
 # Ghost Imaging
 
@@ -438,6 +435,7 @@ Write-Host
 
 Write-Host
 Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
+
 $UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
 $UBPRDestination = "$mountdir\Windows\System32"
 
@@ -447,7 +445,45 @@ Write-Host
 Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
 Write-Host
 
-# Disount the image
+# File Explorer
+
+Write-Host
+Write-Verbose "Processing: Explorer ++ for OSDCloud..." -Verbose 
+
+$ExplorerPPPath = "C:\OSDCloud\downloads\GitHub\FileExplorer\Explorer++.exe"
+$ExplorerPPDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $ExplorerPPPath -Destination $ExplorerPPDestination  -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Explorer++ for OSDCloud..." -Verbose
+Write-Host
+
+# Text Editor
+
+Write-Host
+Write-Verbose "Processing: Notepad ++ for OSDCloud..." -Verbose 
+
+$NotepadPPPath = "C:\OSDCloud\downloads\GitHub\TextEditor\notepad++.exe"
+$NotepadPPDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $NotepadPPPath -Destination $NotepadPPDestination  -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Notepad++ for OSDCloud..." -Verbose
+Write-Host
+
+# HW Info
+
+Write-Host
+Write-Verbose "Processing: HWiNFO Portable for OSDCloud..." -Verbose 
+
+$HWiNFOZIPPath = "C:\OSDCloud\downloads\GitHub\HWInfo"
+$HWInfoDestination = "$mountdir\Windows\System32\HWiNFO"
+
+Expand-Archive -Path "$HWiNFOZIPPath\HWiNFO.zip" -DestinationPath "$HWInfoDestination" -Force
+
+# Dismount the image
 Write-Host
 Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
