@@ -8,7 +8,7 @@ Get-Date
 # HWInfo  File URLs
 ############################################
 
-$HWInfoFile1URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/File%20Explorer/Explorer++.exe"
+$HWInfoFile1URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/System%20Information/HWiNFO.zip"
 
 Import-Module -Name OSD -Force
 
