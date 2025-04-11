@@ -145,15 +145,15 @@ $ExplorerPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/r
 Invoke-Expression $($ExplorerPP.Content)
 
 Write-Host
-Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer - CM Trace" -Verbose
-Write-Host
-
-Write-Host
 Write-Verbose "Processing: HWiNFO Portable" -Verbose
 Write-Host
 
 $HWInfo = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/System%20Information/HWInfo.ps1")
 Invoke-Expression $($HWInfo.Content)
+
+Write-Host
+Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer - CM Trace" -Verbose
+Write-Host
 
 $CMTrace = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Log%20Viewer/CMTrace.ps1")
 Invoke-Expression $($CMTrace.Content)
