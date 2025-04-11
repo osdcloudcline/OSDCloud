@@ -70,6 +70,21 @@ Invoke-WebRequest $($DaRT.Content)
 $MSTSC = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Remote%20Desktop%20Control/MSTSC.ps1")
 Invoke-Expression $($MSTSC.Content)
 
+$CloudPC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Remote%20Desktop%20-%20Cloud%20PC/CloudPC%20-%20Download.ps1")
+Invoke-Expression $($CloudPC.Content) 
+
+$NotepadPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Text%20Editor/NotepadPP.ps1")
+Invoke-Expression $($NotepadPP.Content)
+
+$ExplorerPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/File%20Explorer/ExplorerPP.ps1")
+Invoke-Expression $($ExplorerPP.Content)
+
+$HWInfo = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/System%20Information/HWInfo.ps1")
+Invoke-Expression $($HWInfo.Content)
+
+$CMTrace = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Log%20Viewer/CMTrace.ps1")
+Invoke-Expression $($CMTrace.Content)
+
 Write-Host
 Write-Verbose "Completed: ALL ASRock LGA 1851 Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
 Write-Host
@@ -421,9 +436,10 @@ $CloudPCDestination1 = "$mountdir\Windows\System32"
 $CloudPCDestination2 = "$mountdir\Windows\System32\en-US"
 
 Copy-Item -Path "$CloudPCPath1\*" -Destination $CloudPCDestination1  -Recurse -Force
-Copy-Item -Path "$CloudPCPath2\*" -Destination $CloudPCDestination2  -Recurse -Force 
+Copy-Item -Path "$CloudPCPath2\*" -Destination $CloudPCDestination2  -Recurse -Force
 
 # Ghost Imaging
+
 Write-Host
 Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
 $Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
@@ -443,6 +459,7 @@ Write-Host
 
 Write-Host
 Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
+
 $UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
 $UBPRDestination = "$mountdir\Windows\System32"
 
@@ -452,7 +469,45 @@ Write-Host
 Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
 Write-Host
 
-# Disount the image
+# File Explorer
+
+Write-Host
+Write-Verbose "Processing: Explorer ++ for OSDCloud..." -Verbose 
+
+$ExplorerPPPath = "C:\OSDCloud\downloads\GitHub\FileExplorer\Explorer++.exe"
+$ExplorerPPDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $ExplorerPPPath -Destination $ExplorerPPDestination  -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Explorer++ for OSDCloud..." -Verbose
+Write-Host
+
+# Text Editor
+
+Write-Host
+Write-Verbose "Processing: Notepad ++ for OSDCloud..." -Verbose 
+
+$NotepadPPPath = "C:\OSDCloud\downloads\GitHub\TextEditor\notepad++.exe"
+$NotepadPPDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $NotepadPPPath -Destination $NotepadPPDestination  -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Notepad++ for OSDCloud..." -Verbose
+Write-Host
+
+# HW Info
+
+Write-Host
+Write-Verbose "Processing: HWiNFO Portable for OSDCloud..." -Verbose 
+
+$HWiNFOZIPPath = "C:\OSDCloud\downloads\GitHub\HWInfo"
+$HWInfoDestination = "$mountdir\Windows\System32\HWiNFO"
+
+Expand-Archive -Path "$HWiNFOZIPPath\HWiNFO.zip" -DestinationPath "$HWInfoDestination" -Force
+
+# Dismount the image
 Write-Host
 Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
