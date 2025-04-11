@@ -151,6 +151,13 @@ $ExplorerPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/r
 Invoke-Expression $($ExplorerPP.Content)
 
 Write-Host
+Write-Verbose "Processing: HWiNFO Portable" -Verbose
+Write-Host
+
+$HWInfo = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/System%20Information/HWInfo.ps1")
+Invoke-Expression $($HWInfo.Content)
+
+Write-Host
 Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer - CM Trace" -Verbose
 Write-Host
 
@@ -568,6 +575,7 @@ Copy-Item -Path "$CloudPCPath1\*" -Destination $CloudPCDestination1  -Recurse -F
 Copy-Item -Path "$CloudPCPath2\*" -Destination $CloudPCDestination2  -Recurse -Force
 
 # Ghost Imaging
+
 Write-Host
 Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
 $Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
@@ -587,6 +595,7 @@ Write-Host
 
 Write-Host
 Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
+
 $UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
 $UBPRDestination = "$mountdir\Windows\System32"
 
@@ -596,7 +605,45 @@ Write-Host
 Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
 Write-Host
 
-# Disount the image
+# File Explorer
+
+Write-Host
+Write-Verbose "Processing: Explorer ++ for OSDCloud..." -Verbose 
+
+$ExplorerPPPath = "C:\OSDCloud\downloads\GitHub\FileExplorer\Explorer++.exe"
+$ExplorerPPDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $ExplorerPPPath -Destination $ExplorerPPDestination  -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Explorer++ for OSDCloud..." -Verbose
+Write-Host
+
+# Text Editor
+
+Write-Host
+Write-Verbose "Processing: Notepad ++ for OSDCloud..." -Verbose 
+
+$NotepadPPPath = "C:\OSDCloud\downloads\GitHub\TextEditor\notepad++.exe"
+$NotepadPPDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $NotepadPPPath -Destination $NotepadPPDestination  -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Notepad++ for OSDCloud..." -Verbose
+Write-Host
+
+# HW Info
+
+Write-Host
+Write-Verbose "Processing: HWiNFO Portable for OSDCloud..." -Verbose 
+
+$HWiNFOZIPPath = "C:\OSDCloud\downloads\GitHub\HWInfo"
+$HWInfoDestination = "$mountdir\Windows\System32\HWiNFO"
+
+Expand-Archive -Path "$HWiNFOZIPPath\HWiNFO.zip" -DestinationPath "$HWInfoDestination" -Force
+
+# Dismount the image
 Write-Host
 Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
