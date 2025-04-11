@@ -319,6 +319,131 @@ Write-Host
 Write-Verbose "Processing: ASRock LGA 1851 drivers" -Verbose
 Write-Host
 
+# AQUA motherboards
+
+Write-Host
+Write-Verbose "Processing: ASRock Intel LGA1851 AQUA Motherboard drivers..." -Verbose
+Write-Host
+
+$AQUABluetoothPath1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\AQUA\Bluetooth"
+$AQUAEthernetPath1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\AQUA\Ethernet1"
+$AQUAEthernetPath2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\AQUA\Ethernet2"
+$AQUAEthernetPath3 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\AQUA\Ethernet3"
+$AQUAEthernetPath4 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\AQUA\Ethernet4"
+$AQUAEthernetPath5 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\AQUA\Ethernet5"
+$AQUAEthernetPath6 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\AQUA\Ethernet6"
+$AQUAEthernetPath7 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\AQUA\Ethernet7"
+$AQUAStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\AQUA\Storage"
+$AQUAWLANPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\AQUA\WLAN"
+
+Edit-OSDCloudWinPe -DriverPath $AQUABluetoothPath
+Edit-OSDCloudWinPe -DriverPath $AQUAEthernetPath1
+Edit-OSDCloudWinPe -DriverPath $AQUAEthernetPath2
+Edit-OSDCloudWinPe -DriverPath $AQUAEthernetPath3
+Edit-OSDCloudWinPe -DriverPath $AQUAEthernetPath4
+Edit-OSDCloudWinPe -DriverPath $AQUAEthernetPath5
+Edit-OSDCloudWinPe -DriverPath $AQUAEthernetPath6
+Edit-OSDCloudWinPe -DriverPath $AQUAEthernetPath7
+Edit-OSDCloudWinPe -DriverPath $AQUAStoragePath
+Edit-OSDCloudWinPe -DriverPath $AQUAWLANPath
+
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA1851 AQUA Motherboard drivers..." -Verbose
+Write-Host
+
+# Live Mixer motherboards
+
+Write-Host
+Write-Verbose "Processing: ASRock Intel LGA1851 LiveMixer Motherboard drivers..." -Verbose
+Write-Host
+
+$LiveMixerBluetoothPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\LiveMixer\Bluetooth"
+$LiveMixerEthernetPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\LiveMixer\Ethernet"
+$LiveMixerStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\LiveMixer\Storage"
+$LiveMixerWLANPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\LiveMixer\WLAN"
+
+Edit-OSDCloudWinPe -DriverPath $LiveMixerBluetoothPath
+Edit-OSDCloudWinPe -DriverPath $LiveMixerEthernetPath
+Edit-OSDCloudWinPe -DriverPath $LiveMixerStoragePath
+Edit-OSDCloudWinPe -DriverPath $LiveMixerWLANPath
+
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA1851 LiveMixer Motherboard drivers..." -Verbose
+Write-Host
+
+# PRO motherboards
+
+Write-Host
+Write-Verbose "Processing: ASRock Intel LGA1851 PRO Motherboard drivers..." -Verbose
+Write-Host
+
+$PROBluetoothPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\PRO\Bluetooth"
+$PROEthernetPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\PRO\Ethernet"
+$PROStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\PRO\Storage"
+$PROWLANPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\PRO\WLAN"
+
+
+Edit-OSDCloudWinPe -DriverPath $PROBluetoothPath
+Edit-OSDCloudWinPe -DriverPath $PROEthernetPath
+Edit-OSDCloudWinPe -DriverPath $PROStoragePath
+Edit-OSDCloudWinPe -DriverPath $PROWLANPath
+
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA1851 PRO Motherboard drivers..." -Verbose
+Write-Host
+
+# Steel Legend motherboards
+
+Write-Host
+Write-Verbose "Processing: ASRock Intel LGA1851 Steel Legend Motherboard drivers..." -Verbose
+Write-Host
+
+$SteelLegendBluetoothPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\Bluetooth"
+$SteelLegendEthernetPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\Ethernet"
+$SteelLegendStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\Storage"
+$SteelLegendWLANPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\WLAN"
+
+Edit-OSDCloudWinPe -DriverPath $SteelLegendBluetoothPath
+Edit-OSDCloudWinPe -DriverPath $SteelLegendEthernetPath
+Edit-OSDCloudWinPe -DriverPath $SteelLegendStoragePath
+Edit-OSDCloudWinPe -DriverPath $SteelLegendWLANPath
+
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA1851 Steel Legend Motherboard drivers..." -Verbose
+Write-Host
+
+# Taichi motherboards
+
+Write-Host
+Write-Verbose "Processing: ASRock Intel LGA1851 Taichi Motherboard drivers..." -Verbose
+Write-Host
+
+$TaichiBluetoothPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\Taichi\Bluetooth"
+$TaichiEthernetPath1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\Taichi\Ethernet1"
+$TaichiEthernetPath2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\Taichi\Ethernet2"
+$TaichiEthernetPath3 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\Taichi\Ethernet3"
+$TaichiEthernetPath4 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\Taichi\Ethernet4"
+$TaichiEthernetPath5 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\Taichi\Ethernet5"
+$TaichiEthernetPath6 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\Taichi\Ethernet6"
+$TaichiEthernetPath7 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\Taichi\Ethernet7"
+$TaichiStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\Taichi\Storage"
+$TaichiWLANPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\Taichi\WLAN"
+
+Edit-OSDCloudWinPe -DriverPath $TaichiBluetoothPath
+Edit-OSDCloudWinPe -DriverPath $TaichiEthernetPath1
+Edit-OSDCloudWinPe -DriverPath $TaichiEthernetPath2
+Edit-OSDCloudWinPe -DriverPath $TaichiEthernetPath3
+Edit-OSDCloudWinPe -DriverPath $TaichiEthernetPath4
+Edit-OSDCloudWinPe -DriverPath $TaichiEthernetPath5
+Edit-OSDCloudWinPe -DriverPath $TaichiEthernetPath6
+Edit-OSDCloudWinPe -DriverPath $TaichiEthernetPath7
+Edit-OSDCloudWinPe -DriverPath $TaichiStoragePath
+Edit-OSDCloudWinPe -DriverPath $TaichiWLANPath
+
+Write-Host
+Write-Verbose "Completed: ASRock Intel LGA1851 Taichi Motherboard drivers..." -Verbose
+Write-Host
+
 #############################################
 # INTEL LGA 1851 Driver Integration - ASUS
 #############################################
