@@ -41,7 +41,7 @@ Write-Verbose "Acquiring HWiNFOPortable from GitHub repository..." -Verbose
 Save-WebFile -SourceUrl $HWInfoFile1URL -DestinationDirectory $HWInfoDestination
 
 Write-Host
-Write-Verbose "Completed: HWiNFO Portable have been downloaded..." -Verbose
+Write-Verbose "Completed: HWiNFO Portable has been downloaded..." -Verbose
 Write-Host
 }
 
