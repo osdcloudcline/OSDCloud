@@ -148,6 +148,13 @@ $ExplorerPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/r
 Invoke-Expression $($ExplorerPP.Content)
 
 Write-Host
+Write-Verbose "Processing: HWiNFO Portable" -Verbose
+Write-Host
+
+$HWInfo = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/System%20Information/HWInfo.ps1")
+Invoke-Expression $($HWInfo.Content)
+
+Write-Host
 Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer - CM Trace" -Verbose
 Write-Host
 
@@ -480,6 +487,15 @@ Write-Host
 Write-Verbose "Completed: Integration of Notepad++ for OSDCloud..." -Verbose
 Write-Host
 
+# HW Info
+
+Write-Host
+Write-Verbose "Processing: HWiNFO Portable for OSDCloud..." -Verbose 
+
+$HWiNFOZIPPath = "C:\OSDCloud\downloads\GitHub\HWInfo\HWiNFO.zip"
+$HWInfoDestination = "$mountdir\Windows\System32\HWiNFO"
+
+Expand-Archive -Path "$HWiNFOZIPPath\HWiNFO.zip" -DestinationPath "$HWInfoDestination" -Force
 
 # Dismount the image
 Write-Host
