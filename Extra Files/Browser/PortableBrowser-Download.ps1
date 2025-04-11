@@ -9,7 +9,7 @@ pause
 ######################################################################################
 ####    OSDCloud Web Browser URL                                                 #######
 ######################################################################################
-$OSDBrowser = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Browser/Chrome.zip"
+$OSDBrowser = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Browser/Chrome.exe"
 
 
 ######################################################################################
@@ -23,8 +23,7 @@ Import-Module -Name 7Zip4PowerShell -Force
 
 Write-Verbose "Acquiring Google Chrome Portable Web Browser from GitHub repository..." -Verbose
 Save-WebFile -SourceUrl $OSDBrowser  -DestinationDirectory $ChromeDownloadPath 
-Write-Verbose "Expanding Google Chrome Portable Web Browser ..." -Verbose
-Expand-7Zip -ArchiveFileName "$ChromeDownloadPath\Chrome.zip" -TargetPath $ChromePath -ErrorAction SilentlyContinue 
+
 
 Write-Verbose "Confirming successful download of Google Chrome Portable Browser..." -Verbose
 $ChromeTP = Test-Path -Path "$ChromePath\Chrome.exe" 
@@ -34,6 +33,4 @@ Write-Host "Google Chrome successfully downloaded"
 ElseIf($ChromeTP -eq $false){
 Write-Verbose "Acquiring Google Chrome Portable Web Browser from GitHub repository..." -Verbose
 Save-WebFile -SourceUrl $OSDBrowser  -DestinationDirectory $ChromeDownloadPath 
-Write-Verbose "Expanding Google Chrome Portable Web Browser ..." -Verbose
-Expand-7Zip -ArchiveFileName "$ChromeDownloadPath\Chrome.zip" -TargetPath $ChromePath -ErrorAction SilentlyContinue 
 }
