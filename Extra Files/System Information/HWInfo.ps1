@@ -23,7 +23,7 @@ $HWInfoZIPDestination = "C:\OSDCloud\downloads\GitHub\HWInfo\Extract"
 Write-Verbose "Processing: Acquiring HWiNFO Portable for integration to OSDCloud..." -Verbose
 Write-Host
 Save-WebFile -SourceUrl $HWInfoFile1URL -DestinationDirectory $HWInfoDestination
-Expand-7Zip -ArchiveFileName "$HWInfoDestination\HWiNFO.zip" -TargetPath $HWInfoZIPDestination -ErrorAction SilentlyContinue 
+Expand-Archive -Path "$HWInfoDestination\HWiNFO.zip" -DestinationPath "$HWInfoZIPDestination" -ErrorAction SilentlyContinue 
 
 Write-Host
 Write-Verbose "Completed: Download of HWiNFO Portable for integration to OSDCloud..." -Verbose
