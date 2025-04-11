@@ -50,26 +50,26 @@ Write-Host
 Write-Verbose "Processing: ASRock Intel LGA 1700 Motherboard driver downloads" -Verbose
 Write-Host 
 
-$ASRockAQUALGA1700 = Invoke-WebRequest("")
+$ASRockAQUALGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/AQUA%20Motherboards/AQUA.ps1")
 Invoke-Expression $($ASRockAQUALGA1700.Content)
 
-$ASRockExtremeLGA1700 = Invoke-WebRequest("")
+$ASRockExtremeLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/Extreme%20Motherboards/Extreme.ps1")
 Invoke-Expression $($ASRockExtremeLGA1700.Content)
 
-$ASRockPROLGA1700 = Invoke-WebRequest("")
+$ASRockLiveMixerLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/Live%20Mixer%20Motherboards/LiveMixer.ps1")
 Invoke-Expression $($ASRockPROLGA1700.Content)
 
-$ASRockPhantomGamingLGA1700 = Invoke-WebRequest("")
+$ASRockPROLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/PRO%20Motherboards/PRO.ps1")
+Invoke-Expression $($ASRockPROLGA1700.Content)
+
+$ASRockPhantomGamingLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/Phantom%20Gaming%20Motherboards/PhantomGaming.ps1")
 Invoke-Expression $($ASRockPhantomGamingLGA1700.Content)
 
-$ASRockSteelLegendLGA1700 = Invoke-WebRequest("")
+$ASRockSteelLegendLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/Steel%20Legend%20Motherboards/SteelLegend.ps1")
 Invoke-Expression $($ASRockSteelLegendLGA1700.Content)
 
-$ASRockTaichiLGA1700 = Invoke-WebRequest("")
+$ASRockTaichiLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/Taichi%20Motherboards/Taichi.ps1")
 Invoke-Expression $($ASRockTaichiLGA1700.Content)
-
-
-
 
 Write-Host
 Write-Verbose "Completed: ASRock Intel LGA 1700 Motherboard driver downloads" -Verbose
@@ -79,34 +79,32 @@ Write-Host
 Write-Verbose "Processing: ASUS Intel LGA 1700 Motherboard driver downloads" -Verbose
 Write-Host 
 
-$ASUSBusinessLGA1700 = Invoke-WebRequest("")
+$ASUSBusinessLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/Business%20Motherboards/Business.ps1")
 Invoke-Expression $($ASUSBusinessLGA1700.Content)
 
-$ASUSCSMLGA1700 = Invoke-WebRequest("")
+$ASUSCSMLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/CSM%20Motherboards/CSM.ps1")
 Invoke-Expression $($ASUSCSMLGA1700.Content)
 
-$ASUSExpeditionLGA1700 = Invoke-WebRequest("")
+$ASUSExpeditionLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/Expedition%20Motherboards/Expedition.ps1")
 Invoke-Expression $($ASUSExpeditionLGA1700.Content)
 
-$ASUSOthersLGA1700 = Invoke-WebRequest("")
+$ASUSOthersLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/Other%20Motherboards/Other.ps1")
 Invoke-Expression $($ASUSOthersLGA1700.Content)
 
-$ASUSPRIMELGA1700 = Invoke-WebRequest("")
+$ASUSPRIMELGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/PRIME%20Motherboards/PRIME.ps1")
 Invoke-Expression $($ASUSPRIMELGA1700.Content)
 
-$ASUSProArtLGA1700 = Invoke-WebRequest("")
+$ASUSProArtLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/ProArt%20Motherboards/ProArt.ps1")
 Invoke-Expression $($ASUSProArtLGA1700.Content)
 
-$ASUSROGLGA1700 = Invoke-WebRequest("")
+$ASUSROGLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/ROG%20-%20Republic%20of%20Gamers%20Motherboards/ROG%20-%20Republic%20of%20Gamers.ps1")
 Invoke-Expression $($ASUSROGLGA1700.Content)
 
-$ASUSTUFGamingLGA1700 = Invoke-WebRequest("")
+$ASUSTUFGamingLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/TUF%20Gaming%20Motherboards/TUFGaming.ps1")
 Invoke-Expression $($ASUSTUFGamingLGA1700.Content)
 
-$ASUSWorkstationLGA1700 = Invoke-WebRequest("")
+$ASUSWorkstationLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/Workstation%20Motherboards/Workstation.ps1")
 Invoke-Expression $($ASUSWorkstationLGA1700.Content)
-
-
 
 Write-Host
 Write-Verbose "Completed: ASUS Intel LGA 1700 Motherboard driver downloads" -Verbose
@@ -139,16 +137,16 @@ Write-Host
 Write-Verbose "Processing: MSI Intel LGA 1700 Motherboard driver downloads" -Verbose
 Write-Host 
 
-$MSIMEGLGA1700 = Invoke-WebRequest("")
-Invoke-Expression $($MSIMEGLGA1700.Content)
-
-$MSIMPGLGA1700 = Invoke-WebRequest("")
-Invoke-Expression $($MSIMPGLGA1700.Content)
-
-$MSIMAGLGA1700 = Invoke-WebRequest("")
+$MSIMAGLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/MAG%20Series/MAG.ps1")
 Invoke-Expression $($MSIMAGLGA1700.Content)
 
-$MSIPROLGA1700 = Invoke-WebRequest("")
+$MSIMEGLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/MEG%20Series/MEG.ps1")
+Invoke-Expression $($MSIMEGLGA1700.Content)
+
+$MSIMPGLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/MPG%20Series/MPG.ps1")
+Invoke-Expression $($MSIMPGLGA1700.Content)
+
+$MSIPROLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/PRO%20Series/PRO.ps1")
 Invoke-Expression $($MSIPROLGA1700.Content)
 
 Write-Host
@@ -752,10 +750,13 @@ Write-Host
 Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
 Write-Host
 
-
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
 ##########################################
+
+Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
+Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1
+Write-Host
 
 ###########################################
 # Rename OSDCloud ISO
