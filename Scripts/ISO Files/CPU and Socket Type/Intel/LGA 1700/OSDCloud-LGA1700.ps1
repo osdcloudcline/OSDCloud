@@ -255,6 +255,13 @@ $ExplorerPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/r
 Invoke-Expression $($ExplorerPP.Content)
 
 Write-Host
+Write-Verbose "Processing: HWiNFO Portable" -Verbose
+Write-Host
+
+$HWInfo = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/System%20Information/HWInfo.ps1")
+Invoke-Expression $($HWInfo.Content)
+
+Write-Host
 Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer - CM Trace" -Verbose
 Write-Host
 
@@ -306,6 +313,47 @@ Get-OSDCloudWorkspace
 
 $AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
 Invoke-Expression $($AddPS7.Content)
+
+#############################################
+# INTEL LGA 1700 Driver Integration - ASRock
+#############################################
+
+Write-Host
+Write-Verbose "Processing: ASRock LGA 1700 drivers" -Verbose
+Write-Host
+
+#############################################
+# INTEL LGA 1700 Driver Integration - ASUS
+#############################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1700 drivers" -Verbose
+Write-Host
+
+
+
+###############################################
+# INTEL LGA 1700 Driver Integration - Gigabyte
+###############################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte LGA 1700 drivers" -Verbose
+Write-Host
+
+#############################################
+# INTEL LGA 1700 Driver Integration - MSI
+#############################################
+
+Write-Host
+Write-Verbose "Processing: MSI LGA 1700 drivers" -Verbose
+Write-Host
+
+
+
+
+Write-Host
+Write-Verbose "Completed: Integration of ALL Intel Socket LGA 1700 drivers for OSDCloud..." -Verbose
+Write-Host
 
 #################################
 # OSDCloud - Cloud Drivers
@@ -427,186 +475,6 @@ Write-Host
 Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
 Write-Host
 
-######################################
-## Extra Scripting Support
-######################################
-
-# VBS Scripting Support
-
-$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
-$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
-$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
-$VBSName3 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
-$VBSName4 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
-$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
-$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
-$VBS3 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
-$VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
-
-$sourceWIMDir = "\Media\sources"
-$WorkspacePath = Get-OSDCloudWorkspace
-$WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
-$mountdir = "C:\Mount"
-
-Write-Verbose "Processing: Mounting OSDCloud boot.wim" -Verbose
-# Mount the image
-
-Mount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
-
-Write-Host
-Write-Verbose "Processing: VBS Scripting Support..." -Verbose 
-
-Write-Host
-Write-Verbose "Processing Item: $VBSName1..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
-Write-Host
-
-Write-Verbose "Processing Item: $VBSName2..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
-Write-Host
-
-Write-Verbose "Processing Item: $VBSName3..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
-Write-Host
-
-Write-Verbose "Processing Item: $VBSName4..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
-
-Write-Host
-Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
-Write-Host
-
-########################################
-# 3rd party software and utilities
-########################################
-
-# Portable Browsers
-
-Write-Host
-Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verbose 
-$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
-$ChromeDestination = "$mountdir\Windows\System32"
-
-Copy-Item -Path $ChromePath -Destination $ChromeDestination -Force
-
-Write-Host
-Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
-Write-Host
-
-# MS DaRT Remote Connections and Troubleshooting
-
-# CloudPC
-
-Write-Host
-Write-Verbose "Processing: Microsoft Remote Desktop - Cloud PC for OSDCloud..." -Verbose 
-$CloudPCPath1 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files"
-$CloudPCPath2 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files\en-us"
-$CloudPCDestination1 = "$mountdir\Windows\System32"
-$CloudPCDestination2 = "$mountdir\Windows\System32\en-US"
-
-Copy-Item -Path "$CloudPCPath1\*" -Destination $CloudPCDestination1  -Force
-Copy-Item -Path "$CloudPCPath2\*" -Destination $CloudPCDestination2  -Force
-
-# CMTrace 
-
-Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer CM Trace for OSDCloud..." -Verbose 
-$CMTracePath = "C:\OSDCloud\downloads\GitHub\MECM-LogViewer"
-$CMTraceDestination = "$mountdir\Windows\System32"
-
-Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force
-
-# Ghost Imaging
-
-Write-Host
-Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
-$Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
-$GhostExplorerPath = "C:\OSDCloud\GitHub\downloads\Ghost\Ghostexp.exe"
-$GhostServPath = "C:\OSDCloud\GitHub\downloads\Ghost\GhostSrv.exe"
-$GhostDestination = "$mountdir\Windows\System32"
-
-Copy-Item -Path $Ghost64Path -Destination $GhostDestination -Force
-Copy-Item -Path $GhostExplorerPath -Destination $GhostDestination -Force
-Copy-Item -Path $GhostServPath -Destination $GhostDestination -Force
-
-Write-Host
-Write-Verbose "Completed: Integration of Ghost Imaging for OSDCloud..." -Verbose
-Write-Host
-
-# User Profile Backup and Restore 
-
-Write-Host
-Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
-$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
-$UBPRDestination = "$mountdir\Windows\System32"
-
-Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
-
-Write-Host
-Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
-Write-Host
-
-# Disount the image
-Write-Host
-Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
-
-Dismount-WindowsImage -Path $mountdir -Save
-
-######################################
-## Extra PowerShell Modules - OSDCloud
-######################################
-
-# PowerShell 5.1 Modules - OSDCloud
-
-$OSDCloudPS5xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
-Invoke-Expression $($OSDCloudPS5xMods.Content)
-
-# PowerShell 7.x Modules - OSDCloud
-
-$OSDCloudPS7xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
-Invoke-Expression $($OSDCloudPS7xMods.Content)
-
-#############################################
-# INTEL LGA 1700 Driver Integration - ASRock
-#############################################
-
-Write-Host
-Write-Verbose "Processing: ASRock LGA 1700 drivers" -Verbose
-Write-Host
-
-#############################################
-# INTEL LGA 1700 Driver Integration - ASUS
-#############################################
-
-Write-Host
-Write-Verbose "Processing: ASUS LGA 1700 drivers" -Verbose
-Write-Host
-
-
-
-###############################################
-# INTEL LGA 1700 Driver Integration - Gigabyte
-###############################################
-
-Write-Host
-Write-Verbose "Processing: Gigabyte LGA 1700 drivers" -Verbose
-Write-Host
-
-#############################################
-# INTEL LGA 1700 Driver Integration - MSI
-#############################################
-
-Write-Host
-Write-Verbose "Processing: MSI LGA 1700 drivers" -Verbose
-Write-Host
-
-
-
-
-Write-Host
-Write-Verbose "Completed: Integration of ALL Intel Socket LGA 1700 drivers for OSDCloud..." -Verbose
-Write-Host
-
-
 ############################################
 # Other Drivers
 ############################################
@@ -680,6 +548,195 @@ Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage2
 Write-Host
 Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
 Write-Host
+
+######################################
+## Extra Scripting Support
+######################################
+
+# VBS Scripting Support
+
+$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
+$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBSName3 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBSName4 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBS3 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+
+$sourceWIMDir = "\Media\sources"
+$WorkspacePath = Get-OSDCloudWorkspace
+$WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
+$mountdir = "C:\Mount"
+
+Write-Verbose "Processing: Mounting OSDCloud boot.wim" -Verbose
+# Mount the image
+
+Mount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
+
+Write-Host
+Write-Verbose "Processing: VBS Scripting Support..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing Item: $VBSName1..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName2..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName3..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName4..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
+
+Write-Host
+Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
+Write-Host
+
+########################################
+# 3rd party software and utilities
+########################################
+
+# Portable Browsers
+
+Write-Host
+Write-Verbose "Processing: Google Chrome Portable Browser for OSDCloud..." -Verbose 
+$ChromePath = "C:\OSDCloud\GitHub\downloads\Chrome.exe"
+$ChromeDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $ChromePath -Destination $ChromeDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Google Chrome Portable Browser for OSDCloud..." -Verbose
+Write-Host
+
+# CMTrace 
+
+Write-Host
+Write-Verbose "Processing: CMTrace Log Viewer for OSDCloud..." -Verbose 
+
+$CMTracePath = "C:\OSDCloud\downloads\GitHub\MECM-LogViewer\CMTrace.exe"
+$CMTraceDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $CMTracePath -Destination $CMTraceDestination -Force
+
+# MSTSC
+
+Write-Host
+Write-Verbose "Processing: Microsoft Remote Desktop for OSDCloud..." -Verbose 
+$MSTSCPath1 = "C:\OSDCloud\downloads\GitHub\MSTSC\Sys32Files"
+$MSTSCPath2 = "C:\OSDCloud\downloads\GitHub\MSTSC\Sys32Files\en-us"
+$MSTSCDestination1 = "$mountdir\Windows\System32"
+$MSTSCDestination2 = "$mountdir\Windows\System32\en-US"
+
+Copy-Item -Path "$MSTSCPath1\*" -Destination $MSTSCDestination1 -Recurse  -Force
+Copy-Item -Path "$MSTSCPath2\*" -Destination $MSTSCDestination2  -Recurse -Force
+
+# CloudPC
+
+Write-Host
+Write-Verbose "Processing: Microsoft Remote Desktop - Cloud PC for OSDCloud..." -Verbose 
+$CloudPCPath1 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files"
+$CloudPCPath2 = "C:\OSDCloud\downloads\GitHub\CloudPC\Sys32Files\en-us"
+$CloudPCDestination1 = "$mountdir\Windows\System32"
+$CloudPCDestination2 = "$mountdir\Windows\System32\en-US"
+
+Copy-Item -Path "$CloudPCPath1\*" -Destination $CloudPCDestination1  -Recurse -Force
+Copy-Item -Path "$CloudPCPath2\*" -Destination $CloudPCDestination2  -Recurse -Force
+
+# Ghost Imaging
+
+Write-Host
+Write-Verbose "Processing: Ghost Imaging for OSDCloud..." -Verbose 
+$Ghost64Path = "C:\OSDCloud\GitHub\downloads\Ghost\Ghost64.exe"
+$GhostExplorerPath = "C:\OSDCloud\GitHub\downloads\Ghost\Ghostexp.exe"
+$GhostServPath = "C:\OSDCloud\GitHub\downloads\Ghost\GhostSrv.exe"
+$GhostDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $Ghost64Path -Destination $GhostDestination -Force
+Copy-Item -Path $GhostExplorerPath -Destination $GhostDestination -Force
+Copy-Item -Path $GhostServPath -Destination $GhostDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Ghost Imaging for OSDCloud..." -Verbose
+Write-Host
+
+# User Profile Backup and Restore 
+
+Write-Host
+Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
+
+$UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
+$UBPRDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
+Write-Host
+
+# File Explorer
+
+Write-Host
+Write-Verbose "Processing: Explorer ++ for OSDCloud..." -Verbose 
+
+$ExplorerPPPath = "C:\OSDCloud\downloads\GitHub\FileExplorer\Explorer++.exe"
+$ExplorerPPDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $ExplorerPPPath -Destination $ExplorerPPDestination  -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Explorer++ for OSDCloud..." -Verbose
+Write-Host
+
+# Text Editor
+
+Write-Host
+Write-Verbose "Processing: Notepad ++ for OSDCloud..." -Verbose 
+
+$NotepadPPPath = "C:\OSDCloud\downloads\GitHub\TextEditor\notepad++.exe"
+$NotepadPPDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $NotepadPPPath -Destination $NotepadPPDestination  -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Notepad++ for OSDCloud..." -Verbose
+Write-Host
+
+# HW Info
+
+Write-Host
+Write-Verbose "Processing: HWiNFO Portable for OSDCloud..." -Verbose 
+
+$HWiNFOZIPPath = "C:\OSDCloud\downloads\GitHub\HWInfo"
+$HWInfoDestination = "$mountdir\Windows\System32\HWiNFO"
+
+Expand-Archive -Path "$HWiNFOZIPPath\HWiNFO.zip" -DestinationPath "$HWInfoDestination" -Force
+
+# Dismount the image
+Write-Host
+Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
+
+Dismount-WindowsImage -Path $mountdir -Save
+
+######################################
+## Extra PowerShell Modules - OSDCloud
+######################################
+
+# PowerShell 5.1 Modules - OSDCloud
+
+$OSDCloudPS5xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS5xMods.Content)
+
+# PowerShell 7.x Modules - OSDCloud
+
+$OSDCloudPS7xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
+Invoke-Expression $($OSDCloudPS7xMods.Content)
 
 ###########################################
 # OSDCloud NEW Wallpaper
