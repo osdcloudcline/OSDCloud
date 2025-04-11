@@ -442,6 +442,7 @@ Write-Host
 
 Write-Host
 Write-Verbose "Processing: User Profile Backup/Restore for OSDCloud..." -Verbose 
+
 $UPBRFilePath = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
 $UBPRDestination = "$mountdir\Windows\System32"
 
@@ -450,6 +451,35 @@ Copy-Item -Path $UPBRFilePath -Destination $UBPRDestination -Force
 Write-Host
 Write-Verbose "Completed: Integration of User Profile Backup/Restore for OSDCloud..." -Verbose
 Write-Host
+
+# File Explorer
+
+Write-Host
+Write-Verbose "Processing: Explorer ++ for OSDCloud..." -Verbose 
+
+$ExplorerPPPath = "C:\OSDCloud\downloads\GitHub\FileExplorer\Explorer++.exe"
+$ExplorerPPDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $ExplorerPPPath -Destination $ExplorerPPDestination  -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Explorer++ for OSDCloud..." -Verbose
+Write-Host
+
+# Text Editor
+
+Write-Host
+Write-Verbose "Processing: Notepad ++ for OSDCloud..." -Verbose 
+
+$NotepadPPPath = "C:\OSDCloud\downloads\GitHub\TextEditor\notepad++.exe"
+$NotepadPPDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $NotepadPPPath -Destination $NotepadPPDestination  -Force
+
+Write-Host
+Write-Verbose "Completed: Integration of Notepad++ for OSDCloud..." -Verbose
+Write-Host
+
 
 # Dismount the image
 Write-Host
