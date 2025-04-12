@@ -803,5 +803,21 @@ Write-Host
 $OSDCloudISOPath = "C:\OSDCloud\ALL-ASRock-AM4"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Write-Host
 Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ALL-ASRock-AM4\OSDCloud-ALL-ASRock-AM4.iso" -Force
 Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ALL-ASRock-AM4\OSDCloud-ALL-ASRock-AM4_NoPrompt.iso" -Force
+
+###########################################
+# Copy OSDCloud ISO Files
+#########################################
+
+$ISO1 = "C:\OSDCloud\ALL-ASRock-AM4\OSDCloud-ALL-ASRock-AM4.iso"
+$ISO2 = "C:\OSDCloud\ALL-ASRock-AM4\OSDCloud-ALL-ASRock-AM4_NoPrompt.iso"
+
+$OSDISODestination = "C:\ISOs\OSDCloud"
+
+Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
+Write-Host
+
+Copy-Item -Path $ISO1 -Destination $OSDISODestination -Force
+Copy-Item -Path $ISO2 -Destination $OSDISODestination -Force
