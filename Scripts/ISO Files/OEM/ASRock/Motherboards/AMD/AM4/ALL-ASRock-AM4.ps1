@@ -123,7 +123,7 @@ Write-Host
 Write-Verbose "Processing: Google Chrome - portable browser" -Verbose
 Write-Host
 
-$PortableBrowser = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Browser/PortableBrowser-Download.ps1")
+$PortableBrowser = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Browser/PortableBrowser-Download.ps1")
 Invoke-WebRequest $($PortableBrowser.Content)
 
 Write-Host
