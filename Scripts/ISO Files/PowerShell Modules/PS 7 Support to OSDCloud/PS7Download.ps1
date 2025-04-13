@@ -2,7 +2,7 @@ $PS7ToOSDCloudISOLog = "C:\Logs\OSDCloud\PowerShell 7 Support\PS7-Download.log"
 
 Start-Transcript -Path $PS7ToOSDCloudISOLog
 
-
+Install-Module -Name OSD -Force
 Import-Module -Name OSD -Force
 
 
