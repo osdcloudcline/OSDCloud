@@ -27,3 +27,21 @@ Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Write-Host
 Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
 Get-OSDCloudWorkspace
+
+##########################################
+# OSDCloud WebScript for Startnet.cmd
+##########################################
+
+Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
+Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1
+Write-Host
+
+###########################################
+# Rename OSDCloud ISO
+#########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\ASRock-PhantomGamingMotherboards-AM4"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASRock-PhantomGamingMotherboards-AM4\OSDCloud-ASRock-PhantomGaming-AM4.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASRock-PhantomGamingMotherboards-AM4\OSDCloud-ASRock-PhantomGaming-AM4_NoPrompt.iso" -Force
