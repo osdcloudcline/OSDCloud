@@ -26,7 +26,7 @@ Import-Module -Name OSD -Force
 
 Import-Module -Name 7Zip4Powershell -Force
 
-$VTOSDCloudWorkspace = Invoke-WebRequest("")
+$VTOSDCloudWorkspace = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/All-VT.ps1")
 Invoke-Expression $($VTOSDCloudWorkspace.Content)
 
 Write-Host
@@ -39,9 +39,6 @@ Invoke-Expression $($PS7.Content)
 Write-Host
 Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
 Write-Host
-
-$DaRT = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/DaRT/DaRT.ps1")
-Invoke-WebRequest $($DaRT.Content)
 
 #################################
 # Adding PowerShell 7 to OSDCloud 
