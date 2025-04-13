@@ -21,10 +21,13 @@ Write-Host '                                                                    
 pause
 Clear-Host
 
-Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
+
 Import-Module -Name OSD -Force
-Install-Module -Name 7Zip4Powershell -Force -AllowClobber -SkipPublisherCheck -Verbose
+
 Import-Module -Name 7Zip4Powershell -Force
+
+$VTOSDCloudWorkspace = Invoke-WebRequest("")
+Invoke-Expression $($VTOSDCloudWorkspace.Content)
 
 Write-Host
 Write-Verbose "Processing: PowerShell 7.x support downloads" -Verbose
@@ -39,32 +42,6 @@ Write-Host
 
 $DaRT = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/DaRT/DaRT.ps1")
 Invoke-WebRequest $($DaRT.Content)
-
-################################################
-# OSDCloud Template and Workspace configuration
-################################################
-
-Write-Host
-Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name ALL-Virtual -WinRE
-
-Write-Host
-Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
-Get-OSDCloudTemplateNames
-
-Write-Host
-Write-Verbose "Retriving OSDCloud Workspaces..." -Verbose
-Get-OSDCloudWorkspace
-
-Write-Host
-Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = "C:\OSDCloud\All-VT"
-New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
-Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
-
-Write-Host
-Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
-Get-OSDCloudWorkspace
 
 #################################
 # Adding PowerShell 7 to OSDCloud 
@@ -141,7 +118,6 @@ reg unload "HKLM\OfflineWinPE"
 Write-Verbose "Processing: Dismounting and saving the OSDCloud boot.wim" -Verbose
 # dismounting and saving the image
 Dismount-WindowsImage -Path $mountdir -Save
-
 
 ######################################################################
 ###  Remaining downloads
