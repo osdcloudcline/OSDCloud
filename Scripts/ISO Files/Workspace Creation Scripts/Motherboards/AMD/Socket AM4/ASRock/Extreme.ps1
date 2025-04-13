@@ -55,7 +55,7 @@ Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud
 $ISO1 = "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4\OSDCloud-ASRock-ExtremeMotherboards-AM4.iso"
 $ISO2 = "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4\OSDCloud-ASRock-ExtremeMotherboards-AM4_NoPrompt.iso"
 
-$OSDISODestination = "C:\ISOs\OSDCloud"
+$OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM4\ASRock"
 
 Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
 Write-Host
