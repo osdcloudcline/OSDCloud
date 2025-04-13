@@ -7,7 +7,7 @@ Write-Verbose "Confirming OSDCloud Templates......" -Verbose
 Get-OSDCloudTemplate
 
 Write-Host
-Write-Verbose "Creating New OSDCloud WinRE Template specific for ASUS CSM AM4 motherboards to enable wireless networking support..." -Verbose
+Write-Verbose "Creating New OSDCloud WinRE Template specific for ASUS CSM AM5 motherboards to enable wireless networking support..." -Verbose
 New-OSDCloudTemplate -Name ASUS-CSM-AM5 -WinRE
 
 Write-Host
