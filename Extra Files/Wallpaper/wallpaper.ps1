@@ -37,7 +37,7 @@ Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name OSD -Force
 
 Write-Verbose "Changing OSDCloud wallpaper..." -Verbose
-$OSDCloudGHdownloads = "C:\downloads\OSDCloud\GitHub"
+$OSDCloudGHdownloads = "C:\downloads\OSDCloud\GitHub\wallpaper"
 $OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/Wallpaper/winpe.jpg"
 Save-WebFile -SourceUrl $OSDCloudWallpaperURL -DestinationDirectory $OSDCloudGHdownloads
 Edit-OSDCloudWinPE -Wallpaper "$OSDCloudGHdownloads\winpe.jpg"
