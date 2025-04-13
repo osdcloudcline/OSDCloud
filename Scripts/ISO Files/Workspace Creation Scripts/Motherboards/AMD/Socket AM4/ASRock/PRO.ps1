@@ -43,6 +43,20 @@ Write-Host
 $OSDCloudISOPath = "C:\OSDCloud\ASRock-PROMotherboards-AM4"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASRock-PROMotherboards-AM4\OSDCloud-PROMotherboards-AM4.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASRock-PROMotherboards-AM4\OSDCloud-PROMotherboards-AM4_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASRock-PROMotherboards-AM4\OSDCloud-ASRock-PRO-AM4.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASRock-PROMotherboards-AM4\OSDCloud-ASRock-PRO-AM4_NoPrompt.iso" -Force
 
+###########################################
+# Copy OSDCloud ISO Files
+#########################################
+
+$ISO1 = "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4\OSDCloud-ASRock-PRO-AM4.iso"
+$ISO2 = "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4\OSDCloud-ASRock-PRO-AM4_NoPrompt.iso"
+
+$OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM4\ASRock"
+
+Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
+Write-Host
+
+Copy-Item -Path $ISO1 -Destination $OSDISODestination -Force
+Copy-Item -Path $ISO2 -Destination $OSDISODestination -Force
