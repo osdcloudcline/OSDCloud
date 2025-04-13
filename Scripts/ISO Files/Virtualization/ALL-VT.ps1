@@ -37,6 +37,9 @@ Write-Host
 Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
 Write-Host
 
+$DaRT = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/DaRT/DaRT.ps1")
+Invoke-WebRequest $($DaRT.Content)
+
 ################################################
 # OSDCloud Template and Workspace configuration
 ################################################
@@ -215,9 +218,6 @@ Invoke-Expression $($Ghost.Content)
 Write-Host
 Write-Verbose "Processing: Microsoft DaRT and Remote Desktop Connections" -Verbose
 Write-Host
-
-$DaRT = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/DaRT/DaRT.ps1")
-Invoke-WebRequest $($DaRT.Content)
 
 $MSTSC = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Remote%20Desktop%20Control/MSTSC.ps1")
 Invoke-Expression $($MSTSC.Content)
