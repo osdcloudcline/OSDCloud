@@ -215,7 +215,7 @@ Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud
 $ISO1 = "C:\OSDCloud\ASRock-PRO-AM5\OSDCloud-ASRock PRO-AM5.iso"
 $ISO2 = "C:\OSDCloud\ASRock-PRO-AM5\OSDCloud-ASRock PRO-AM5_NoPrompt.iso"
 
-$OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM5\Gigabyte"
+$OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM5\ASRock"
 
 Write-Verbose "Processing: Creating ISO directory" -Verbose
 Write-Host
