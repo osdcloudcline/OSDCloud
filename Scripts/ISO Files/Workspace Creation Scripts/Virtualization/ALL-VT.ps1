@@ -27,7 +27,11 @@ Get-OSDCloudWorkspace
 #########################################
 # ADD PowerShell 7
 ##########################################
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name OSD -Force
+
+Install-Module -Name 7Zip4Powershell -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name 7Zip4Powershell -Force
 
 $sourcedownload = "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0/PowerShell-7.5.0-win-x64.zip"
 $DLDestination = "C:\OSDCloud\downloads\PowerShell\7"
@@ -47,6 +51,11 @@ $mountdir = "C:\Mount"
 $sourceWIMDir = "\Media\sources"
 $WorkspacePath = Get-OSDCloudWorkspacePath
 $WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
+
+Write-Verbose "Processing: Creating mount directory" -Verbose
+Write-Host
+# Create Mount Directory
+New-Item -Path $mountdir -ItemType Directory -Force
 
 Write-Verbose "Processing: Mounting OSDCloud boot.wim" -Verbose
 # Mount the image
