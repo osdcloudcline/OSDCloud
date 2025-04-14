@@ -11,10 +11,6 @@ Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
 Get-OSDCloudTemplateNames
 
 Write-Host
-Write-Verbose "Retriving OSDCloud Workspaces..." -Verbose
-Get-OSDCloudWorkspace
-
-Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
 $WorkspacePath = "C:\OSDCloud\All-VT"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
@@ -49,7 +45,7 @@ $sourcedownload = "https://github.com/PowerShell/PowerShell/releases/download/v7
 $DLDestination = "C:\OSDCloud\downloads\PowerShell\7"
 $mountdir = "C:\Mount"
 $sourceWIMDir = "\Media\sources"
-$WorkspacePath = Get-OSDCloudWorkspacePath
+$WorkspacePath = Get-OSDCloudWorkspace
 $WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
 
 Write-Verbose "Processing: Creating mount directory" -Verbose
@@ -121,6 +117,12 @@ Write-Verbose "Processing: Dismounting and saving the OSDCloud boot.wim" -Verbos
 Write-Host
 # dismounting and saving the image
 Dismount-WindowsImage -Path $mountdir -Save
+
+
+#########################################
+##     ADD VBS Scripting Support
+#########################################
+
 
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
