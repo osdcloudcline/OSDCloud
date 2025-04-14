@@ -77,3 +77,10 @@ do
         $OSDCloudMain = Invoke-WebRequest("")
         Invoke-Expression $($OSDCloudMain.Content)
         }
+    }
+    }
+     until ($selection -eq '12'){Invoke-Expression $($OSDCloudMain.Content)}
+    }
+
+    
+Show-MainMenu
