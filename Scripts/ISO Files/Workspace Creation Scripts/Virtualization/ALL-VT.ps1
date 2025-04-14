@@ -193,6 +193,13 @@ Write-Verbose "Adding a customized PowerShell based Startnet script and configur
 Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1
 Write-Host
 
+############################################
+# Add Drivers
+###########################################
+
+$ALLVTDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/ALL-VT-Drivers.ps1")
+Invoke-Expression $($ALLVTDrivers.Content)
+
 ###########################################
 # Rename OSDCloud ISO
 #########################################
