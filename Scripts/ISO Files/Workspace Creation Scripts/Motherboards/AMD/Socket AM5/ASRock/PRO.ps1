@@ -16,7 +16,7 @@ Get-OSDCloudTemplateNames
 
 Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = "C:\OSDCloud\ASRock PRO-AM5"
+$WorkspacePath = "C:\OSDCloud\ASRock-PRO-AM5"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
@@ -201,7 +201,7 @@ Write-Host
 # Rename OSDCloud ISO
 #########################################
 
-$OSDCloudISOPath = "C:\OSDCloud\ASRock PRO-AM5"
+$OSDCloudISOPath = "C:\OSDCloud\ASRock-PRO-AM5"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
@@ -212,8 +212,8 @@ Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\ASRock PRO-AM5\OSDCloud-ASRock PRO-AM5.iso"
-$ISO2 = "C:\OSDCloud\ASRock PRO-AM5\OSDCloud-ASRock PRO-AM5_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\ASRock-PRO-AM5\OSDCloud-ASRock PRO-AM5.iso"
+$ISO2 = "C:\OSDCloud\ASRock-PRO-AM5\OSDCloud-ASRock PRO-AM5_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM5\Gigabyte"
 
