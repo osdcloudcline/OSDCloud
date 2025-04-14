@@ -15,12 +15,8 @@ Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
 Get-OSDCloudTemplateNames
 
 Write-Host
-Write-Verbose "Retriving OSDCloud Workspaces..." -Verbose
-Get-OSDCloudWorkspace
-
-Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = "C:\OSDCloud\ASUS-OthersMotherboards-AM4"
+$WorkspacePath = "C:\OSDCloud\ASUS-Others-AM4"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
