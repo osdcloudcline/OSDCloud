@@ -213,7 +213,7 @@ Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud
 #########################################
 
 $ISO1 = "C:\OSDCloud\ASUS-CSM-AM4\OSDCloud-ASUS-CSM-AM44.iso"
-$ISO2 = "C:\OSDCloud\ASUS-Business-AM4\OSDCloud-ASUS-CSM-AM44_NoPrompt.iso"
+$ISO2 = "C:\OSDCloud\ASUS-CSM-AM4\OSDCloud-ASUS-CSM-AM44_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM4\ASUS"
 
