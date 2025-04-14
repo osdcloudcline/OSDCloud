@@ -216,6 +216,11 @@ $ISO2 = "$OSDCloudISOPath\OSDCloud-ASRock-Taichi-AM4_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM4\ASRock"
 
+Write-Verbose "Processing: Creating ISO directory" -Verbose
+Write-Host
+# Create ISO Directory
+New-Item -Path $OSDISODestination -ItemType Directory -Force
+
 Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
 Write-Host
 
