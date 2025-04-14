@@ -125,6 +125,9 @@ Dismount-WindowsImage -Path $mountdir -Save
 
 # VBS Scripting Support
 
+$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
+$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+
 $VBSScriptSupport_URL = "https://github.com/osdcloudcline/OSDCloud/raw/main/Extra%20Files/Scripting%20Support/VBS%20Scripting/VBScriptCABFiles.zip"
 
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
@@ -209,6 +212,11 @@ $ISO1 = "C:\OSDCloud\ALL-VT\OSDCloud-ALL-VT.iso"
 $ISO2 = "C:\OSDCloud\ALL-VT\OSDCloud-ALL-VT_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\Virtualization"
+
+Write-Verbose "Processing: Creating ISO directory" -Verbose
+Write-Host
+# Create ISO Directory
+New-Item -Path $OSDISODestination -ItemType Directory -Force
 
 Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
 Write-Host
