@@ -148,7 +148,7 @@ Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud
 $ISO1 = "C:\OSDCloud\ALL-VT\OSDCloud-ALL-VT.iso"
 $ISO2 = "C:\OSDCloud\ALL-VT\OSDCloud-ALL-VT_NoPrompt.iso"
 
-$OSDISODestination = "C:\ISOs\OSDCloud\Vitualization"
+$OSDISODestination = "C:\ISOs\OSDCloud\Virtualization"
 
 Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
 Write-Host
