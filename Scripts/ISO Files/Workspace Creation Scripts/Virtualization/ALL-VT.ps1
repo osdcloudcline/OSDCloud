@@ -123,6 +123,64 @@ Dismount-WindowsImage -Path $mountdir -Save
 ##     ADD VBS Scripting Support
 #########################################
 
+# VBS Scripting Support
+
+$VBSScriptSupport_URL = "https://github.com/osdcloudcline/OSDCloud/raw/main/Extra%20Files/Scripting%20Support/VBS%20Scripting/VBScriptCABFiles.zip"
+
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name OSD -Force
+
+Install-Module -Name 7Zip4Powershell -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name 7Zip4Powershell -Force
+
+Write-Verbose  "Acquiring VBS Script Support CAB Files from GitHub repository..." -Verbose
+Save-WebFile -SourceUrl $VBSScriptSupport_URL -DestinationDirectory $OSDCloudGHdownloads
+Expand-7Zip -ArchiveFileName "$OSDCloudGHdownloads\VBScriptCABFiles.zip" -TargetPath $OSDCloudVBS_Extract -ErrorAction SilentlyContinue
+Write-Host
+
+
+$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
+$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBSName3 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBSName4 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
+$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
+$VBS3 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
+$VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
+
+$sourceWIMDir = "\Media\sources"
+$WorkspacePath = Get-OSDCloudWorkspace
+$WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
+$mountdir = "C:\Mount"
+
+Write-Verbose "Processing: Mounting OSDCloud boot.wim" -Verbose
+# Mount the image
+
+Mount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
+
+Write-Host
+Write-Verbose "Processing: VBS Scripting Support..." -Verbose 
+
+Write-Host
+Write-Verbose "Processing Item: $VBSName1..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName2..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName3..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
+Write-Host
+
+Write-Verbose "Processing Item: $VBSName4..." -Verbose
+Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
+
+Write-Host
+Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
+Write-Host
 
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
