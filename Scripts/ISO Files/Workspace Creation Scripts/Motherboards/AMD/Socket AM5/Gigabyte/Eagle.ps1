@@ -8,7 +8,7 @@ Get-OSDCloudTemplate
 
 Write-Host
 Write-Verbose "Creating New OSDCloud WinRE Template specific for ALL Gigabyte Eagle AM5 motherboards to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name Gigabyte-AM4 -WinRE
+New-OSDCloudTemplate -Name Gigabyte-Eagle-AM5 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
