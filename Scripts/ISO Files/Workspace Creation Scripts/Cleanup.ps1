@@ -1,5 +1,5 @@
 $PS7DLDestination = "C:\OSDCloud\downloads\PowerShell\7"
 
-$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
+$VBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
 
-$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+$VBSZIP = "C:\OSDCloud\GitHub\downloads\VBScriptCABFiles.zip"
