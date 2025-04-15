@@ -16,7 +16,7 @@ Get-OSDCloudTemplateNames
 
 Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4"
+$WorkspacePath = "C:\OSDCloud\ASRock-Extreme-AM4"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
@@ -201,7 +201,7 @@ Write-Host
 # Rename OSDCloud ISO
 #########################################
 
-$OSDCloudISOPath = "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4"
+$OSDCloudISOPath = "C:\OSDCloud\ASRock-Extreme-AM4"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
@@ -213,8 +213,8 @@ Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4\OSDCloud-ASRock-Extreme-AM4.iso"
-$ISO2 = "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4\OSDCloud-ASRock-Extreme-AM4_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\ASRock-Extreme-AM4\OSDCloud-ASRock-Extreme-AM4.iso"
+$ISO2 = "C:\OSDCloud\ASRock-Extreme-AM4\OSDCloud-ASRock-Extreme-AM4_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM4\ASRock"
 
