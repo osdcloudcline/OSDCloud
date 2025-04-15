@@ -4,7 +4,7 @@
 
 Write-Host
 Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name Gigabyte-GamingLGA1700 -WinRE
+New-OSDCloudTemplate -Name Gigabyte-Gaming-LGA1700 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
