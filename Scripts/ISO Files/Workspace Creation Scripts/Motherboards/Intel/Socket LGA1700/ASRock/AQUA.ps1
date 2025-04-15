@@ -4,7 +4,7 @@
 
 Write-Host
 Write-Verbose "Creating New OSDCloud WinRE Template to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name ASRock-LGA1700 -WinRE
+New-OSDCloudTemplate -Name ASRock-AQUA-LGA1700 -WinRE
 
 Write-Host
 Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
