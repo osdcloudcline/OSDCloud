@@ -211,7 +211,7 @@ Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud
 $ISO1 = "C:\OSDCloud\ALL-ASRock-LGA1700\OSDCloud-ALL-ASRock-LGA1700.iso"
 $ISO2 = "C:\OSDCloud\ALL-ASRock-LGA1700\OSDCloud-ALL-ASRock-LGA1700_NoPrompt.iso"
 
-$OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket lga 1700\ASRock"
+$OSDISODestination = "C:\ISOs\OSDCloud\Intel\Socket LGA1700\ASRock"
 
 Write-Verbose "Processing: Creating ISO directory" -Verbose
 Write-Host
