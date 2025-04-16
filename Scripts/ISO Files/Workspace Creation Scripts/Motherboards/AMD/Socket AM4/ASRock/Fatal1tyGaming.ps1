@@ -305,7 +305,7 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 #########################################
 
 Write-Host
-Write-Verbose "Processing: Integrating ASRock Fatal1ty Gaming Socket AM$ Motherboard Drivers" -Verbose
+Write-Verbose "Processing: Integrating ASRock Fatal1ty Gaming Socket AM4 Motherboard Drivers" -Verbose
 Write-Host
 
 $Fatal1tyGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/Fatal1tyGaming.ps1")
