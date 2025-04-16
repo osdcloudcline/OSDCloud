@@ -26,7 +26,7 @@ do
   {
 
   '1' { cls
-        $AICopilot = Invoke-WebRequest("")
+        $AICopilot = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/AI-Copilot%20PCs/MainMenu.ps1")
         Invoke-Expression $($AICopilot.Content)
         }
   '2' { cls
