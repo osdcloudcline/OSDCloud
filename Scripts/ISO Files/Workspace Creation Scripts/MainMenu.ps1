@@ -96,14 +96,14 @@ Clear-Host
 
 Clear-Host
 Write-Host "======= $Title ======"
-Write-Host " 1. AI-Copilot PCs"
-Write-Host " 2. By CPU and Socket Type"
-Write-Host " 3. Custom Scripts"
-Write-Host " 4. Motherboards"
-Write-Host " 5. OEM Desktops"
-Write-Host " 6. OEM Laptops"
-Write-Host " 7. OEM Tablet PCs"
-Write-Host " 8. Virtualization"
+Write-Host " 1. OSDCloud: AI-Copilot PCs"
+Write-Host " 2. OSDCloud: By CPU and Socket Type"
+Write-Host " 3. OSDCloud: Custom Scripts"
+Write-Host " 4. OSDCloud: Motherboards"
+Write-Host " 5. OSDCloud: OEM Desktops"
+Write-Host " 6. OSDCloud: OEM Laptops"
+Write-Host " 7. OSDCloud: OEM Tablet PCs"
+Write-Host " 8. OSDCloud: Virtualization"
 Write-Host " 9. Return to OSD Cloud Main Menu"
 
 do 
