@@ -203,6 +203,20 @@ Invoke-Expression $($OSDCloudPS5xMods.Content)
 $OSDCloudPS7xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
 Invoke-Expression $($OSDCloudPS7xMods.Content)
 
+################################################
+# Download ASRock Fatal1ty Gaming AM4 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Fatal1ty Gaming Socket AM$ Motherboard drivers download......" -Verbose
+Write-Host
+
+$Fatal1tyGamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Fatal1ty%20Gaming%20Motherboards/Fatal1tyGaming.ps1")
+Invoke-Expression $($Fatal1tyGamingDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Fatal1ty Gaming Socket AM$ Motherboard drivers download..." -Verbose
+Write-Host
 
 #################################
 # Download OSDCloud - Cloud Drivers
