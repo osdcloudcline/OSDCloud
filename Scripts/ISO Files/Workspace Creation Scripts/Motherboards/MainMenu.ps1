@@ -40,16 +40,16 @@ do
         Invoke-Expression $($AM4.Content)
         }
   '2' { cls
-        $CPUSocketType = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/By%20CPU%20and%20Socket%20Type/MainMenu.ps1")
-        Invoke-Expression $($CPUSocketType.Content)
+        $AM5 = Invoke-WebRequest("")
+        Invoke-Expression $($AM5.Content)
         }
   '3' { cls
-        $CustomScripts = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Custom/MainMenu.ps1")
-        Invoke-Expression $($CustomScripts.Content)
+        $LGA1700 = Invoke-WebRequest("")
+        Invoke-Expression $($LGA1700.Content)
         }
   '4' { cls
-        $Motherboards = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Motherboards/MainMenu.ps1")
-        Invoke-Expression $($Motherboards.Content)
+        $LGA1851 = Invoke-WebRequest("")
+        Invoke-Expression $($LGA1851.Content)
         }   
   '9' { cls
         $OSDCloudMain = Invoke-WebRequest("")
