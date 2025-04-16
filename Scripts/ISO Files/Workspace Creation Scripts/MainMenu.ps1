@@ -42,7 +42,7 @@ do
         Invoke-Expression $($Motherboards.Content)
         }
   '5' { cls
-        $OEMDesktops = Invoke-WebRequest("")
+        $OEMDesktops = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/OEM%20Desktops/MainMenu.ps1")
         Invoke-Expression $($OEMDesktops.Content)
         }
   '6' { cls
