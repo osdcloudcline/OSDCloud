@@ -66,8 +66,6 @@ $CMTraceFile1URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/mai
 
 $CMTraceDestination = "C:\OSDCloud Software\MECM-LogViewer"
 
-
-
 Write-Verbose "Processing: Acquiring CM Trace for integration to OSDCloud..." -Verbose
 Write-Host
 Save-WebFile -SourceUrl $CMTraceFile1URL -DestinationDirectory $CMTraceDestination
