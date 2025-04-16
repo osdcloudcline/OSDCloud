@@ -10,18 +10,14 @@ Function Show-MainMenu{
 
 Clear-Host
 Write-Host "======= $Title ======"
-Write-Host " 1. Virtualization"
-Write-Host " 2. ASRock - AMD"
-Write-Host " 3. ASRock - Intel"
-Write-Host " 4. ASUS - AMD"
-Write-Host " 5. ASUS - Intel"
-Write-Host " 6. Gigabyte - AMD"
-Write-Host " 7. Gigabyte - Intel"
-Write-Host " 8. MSI - AMD"
-Write-Host " 9. MSI - Intel"
-Write-Host " 10. Custom Built PC Scripts"
-Write-Host " 11. OEM Pre-Built Devices"
-Write-Host " 12. Return to OSD Cloud Main Menu"
+Write-Host " 1. AI-Copilot PCs"
+Write-Host " 2. By CPU and Socket Type"
+Write-Host " 3. Custom Scripts"
+Write-Host " 4. Motherboards"
+Write-Host " 5. OEM Desktops"
+Write-Host " 6. OEM Laptops"
+Write-Host " 7. OEM Tablet PCs"
+Write-Host " 8. Return to OSD Cloud Main Menu"
 
 do 
 {
@@ -30,56 +26,40 @@ do
   {
 
   '1' { cls
-        $Virtualization = Invoke-WebRequest("")
-        Invoke-Expression $($Virtualization.Content)
+        $AICopilot = Invoke-WebRequest("")
+        Invoke-Expression $($AICopilot.Content)
         }
   '2' { cls
-        $ASRockAMD = Invoke-WebRequest("")
-        Invoke-Expression $($ASRockAMD.Content)
+        $CPUSocketType = Invoke-WebRequest("")
+        Invoke-Expression $($CPUSocketType.Content)
         }
   '3' { cls
-        $ASRockIntel = Invoke-WebRequest("")
-        Invoke-Expression $($ASRockIntel.Content)
+        $CustomScripts = Invoke-WebRequest("")
+        Invoke-Expression $($CustomScripts.Content)
         }
   '4' { cls
-        $ASUSAMD = Invoke-WebRequest("")
-        Invoke-Expression $($ASUSAMD.Content)
+        $Motherboards = Invoke-WebRequest("")
+        Invoke-Expression $($Motherboards.Content)
         }
   '5' { cls
-        $ASUSIntel = Invoke-WebRequest("")
-        Invoke-Expression $($ASUSIntel.Content)
+        $OEMDesktops = Invoke-WebRequest("")
+        Invoke-Expression $($OEMDesktops.Content)
         }
   '6' { cls
-        $GigabyteAMD = Invoke-WebRequest("")
-        Invoke-Expression $($GigabyteAMD.Content)
+        $OEMLaptops = Invoke-WebRequest("")
+        Invoke-Expression $($OEMLaptops.Content)
         }
   '7' { cls
-        $GigabyteIntel = Invoke-WebRequest("")
-        Invoke-Expression $($GigabyteIntel.Content)
+        $OEMTablets = Invoke-WebRequest("")
+        Invoke-Expression $($OEMTablets.Content)
         }
   '8' { cls
-        $MSIAMD = Invoke-WebRequest("")
-        Invoke-Expression $($MSIAMD.Content)
-        }
-  '9' { cls
-        $MSIIntel = Invoke-WebRequest("")
-        Invoke-Expression $($MSIIntel.Content)
-        }
-  '10' { cls
-        $CustomBuilt = Invoke-WebRequest("")
-        Invoke-Expression $($CustomBuilt.Content)
-        }
-  '11' { cls
-        $OEMPreBuilt = Invoke-WebRequest("")
-        Invoke-Expression $($OEMPreBuilt.Content)
-        }
-  '12' { cls
         $OSDCloudMain = Invoke-WebRequest("")
         Invoke-Expression $($OSDCloudMain.Content)
         }
     }
     }
-     until ($selection -eq '12'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '8'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
