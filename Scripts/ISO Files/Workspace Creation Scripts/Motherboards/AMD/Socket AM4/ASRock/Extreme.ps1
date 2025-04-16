@@ -209,7 +209,7 @@ Invoke-Expression $($OSDCloudPS7xMods.Content)
 ################################################
 
 Write-Host
-Write-Verbose "Processing: ASRock Extreme Socket AM$ Motherboard drivers download......" -Verbose
+Write-Verbose "Processing: ASRock Extreme Socket AM4 Motherboard drivers download......" -Verbose
 Write-Host
 
 $ExtremeDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Extreme%20Motherboards/Extreme.ps1")
