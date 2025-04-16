@@ -53,3 +53,21 @@ Save-WebFile -SourceUrl $GhostURL4 -DestinationDirectory $GhostDestination
 Write-Host
 Write-Verbose "Completed: Symantec Ghost file downloads" -Verbose
 Write-Host
+
+############################################
+# CM Trace File URLs
+############################################
+
+$CMTraceFile1URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Log%20Viewer/CMTrace.exe"
+
+####################################################################
+# Log Viewer - CM Trace DL File Destination ##############
+####################################################################
+
+$CMTraceDestination = "C:\OSDCloud Software\MECM-LogViewer"
+
+
+
+Write-Verbose "Processing: Acquiring CM Trace for integration to OSDCloud..." -Verbose
+Write-Host
+Save-WebFile -SourceUrl $CMTraceFile1URL -DestinationDirectory $CMTraceDestination
