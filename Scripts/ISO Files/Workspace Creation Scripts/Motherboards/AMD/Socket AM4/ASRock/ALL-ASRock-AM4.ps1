@@ -203,7 +203,7 @@ Invoke-Expression $($OSDCloudPS7xMods.Content)
 # Download OSDCloud Extra Apps
 ################################################
 
-$DownloadApps = Invoke-WebRequest("")
+$DownloadApps = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Extra%20Apps/DownloadApps.ps1")
 Invoke-Expression $($DownloadApps.Content)
 
 ################################################
