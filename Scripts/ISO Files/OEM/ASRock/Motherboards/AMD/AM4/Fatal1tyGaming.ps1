@@ -1,18 +1,4 @@
 
-######################################
-## Extra PowerShell Modules - OSDCloud
-######################################
-
-# PowerShell 5.1 Modules - OSDCloud
-
-$OSDCloudPS5xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/5.x/AddModules.ps1")
-Invoke-Expression $($OSDCloudPS5xMods.Content)
-
-# PowerShell 7.x Modules - OSDCloud
-
-$OSDCloudPS7xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
-Invoke-Expression $($OSDCloudPS7xMods.Content)
-
 #########################################
 # ASRock AM 4 Fata1ty Gaming Motherboards
 #########################################
