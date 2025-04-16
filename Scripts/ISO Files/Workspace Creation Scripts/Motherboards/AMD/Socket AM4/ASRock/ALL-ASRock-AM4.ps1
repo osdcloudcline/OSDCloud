@@ -200,6 +200,13 @@ $OSDCloudPS7xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdclou
 Invoke-Expression $($OSDCloudPS7xMods.Content)
 
 ################################################
+# Download OSDCloud Extra Apps
+################################################
+
+$DownloadApps = Invoke-WebRequest("")
+Invoke-Expression $($DownloadApps.Content)
+
+################################################
 # Download ASRock Extreme AM4 Drivers
 ################################################
 
