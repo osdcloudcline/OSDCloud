@@ -226,11 +226,17 @@ Invoke-Expression $($AddApps.Content)
 # Confirm Apps have been integrated
 ########################################################
 
+$ConfirmAppsFiles = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Extra%20Apps/ConfirmApps.ps1")
+Invoke-Expression $($ConfirmAppsFiles.Content)
+
+########################
 # Dismount the image
+########################
 Write-Host
 Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
+
 ################################################
 # Download ASRock Extreme AM4 Drivers
 ################################################
