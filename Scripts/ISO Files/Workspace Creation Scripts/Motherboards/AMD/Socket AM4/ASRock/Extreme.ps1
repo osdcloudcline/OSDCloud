@@ -289,7 +289,27 @@ Write-Host
 $ProxmoxDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Proxmox/Proxmox.ps1")
 Invoke-Expression $($ProxmoxDrivers.Content) 
 
+#########################################
+# Integrate Drivers
+#########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Extreme Socket AM$ Motherboard Drivers" -Verbose
+Write-Host
+
+$Extreme = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/Extreme.ps1")
+Invoke-Expression $($Extreme.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
+Write-Host
+
+$CloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Cloud%20Drivers/CloudDrivers.ps1")
+Invoke-Expression $($CloudDrivers.Content) 
+
+Write-Host
+Write-Verbose "Completed: Integrating Drivers" -Verbose
+Write-Host
 
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
