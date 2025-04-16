@@ -46,7 +46,7 @@ do
         Invoke-Expression $($OEMDesktops.Content)
         }
   '6' { cls
-        $OEMLaptops = Invoke-WebRequest("")
+        $OEMLaptops = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/OEM%20Laptops/MainMenu.ps1")
         Invoke-Expression $($OEMLaptops.Content)
         }
   '7' { cls
