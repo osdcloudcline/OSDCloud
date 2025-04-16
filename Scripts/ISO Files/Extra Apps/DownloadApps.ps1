@@ -276,3 +276,19 @@ Save-WebFile -SourceUrl $NotepadPPFile1URL -DestinationDirectory $NotepadPPDesti
 
 Write-Host
 Write-Verbose "Completed: Download of Notepad ++for integration to OSDCloud..." -Verbose
+
+######################################################################################
+####    USER PROFILE BACKUP AND RESTORE URL                                    #######
+######################################################################################
+
+$UPBR_URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/User%20Profile%20Backup%20Restore/UserProfileBackupRestore.exe"
+
+######################################################################################
+####    USER PROFILE BACKUP AND RESTORE EXTRACTION LOCATION                    #######
+######################################################################################
+$UPBRFilePath = "C:\OSDCloud Software\ProfileBackupRestore"
+$OSDCloudUPBRdownload = "C:\OSDCloud Software\ProfileBackupRestore"
+
+Write-Host "Acquiring User Profile Backup and Restore from GitHub repository..." -ForegroundColor Green
+Save-WebFile -SourceUrl $UPBR_URL -DestinationDirectory $OSDCloudUPBRdownload
+Rename-Item -Path "$UPBRFilePath\UserProfileBackupRestore.exe" -NewName "$UPBRFilePath\UPBR.exe" -Force
