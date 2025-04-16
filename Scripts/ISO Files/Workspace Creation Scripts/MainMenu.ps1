@@ -55,7 +55,7 @@ do
         Invoke-Expression $($OEMTablets.Content)
         }
   '8' { cls
-        $Virtualization = Invoke-WebRequest("")
+        $Virtualization = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Virtualization/MainMenu.ps1")
         Invoke-Expression $($Virtualization.Content)
         }    
   '9' { cls
@@ -64,7 +64,7 @@ do
         }
     }
     }
-     until ($selection -eq '8'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '9'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
