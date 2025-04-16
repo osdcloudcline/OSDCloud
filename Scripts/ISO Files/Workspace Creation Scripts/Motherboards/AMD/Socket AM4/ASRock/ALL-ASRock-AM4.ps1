@@ -206,6 +206,16 @@ Invoke-Expression $($OSDCloudPS7xMods.Content)
 $DownloadApps = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Extra%20Apps/DownloadApps.ps1")
 Invoke-Expression $($DownloadApps.Content)
 
+###############################################
+# Add Applications
+###############################################
+
+$mountdir = "C:\Mount"
+$sourceWIMDir = "\Media\sources"
+$WorkspacePath = Get-OSDCloudWorkspace
+$WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
+
+
 ################################################
 # Download ASRock Extreme AM4 Drivers
 ################################################
