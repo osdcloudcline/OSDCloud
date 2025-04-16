@@ -254,6 +254,34 @@ Write-Host
 Write-Verbose "Completed: OSDCloud Download - Cloud Drivers..." -Verbose
 Write-Host
 
+#########################################
+# Integrate Drivers
+#########################################
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Fatal1ty Gaming Socket AM$ Motherboard Drivers" -Verbose
+Write-Host
+
+$Fatal1tyGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/Fatal1tyGaming.ps1")
+Invoke-Expression $($Fatal1tyGaming.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
+Write-Host
+
+$CloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Cloud%20Drivers/CloudDrivers.ps1")
+Invoke-Expression $($CloudDrivers.Content) 
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud - Other Drivers" -Verbose
+Write-Host
+
+$OtherDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/Other.ps1")
+Invoke-Expression $($OtherDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: Integrating Drivers" -Verbose
+Write-Host
 
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
