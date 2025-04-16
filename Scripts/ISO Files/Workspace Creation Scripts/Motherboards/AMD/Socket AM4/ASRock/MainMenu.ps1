@@ -51,3 +51,5 @@ do
     }
      until ($selection -eq '8'){Show-MainMenu}
     }
+
+Show-ASRockAM4
