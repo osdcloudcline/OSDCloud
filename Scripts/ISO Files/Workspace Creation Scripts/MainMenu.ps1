@@ -34,7 +34,7 @@ do
         Invoke-Expression $($CPUSocketType.Content)
         }
   '3' { cls
-        $CustomScripts = Invoke-WebRequest("")
+        $CustomScripts = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Custom/MainMenu.ps1")
         Invoke-Expression $($CustomScripts.Content)
         }
   '4' { cls
