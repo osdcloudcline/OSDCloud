@@ -1,10 +1,3 @@
-Write-Host '                                                                                   '
-Write-Host '                                                                                   ' -BackgroundColor White                                                              
-Write-Host ' The following extras will be downloaded to be integrated into OSDCloud boot.wim:  ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Google Chrome Portable Web Browser                                          ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '                                                                                   ' -BackgroundColor White
-Write-Host '                                                                                   '
-pause
 
 ######################################################################################
 ####    OSDCloud Web Browser URL                                                 #######
@@ -23,3 +16,19 @@ Import-Module -Name 7Zip4PowerShell -Force
 
 Write-Verbose "Acquiring Google Chrome Portable Web Browser from GitHub repository..." -Verbose
 Save-WebFile -SourceUrl $OSDBrowser  -DestinationDirectory $ChromeDownloadPath 
+
+############################################
+# Explorer + +  File URLs
+############################################
+
+$ExplorerPPFile1URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/File%20Explorer/Explorer++.exe"
+
+####################################################################
+# Explorer + + DL File Destination ##############
+####################################################################
+
+$ExplorerPPDestination = "C:\OSDCloud Software\File Explorer"
+
+Write-Verbose "Processing: Acquiring Explorer + + for integration to OSDCloud..." -Verbose
+Write-Host
+Save-WebFile -SourceUrl $ExplorerPPFile1URL -DestinationDirectory $ExplorerPPDestination
