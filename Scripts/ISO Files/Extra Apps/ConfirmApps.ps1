@@ -8,7 +8,7 @@ $GhostServPath = "$mountdir\Windows\System32\GhostSrv.exe"
 $CMTracePath = "$mountdir\Windows\System32\CMTrace.exe"
 $NotepadPPPath = "$mountdir\Windows\System32\notepad++.exe"
 $UPBRPath = "$mountdir\Windows\System32\UPBR.exe"
-$HWiNFOPATH = ""
+$HWiNFOPATH = "$mountdir\Windows\System32\HWiNFO\HWiNFOPortable.exe"
 
 $CloudPCFile1 = "$mountdir\Windows\System32\CommonServiceLocator.dll"
 $CloudPCFile2 = "$mountdir\Windows\System32\CommonServiceLocator.dll"
@@ -73,3 +73,94 @@ $MSTSCenusFile2 = "$mountdir\Windows\System32\en-us\msacm32.drv.mui"
 $MSTSCenusFile3 = "$mountdir\Windows\System32\en-us\mstsc.exe.mui"
 $MSTSCenusFile4 = "$mountdir\Windows\System32\en-us\mstscax.dll.mui"
 
+Write-Host "Confirming ALL OSDCloud Portable and and nessary files have successfully been copied to the image. Please wait for file verification to complete" -ForegroundColor Cyan
+
+Write-Host "Processing: Google Chrome" -ForegroundColor Cyan
+Test-Path -Path $ChromePath
+
+Write-Host "Processing: Explorer ++" -ForegroundColor Cyan
+Test-Path -Path $ExplorerPPPath
+
+Write-Host "Processing: Symantec Ghost" -ForegroundColor Cyan
+Test-Path -Path $Ghost64Path
+Test-Path -Path $GhostExplorerPath
+Test-Path -Path $GhostServPath
+
+Write-Host "Processing: MECM Log Viewer" -ForegroundColor Cyan
+Test-Path -Path $CMTracePath
+
+Write-Host "Processing: Notepad ++" -ForegroundColor Cyan
+Test-Path -Path $NotepadPPPath
+
+Write-Host "Processing: User Profile Backup and Restore - UPBR" -ForegroundColor Cyan
+Test-Path -Path $UPBRPath
+
+Write-Host "Processing: HWiNFO" -ForegroundColor Cyan
+Test-Path -Path $HWiNFOPATH
+
+Write-Host "Processing: Cloud PC" -ForegroundColor Cyan
+Test-Path -Path $CloudPCFile1 
+Test-Path -Path $CloudPCFile2 
+Test-Path -Path $CloudPCFile3 
+Test-Path -Path $CloudPCFile4 
+Test-Path -Path $CloudPCFile5 
+Test-Path -Path $CloudPCFile6 
+Test-Path -Path $CloudPCFile7 
+Test-Path -Path $CloudPCFile8 
+Test-Path -Path $CloudPCFile9 
+Test-Path -Path $CloudPCFile10 
+Test-Path -Path $CloudPCFile11 
+Test-Path -Path $CloudPCFile12 
+Test-Path -Path $CloudPCFile13 
+Test-Path -Path $CloudPCFile14 
+Test-Path -Path $CloudPCFile15 
+Test-Path -Path $CloudPCFile16 
+Test-Path -Path $CloudPCFile17 
+Test-Path -Path $CloudPCFile18 
+Test-Path -Path $CloudPCFile19 
+Test-Path -Path $CloudPCFile20 
+Test-Path -Path $CloudPCFile21 
+Test-Path -Path $CloudPCFile22 
+Test-Path -Path $CloudPCFile23 
+Test-Path -Path $CloudPCFile24 
+Test-Path -Path $CloudPCFile25 
+Test-Path -Path $CloudPCFile26 
+Test-Path -Path $CloudPCFile27 
+Test-Path -Path $CloudPCFile28 
+Test-Path -Path $CloudPCFile29 
+Test-Path -Path $CloudPCFile30 
+Test-Path -Path $CloudPCFile31 
+Test-Path -Path $CloudPCFile32 
+Test-Path -Path $CloudPCFile33 
+Test-Path -Path $CloudPCFile34 
+Test-Path -Path $CloudPCFile35 
+Test-Path -Path $CloudPCFile36 
+Test-Path -Path $CloudPCFile37 
+Test-Path -Path $CloudPCFile38 
+Test-Path -Path $CloudPCFile39 
+Test-Path -Path $CloudPCFile40 
+Test-Path -Path $CloudPCFile41 
+Test-Path -Path $CloudPCFile42 
+Test-Path -Path $CloudPCFile43 
+Test-Path -Path $CloudPCFile44 
+Test-Path -Path $CloudPCenusFile1 
+Test-Path -Path $CloudPCenusFile2 
+
+Write-Host "Processing: Microsoft Remote Desktop Connection - MSTSC" -ForegroundColor Cyan
+Test-Path -Path $MSTSCFile1 
+Test-Path -Path $MSTSCFile2 
+Test-Path -Path $MSTSCFile3 
+Test-Path -Path $MSTSCFile4 
+Test-Path -Path $MSTSCFile5 
+Test-Path -Path $MSTSCFile6 
+Test-Path -Path $MSTSCFile7 
+Test-Path -Path $MSTSCFile8 
+Test-Path -Path $MSTSCFile9 
+Test-Path -Path $MSTSCFile10
+Test-Path -Path $MSTSCFile11 
+Test-Path -Path $MSTSCenusFile1 
+Test-Path -Path $MSTSCenusFile2 
+Test-Path -Path $MSTSCenusFile3 
+Test-Path -Path $MSTSCenusFile4 
+
+Write-Host "ALL OSDCloud Portable and and nessary files have successfully been confirmed" -ForegroundColor Cyan
