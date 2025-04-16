@@ -292,3 +292,17 @@ $OSDCloudUPBRdownload = "C:\OSDCloud Software\ProfileBackupRestore"
 Write-Host "Acquiring User Profile Backup and Restore from GitHub repository..." -ForegroundColor Green
 Save-WebFile -SourceUrl $UPBR_URL -DestinationDirectory $OSDCloudUPBRdownload
 Rename-Item -Path "$UPBRFilePath\UserProfileBackupRestore.exe" -NewName "$UPBRFilePath\UPBR.exe" -Force
+
+######################################################################################
+####    OSDCloud Wallpaper URL                                                 #######
+######################################################################################
+$OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/Wallpaper/winpe.jpg"
+
+
+Write-Verbose "Processing: Downloading new OSDCloud wallpaper..." -Verbose
+$OSDCloudWallpaperdownloads = "C:\OSDCloud Software\wallpaper"
+$OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/Wallpaper/winpe.jpg"
+Save-WebFile -SourceUrl $OSDCloudWallpaperURL -DestinationDirectory $OSDCloudWallpaperdownloads
+
+Write-Host
+Write-Verbose "Completed: ALL Extra App and file downloads"
