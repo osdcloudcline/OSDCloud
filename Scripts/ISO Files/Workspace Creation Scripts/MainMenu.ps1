@@ -30,7 +30,7 @@ do
         Invoke-Expression $($AICopilot.Content)
         }
   '2' { cls
-        $CPUSocketType = Invoke-WebRequest("")
+        $CPUSocketType = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/By%20CPU%20and%20Socket%20Type/MainMenu.ps1")
         Invoke-Expression $($CPUSocketType.Content)
         }
   '3' { cls
