@@ -257,6 +257,40 @@ Write-Host
 Write-Verbose "Completed: OSDCloud Download - Cloud Drivers..." -Verbose
 Write-Host
 
+#################################
+# Download OSDCloud - Other Drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - Hyper-V Drivers" -Verbose
+Write-Host
+
+$HyperVDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
+Invoke-Expression $($HyperVDrivers.Content) 
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - VMWare ESXI Drivers" -Verbose
+Write-Host
+
+$ESXIDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/VMWare%20ESXI/ESXI-Drivers.ps1")
+Invoke-Expression $($ESXIDrivers.Content) 
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - VMWare Workstation Pro Drivers" -Verbose
+Write-Host
+
+$VMWareWSProDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/VMWare%20Workstation/VMWare-WorkstationPRO-Drivers.ps1")
+Invoke-Expression $($VMWareWSProDrivers.Content) 
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - Proxmox Drivers" -Verbose
+Write-Host
+
+$ProxmoxDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Proxmox/Proxmox.ps1")
+Invoke-Expression $($ProxmoxDrivers.Content) 
+
+
+
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
 ##########################################
