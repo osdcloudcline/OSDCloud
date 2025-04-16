@@ -1,4 +1,7 @@
 
+Import-Module -Name OSD -Force
+Import-Module -Name 7Zip4PowerShell -Force
+
 ######################################################################################
 ####    OSDCloud Web Browser URL                                                 #######
 ######################################################################################
@@ -10,9 +13,6 @@ $OSDBrowser = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Ext
 ######################################################################################
 $ChromePath = "C:\OSDCloud Software\Browsers\Chrome"
 $ChromeDownloadPath = "C:\OSDCloud Software\Browsers\Chrome" 
-
-Import-Module -Name OSD -Force
-Import-Module -Name 7Zip4PowerShell -Force
 
 Write-Verbose "Acquiring Google Chrome Portable Web Browser from GitHub repository..." -Verbose
 Save-WebFile -SourceUrl $OSDBrowser  -DestinationDirectory $ChromeDownloadPath 
@@ -32,7 +32,6 @@ $ExplorerPPDestination = "C:\OSDCloud Software\File Explorer"
 Write-Verbose "Processing: Acquiring Explorer + + for integration to OSDCloud..." -Verbose
 Write-Host
 Save-WebFile -SourceUrl $ExplorerPPFile1URL -DestinationDirectory $ExplorerPPDestination
-
 
 ####################################################################
 # Symantec Ghost Suite  ##############
@@ -237,3 +236,24 @@ Save-WebFile -SourceUrl $MSTSCenusFile4URL -DestinationDirectory $MSTSCDestinati
 
 Write-Host
 Write-Verbose "Completed: Download of files for Microsoft Remote Desktop integration to OSDCloud..." -Verbose
+
+############################################
+# HWInfo  File URLs
+############################################
+
+$HWInfoFile1URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/System%20Information/HWiNFO.zip"
+
+####################################################################
+# HWInfo DL File Destination ##############
+####################################################################
+
+$HWInfoDestination = "C:\OSDCloud Software\HWInfo"
+$HWInfoZIPDestination = "C:\OSDCloud Software\HWInfo\Extract"
+
+Write-Verbose "Processing: Acquiring HWiNFO Portable for integration to OSDCloud..." -Verbose
+Write-Host
+Save-WebFile -SourceUrl $HWInfoFile1URL -DestinationDirectory $HWInfoDestination
+Expand-Archive -Path "$HWInfoDestination\HWiNFO.zip" -DestinationPath "$HWInfoZIPDestination" -ErrorAction SilentlyContinue 
+
+Write-Host
+Write-Verbose "Completed: Download of HWiNFO Portable for integration to OSDCloud..." -Verbose
