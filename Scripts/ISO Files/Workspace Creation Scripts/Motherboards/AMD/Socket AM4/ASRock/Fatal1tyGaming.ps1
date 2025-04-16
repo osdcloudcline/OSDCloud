@@ -189,6 +189,62 @@ Write-Host
 Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
 Write-Host
 
+
+
+
+
+
+#################################
+# Download OSDCloud - Cloud Drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - Dell Cloud Drivers..." -Verbose
+Write-Host
+
+$DellCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Dell%20Drivers/Dell-CloudDrivers.ps1")
+Invoke-Expression $($DellCloudDrivers.Content)
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - Intel Cloud Drivers..." -Verbose
+Write-Host
+
+$IntelCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Intel%20Ethernet%20Driver%20Pack/Intel-CloudDrivers.ps1")
+Invoke-Expression $($IntelCloudDrivers.Content)
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - Nutanix Cloud Drivers..." -Verbose
+Write-Host
+
+$NutanixCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Nutanix%20Drivers/Nutanix-CloudDrivers.ps1")
+Invoke-Expression $($NutanixCloudDrivers.Content)
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - USB Cloud Drivers..." -Verbose
+Write-Host
+
+$USBCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/USB%20Drivers/USB-CloudDrivers.ps1")
+Invoke-Expression $($USBCloudDrivers.Content)
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - VMWare Cloud Drivers..." -Verbose
+Write-Host
+
+$VMWareCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/VMWare%20Drivers/VMWare-CloudDrivers.ps1")
+Invoke-Expression $($VMWareCloudDrivers.Content)
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - WLAN Cloud Drivers..." -Verbose
+Write-Host
+
+$WLANCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/WLAN%20Drivers/WLAN-CloudDrivers.ps1")
+Invoke-Expression $($WLANCloudDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: OSDCloud Download - Cloud Drivers..." -Verbose
+Write-Host
+
+
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
 ##########################################
