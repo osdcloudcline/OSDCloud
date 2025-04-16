@@ -244,6 +244,22 @@ Write-Host
 Write-Verbose "Completed: ASRock PRO Socket AM$ Motherboard drivers download..." -Verbose
 Write-Host
 
+################################################
+# Download ASRock Phantom Gaming AM4 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Phantom Gaming Socket AM$ Motherboard drivers download......" -Verbose
+Write-Host
+
+$PhantomGamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Phantom%20Gaming%20Motherboards/PhantomGaming.ps1")
+Invoke-Expression $($PhantomGamingDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Phantom Gaming Socket AM$ Motherboard drivers download..." -Verbose
+Write-Host
+
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
