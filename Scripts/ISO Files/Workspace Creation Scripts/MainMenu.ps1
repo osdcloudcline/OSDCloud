@@ -17,7 +17,8 @@ Write-Host " 4. Motherboards"
 Write-Host " 5. OEM Desktops"
 Write-Host " 6. OEM Laptops"
 Write-Host " 7. OEM Tablet PCs"
-Write-Host " 8. Return to OSD Cloud Main Menu"
+Write-Host " 8. Virtualization"
+Write-Host " 9. Return to OSD Cloud Main Menu"
 
 do 
 {
@@ -54,6 +55,10 @@ do
         Invoke-Expression $($OEMTablets.Content)
         }
   '8' { cls
+        $Virtualization = Invoke-WebRequest("")
+        Invoke-Expression $($Virtualization.Content)
+        }    
+  '9' { cls
         $OSDCloudMain = Invoke-WebRequest("")
         Invoke-Expression $($OSDCloudMain.Content)
         }
