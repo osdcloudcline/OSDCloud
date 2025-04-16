@@ -185,6 +185,22 @@ Write-Host
 Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
 Write-Host
 
+################################################
+# Download ASRock Extreme AM4 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Extreme Socket AM$ Motherboard drivers download......" -Verbose
+Write-Host
+
+$ExtremeDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Extreme%20Motherboards/Extreme.ps1")
+Invoke-Expression $($ExtremeDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Extreme Socket AM$ Motherboard drivers download..." -Verbose
+Write-Host
+
+
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
 ##########################################
