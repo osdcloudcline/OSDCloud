@@ -257,3 +257,22 @@ Expand-Archive -Path "$HWInfoDestination\HWiNFO.zip" -DestinationPath "$HWInfoZI
 
 Write-Host
 Write-Verbose "Completed: Download of HWiNFO Portable for integration to OSDCloud..." -Verbose
+
+############################################
+# Notepad + +  File URLs
+############################################
+
+$NotepadPPFile1URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Text%20Editor/notepad++.exe"
+
+####################################################################
+# Explorer + + DL File Destination ##############
+####################################################################
+
+$NotepadPPDestination = "C:\OSDCloud Software\TextEditor"
+
+Write-Verbose "Processing: Acquiring Notepad + + for integration to OSDCloud..." -Verbose
+Write-Host
+Save-WebFile -SourceUrl $NotepadPPFile1URL -DestinationDirectory $NotepadPPDestination
+
+Write-Host
+Write-Verbose "Completed: Download of Notepad ++for integration to OSDCloud..." -Verbose
