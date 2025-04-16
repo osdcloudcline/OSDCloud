@@ -308,6 +308,13 @@ $CloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw
 Invoke-Expression $($CloudDrivers.Content) 
 
 Write-Host
+Write-Verbose "Processing: Integrating OSDCloud - Other Drivers" -Verbose
+Write-Host
+
+$OtherDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/Other.ps1")
+Invoke-Expression $($OtherDrivers.Content)
+
+Write-Host
 Write-Verbose "Completed: Integrating Drivers" -Verbose
 Write-Host
 
