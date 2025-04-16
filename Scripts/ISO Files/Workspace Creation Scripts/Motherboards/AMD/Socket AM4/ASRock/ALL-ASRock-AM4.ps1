@@ -411,8 +411,11 @@ $SteelLegend = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/
 Invoke-Expression $($SteelLegend.Content)
 
 Write-Host
-Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
+Write-Verbose "Processing: Integrating ASRock Taichi Socket AM4 Motherboard Drivers" -Verbose
 Write-Host
+
+$Taichi = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/Taichi.ps1")
+Invoke-Expression $($Taichi.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
