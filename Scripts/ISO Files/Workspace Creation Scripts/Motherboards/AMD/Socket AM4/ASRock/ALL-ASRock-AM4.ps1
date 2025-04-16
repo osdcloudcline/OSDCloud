@@ -215,7 +215,22 @@ $sourceWIMDir = "\Media\sources"
 $WorkspacePath = Get-OSDCloudWorkspace
 $WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
 
+Write-Verbose "Processing: Mounting OSDCloud boot.wim" -Verbose
+# Mount the image
+Mount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
 
+$AddApps = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Extra%20Apps/AddApps.ps1")
+Invoke-Expression $($AddApps.Content)
+
+########################################################
+# Confirm Apps have been integrated
+########################################################
+
+# Dismount the image
+Write-Host
+Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
+
+Dismount-WindowsImage -Path $mountdir -Save
 ################################################
 # Download ASRock Extreme AM4 Drivers
 ################################################
