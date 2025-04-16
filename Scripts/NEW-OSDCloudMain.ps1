@@ -96,15 +96,11 @@ pause
 Clear-Host
 
 Write-Host "======= $Title ======"
-Write-Host " 1. OSDCloud: Desktop Motherboards"
-Write-Host " 2. OSDCloud: Custom Built Systems"
-Write-Host " 3. OSDCloud: OEM Pre-Built Systems"
-Write-Host " 4. OSDCloud: Virtualization"
-Write-Host " 5. OSDCloud: By Processor and Motherboard Socket Type"
-Write-Host " 6. OSDCloud: Create ZTI Installation Media"
-Write-Host " 7. OSDCloud: Download Drivers ONLY"
-Write-Host " 8. OSDCloud: Get Help"
-Write-Host " 9. Return to Main Menu"
+Write-Host " 1. OSDCloud: Workplace Creation Scripts"
+Write-Host " 2. OSDCloud: Create ZTI Installation Media"
+Write-Host " 3. OSDCloud: Download Drivers ONLY"
+Write-Host " 4. OSDCloud: Get Help"
+Write-Host " 5. Return to Main Menu"
 
 do 
 {
@@ -112,24 +108,8 @@ do
   switch($selection)
   {
 '1'{cls
-    $DesktopMotherboards = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Desktop%20Motherboards/DesktopMotherboardsMain.ps1")
-    Invoke-Expression $($DesktopMotherboards.Content)
-    }
-'2'{cls
-    $CustomBuilt = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Custom/CustomBuiltMain.ps1")
-    Invoke-Expression $($CustomBuilt.Content)
-    }
-'3'{cls
-    $OEMPreBuilt = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OEM%20Pre-Built%20Systems/OEMPreBuilt-Main.ps1")
-    Invoke-Expression $($OEMPreBuilt.Content)
-    }
-'4'{cls
-    $Virtualization = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Virtualization/VirtualizationMain.ps1")
-    Invoke-Expression $($Virtualization.Content)
-    }
-'5'{cls
-    $CPUSocket = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/CPU%20and%20Socket%20Type/CPUSocketMain.ps1")
-    Invoke-Expression $($CPUSocket.Content)
+    $WorkplaceCreation = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/MainMenu.ps1")
+    Invoke-Expression $($WorkplaceCreation.Content)
     }
 '6'{cls
     $ZTIMain = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud-ZTI%20ISO%20Files/ZTI%20Installations-MainMenu.ps1")
