@@ -375,6 +375,17 @@ $PhantomGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/ra
 Invoke-Expression $($PhantomGaming.Content)
 
 Write-Host
+Write-Verbose "Processing: Integrating ASRock Steel Legend Socket AM4 Motherboard Drivers" -Verbose
+Write-Host
+
+$SteelLegend = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/SteelLegend.ps1")
+Invoke-Expression $($SteelLegend.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
+Write-Host
+
+Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
 Write-Host
 
