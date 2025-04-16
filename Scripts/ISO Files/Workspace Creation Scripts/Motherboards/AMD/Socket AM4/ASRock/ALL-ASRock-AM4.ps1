@@ -345,6 +345,13 @@ $Fatal1tyGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/r
 Invoke-Expression $($Fatal1tyGaming.Content)
 
 Write-Host
+Write-Verbose "Processing: Integrating ASRock PRO Socket AM$ Motherboard Drivers" -Verbose
+Write-Host
+
+$PRO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/PRO.ps1")
+Invoke-Expression $($PRO.Content)
+
+Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
 Write-Host
 
