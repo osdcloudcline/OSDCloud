@@ -1,240 +1,22 @@
-Write-Host
-Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
-Write-Host
-$Date = Get-Date
-Write-Host "Today is:" "$Date"
-Write-Host
-Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
-Write-Host
-Write-Host 
-Write-Host '                                                                                              ' -BackgroundColor White                                                              
-Write-Host '    This scripts creates an OSCloud Deployment ISO with the following:                        ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Networking and Storage: ASRock AM4 motherboard drivers                                 ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Networking and Storage: VM drivers for ESXI, Hyper-V, VMWare Workstation and Proxmox   ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - VBS Scripting Support                                                                  ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Wireless networking support                                                            ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - FOR SYSTEM REFRESH: User Profile Backup and Restore for data backup                    ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Google Chrome portable browser                                                         ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - PowerShell Modules: Version 5.x and 7.x                                                ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Imaging Tools: Symantec Ghost                                                          ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - System Rescue/Troubleshooting: Microsoft DaRT Support                                  ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '                                                                                              ' -BackgroundColor White
-pause
-Clear-Host
 
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name OSD -Force
 Install-Module -Name 7Zip4Powershell -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name 7Zip4Powershell -Force
 
-$FileDLLog = "C:\Logs\ASRock-Extreme-AM4\FileDownloads.log"
-
-Start-Transcript -Path $FileDLLog
-
-Write-Host
-Write-Verbose "Processing: Beginning file downloads" -Verbose
-Write-Host 
-
-Write-Host
-Write-Verbose "Processing: PowerShell 7.x support downloads" -Verbose
-Write-Host 
-
-$PS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/PS7Download.ps1")
-Invoke-Expression $($PS7.Content)
-
-Write-Host
-Write-Verbose "Completed: PowerShell 7.x support downloads" -Verbose
-Write-Host
-
-Write-Host
-Write-Verbose "Processing: ASRock AM4 Extreme Motherboard driver downloads" -Verbose
-Write-Host
-
-$Extreme = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Extreme%20Motherboards/Extreme.ps1")
-Invoke-Expression $($Extreme.Content)
-
-Write-Host
-Write-Verbose "Completed: ASRock AM4 Extreme Motherboard driver downloads" -Verbose
-Write-Host
-
-Write-Host
-Write-Verbose "Processing: ALL Virtualization driver downloads" -Verbose
-Write-Host
-
-Write-Host
-Write-Verbose "Processing: Microsoft Hyper-V virtualization drivers" -Verbose
-Write-Host 
-
-$HyperV = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
-Invoke-Expression $($HyperV.Content)
-
-Write-Host
-Write-Verbose "Processing: Proxmox virtualization driver downloads" -Verbose
-Write-Host
-
-$Proxmox = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/Proxmox/Proxmox.ps1")
-Invoke-Expression $($Proxmox.Content)
-
-Write-Host
-Write-Verbose "Processing: VMWare ESXI vSphere virtualization driver downloads" -Verbose
-Write-Host
-
-$ESXI = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/VMWare%20ESXI/ESXI-Drivers.ps1")
-Invoke-Expression $($ESXI.Content)
-
-Write-Host
-Write-Verbose "Processing: VMWare Workstation Pro virtualization driver downloads" -Verbose
-Write-Host
-
-$VMWareWSPro = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloudDrivers/refs/heads/main/Network%20and%20Storage%20/VMWare%20Workstation/VMWare-WorkstationPRO-Drivers.ps1")
-Invoke-Expression $($VMWareWSPro.Content)
-
-Write-Host
-Write-Verbose "Completed: ALL Virtualization driver downloads" -Verbose
-Write-Host
-
-Write-Host
-Write-Verbose "Processing: Additional OSDCloud scripting support downloads" -Verbose
-Write-Host
-
-$VBS = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Scripting%20Support/VBS%20Scripting/VBSScriptingSupport-Download.ps1")
-Invoke-Expression $($VBS.Content)
-
-Write-Host
-Write-Verbose "Completed: Additional OSDCloud scripting support downloads" -Verbose
-Write-Host
-
-Write-Host
-Write-Verbose "Processing: Google Chrome - portable browser" -Verbose
-Write-Host
-
-$PortableBrowser = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Browser/PortableBrowser-Download.ps1")
-Invoke-WebRequest $($PortableBrowser.Content)
-
-Write-Host
-Write-Verbose "Processing: User Profile Backup and Restore" -Verbose
-Write-Host
-
-$UPBR = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/User%20Profile%20Backup%20Restore/UPBR-Download.ps1")
-Invoke-Expression $($UPBR.Content)
-
-Write-Host
-Write-Verbose "Processing: System Imaging utilities" -Verbose
-Write-Host
-
-$Ghost = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Imaging/Ghost/Ghosting.ps1")
-Invoke-Expression $($Ghost.Content)
-
-Write-Host
-Write-Verbose "Processing: Microsoft DaRT and Remote Desktop Connections" -Verbose
-Write-Host
-
-$DaRT = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/DaRT/DaRT.ps1")
-Invoke-WebRequest $($DaRT.Content)
-
-$MSTSC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Remote%20Desktop%20Control/MSTSC.ps1")
-Invoke-Expression $($MSTSC.Content)
-
-$CloudPC = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Remote%20Desktop%20-%20Cloud%20PC/CloudPC%20-%20Download.ps1")
-Invoke-Expression $($CloudPC.Content) 
-
-Write-Host
-Write-Verbose "Processing: Notepad ++" -Verbose
-Write-Host
-
-$NotepadPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Text%20Editor/NotepadPP.ps1")
-Invoke-Expression $($NotepadPP.Content)
-
-Write-Host
-Write-Verbose "Processing: Explorer ++" -Verbose
-Write-Host
-
-$ExplorerPP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/File%20Explorer/ExplorerPP.ps1")
-Invoke-Expression $($ExplorerPP.Content)
-
-Write-Host
-Write-Verbose "Processing: HWiNFO Portable" -Verbose
-Write-Host
-
-$HWInfo = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/System%20Information/HWInfo.ps1")
-Invoke-Expression $($HWInfo.Content)
-
-Write-Host
-Write-Verbose "Processing: Microsoft Endpoint Configuration Manager Log Viewer - CM Trace" -Verbose
-Write-Host
-
-$CMTrace = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/Log%20Viewer/CMTrace.ps1")
-Invoke-Expression $($CMTrace.Content)
-
-Write-Host
-Write-Verbose "Completed: Download of Extra OSDCloud ISO Utilities" -Verbose
-Write-Host
-
-Write-Host
-Write-Verbose "Processing: NEW OSDCloud wallpaper" -Verbose
-Write-Host
-
-$OSDCloudWallpaper = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Extra%20Files/Wallpaper/OSDCloudWallpaper-Download.ps1")
-Invoke-Expression $($OSDCloudWallpaper.Content) 
-
-Write-Host
-Write-Verbose "Completed: OSDCloud wallpaper download" -Verbose
-Write-Host
-
-Write-Host
-Write-Verbose "Completed: ALL ASRock AM4 Extreme Motherboard driver, Virtualization driver, scripting support and other utilities file downloads" -Verbose
-Write-Host
-
-Stop-Transcript 
-
-################################################
-# OSDCloud Template and Workspace configuration
-################################################
-
-Write-Host
-Write-Verbose "Confirming OSDCloud Templates......" -Verbose
-Get-OSDCloudTemplate
-
-Write-Host
-Write-Verbose "Creating New OSDCloud WinRE Template specific for ASRock AM4 Extreme motherboards to enable wireless networking support..." -Verbose
-New-OSDCloudTemplate -Name ASRock-Extreme-AM4 -WinRE
-
-Write-Host
-Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
-Get-OSDCloudTemplateNames
-
-Write-Host
-Write-Verbose "Retriving OSDCloud Workspaces..." -Verbose
-Get-OSDCloudWorkspace
-
-Write-Host
-Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4"
-New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
-Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
-
-Write-Host
-Write-Verbose "Confirming new OSDCloud Workspace Path..." -Verbose
-Get-OSDCloudWorkspace
-
-# Adding PowerShell 7 to OSDCloud 
-
-$AddPS7 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/PS%207%20Support%20to%20OSDCloud/AddPS7-OSDCloudISO.ps1")
-Invoke-Expression $($AddPS7.Content)
-
 #####################################
 # ASRock AM 4 Extreme Motherboards
 #####################################
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Extreme Motherboard Ethernet Drivers..." -Verbose 
-$ExtremeEthernet = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Extreme\Ethernet"
+$ExtremeEthernet = "C:\Drivers\Motherboards\ASRock\AM4\Extreme\Ethernet"
 
 Edit-OSDCloudWinPE -DriverPath $ExtremeEthernet
 
 Write-Host
 Write-Verbose "Processing: ASRock AM 4 Extreme Motherboard Storage Drivers..." -Verbose 
-$ExtremeStorage1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Extreme\Storage1"
-$ExtremeStorage2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\AM4\Extreme\Storage2"
+$ExtremeStorage1 = "C:\Drivers\Motherboards\ASRock\AM4\Extreme\Storage1"
+$ExtremeStorage2 = "C:\Drivers\Motherboards\ASRock\AM4\Extreme\Storage2"
 
 Edit-OSDCloudWinPE -DriverPath $ExtremeStorage1
 Edit-OSDCloudWinPE -DriverPath $ExtremeStorage2
@@ -242,16 +24,9 @@ Edit-OSDCloudWinPE -DriverPath $ExtremeStorage2
 Write-Host
 Write-Verbose "Completed: Integration of ASRock AMD AM 4 Motherboard Drivers..." -Verbose 
 
-#################################
-# OSDCloud - Cloud Drivers
-#################################
-
 Write-Host
 Write-Verbose "Integrating OSDCloud - Cloud Drivers..." -Verbose
 Write-Host
-
-$DellCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Dell%20Drivers/Dell-CloudDrivers.ps1")
-Invoke-Expression $($DellCloudDrivers.Content)
 
 $DellCloudDriverPath1 = "C:\Drivers\Cloud Drivers\Dell\Network\Windows10\1836"
 $DellCloudDriverPath2 = "C:\Drivers\Cloud Drivers\Dell\Network\Windows10\22000"
@@ -273,9 +48,6 @@ Edit-OSDCloudWinPe -DriverPath $DellCloudDriverPath7
 
 Write-Host
 
-$IntelCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Intel%20Ethernet%20Driver%20Pack/Intel-CloudDrivers.ps1")
-Invoke-Expression $($IntelCloudDrivers.Content)
-
 $IntelCloudDriverPath1 = "C:\Drivers\Cloud Drivers\Intel\Network\Client OS"
 $IntelCloudDriverPath2 = "C:\Drivers\Cloud Drivers\Intel\Network\Server OS"
 $IntelCloudDriverPath3 = "C:\Drivers\Cloud Drivers\Intel\Network\Other\1"
@@ -288,20 +60,6 @@ Edit-OSDCloudWinPe -DriverPath $IntelCloudDriverPath2
 Edit-OSDCloudWinPe -DriverPath $IntelCloudDriverPath3
 Edit-OSDCloudWinPe -DriverPath $IntelCloudDriverPath4
 
-$SurfaceCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Microsoft%20Surface%20Drivers/Surface-CloudDrivers.ps1")
-Invoke-Expression $($SurfaceCloudDrivers.Content)
-
-$SurfaceCloudDriverPath = "C:\Drivers\Cloud Drivers\Surface\Extract"
-
-Write-Host
-Write-Verbose "Processing: Integrating OSDCloud Microsoft Surface Tablet Cloud Drivers..." -Verbose
-
-Edit-OSDCloudWinPe -DriverPath $SurfaceCloudDriverPath
-
-
-$NutanixCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Nutanix%20Drivers/Nutanix-CloudDrivers.ps1")
-Invoke-Expression $($NutanixCloudDrivers.Content)
-
 $NutanixCloudDriverPath1 = "C:\Drivers\Cloud Drivers\Nutanix\Extract\1"
 $NutanixCloudDriverPath2 = "C:\Drivers\Cloud Drivers\Nutanix\Extract\2"
 $NutanixCloudDriverPath3 = "C:\Drivers\Cloud Drivers\Nutanix\Extract\3"
@@ -312,10 +70,6 @@ Write-Verbose "Processing: Integrating OSDCloud Nutanix Cloud Drivers..." -Verbo
 Edit-OSDCloudWinPe -DriverPath $NutanixCloudDriverPath1
 Edit-OSDCloudWinPe -DriverPath $NutanixCloudDriverPath2
 Edit-OSDCloudWinPe -DriverPath $NutanixCloudDriverPath3
-
-
-$USBCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/USB%20Drivers/USB-CloudDrivers.ps1")
-Invoke-Expression $($USBCloudDrivers.Content)
 
 $USBCloudDriverPath1 = "C:\Drivers\Cloud Drivers\USB\Extract\1"
 $USBCloudDriverPath2 = "C:\Drivers\Cloud Drivers\USB\Extract\2"
@@ -334,19 +88,6 @@ Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath4
 Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath5
 Edit-OSDCloudWinPe -DriverPath $USBCloudDriverPath6
 
-$WLANCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/WLAN%20Drivers/WLAN-CloudDrivers.ps1")
-Invoke-Expression $($WLANCloudDrivers.Content)
-
-$WLANCloudDriverPath = "C:\Drivers\Cloud Drivers\WLAN\Extract"
-
-Write-Host
-Write-Verbose "Processing: Integrating OSDCloud WiFi Cloud Drivers..." -Verbose
-
-Edit-OSDCloudWinPe -DriverPath $WLANCloudDriverPath
-
-$VMWareCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/VMWare%20Drivers/VMWare-CloudDrivers.ps1")
-Invoke-Expression $($VMWareCloudDrivers.Content)
-
 $VMWareCloudDriverPath1 = "C:\Drivers\Cloud Drivers\VMWare\Extract\1"
 $VMWareCloudDriverPath2 = "C:\Drivers\Cloud Drivers\VMWare\Extract\2"
 $VMWareCloudDriverPath3 = "C:\Drivers\Cloud Drivers\VMWare\Extract\3"
@@ -357,6 +98,13 @@ Write-Verbose "Processing: Integrating OSDCloud VMWare Cloud Drivers..." -Verbos
 Edit-OSDCloudWinPe -DriverPath $VMWareCloudDriverPath1
 Edit-OSDCloudWinPe -DriverPath $VMWareCloudDriverPath2
 Edit-OSDCloudWinPe -DriverPath $VMWareCloudDriverPath3
+
+$WLANCloudDriverPath = "C:\Drivers\Cloud Drivers\WLAN\Extract"
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud WiFi Cloud Drivers..." -Verbose
+
+Edit-OSDCloudWinPe -DriverPath $WLANCloudDriverPath
 
 Write-Host
 Write-Verbose "Completed: Integration of OSDCloud - Cloud Drivers..." -Verbose
@@ -434,55 +182,6 @@ Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage2
 
 Write-Host
 Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
-Write-Host
-
-######################################
-## Extra Scripting Support
-######################################
-
-# VBS Scripting Support
-
-$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
-$VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
-$VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
-$VBSName3 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
-$VBSName4 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
-$VBS1 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
-$VBS2 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
-$VBS3 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~~.cab"
-$VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~wow64~en-us~.cab"
-
-$sourceWIMDir = "\Media\sources"
-$WorkspacePath = Get-OSDCloudWorkspace
-$WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
-$mountdir = "C:\Mount"
-
-Write-Verbose "Processing: Mounting OSDCloud boot.wim" -Verbose
-# Mount the image
-
-Mount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
-
-Write-Host
-Write-Verbose "Processing: VBS Scripting Support..." -Verbose 
-
-Write-Host
-Write-Verbose "Processing Item: $VBSName1..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
-Write-Host
-
-Write-Verbose "Processing Item: $VBSName2..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
-Write-Host
-
-Write-Verbose "Processing Item: $VBSName3..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
-Write-Host
-
-Write-Verbose "Processing Item: $VBSName4..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
-
-Write-Host
-Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
 Write-Host
 
 ########################################
@@ -625,52 +324,7 @@ Invoke-Expression $($OSDCloudPS5xMods.Content)
 $OSDCloudPS7xMods = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/PowerShell%20Modules/7.x/AddModules.ps1")
 Invoke-Expression $($OSDCloudPS7xMods.Content)
 
-###########################################
-# OSDCloud NEW Wallpaper
-###########################################
-
-Write-Host
-Write-Verbose "Processing: NEW OSDCloud Wallpaper..." -Verbose 
-$OSDCloudwallpaper = "C:\downloads\OSDCloud\GitHub\wallpaper\winpe.jpg"
-
-Edit-OSDCloudWinPE -Wallpaper $OSDCloudwallpaper
-
-Write-Host
-Write-Verbose "Completed: Integration of NEW OSDCloud Wallpaper..." -Verbose
-Write-Host
 
 
-##########################################
-# OSDCloud WebScript for Startnet.cmd
-##########################################
 
-Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
-Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1
-Write-Host
 
-###########################################
-# Rename OSDCloud ISO
-#########################################
-
-$OSDCloudISOPath = "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4"
-
-Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
-Write-Host
-
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4\OSDCloud-ASRock-ExtremeMotherboards-AM4.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4\OSDCloud-ASRock-ExtremeMotherboards-AM4_NoPrompt.iso" -Force
-
-###########################################
-# Copy OSDCloud ISO Files
-#########################################
-
-$ISO1 = "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4\OSDCloud-ASRock-ExtremeMotherboards-AM4.iso"
-$ISO2 = "C:\OSDCloud\ASRock-ExtremeMotherboards-AM4\OSDCloud-ASRock-ExtremeMotherboards-AM4_NoPrompt.iso"
-
-$OSDISODestination = "C:\ISOs\OSDCloud"
-
-Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
-Write-Host
-
-Copy-Item -Path $ISO1 -Destination $OSDISODestination -Force
-Copy-Item -Path $ISO2 -Destination $OSDISODestination -Force
