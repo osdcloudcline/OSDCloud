@@ -259,6 +259,20 @@ Write-Host
 Write-Verbose "Completed: ASRock Phantom Gaming Socket AM$ Motherboard drivers download..." -Verbose
 Write-Host
 
+################################################
+# Download ASRock Steel Legend AM4 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Steel Legend Socket AM4 Motherboard drivers download......" -Verbose
+Write-Host
+
+$SteelLegendDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Steel%20Legend%20Motherboards/SteelLegend.ps1")
+Invoke-Expression $($SteelLegendDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Steel Legend Socket AM4 Motherboard drivers download..." -Verbose
+Write-Host
 
 #################################
 # Download OSDCloud - Cloud Drivers
