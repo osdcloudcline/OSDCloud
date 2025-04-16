@@ -77,7 +77,6 @@ do
     }
     }
      until ($selection -eq '9'){Invoke-Expression $($OSDCloudMain.Content)}
-    }
 
 Function Show-ASRockAM4{ 
 
