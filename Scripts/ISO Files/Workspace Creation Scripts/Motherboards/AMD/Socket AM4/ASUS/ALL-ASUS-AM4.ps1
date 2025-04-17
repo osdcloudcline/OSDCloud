@@ -465,6 +465,13 @@ $TUFGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/re
 Invoke-Expression $($TUFGaming.Content)
 
 Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 Workstation motherboard drivers" -Verbose
+Write-Host
+
+$Workstation = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/Workstation.ps1")
+Invoke-Expression $($Workstation.Content)
+
+Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
 Write-Host
 
