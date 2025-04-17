@@ -21,23 +21,23 @@ do
   {
 
   '1' { cls
-        $Gigabyte = Invoke-WebRequest("")
+        $Gigabyte = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Motherboards/AMD/Socket%20AM4/Gigabyte/ALL-Gigabyte-AM4.ps1")
         Invoke-Expression $($Gigabyte.Content)
         }
   '2' { cls
-        $AERO = Invoke-WebRequest("")
+        $AERO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Motherboards/AMD/Socket%20AM4/Gigabyte/AERO.ps1")
         Invoke-Expression $($AERO.Content)
         }
   '3' { cls
-        $AORUS = Invoke-WebRequest("")
+        $AORUS = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Motherboards/AMD/Socket%20AM4/Gigabyte/AORUS.ps1")
         Invoke-Expression $($AORUS.Content)
         }
   '4' { cls
-        $Gaming = Invoke-WebRequest("")
+        $Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Motherboards/AMD/Socket%20AM4/Gigabyte/Gaming.ps1")
         Invoke-Expression $($Gaming.Content)
         }
   '5' { cls
-        $UD = Invoke-WebRequest("")
+        $UD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Motherboards/AMD/Socket%20AM4/Gigabyte/UD-UltraDurable.ps1")
         Invoke-Expression $($UD.Content)
         }
   '6' { cls
