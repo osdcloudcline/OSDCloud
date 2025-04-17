@@ -4,6 +4,8 @@ Function Show-ASRockAM4{
     [string]$Title = 'OSD Cloud ASRock Socket AM4 ISO Creation - Main Menu',
     [string]$Question = 'What type of action do you want to perform?'
 )
+cls
+
 Write-Host "======= $Title ======"
 Write-Host " 1. OSDCloud: ALL ASRock Socket AM4 motherboards"
 Write-Host " 2. OSDCloud: ASRock Extreme Socket AM4 Motherboard"
