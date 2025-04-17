@@ -11,16 +11,16 @@ Edit-OSDCloudWinPE -DriversPath $AEROEthernet
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 AERO Motherboard WiFi Drivers..." -Verbose 
-$AEROWiFi1 = "C:\Drivers\Drivers\Motherboards\Gigabyte\AM4\AERO\WiFi1"
-$AEROWiFi2 = "C:\Drivers\Drivers\Motherboards\Gigabyte\AM4\AERO\WiFi2"
+$AEROWiFi1 = "C:\Drivers\Motherboards\Gigabyte\AM4\AERO\WiFi1"
+$AEROWiFi2 = "C:\Drivers\Motherboards\Gigabyte\AM4\AERO\WiFi2"
 
 Edit-OSDCloudWinPE -DriversPath $AEROWiFi1
 Edit-OSDCloudWinPE -DriversPath $AEROWiFi2
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 AERO Motherboard Storage Drivers..." -Verbose 
-$AEROStorage1 = "C:\Drivers\Drivers\Motherboards\Gigabyte\AM4\AERO\Storage1"
-$AEROStorage2 = "C:\Drivers\Drivers\Motherboards\Gigabyte\AM4\AERO\Storage2"
+$AEROStorage1 = "C:\Drivers\Motherboards\Gigabyte\AM4\AERO\Storage1"
+$AEROStorage2 = "C:\Drivers\Motherboards\Gigabyte\AM4\AERO\Storage2"
 
 Edit-OSDCloudWinPE -DriversPath  $AEROStorage1
 Edit-OSDCloudWinPE -DriversPath  $AEROStorage2
