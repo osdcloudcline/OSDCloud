@@ -17,12 +17,12 @@ do
         Invoke-Expression $($ASRock.Content)
         }
   '2' { cls
-        $Extreme = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Motherboards/AMD/Socket%20AM4/ASRock/Extreme.ps1")
-        Invoke-Expression $($Extreme.Content)
+        $ASUS = Invoke-WebRequest("")
+        Invoke-Expression $($ASUS.Content)
         }
   '3' { cls
-        $Fatal1tyGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Motherboards/AMD/Socket%20AM4/ASRock/Fatal1tyGaming.ps1")
-        Invoke-Expression $($Fatal1tyGaming.Content)
+        $Gigabyte = Invoke-WebRequest("")
+        Invoke-Expression $($Gigabyte.Content)
         }   
   '4' { cls
         Show-MainMenu
