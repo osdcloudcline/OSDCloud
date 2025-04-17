@@ -27,7 +27,7 @@ do
         Invoke-Expression $($ASUS.Content)
         }
   '3' { cls
-        $Gigabyte = Invoke-WebRequest("")
+        $Gigabyte = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Motherboards/AMD/Socket%20AM4/Gigabyte/MainMenu.ps1")
         Invoke-Expression $($Gigabyte.Content)
         }   
   '4' { cls
