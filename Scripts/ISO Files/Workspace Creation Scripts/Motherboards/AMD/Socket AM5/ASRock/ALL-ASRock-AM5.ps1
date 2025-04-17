@@ -241,6 +241,47 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+################################################
+# Download ASRock PRO AM5 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock PRO Socket AM5 Motherboard drivers download......" -Verbose
+Write-Host
+
+$PRODrivers = Invoke-WebRequest("")
+Invoke-Expression $($PRODrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock PRO Socket AM5 Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASRock Steel Legend AM5 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Steel Legend Socket AM5 Motherboard drivers download......" -Verbose
+Write-Host
+
+$SteelLegendDrivers = Invoke-WebRequest("")
+Invoke-Expression $($SteelLegendDrivers.Content)
+
+################################################
+# Download ASRock Taichi AM5 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Taichi Socket AM4 Motherboard drivers download......" -Verbose
+Write-Host
+
+$TaichiDrivers = Invoke-WebRequest("")
+Invoke-Expression $($TaichiDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Steel Legend Socket AM5 Motherboard drivers download..." -Verbose
+Write-Host
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
