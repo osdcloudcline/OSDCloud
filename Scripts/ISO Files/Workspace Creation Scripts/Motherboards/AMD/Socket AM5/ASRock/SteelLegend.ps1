@@ -241,6 +241,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+################################################
+# Download ASRock Steel Legend AM5 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Steel Legend Socket AM5 Motherboard drivers download......" -Verbose
+Write-Host
+
+$SteelLegendDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM5/Steel%20Legend%20Motherboards/SteelLegend.ps1")
+Invoke-Expression $($SteelLegendDrivers.Content)
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
