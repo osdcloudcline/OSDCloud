@@ -242,6 +242,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 Dismount-WindowsImage -Path $mountdir -Save
 
 #################################
+# Download Gigabyte UD-Ultra Durable Socket AM4 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM4 UD - Ultra Durable motherboard drivers" -Verbose
+Write-Host
+
+$Ultra DurableDrivers = Invoke-WebRequest("")
+Invoke-Expression $($UltraDurableDrivers.Content)
+
+#################################
 # Download OSDCloud - Cloud Drivers
 #################################
 
