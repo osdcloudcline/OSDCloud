@@ -241,6 +241,21 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+################################################
+# Download ASRock PRO AM5 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock PRO Socket AM5 Motherboard drivers download......" -Verbose
+Write-Host
+
+$PRODrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM5/PRO%20Motherboards/PRO.ps1")
+Invoke-Expression $($PRODrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock PRO Socket AM5 Motherboard drivers download..." -Verbose
+Write-Host
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
