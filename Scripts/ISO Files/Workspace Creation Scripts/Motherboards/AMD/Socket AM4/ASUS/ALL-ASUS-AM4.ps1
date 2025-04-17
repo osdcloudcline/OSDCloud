@@ -296,6 +296,17 @@ Write-Host
 $ProArtDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/ProArt%20Motherboards/ProArt.ps1")
 Invoke-Expression $($ProArtDrivers.Content)
 
+#######################################################
+# Download ASUS Socket AM4 ROG motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM4 Republic of Gamers motherboard drivers..." -Verbose
+Write-Host
+
+$ROGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/ROG%20-%20Republic%20of%20Gamers%20Motherboards/ROG%20-%20Republic%20of%20Gamers.ps1")
+Invoke-Expression $($ROGDrivers.Content)
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
