@@ -242,6 +242,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 Dismount-WindowsImage -Path $mountdir -Save
 
 #################################
+# Download Gigabyte AORUS Socket AM4 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM4 Gaming motherboard drivers" -Verbose
+Write-Host
+
+$GamingDrivers = Invoke-WebRequest("")
+Invoke-Expression $($GamingDrivers.Content)
+
+#################################
 # Download OSDCloud - Cloud Drivers
 #################################
 
