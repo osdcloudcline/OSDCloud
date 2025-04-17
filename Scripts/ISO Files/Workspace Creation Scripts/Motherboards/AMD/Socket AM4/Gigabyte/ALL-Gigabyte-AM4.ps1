@@ -379,11 +379,18 @@ $AERO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/he
 Invoke-Expression $($AERO.Content)
 
 Write-Host
-Write-Verbose "Processing: Integrating Gigabyte AORUS Socket AM4 AERO motherboard drivers" -Verbose
+Write-Verbose "Processing: Integrating Gigabyte AORUS Socket AM4 AORUS motherboard drivers" -Verbose
 Write-Host
 
 $AORUS = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM4/AORUS.ps1")
 Invoke-Expression $($AORUS.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating Gigabyte Gaming Socket AM4 Gaming motherboard drivers" -Verbose
+Write-Host
+
+$Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM4/Gaming.ps1")
+Invoke-Expression $($Gaming.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
