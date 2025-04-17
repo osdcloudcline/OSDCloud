@@ -338,7 +338,12 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 # Integrate Drivers
 #########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 ROG - Republic of Gamers motherboard drivers" -Verbose
+Write-Host
 
+$ROG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/ROG%20-%20Republic%20of%20Gamers.ps1")
+Invoke-Expression $($ROG.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
