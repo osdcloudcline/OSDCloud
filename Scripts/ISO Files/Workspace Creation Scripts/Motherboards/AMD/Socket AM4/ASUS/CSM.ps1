@@ -241,6 +241,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+#######################################################
+# Download ASUS CSM Socket AM4 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM4 CSM motherboard drivers..." -Verbose
+Write-Host
+
+$CSMDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/CSM%20Motherboards/CSM.ps1")
+Invoke-Expression $($CSMDrivers.Content)
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
