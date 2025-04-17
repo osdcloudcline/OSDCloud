@@ -307,6 +307,18 @@ Write-Host
 $ROGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/ROG%20-%20Republic%20of%20Gamers%20Motherboards/ROG%20-%20Republic%20of%20Gamers.ps1")
 Invoke-Expression $($ROGDrivers.Content)
 
+#######################################################
+# Download ASUS Socket AM4 TUF Gaming motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM4 TUF Gaming motherboard drivers..." -Verbose
+Write-Host
+
+$TUFGamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/TUF%20Gaming%20Motherboards/TUFGaming.ps1")
+Invoke-Expression $($TUFGamingDrivers.Content)
+
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
