@@ -5,15 +5,15 @@
 
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 Business Motherboard Ethernet Drivers..." -Verbose 
-$BusinessEthernet1 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Business\Ethernet1"
-$BusinessEthernet2 = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Business\Ethernet2"
+$BusinessEthernet1 = "C:\Drivers\Motherboards\ASUS\AM4\Business\Ethernet1"
+$BusinessEthernet2 = "C:\Drivers\Motherboards\ASUS\AM4\Business\Ethernet2"
 
 Edit-OSDCloudWinPE -DriverPath $BusinessEthernet1
 Edit-OSDCloudWinPE -DriverPath $BusinessEthernet2
 
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 Business Motherboard Storage Drivers..." -Verbose 
-$BusinessStorage = "C:\OSDCloud\Drivers\Motherboards\ASUS\AM4\Business\Storage"
+$BusinessStorage = "C:\Drivers\Motherboards\ASUS\AM4\Business\Storage"
 
 Edit-OSDCloudWinPE -DriverPath $BusinessStorage
 
