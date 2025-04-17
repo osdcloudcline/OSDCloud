@@ -1,4 +1,9 @@
-Function Show-ASRockAM4{ 
+Function Show-SocketAM4{ 
+    [CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Cloud Socket AM4 ISO Creation - Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
 
 Write-Host "======= $Title ======"
 Write-Host " 1. OSDCloud: ASRock Socket AM4 motherboards"
@@ -32,4 +37,4 @@ do
      until ($selection -eq '4'){Show-MainMenu}
     }
 
-Show-ASRockAM4
+Show-SocketkAM4
