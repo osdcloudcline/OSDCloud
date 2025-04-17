@@ -285,6 +285,17 @@ Write-Host
 $PRIMEDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/PRIME%20Motherboards/PRIME.ps1")
 Invoke-Expression $($PRIMEDrivers.Content)
 
+#######################################################
+# Download ASUS Socket AM4 ProArt motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM4 ProArt motherboard drivers..." -Verbose
+Write-Host
+
+$ProArtDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/ProArt%20Motherboards/ProArt.ps1")
+Invoke-Expression $($ProArtDrivers.Content)
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
