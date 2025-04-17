@@ -357,6 +357,13 @@ $Business = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/ref
 Invoke-Expression $($Business.Content)
 
 Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 CSM motherboard drivers" -Verbose
+Write-Host
+
+$CSM = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/CSM.ps1")
+Invoke-Expression $($CSM.Content)
+
+Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
 Write-Host
 
