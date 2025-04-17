@@ -371,6 +371,13 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 # Integrate Drivers
 #########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating Gigabyte Socket AM4 AERO motherboard drivers" -Verbose
+Write-Host
+
+$AERO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM4/AERO.ps1")
+Invoke-Expression $($AERO.Content)
+
 
 
 Write-Host
