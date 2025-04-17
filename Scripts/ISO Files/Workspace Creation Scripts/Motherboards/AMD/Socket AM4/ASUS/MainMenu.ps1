@@ -1,4 +1,4 @@
-Function Show-ASRockAM4{ 
+Function Show-ASUSAM4{ 
     [CmdletBinding()]
     param(
     [string]$Title = 'OSD Cloud ASUS Socket AM4 ISO Creation - Main Menu',
@@ -66,3 +66,5 @@ do
     }
     }
      until ($selection -eq '8'){Show-MainMenu}
+  }
+Show-ASUSAM4
