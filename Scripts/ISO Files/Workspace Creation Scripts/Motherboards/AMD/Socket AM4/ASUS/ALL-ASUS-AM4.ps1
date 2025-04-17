@@ -411,6 +411,13 @@ $PRIME = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/h
 Invoke-Expression $($PRIME.Content)
 
 Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 ProArt motherboard drivers" -Verbose
+Write-Host
+
+$ProArt = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/ProArt.ps1")
+Invoke-Expression $($ProArt.Content)
+
+Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
 Write-Host
 
