@@ -372,21 +372,21 @@ Write-Host
 Write-Verbose "Processing: Integrating ASRock PRO Socket AM5 Motherboard Drivers" -Verbose
 Write-Host
 
-$PRO = Invoke-WebRequest("")
+$PRO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM5/PRO.ps1")
 Invoke-Expression $($PRO.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating ASRock Steel Legend Socket AM5 Motherboard Drivers" -Verbose
 Write-Host
 
-$SteelLegend = Invoke-WebRequest("")
+$SteelLegend = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM5/SteelLegend.ps1")
 Invoke-Expression $($SteelLegend.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating ASRock Taichi Socket AM5 Motherboard Drivers" -Verbose
 Write-Host
 
-$Taichi = Invoke-WebRequest("")
+$Taichi = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM5/Taichi.ps1")
 Invoke-Expression $($Taichi.Content)
 
 Write-Host
