@@ -375,6 +375,13 @@ $CSM = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/hea
 Invoke-Expression $($CSM.Content)
 
 Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 Others motherboard drivers" -Verbose
+Write-Host
+
+$Others = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/Others.ps1")
+Invoke-Expression $($Others.Content)
+
+Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
 Write-Host
 
