@@ -242,6 +242,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 Dismount-WindowsImage -Path $mountdir -Save
 
 #################################
+# Download Gigabyte AERO Socket AM4 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM4 AERO motherboard drivers" -Verbose
+Write-Host
+
+$AERODrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/AERO/AERO.ps1")
+Invoke-Expression $($AERODrivers.Content)
+
+#################################
 # Download OSDCloud - Cloud Drivers
 #################################
 
