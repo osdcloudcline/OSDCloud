@@ -23,7 +23,7 @@ do
         Invoke-Expression $($ASRock.Content)
         }
   '2' { cls
-        $ASUS = Invoke-WebRequest("")
+        $ASUS = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Motherboards/AMD/Socket%20AM4/ASUS/MainMenu.ps1")
         Invoke-Expression $($ASUS.Content)
         }
   '3' { cls
@@ -38,4 +38,4 @@ do
      until ($selection -eq '4'){Show-MainMenu}
     }
 
-Show-SocketkAM4
+Show-SocketAM4
