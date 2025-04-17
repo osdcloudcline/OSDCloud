@@ -374,7 +374,7 @@ Write-Host
 # Rename OSDCloud ISO
 #########################################
 
-$OSDCloudISOPath = "C:\OSDCloud\BillyDesktop""
+$OSDCloudISOPath = "C:\OSDCloud\BillyDesktop"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
@@ -385,8 +385,8 @@ Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\BillyDesktop"\OSDCloud-Gigabyte-AERO-AM4.iso"
-$ISO2 = "C:\OSDCloud\BillyDesktop"\OSDCloud-Gigabyte-AERO-AM4_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\BillyDesktop\OSDCloud-Gigabyte-AERO-AM4.iso"
+$ISO2 = "C:\OSDCloud\BillyDesktop\OSDCloud-Gigabyte-AERO-AM4_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\Custom\Billy Desktop"
 
