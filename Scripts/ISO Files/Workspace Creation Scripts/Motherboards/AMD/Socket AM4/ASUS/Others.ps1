@@ -241,6 +241,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+#######################################################
+# Download ASUS Socket AM4 Others motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM4 Others motherboard drivers..." -Verbose
+Write-Host
+
+$OthersDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/Other%20Motherboards/Others.ps1")
+Invoke-Expression $($OthersDrivers.Content)
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
