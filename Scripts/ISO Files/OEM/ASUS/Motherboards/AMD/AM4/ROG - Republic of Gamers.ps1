@@ -32,8 +32,8 @@ Edit-OSDCloudWinPE -DriverPath $ROGWiFi4
 
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 ROG - Republic of Gamers Motherboard Storage Drivers..." -Verbose 
-$ROGStorage1 = "C:\Drivers\Motherboards\ASUS\AM4\ROG\Storage"
-$ROGStorage2 = "C:\Drivers\Motherboards\ASUS\AM4\ROG\Storage"
+$ROGStorage1 = "C:\Drivers\Motherboards\ASUS\AM4\ROG\Storage1"
+$ROGStorage2 = "C:\Drivers\Motherboards\ASUS\AM4\ROG\Storage2"
 
 Edit-OSDCloudWinPE -DriverPath $ROGStorage1
 Edit-OSDCloudWinPE -DriverPath $ROGStorage2
