@@ -249,7 +249,7 @@ Write-Host
 Write-Verbose "Processing: Gigabyte Socket AM4 Gaming motherboard drivers" -Verbose
 Write-Host
 
-$GamingDrivers = Invoke-WebRequest("")
+$GamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/Gaming/Gaming.ps1")
 Invoke-Expression $($GamingDrivers.Content)
 
 #################################
