@@ -250,7 +250,7 @@ Write-Verbose "Processing: Gigabyte Socket AM4 AERO motherboard drivers" -Verbos
 Write-Host
 
 $AERODrivers = Invoke-WebRequest("")
-Invoke-Expression $($AERDrivers.Content)
+Invoke-Expression $($AERODrivers.Content)
 
 #################################
 # Download OSDCloud - Cloud Drivers
