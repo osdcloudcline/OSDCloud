@@ -368,7 +368,30 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 # Integrate Drivers
 #########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating ASRock PRO Socket AM5 Motherboard Drivers" -Verbose
+Write-Host
 
+$PRO = Invoke-WebRequest("")
+Invoke-Expression $($PRO.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Steel Legend Socket AM5 Motherboard Drivers" -Verbose
+Write-Host
+
+$SteelLegend = Invoke-WebRequest("")
+Invoke-Expression $($SteelLegend.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Taichi Socket AM5 Motherboard Drivers" -Verbose
+Write-Host
+
+$Taichi = Invoke-WebRequest("")
+Invoke-Expression $($Taichi.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
+Write-Host
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
