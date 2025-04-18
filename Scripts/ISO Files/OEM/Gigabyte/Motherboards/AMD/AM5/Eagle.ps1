@@ -17,15 +17,15 @@ Edit-OSDCloudWinPE -DriversPath $EagleEthernet4
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 Eagle Motherboard WiFi Drivers..." -Verbose 
-$EagleWiFi1 = "C:\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\WiFi1"
-$EagleWiFi2 = "C:\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\WiFi2"
-$EagleWiFi3 = "C:\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\WiFi1"
-$EagleWiFi4 = "C:\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\WiFi2"
+$EagleWLAN1 = "C:\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\WLAN1"
+$EagleWLAN2 = "C:\Drivers\Motherboards\Gigabyte\AM5\Eagle\B650\WLAN2"
+$EagleWLAN3 = "C:\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\WLAN1"
+$EagleWLAN4 = "C:\Drivers\Motherboards\Gigabyte\AM5\Eagle\X870\WLAN2"
 
-Edit-OSDCloudWinPE -DriversPath $EagleWiFi1
-Edit-OSDCloudWinPE -DriversPath $EagleWiFi2
-Edit-OSDCloudWinPE -DriversPath $EagleWiFi3
-Edit-OSDCloudWinPE -DriversPath $EagleWiFi4
+Edit-OSDCloudWinPE -DriversPath $EagleWLAN1
+Edit-OSDCloudWinPE -DriversPath $EagleWLAN2
+Edit-OSDCloudWinPE -DriversPath $EagleWLAN3
+Edit-OSDCloudWinPE -DriversPath $EagleWLAN4
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 Eagle Motherboard Storage Drivers..." -Verbose 
