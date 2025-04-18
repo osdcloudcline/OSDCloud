@@ -241,6 +241,8 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
