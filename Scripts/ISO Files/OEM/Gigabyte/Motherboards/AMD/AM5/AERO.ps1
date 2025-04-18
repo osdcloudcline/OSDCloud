@@ -10,9 +10,9 @@ Edit-OSDCloudWinPE -DriversPath $AEROEthernet
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AERO Motherboard WiFi Drivers..." -Verbose 
-$AEROWiFi = "C:\Drivers\Motherboards\Gigabyte\AM5\AERO\WiFi"
+$AEROWLAN = "C:\Drivers\Motherboards\Gigabyte\AM5\AERO\WLAN"
 
-Edit-OSDCloudWinPE -DriversPath $AEROWiFi
+Edit-OSDCloudWinPE -DriversPath $AEROWLAN
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AERO Motherboard Storage Drivers..." -Verbose 
