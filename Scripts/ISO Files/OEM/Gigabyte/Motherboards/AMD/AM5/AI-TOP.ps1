@@ -17,12 +17,6 @@ $AITOPWiFi = "C:\Drivers\Motherboards\Gigabyte\AM5\AI-TOP\WiFi"
 Edit-OSDCloudWinPE -DriversPath $AITOPWiFi
 
 Write-Host
-Write-Verbose "Processing: Gigabyte AM 5 AI TOP Motherboard Bluetooth Drivers..." -Verbose 
-$AITOPBluetooth = "C:\Drivers\Motherboards\Gigabyte\AM5\AI-TOP\Bluetooth"
-
-Edit-OSDCloudWinPE -DriversPath $AITOPBluetooth
-
-Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AI TOP Motherboard Storage Drivers..." -Verbose 
 $AITOPStorage = "C:\Drivers\Motherboards\Gigabyte\AM5\AI-TOP\Storage"
 
