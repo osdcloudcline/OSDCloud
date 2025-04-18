@@ -338,7 +338,12 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 # Integrate Drivers
 #########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating Gigabyte Gaming Socket AM5 UD - Ultra Durable motherboard drivers" -Verbose
+Write-Host
 
+$UD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/UD-Ultra%20Durable.ps1")
+Invoke-Expression $($UD.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
