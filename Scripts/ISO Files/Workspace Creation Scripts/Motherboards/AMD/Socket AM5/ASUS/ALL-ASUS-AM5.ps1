@@ -304,7 +304,7 @@ Write-Host
 Write-Verbose "Processing: ASUS Socket AM5 ProArt motherboard drivers..." -Verbose
 Write-Host
 
-$ProArtDrivers = Invoke-WebRequest("")
+$ProArtDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/ProArt%20Motherboards/ProArt.ps1")
 Invoke-Expression $($ProArtDrivers.Content)
 
 #######################################################
