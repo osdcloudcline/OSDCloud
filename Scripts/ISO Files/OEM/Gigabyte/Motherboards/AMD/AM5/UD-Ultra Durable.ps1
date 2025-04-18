@@ -16,23 +16,23 @@ Edit-OSDCloudWinPE -DriversPath $UDEthernet4
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 Ultra Durable Motherboard WiFi Drivers..." -Verbose 
-$UDWiFi1 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\A620\WiFi1"
-$UDWiFi2 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\A620\WiFi2"
-$UDWiFi3 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WiFi1"
-$UDWiFi4 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WiFi2"
-$UDWiFi5 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WiFi3"
-$UDWiFi6 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WiFi4"
-$UDWiFi7 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WiFi5"
-$UDWiFi8 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WiFi6"
+$UDWLAN1 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\A620\WLAN1"
+$UDWLAN2 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\A620\WLAN2"
+$UDWLAN3 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WLAN1"
+$UDWLAN4 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WLAN2"
+$UDWLAN5 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WLAN3"
+$UDWLAN6 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WLAN4"
+$UDWLAN7 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WLAN5"
+$UDWLAN8 = "C:\Drivers\Motherboards\Gigabyte\AM5\UD-UltraDurable\B650\WLAN6"
 
-Edit-OSDCloudWinPE -DriversPath $UDWiFi1
-Edit-OSDCloudWinPE -DriversPath $UDWiFi2
-Edit-OSDCloudWinPE -DriversPath $UDWiFi3
-Edit-OSDCloudWinPE -DriversPath $UDWiFi4
-Edit-OSDCloudWinPE -DriversPath $UDWiFi5
-Edit-OSDCloudWinPE -DriversPath $UDWiFi6
-Edit-OSDCloudWinPE -DriversPath $UDWiFi7
-Edit-OSDCloudWinPE -DriversPath $UDWiFi8
+Edit-OSDCloudWinPE -DriversPath $UDWLAN1
+Edit-OSDCloudWinPE -DriversPath $UDWLAN2
+Edit-OSDCloudWinPE -DriversPath $UDWLAN3
+Edit-OSDCloudWinPE -DriversPath $UDWLAN4
+Edit-OSDCloudWinPE -DriversPath $UDWLAN5
+Edit-OSDCloudWinPE -DriversPath $UDWLAN6
+Edit-OSDCloudWinPE -DriversPath $UDWLAN7
+Edit-OSDCloudWinPE -DriversPath $UDWLAN8
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 Ultra Durable Motherboard Storage Drivers..." -Verbose 
