@@ -315,7 +315,7 @@ Write-Host
 Write-Verbose "Processing: ASUS Socket AM5 Republic of Gamers motherboard drivers..." -Verbose
 Write-Host
 
-$ROGDrivers = Invoke-WebRequest("")
+$ROGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/ROG%20-%20Republic%20of%20Gamers%20Motherboards/ROG%20-%20Republic%20of%20Gamers.ps1")
 Invoke-Expression $($ROGDrivers.Content)
 
 #######################################################
