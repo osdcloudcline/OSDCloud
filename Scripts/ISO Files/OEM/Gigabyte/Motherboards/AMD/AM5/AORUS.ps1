@@ -41,7 +41,7 @@ $AORUSWLAN4 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\WLAN1"
 $AORUSWLAN5 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\WLAN2"
 $AORUSWLAN6 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\WLAN3"
 $AORUSWLAN7 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870\WLAN"
-$AORUSWLAN8 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870E\WLAN1"
+$AORUSWLAN8 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870E\WLAN"
 
 
 Edit-OSDCloudWinPE -DriversPath $AORUSWLAN1
