@@ -326,7 +326,7 @@ Write-Host
 Write-Verbose "Processing: ASUS Socket AM5 TUF Gaming motherboard drivers..." -Verbose
 Write-Host
 
-$TUFGamingDrivers = Invoke-WebRequest("")
+$TUFGamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/TUF%20Gaming%20Motherboards/TUFGaming.ps1")
 Invoke-Expression $($TUFGamingDrivers.Content)
 
 #################################
