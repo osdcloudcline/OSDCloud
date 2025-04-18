@@ -34,24 +34,24 @@ Edit-OSDCloudWinPE -DriversPath $AORUSEthernet13
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AORUS Motherboard WiFi Drivers..." -Verbose 
-$AORUSWiFi1 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\WiFi1"
-$AORUSWiFi2 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\WiFi2"
-$AORUSWiFi3 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\WiFi3"
-$AORUSWiFi4 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\WiFi1"
-$AORUSWiFi5 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\WiFi2"
-$AORUSWiFi6 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\WiFi3"
-$AORUSWiFi7 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870\WiFi"
-$AORUSWiFi8 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870E\WiFi1"
+$AORUSWLAN1 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\WLAN1"
+$AORUSWLAN2 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\WLAN2"
+$AORUSWLAN3 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\B650\WLAN3"
+$AORUSWLAN4 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\WLAN1"
+$AORUSWLAN5 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\WLAN2"
+$AORUSWLAN6 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X670\WLAN3"
+$AORUSWLAN7 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870\WLAN"
+$AORUSWLAN8 = "C:\Drivers\Motherboards\Gigabyte\AM5\AORUS\X870E\WLAN1"
 
 
-Edit-OSDCloudWinPE -DriversPath $AORUSWiFi1
-Edit-OSDCloudWinPE -DriversPath $AORUSWiFi2
-Edit-OSDCloudWinPE -DriversPath $AORUSWiFi3
-Edit-OSDCloudWinPE -DriversPath $AORUSWiFi4
-Edit-OSDCloudWinPE -DriversPath $AORUSWiFi5
-Edit-OSDCloudWinPE -DriversPath $AORUSWiFi6
-Edit-OSDCloudWinPE -DriversPath $AORUSWiFi7
-Edit-OSDCloudWinPE -DriversPath $AORUSWiFi8
+Edit-OSDCloudWinPE -DriversPath $AORUSWLAN1
+Edit-OSDCloudWinPE -DriversPath $AORUSWLAN2
+Edit-OSDCloudWinPE -DriversPath $AORUSWLAN3
+Edit-OSDCloudWinPE -DriversPath $AORUSWLAN4
+Edit-OSDCloudWinPE -DriversPath $AORUSWLAN5
+Edit-OSDCloudWinPE -DriversPath $AORUSWLAN6
+Edit-OSDCloudWinPE -DriversPath $AORUSWLAN7
+Edit-OSDCloudWinPE -DriversPath $AORUSWLAN8
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AORUS Motherboard Storage Drivers..." -Verbose 
