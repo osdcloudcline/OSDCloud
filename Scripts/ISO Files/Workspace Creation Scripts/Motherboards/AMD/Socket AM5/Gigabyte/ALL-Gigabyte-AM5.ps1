@@ -393,6 +393,47 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 # Integrate Drivers
 #########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating Gigabyte Socket AM5 AERO motherboard drivers" -Verbose
+Write-Host
+
+$AERO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/AERO.ps1")
+Invoke-Expression $($AERO.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating Gigabyte Socket AM5 AI TOP motherboard drivers" -Verbose
+Write-Host
+
+$AITOP = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/AI-TOP.ps1")
+Invoke-Expression $($AITOP.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating Gigabyte AORUS Socket AM5 AORUS motherboard drivers" -Verbose
+Write-Host
+
+$AORUS = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/AORUS.ps1")
+Invoke-Expression $($AORUS.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating Gigabyte Eagle Socket AM5 AORUS motherboard drivers" -Verbose
+Write-Host
+
+$Eagle = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/Eagle.ps1")
+Invoke-Expression $($Eagle.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating Gigabyte Gaming Socket AM5 Gaming motherboard drivers" -Verbose
+Write-Host
+
+$Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/Gaming.ps1")
+Invoke-Expression $($Gaming.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating Gigabyte Gaming Socket AM5 UD - Ultra Durable motherboard drivers" -Verbose
+Write-Host
+
+$UD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM5/UD-Ultra%20Durable.ps1")
+Invoke-Expression $($UD.Content)
 
 
 Write-Host
