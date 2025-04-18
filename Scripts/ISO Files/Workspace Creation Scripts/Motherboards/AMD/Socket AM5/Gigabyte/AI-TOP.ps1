@@ -242,6 +242,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 Dismount-WindowsImage -Path $mountdir -Save
 
 #################################
+# Download Gigabyte AI TOP Socket AM5 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM5 AI TOP motherboard drivers" -Verbose
+Write-Host
+
+$AITOPDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM5/AI%20TOP/AI-TOP.ps1")
+Invoke-Expression $($AITOPDrivers.Content)
+
+#################################
 # Download OSDCloud - Cloud Drivers
 #################################
 
