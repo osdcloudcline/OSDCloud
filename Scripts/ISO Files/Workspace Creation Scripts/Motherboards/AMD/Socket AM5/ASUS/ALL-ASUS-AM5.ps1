@@ -260,7 +260,7 @@ Write-Host
 Write-Verbose "Processing: ASUS Socket AM5 CSM motherboard drivers..." -Verbose
 Write-Host
 
-$CSMDrivers = Invoke-WebRequest("")
+$CSMDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/CSM%20Motherboards/CSM.ps1")
 Invoke-Expression $($CSMDrivers.Content)
 
 #######################################################
