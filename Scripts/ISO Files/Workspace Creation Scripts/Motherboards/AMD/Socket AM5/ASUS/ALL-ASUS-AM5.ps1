@@ -271,7 +271,7 @@ Write-Host
 Write-Verbose "Processing: ASUS Socket AM5 Expedition motherboard drivers..." -Verbose
 Write-Host
 
-$ExpeditionDrivers = Invoke-WebRequest("")
+$ExpeditionDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/Expedition%20Motherboards/Expedition.ps1")
 Invoke-Expression $($ExpeditionDrivers.Content)
 
 #######################################################
