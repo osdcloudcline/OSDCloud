@@ -241,6 +241,94 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+#######################################################
+# Download ASUS Business Socket AM5 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 Business motherboard drivers..." -Verbose
+Write-Host
+
+$BusinessDrivers = Invoke-WebRequest("")
+Invoke-Expression $($BusinessDrivers.Content)
+
+#######################################################
+# Download ASUS CSM Socket AM5 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 CSM motherboard drivers..." -Verbose
+Write-Host
+
+$CSMDrivers = Invoke-WebRequest("")
+Invoke-Expression $($CSMDrivers.Content)
+
+#######################################################
+# Download ASUS Socket AM5 Expedition motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 Expedition motherboard drivers..." -Verbose
+Write-Host
+
+$ExpeditionDrivers = Invoke-WebRequest("")
+Invoke-Expression $($ExpeditionDrivers.Content)
+
+#######################################################
+# Download ASUS Socket AM5 Others motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 Others motherboard drivers..." -Verbose
+Write-Host
+
+$OthersDrivers = Invoke-WebRequest("")
+Invoke-Expression $($OthersDrivers.Content)
+
+#######################################################
+# Download ASUS Socket AM5 PRIME motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 PRIME motherboard drivers..." -Verbose
+Write-Host
+
+$PRIMEDrivers = Invoke-WebRequest("")
+Invoke-Expression $($PRIMEDrivers.Content)
+
+#######################################################
+# Download ASUS Socket AM5 ProArt motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 ProArt motherboard drivers..." -Verbose
+Write-Host
+
+$ProArtDrivers = Invoke-WebRequest("")
+Invoke-Expression $($ProArtDrivers.Content)
+
+#######################################################
+# Download ASUS Socket AM5 ROG motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 Republic of Gamers motherboard drivers..." -Verbose
+Write-Host
+
+$ROGDrivers = Invoke-WebRequest("")
+Invoke-Expression $($ROGDrivers.Content)
+
+#######################################################
+# Download ASUS Socket AM5 TUF Gaming motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 TUF Gaming motherboard drivers..." -Verbose
+Write-Host
+
+$TUFGamingDrivers = Invoke-WebRequest("")
+Invoke-Expression $($TUFGamingDrivers.Content)
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
