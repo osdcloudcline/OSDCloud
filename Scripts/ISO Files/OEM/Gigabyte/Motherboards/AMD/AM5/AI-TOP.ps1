@@ -12,9 +12,9 @@ Edit-OSDCloudWinPE -DriversPath $AITOPEthernet2
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AI TOP Motherboard WiFi Drivers..." -Verbose 
-$AITOPWiFi = "C:\Drivers\Motherboards\Gigabyte\AM5\AI-TOP\WiFi"
+$AITOPWLAN = "C:\Drivers\Motherboards\Gigabyte\AM5\AI-TOP\WLAN"
 
-Edit-OSDCloudWinPE -DriversPath $AITOPWiFi
+Edit-OSDCloudWinPE -DriversPath $AITOPWLAN
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AI TOP Motherboard Storage Drivers..." -Verbose 
