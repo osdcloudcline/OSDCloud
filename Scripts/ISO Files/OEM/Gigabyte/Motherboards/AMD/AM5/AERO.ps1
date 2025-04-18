@@ -15,12 +15,6 @@ $AEROWiFi = "C:\Drivers\Motherboards\Gigabyte\AM5\AERO\WiFi"
 Edit-OSDCloudWinPE -DriversPath $AEROWiFi
 
 Write-Host
-Write-Verbose "Processing: Gigabyte AM 5 AERO Motherboard Bluetooth Drivers..." -Verbose 
-$AEROBluetooth = "C:\Drivers\Motherboards\Gigabyte\AM5\AERO\Bluetooth"
-
-Edit-OSDCloudWinPE -DriversPath $AEROBluetooth
-
-Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 AERO Motherboard Storage Drivers..." -Verbose 
 $AEROStorage = "C:\Drivers\Motherboards\Gigabyte\AM5\AERO\Storage"
 
