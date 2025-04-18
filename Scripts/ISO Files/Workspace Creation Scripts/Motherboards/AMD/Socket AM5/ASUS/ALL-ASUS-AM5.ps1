@@ -282,7 +282,7 @@ Write-Host
 Write-Verbose "Processing: ASUS Socket AM5 Others motherboard drivers..." -Verbose
 Write-Host
 
-$OthersDrivers = Invoke-WebRequest("")
+$OthersDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/Other%20Motherboards/Other.ps1")
 Invoke-Expression $($OthersDrivers.Content)
 
 #######################################################
