@@ -241,6 +241,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+#######################################################
+# Download MSI Socket AM5 MEG motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 MEG motherboard drivers..." -Verbose
+Write-Host
+
+$MEGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/MEG%20Series/MEG.ps1")
+Invoke-Expression $($MEGDrivers.Content)
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
