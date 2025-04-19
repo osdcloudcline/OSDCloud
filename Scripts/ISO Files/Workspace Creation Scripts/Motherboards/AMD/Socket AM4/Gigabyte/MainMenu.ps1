@@ -45,7 +45,7 @@ do
         }
     }
     }
-     until ($selection -eq '8'){Show-MainMenu}
+     until ($selection -eq '6'){Show-MainMenu}
   }
 
 Show-GigabyteAM4
