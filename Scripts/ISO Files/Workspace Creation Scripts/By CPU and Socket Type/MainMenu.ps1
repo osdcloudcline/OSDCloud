@@ -98,3 +98,8 @@ Write-Host '                                                                    
 pause
 Clear-Host
 
+Write-Host "======= $Title ======"
+Write-Host " 1. OSDCloud: ALL AMD Socket AM4 Desktop Motherboards"
+Write-Host " 2. OSDCloud: ALL AMD Socket AM5 Desktop Motherboards"
+Write-Host " 3. OSDCloud: ALL INTEL Socket LGA 1700 Desktop Motherboards"
+Write-Host " 4. OSDCloud: ALL INTEL Socket LGA 1851 Desktop Motherboards"
