@@ -3,6 +3,8 @@
 #################################################################
 
 Function Show-MainMenu{
+    $WiFiConnect = "X:\Windows\WirelessConnect.exe"
+    Start-Process -FilePath $WiFiConnect
    [CmdletBinding()]
    param(
    [string]$Title = 'OSD Cloud Startnet - Main Menu',
