@@ -241,6 +241,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+#######################################################
+# Download MSI MAG Socket AM5 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 MAG motherboard drivers..." -Verbose
+Write-Host
+
+$MAGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/MAG%20Series/MAG.ps1")
+Invoke-Expression $($MAGDrivers.Content)
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
