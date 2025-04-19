@@ -84,8 +84,7 @@ Write-Host
 Write-Host 
 Write-Host '                                                                                              ' -BackgroundColor White                                                              
 Write-Host '    This scripts creates an OSCloud Deployment ISO file for the following:                    ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - all AMD AM4 and AM5 Socket types and all Intel LGA1700 and 1851 Socket types PCs       ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - all Qualcomm Snapdragon Socket types PCs                                               ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - all AMD AM4 and AM5 Socket types PCs                                                   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Networking and Storage: VM drivers for ESXI, Hyper-V, VMWare Workstation and Proxmox   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - VBS Scripting Support                                                                  ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Wireless networking support                                                            ' -ForegroundColor DarkBlue -BackgroundColor White
@@ -112,7 +111,7 @@ do
   {
 
   '1' { cls
-        $ALLSocketAM4 = Invoke-WebRequest("")
+        $ALLSocketAM4 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/By%20CPU%20and%20Socket%20Type/AMD%20Socket%20AM4/ALL-SocketAM4.ps1")
         Invoke-Expression $($ALLSocketAM4.Content)
         }
   '2' { cls
