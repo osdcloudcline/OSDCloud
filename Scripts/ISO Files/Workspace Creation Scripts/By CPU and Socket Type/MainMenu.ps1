@@ -104,3 +104,30 @@ Write-Host " 2. OSDCloud: ALL AMD Socket AM5 Desktop Motherboards"
 Write-Host " 3. OSDCloud: ALL INTEL Socket LGA 1700 Desktop Motherboards"
 Write-Host " 4. OSDCloud: ALL INTEL Socket LGA 1851 Desktop Motherboards"
 Write-Host " 5. Return to OSD Cloud Main Menu"
+
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+
+  '1' { cls
+        $ALLSocketAM4 = Invoke-WebRequest("")
+        Invoke-Expression $($ALLSocketAM4.Content)
+        }
+  '2' { cls
+        $ALLSocketAM5 = Invoke-WebRequest("")
+        Invoke-Expression $($ALLSocketAM5.Content)
+        }
+  '3' { cls
+        $ALLSocketLGA1700 = Invoke-WebRequest("")
+        Invoke-Expression $($ALLSocketLGA1700.Content)
+        }
+  '4' { cls
+        $ALLSocketLGA1851 = Invoke-WebRequest("")
+        Invoke-Expression $($ALLSocketLGA1851.Content)
+        }
+ '5' { cls
+        $ALLSocketLGA1851 = Invoke-WebRequest("")
+        Invoke-Expression $($ALLSocketLGA1851.Content)
+        }
