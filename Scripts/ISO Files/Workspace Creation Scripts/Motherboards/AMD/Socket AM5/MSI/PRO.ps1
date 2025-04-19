@@ -241,6 +241,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+#######################################################
+# Download MSI Socket AM5 PRO motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 PRO motherboard drivers..." -Verbose
+Write-Host
+
+$PRODrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/PRO%20Series/PRO.ps1")
+Invoke-Expression $($PRODrivers.Content)
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
