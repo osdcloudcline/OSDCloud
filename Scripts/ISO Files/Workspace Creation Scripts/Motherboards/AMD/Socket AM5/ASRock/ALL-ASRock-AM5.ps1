@@ -393,10 +393,6 @@ Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
 Write-Host
 
-Write-Host
-Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
-Write-Host
-
 $CloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Cloud%20Drivers/CloudDrivers.ps1")
 Invoke-Expression $($CloudDrivers.Content) 
 
