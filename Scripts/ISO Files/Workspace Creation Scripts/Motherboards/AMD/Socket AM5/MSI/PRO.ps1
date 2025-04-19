@@ -338,7 +338,12 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 # Integrate Drivers
 #########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating MSI Socket AM5 PRO motherboard drivers" -Verbose
+Write-Host
 
+$PRO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/AMD/AM%205/PRO.ps1")
+Invoke-Expression $($PRO.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
@@ -357,6 +362,7 @@ Invoke-Expression $($OtherDrivers.Content)
 Write-Host
 Write-Verbose "Completed: Integrating Drivers" -Verbose
 Write-Host
+
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
 ##########################################
