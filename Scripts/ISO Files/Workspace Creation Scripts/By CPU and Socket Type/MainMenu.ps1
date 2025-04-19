@@ -127,7 +127,7 @@ do
         Invoke-Expression $($ALLSocketLGA1851.Content)
         }
  '5' { cls
-        $OSDCloudMain = Invoke-WebRequest("")
+        $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/MainMenu.ps1")
         Invoke-Expression $($OSDCloudMain.Content)
         }
 }
