@@ -236,3 +236,94 @@ Write-Host
 Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
+
+################################################
+# Download ASRock Extreme AM4 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Extreme Socket AM$ Motherboard drivers download......" -Verbose
+Write-Host
+
+$ExtremeDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Extreme%20Motherboards/Extreme.ps1")
+Invoke-Expression $($ExtremeDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Extreme Socket AM$ Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASRock Fatal1ty Gaming AM4 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Fatal1ty Gaming Socket AM$ Motherboard drivers download......" -Verbose
+Write-Host
+
+$Fatal1tyGamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Fatal1ty%20Gaming%20Motherboards/Fatal1tyGaming.ps1")
+Invoke-Expression $($Fatal1tyGamingDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Fatal1ty Gaming Socket AM$ Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASRock PRO AM4 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock PRO Socket AM$ Motherboard drivers download......" -Verbose
+Write-Host
+
+$PRODrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/PRO%20Motherboards/PRO.ps1")
+Invoke-Expression $($PRODrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock PRO Socket AM$ Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASRock Phantom Gaming AM4 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Phantom Gaming Socket AM$ Motherboard drivers download......" -Verbose
+Write-Host
+
+$PhantomGamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Phantom%20Gaming%20Motherboards/PhantomGaming.ps1")
+Invoke-Expression $($PhantomGamingDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Phantom Gaming Socket AM$ Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASRock Steel Legend AM4 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Steel Legend Socket AM4 Motherboard drivers download......" -Verbose
+Write-Host
+
+$SteelLegendDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Steel%20Legend%20Motherboards/SteelLegend.ps1")
+Invoke-Expression $($SteelLegendDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Steel Legend Socket AM4 Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASRock Taichi AM4 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Taichi Socket AM4 Motherboard drivers download......" -Verbose
+Write-Host
+
+$TaichiDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Taichi%20Motherboards/Taichi.ps1")
+Invoke-Expression $($TaichiDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Taichi Socket AM4 Motherboard drivers download..." -Verbose
+Write-Host
+
