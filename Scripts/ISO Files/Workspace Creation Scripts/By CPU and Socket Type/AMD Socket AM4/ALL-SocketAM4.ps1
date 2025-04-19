@@ -414,3 +414,48 @@ Write-Host
 
 $WorkstationDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/Workstation%20Motherboards/Workstation.ps1")
 Invoke-Expression $($WorkstationDrivers.Content)
+
+#################################
+# Download Gigabyte AERO Socket AM4 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM4 AERO motherboard drivers" -Verbose
+Write-Host
+
+$AERODrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/AERO/AERO.ps1")
+Invoke-Expression $($AERODrivers.Content)
+
+#################################
+# Download Gigabyte AORUS Socket AM4 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM4 AORUS motherboard drivers" -Verbose
+Write-Host
+
+$AORUSDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/AORUS/AORUS.ps1")
+Invoke-Expression $($AORUSDrivers.Content)
+
+#################################
+# Download Gigabyte AORUS Socket AM4 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM4 Gaming motherboard drivers" -Verbose
+Write-Host
+
+$GamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/Gaming/Gaming.ps1")
+Invoke-Expression $($GamingDrivers.Content)
+
+#################################
+# Download Gigabyte UD-Ultra Durable Socket AM4 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM4 UD - Ultra Durable motherboard drivers" -Verbose
+Write-Host
+
+$UltraDurableDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/Ultra%20Durable/UltraDurable.ps1")
+Invoke-Expression $($UltraDurableDrivers.Content)
+
