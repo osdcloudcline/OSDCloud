@@ -540,3 +540,50 @@ Write-Host
 
 $ProxmoxDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Proxmox/Proxmox.ps1")
 Invoke-Expression $($ProxmoxDrivers.Content) 
+
+#########################################
+# Integrate Drivers
+#########################################
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Extreme Socket AM4 Motherboard Drivers" -Verbose
+Write-Host
+
+$Extreme = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/Extreme.ps1")
+Invoke-Expression $($Extreme.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Fatal1ty Gaming Socket AM4 Motherboard Drivers" -Verbose
+Write-Host
+
+$Fatal1tyGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/Fatal1tyGaming.ps1")
+Invoke-Expression $($Fatal1tyGaming.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock PRO Socket AM4 Motherboard Drivers" -Verbose
+Write-Host
+
+$PRO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/PRO.ps1")
+Invoke-Expression $($PRO.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Phantom Gaming Socket AM4 Motherboard Drivers" -Verbose
+Write-Host
+
+$PhantomGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/PhantomGaming.ps1")
+Invoke-Expression $($PhantomGaming.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Steel Legend Socket AM4 Motherboard Drivers" -Verbose
+Write-Host
+
+$SteelLegend = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/SteelLegend.ps1")
+Invoke-Expression $($SteelLegend.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Taichi Socket AM4 Motherboard Drivers" -Verbose
+Write-Host
+
+$Taichi = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/Taichi.ps1")
+Invoke-Expression $($Taichi.Content)
+
