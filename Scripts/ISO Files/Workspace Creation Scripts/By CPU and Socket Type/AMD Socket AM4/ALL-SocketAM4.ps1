@@ -327,3 +327,90 @@ Write-Host
 Write-Verbose "Completed: ASRock Taichi Socket AM4 Motherboard drivers download..." -Verbose
 Write-Host
 
+#######################################################
+# Download ASUS Business Socket AM4 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM4 Business motherboard drivers..." -Verbose
+Write-Host
+
+$BusinessDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/Business%20Motherboards/Business.ps1")
+Invoke-Expression $($BusinessDrivers.Content)
+
+#######################################################
+# Download ASUS CSM Socket AM4 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM4 CSM motherboard drivers..." -Verbose
+Write-Host
+
+$CSMDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/CSM%20Motherboards/CSM.ps1")
+Invoke-Expression $($CSMDrivers.Content)
+
+#######################################################
+# Download ASUS Socket AM4 Others motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM4 Others motherboard drivers..." -Verbose
+Write-Host
+
+$OthersDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/Other%20Motherboards/Others.ps1")
+Invoke-Expression $($OthersDrivers.Content)
+
+#######################################################
+# Download ASUS Socket AM4 PRIME motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM4 PRIME motherboard drivers..." -Verbose
+Write-Host
+
+$PRIMEDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/PRIME%20Motherboards/PRIME.ps1")
+Invoke-Expression $($PRIMEDrivers.Content)
+
+#######################################################
+# Download ASUS Socket AM4 ProArt motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM4 ProArt motherboard drivers..." -Verbose
+Write-Host
+
+$ProArtDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/ProArt%20Motherboards/ProArt.ps1")
+Invoke-Expression $($ProArtDrivers.Content)
+
+#######################################################
+# Download ASUS Socket AM4 ROG motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM4 Republic of Gamers motherboard drivers..." -Verbose
+Write-Host
+
+$ROGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/ROG%20-%20Republic%20of%20Gamers%20Motherboards/ROG%20-%20Republic%20of%20Gamers.ps1")
+Invoke-Expression $($ROGDrivers.Content)
+
+#######################################################
+# Download ASUS Socket AM4 TUF Gaming motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM4 TUF Gaming motherboard drivers..." -Verbose
+Write-Host
+
+$TUFGamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/TUF%20Gaming%20Motherboards/TUFGaming.ps1")
+Invoke-Expression $($TUFGamingDrivers.Content)
+
+#######################################################
+# Download ASUS Socket AM4 Workstation motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM4 Workstation motherboard drivers..." -Verbose
+Write-Host
+
+$WorkstationDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%204/Workstation%20Motherboards/Workstation.ps1")
+Invoke-Expression $($WorkstationDrivers.Content)
