@@ -128,6 +128,12 @@ do
         Invoke-Expression $($ALLSocketLGA1851.Content)
         }
  '5' { cls
-        $ALLSocketLGA1851 = Invoke-WebRequest("")
-        Invoke-Expression $($ALLSocketLGA1851.Content)
+        $OSDCloudMain = Invoke-WebRequest("")
+        Invoke-Expression $($OSDCloudMain.Content)
         }
+}
+    }
+     until ($selection -eq '5'){Invoke-Expression $($OSDCloudMain.Content)}
+    }
+    
+Show-MainMenu
