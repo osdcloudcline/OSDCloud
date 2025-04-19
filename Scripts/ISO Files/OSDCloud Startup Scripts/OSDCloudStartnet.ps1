@@ -254,8 +254,9 @@ Write-Host " 6. Notepad ++"
 Write-Host " 7. Google Chrome"
 Write-Host " 8. User Profile Backup/Restore"
 Write-Host " 9. Log Viewer - CM Trace"
-Write-Host " 10. OSDCloud: Get Help"
-Write-Host " 11. Return to Main Menu"
+Write-Host " 10. View Hardware Info"
+Write-Host " 11. OSDCloud: Get Help"
+Write-Host " 12. Return to Main Menu"
 
 do 
 {
@@ -304,7 +305,7 @@ Write-Host
    Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments8 -Wait -NoNewWindow -PassThru
    Start-Process -FilePath "regsvr32.exe" -ArgumentsList $arguments9 -Wait -NoNewWindow -PassThru
    
-   $MSTSCPath = "X:\Windows\System32\"
+   $MSTSCPath = "X:\Windows\System32\mstsc.exe"
    Start-Process -FilePath $MSTSCPath
     }
 '4'{cls
@@ -466,6 +467,10 @@ Write-Host
 '9'{cls
     $LogViewerPath = "X:\Windows\System32\CMTrace.exe"
    Start-Process -FilePath $LogViewerPath
+    }
+ '9'{cls
+    $HWiNFOPath = "X:\Windows\System32\HWiNFO\HWiNFOPortable.exe"
+   Start-Process -FilePath $HWiNFOPath
     }
 '10'{cls
     Get-Command osdcloud*
