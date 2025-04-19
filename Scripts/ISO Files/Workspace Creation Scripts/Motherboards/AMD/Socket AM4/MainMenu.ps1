@@ -10,7 +10,7 @@ Write-Host "======= $Title ======"
 Write-Host " 1. OSDCloud: ASRock Socket AM4 motherboards"
 Write-Host " 2. OSDCloud: ASUS Socket AM4 Motherboard"
 Write-Host " 3. OSDCloud: Gigabyte Socket AM4 Motherboard"
-Write-Host " 8. Return to OSD Cloud Motherboard Main Menu"
+Write-Host " 4. Return to OSD Cloud Motherboard Main Menu"
 
 do 
 {
