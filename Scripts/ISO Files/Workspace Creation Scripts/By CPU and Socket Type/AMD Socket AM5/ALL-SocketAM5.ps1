@@ -432,3 +432,144 @@ Write-Host
 $UltraDurableDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM5/UD%20-%20Ultra%20Durable/UD-Ultra%20Durable.ps1")
 Invoke-Expression $($UltraDurableDrivers.Content)
 
+#######################################################
+# Download MSI Gaming Socket AM5 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 Gaming motherboard drivers..." -Verbose
+Write-Host
+
+$GamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/Gaming%20Series/Gaming.ps1")
+Invoke-Expression $($GamingDrivers.Content)
+
+#######################################################
+# Download MSI MAG Socket AM5 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 MAG motherboard drivers..." -Verbose
+Write-Host
+
+$MAGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/MAG%20Series/MAG.ps1")
+Invoke-Expression $($MAGDrivers.Content)
+
+#######################################################
+# Download MSI Socket AM5 MEG motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 MEG motherboard drivers..." -Verbose
+Write-Host
+
+$MEGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/MEG%20Series/MEG.ps1")
+Invoke-Expression $($MEGDrivers.Content)
+
+#######################################################
+# Download MSI Socket AM5 MPG motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 MPG motherboard drivers..." -Verbose
+Write-Host
+
+$MPGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/MPG%20Series/MPG.ps1")
+Invoke-Expression $($MPGDrivers.Content)
+
+#######################################################
+# Download MSI Socket AM5 PRO motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 PRO motherboard drivers..." -Verbose
+Write-Host
+
+$PRODrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/PRO%20Series/PRO.ps1")
+Invoke-Expression $($PRODrivers.Content)
+
+#################################
+# Download OSDCloud - Cloud Drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - Dell Cloud Drivers..." -Verbose
+Write-Host
+
+$DellCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Dell%20Drivers/Dell-CloudDrivers.ps1")
+Invoke-Expression $($DellCloudDrivers.Content)
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - Intel Cloud Drivers..." -Verbose
+Write-Host
+
+$IntelCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Intel%20Ethernet%20Driver%20Pack/Intel-CloudDrivers.ps1")
+Invoke-Expression $($IntelCloudDrivers.Content)
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - Nutanix Cloud Drivers..." -Verbose
+Write-Host
+
+$NutanixCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/Nutanix%20Drivers/Nutanix-CloudDrivers.ps1")
+Invoke-Expression $($NutanixCloudDrivers.Content)
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - USB Cloud Drivers..." -Verbose
+Write-Host
+
+$USBCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/USB%20Drivers/USB-CloudDrivers.ps1")
+Invoke-Expression $($USBCloudDrivers.Content)
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - VMWare Cloud Drivers..." -Verbose
+Write-Host
+
+$VMWareCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/VMWare%20Drivers/VMWare-CloudDrivers.ps1")
+Invoke-Expression $($VMWareCloudDrivers.Content)
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - WLAN Cloud Drivers..." -Verbose
+Write-Host
+
+$WLANCloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/OSDCloud%20-%20Cloud%20Drivers/WLAN%20Drivers/WLAN-CloudDrivers.ps1")
+Invoke-Expression $($WLANCloudDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: OSDCloud Download - Cloud Drivers..." -Verbose
+Write-Host
+
+#################################
+# Download OSDCloud - Other Drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - Hyper-V Drivers" -Verbose
+Write-Host
+
+$HyperVDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
+Invoke-Expression $($HyperVDrivers.Content) 
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - VMWare ESXI Drivers" -Verbose
+Write-Host
+
+$ESXIDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/VMWare%20ESXI/ESXI-Drivers.ps1")
+Invoke-Expression $($ESXIDrivers.Content) 
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - VMWare Workstation Pro Drivers" -Verbose
+Write-Host
+
+$VMWareWSProDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/VMWare%20Workstation/VMWare-WorkstationPRO-Drivers.ps1")
+Invoke-Expression $($VMWareWSProDrivers.Content) 
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - Proxmox Drivers" -Verbose
+Write-Host
+
+$ProxmoxDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Proxmox/Proxmox.ps1")
+Invoke-Expression $($ProxmoxDrivers.Content) 
+
+#########################################
+# Integrate Drivers
+#########################################
+
