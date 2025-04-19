@@ -241,6 +241,61 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+#######################################################
+# Download MSI Gaming Socket AM5 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 Gaming motherboard drivers..." -Verbose
+Write-Host
+
+$GamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/Gaming%20Series/Gaming.ps1")
+Invoke-Expression $($GamingDrivers.Content)
+
+#######################################################
+# Download MSI MAG Socket AM5 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 MAG motherboard drivers..." -Verbose
+Write-Host
+
+$MAGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/MAG%20Series/MAG.ps1")
+Invoke-Expression $($MAGDrivers.Content)
+
+#######################################################
+# Download MSI Socket AM5 MEG motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 MEG motherboard drivers..." -Verbose
+Write-Host
+
+$MEGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/MEG%20Series/MEG.ps1")
+Invoke-Expression $($MEGDrivers.Content)
+
+#######################################################
+# Download MSI Socket AM5 MPG motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 MPG motherboard drivers..." -Verbose
+Write-Host
+
+$MPGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/MPG%20Series/MPG.ps1")
+Invoke-Expression $($MPGDrivers.Content)
+
+#######################################################
+# Download MSI Socket AM5 PRO motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 PRO motherboard drivers..." -Verbose
+Write-Host
+
+$PRODrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/PRO%20Series/PRO.ps1")
+Invoke-Expression $($PRODrivers.Content)
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
