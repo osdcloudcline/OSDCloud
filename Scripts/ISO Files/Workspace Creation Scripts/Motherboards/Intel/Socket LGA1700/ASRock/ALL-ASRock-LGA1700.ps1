@@ -429,7 +429,54 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 # Integrate Drivers
 #########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating ASRock AQUA Socket LGA 1700 Motherboard Drivers" -Verbose
+Write-Host
 
+$AQUA = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1700/AQUA.ps1")
+Invoke-Expression $($AQUA.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Extreme Socket LGA 1700 Motherboard Drivers" -Verbose
+Write-Host
+
+$Extreme = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1700/Extreme.ps1")
+Invoke-Expression $($Extreme.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Live Mixer Socket LGA 1700 Motherboard Drivers" -Verbose
+Write-Host
+
+$LiveMixer = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1700/LiveMixer.ps1")
+Invoke-Expression $($LiveMixer.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock PRO Socket LGA 1700 Motherboard Drivers" -Verbose
+Write-Host
+
+$PRO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1700/PRO.ps1")
+Invoke-Expression $($PRO.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Phantom Gaming Socket LGA 1700 Motherboard Drivers" -Verbose
+Write-Host
+
+$PhantomGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1700/PhantomGaming.ps1")
+Invoke-Expression $($PhantomGaming.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Steel Legend Socket LGA 1700 Motherboard Drivers" -Verbose
+Write-Host
+
+$SteelLegend = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1700/SteelLegend.ps1")
+Invoke-Expression $($SteelLegend.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Taichi Socket LGA 1700 Motherboard Drivers" -Verbose
+Write-Host
+
+$Taichi = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1700/Taichi.ps1")
+Invoke-Expression $($Taichi.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
