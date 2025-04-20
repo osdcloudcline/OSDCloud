@@ -248,10 +248,6 @@ Write-Host
 $ExtremeDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/Extreme%20Motherboards/Extreme.ps1")
 Invoke-Expression $($ExtremeDrivers.Content)
 
-Write-Host
-Write-Verbose "Completed: ASRock Extreme Socket LGA 1700 Motherboard drivers download..." -Verbose
-Write-Host
-
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
