@@ -334,7 +334,12 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 # Integrate Drivers
 #########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Live Mixer Socket LGA 1700 Motherboard Drivers" -Verbose
+Write-Host
 
+$LiveMixer = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1700/LiveMixer.ps1")
+Invoke-Expression $($LiveMixer.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
