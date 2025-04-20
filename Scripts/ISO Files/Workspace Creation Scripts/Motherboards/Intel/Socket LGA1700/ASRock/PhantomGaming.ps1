@@ -237,6 +237,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+################################################
+# Download ASRock Phantom Gaming LGA 1700 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Phantom Gaming Socket LGA 1700 Motherboard drivers download......" -Verbose
+Write-Host
+
+$PhantomGamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/Phantom%20Gaming%20Motherboards/PhantomGaming.ps1")
+Invoke-Expression $($PhantomGamingDrivers.Content)
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
