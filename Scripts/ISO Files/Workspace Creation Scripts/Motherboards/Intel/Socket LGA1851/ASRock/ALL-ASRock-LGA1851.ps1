@@ -237,6 +237,84 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+################################################
+# Download ASRock AQUA LGA 1851 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock AQUA Socket LGA 1851 Motherboard drivers download......" -Verbose
+Write-Host
+
+$AQUADrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/AQUA%20Motherboards/AQUA.ps1")
+Invoke-Expression $($AQUADrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock AQUA Socket LGA 1851 Motherboard drivers download..." -Verbose
+Write-Host
+
+
+################################################
+# Download ASRock Live Mixer LGA 1851 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Live Mixer Socket LGA 1851 Motherboard drivers download......" -Verbose
+Write-Host
+
+$LiveMixergDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/Live%20Mixer%20Motherboards/LiveMixer.ps1")
+Invoke-Expression $($LiveMixergDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Live Mixer Socket LGA 1851 Motherboard drivers download..." -Verbose
+Write-Host
+
+
+################################################
+# Download ASRock PRO LGA 1851 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock PRO Socket LGA 1851 Motherboard drivers download......" -Verbose
+Write-Host
+
+$PRODrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/PRO%20Motherboards/PRO.ps1")
+Invoke-Expression $($PRODrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock PRO Socket LGA 1851 Motherboard drivers download..." -Verbose
+Write-Host
+
+
+################################################
+# Download ASRock Steel Legend LGA 1851 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Steel Legend Socket LGA 1851 Motherboard drivers download......" -Verbose
+Write-Host
+
+$SteelLegendDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/Steel%20Legend%20Motherboards/SteelLegend.ps1")
+Invoke-Expression $($SteelLegendDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Steel Legend Socket LGA 1851 Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASRock Taichi LGA 1851 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Taichi Socket LGA 1851 Motherboard drivers download......" -Verbose
+Write-Host
+
+$TaichiDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/Taichi%20Motherboards/Taichi.ps1")
+Invoke-Expression $($TaichiDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Taichi Socket LGA 1851 Motherboard drivers download..." -Verbose
+Write-Host
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
