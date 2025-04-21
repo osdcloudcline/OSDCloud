@@ -237,6 +237,142 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+################################################
+# Download ASUS Business LGA 1700 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Business Socket LGA 1700 Motherboard drivers download......" -Verbose
+Write-Host
+
+$BusinessDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/Business%20Motherboards/Business.ps1")
+Invoke-Expression $($BusinessDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS Business Socket LGA 1700 Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASUS CSM LGA 1700 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS CSM Socket LGA 1700 Motherboard drivers download......" -Verbose
+Write-Host
+
+$CSMDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/CSM%20Motherboards/CSM.ps1")
+Invoke-Expression $($CSMDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS CSM Socket LGA 1700 Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASUS Expedition LGA 1700 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Expedition Socket LGA 1700 Motherboard drivers download......" -Verbose
+Write-Host
+
+$ExpeditiongDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/Live%20Mixer%20Motherboards/Expedition.ps1")
+Invoke-Expression $($ExpeditiongDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS Expedition Socket LGA 1700 Motherboard drivers download..." -Verbose
+Write-Host
+
+
+################################################
+# Download ASUS Other LGA 1700 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Other Socket LGA 1700 Motherboard drivers download......" -Verbose
+Write-Host
+
+$OtherDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/PRO%20Motherboards/PRO.ps1")
+Invoke-Expression $($OtherDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS Other Socket LGA 1700 Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASUS PRIME LGA 1700 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS PRIME Socket LGA 1700 Motherboard drivers download......" -Verbose
+Write-Host
+
+$PRIMEDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/Phantom%20Gaming%20Motherboards/PRIME.ps1")
+Invoke-Expression $($PRIMEDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS PRIME Socket LGA 1700 Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASUS ProArt LGA 1700 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS ProArt Socket LGA 1700 Motherboard drivers download......" -Verbose
+Write-Host
+
+$ProArtDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/Steel%20Legend%20Motherboards/ProArt.ps1")
+Invoke-Expression $($ProArtDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS ProArt Socket LGA 1700 Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASUS ROG LGA 1700 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS ROG Socket LGA 1700 Motherboard drivers download......" -Verbose
+Write-Host
+
+$ROGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/ROG%20Motherboards/ROG.ps1")
+Invoke-Expression $($ROGDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS ROG Socket LGA 1700 Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASUS TUF Gaming LGA 1700 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS TUF Gaming Socket LGA 1700 Motherboard drivers download......" -Verbose
+Write-Host
+
+$TUFGamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/ROG%20Motherboards/ROG.ps1")
+Invoke-Expression $($TUFGamingDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS TUF Gaming Socket LGA 1700 Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASUS Workstation LGA 1700 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Workstation Socket LGA 1700 Motherboard drivers download......" -Verbose
+Write-Host
+
+$WorkstationDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/ROG%20Motherboards/ROG.ps1")
+Invoke-Expression $($WorkstationDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS Workstation Socket LGA 1700 Motherboard drivers download..." -Verbose
+Write-Host
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
