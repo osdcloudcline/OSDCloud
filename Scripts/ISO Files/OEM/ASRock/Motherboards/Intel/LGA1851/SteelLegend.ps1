@@ -6,11 +6,11 @@ Write-Host
 Write-Verbose "Processing: ASRock Intel LGA1851 Steel Legend Motherboard drivers..." -Verbose
 Write-Host
 
-$SteelLegendEthernetPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\Ethernet"
+$SteelLegendEthernetPath = "C:\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\Ethernet"
 
-$SteelLegendStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\Storage"
+$SteelLegendStoragePath = "C:\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\Storage"
 
-$SteelLegendWLANPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\WLAN"
+$SteelLegendWLANPath = "C:\Drivers\Motherboards\ASRock\LGA1851\SteelLegend\WLAN"
 
 Edit-OSDCloudWinPe -DriverPath $SteelLegendEthernetPath
 Edit-OSDCloudWinPe -DriverPath $SteelLegendStoragePath
