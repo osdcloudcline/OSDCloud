@@ -123,7 +123,7 @@ do
         Invoke-Expression $($ALLSocketLGA1700.Content)
         }
   '4' { cls
-        $ALLSocketLGA1851 = Invoke-WebRequest("")
+        $ALLSocketLGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/By%20CPU%20and%20Socket%20Type/Intel%20Socket%201851/ALL-Socket1851.ps1")
         Invoke-Expression $($ALLSocketLGA1851.Content)
         }
  '5' { cls
