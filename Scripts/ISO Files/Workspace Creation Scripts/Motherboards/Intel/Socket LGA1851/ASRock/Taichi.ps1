@@ -237,6 +237,21 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+################################################
+# Download ASRock Taichi LGA 1851 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Taichi Socket LGA 1851 Motherboard drivers download......" -Verbose
+Write-Host
+
+$TaichiDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/Taichi%20Motherboards/Taichi.ps1")
+Invoke-Expression $($TaichiDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Taichi Socket LGA 1851 Motherboard drivers download..." -Verbose
+Write-Host
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
