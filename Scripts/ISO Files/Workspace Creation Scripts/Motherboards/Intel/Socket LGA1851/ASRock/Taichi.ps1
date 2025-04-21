@@ -338,7 +338,12 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 # Integrate Drivers
 #########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Taichi Socket LGA 1851 Motherboard Drivers" -Verbose
+Write-Host
 
+$Taichi = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1851/Taichi.ps1")
+Invoke-Expression $($Taichi.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
