@@ -237,16 +237,6 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
-################################################
-# Download ASUS Business LGA 1700 Drivers
-################################################
-
-Write-Host
-Write-Verbose "Processing: ASUS Business Socket LGA 1700 Motherboard drivers download......" -Verbose
-Write-Host
-
-$BusinessDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/Business%20Motherboards/Business.ps1")
-Invoke-Expression $($BusinessDrivers.Content)
 
 #################################
 # Download OSDCloud - Cloud Drivers
