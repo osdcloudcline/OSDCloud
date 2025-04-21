@@ -530,3 +530,6 @@ New-Item -Path $OSDISODestination -ItemType Directory -Force
 
 Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
 Write-Host
+
+Copy-Item -Path $ISO1 -Destination $OSDISODestination -Force
+Copy-Item -Path $ISO2 -Destination $OSDISODestination -Force
