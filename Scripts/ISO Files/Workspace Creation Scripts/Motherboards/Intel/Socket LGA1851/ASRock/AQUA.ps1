@@ -237,6 +237,21 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+################################################
+# Download ASRock AQUA LGA 1851 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock AQUA Socket LGA 1851 Motherboard drivers download......" -Verbose
+Write-Host
+
+$AQUADrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/AQUA%20Motherboards/AQUA.ps1")
+Invoke-Expression $($AQUADrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock AQUA Socket LGA 1851 Motherboard drivers download..." -Verbose
+Write-Host
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
