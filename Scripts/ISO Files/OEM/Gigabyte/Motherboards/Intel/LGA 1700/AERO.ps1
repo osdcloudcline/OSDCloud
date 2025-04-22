@@ -8,7 +8,7 @@ $AEROEthernet1 = "C:\Drivers\Motherboards\Gigabyte\LGA 1700\AERO\Ethernet1"
 $AEROEthernet2 = "C:\Drivers\Motherboards\Gigabyte\LGA 1700\AERO\Ethernet2"
 
 Edit-OSDCloudWinPE -DriversPath $AEROEthernet1
-Edit-OSDCloudWinPE -DriversPath $AEROEthernet1
+Edit-OSDCloudWinPE -DriversPath $AEROEthernet2
 
 Write-Host
 Write-Verbose "Processing: Gigabyte LGA 1700 AERO Motherboard WLAN Drivers..." -Verbose 
