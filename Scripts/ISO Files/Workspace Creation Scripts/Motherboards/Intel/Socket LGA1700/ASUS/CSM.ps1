@@ -237,6 +237,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 
 Dismount-WindowsImage -Path $mountdir -Save
 
+#######################################################
+# Download ASUS CSM Socket LGA 1700 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket LGA 1700 CSM motherboard drivers..." -Verbose
+Write-Host
+
+$CSMDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201700/CSM%20Motherboards/CSM.ps1")
+Invoke-Expression $($CSMDrivers.Content)
+
 #################################
 # Download OSDCloud - Cloud Drivers
 #################################
