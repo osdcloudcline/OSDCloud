@@ -761,8 +761,8 @@ $OSDCloudISOPath = "C:\OSDCloud\ALL-AM5"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ALL-MSI-AM5\OSDCloud-ALL-AM5.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ALL-MSI-AM5\OSDCloud-ALL-AM5_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ALL-AM5\OSDCloud-ALL-AM5.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ALL-AM5\OSDCloud-ALL-AM5_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
