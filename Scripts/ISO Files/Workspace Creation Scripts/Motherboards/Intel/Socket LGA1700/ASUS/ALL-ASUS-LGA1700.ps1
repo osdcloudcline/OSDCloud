@@ -423,7 +423,68 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 # Integrate Drivers
 #########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 Business motherboard drivers" -Verbose
+Write-Host
 
+$Business = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201700/Business.ps1")
+Invoke-Expression $($Business.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 CSM motherboard drivers" -Verbose
+Write-Host
+
+$CSM = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201700/CSM.ps1")
+Invoke-Expression $($CSM.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 Expedition motherboard drivers" -Verbose
+Write-Host
+
+$Expedition = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201700/Expedition.ps1")
+Invoke-Expression $($Expedition.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 Others motherboard drivers" -Verbose
+Write-Host
+
+$Others = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201700/Other.ps1")
+Invoke-Expression $($Others.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 PRIME motherboard drivers" -Verbose
+Write-Host
+
+$PRIME = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201700/PRIME.ps1")
+Invoke-Expression $($PRIME.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 ProArt motherboard drivers" -Verbose
+Write-Host
+
+$ProArt = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201700/ProArt.ps1")
+Invoke-Expression $($ProArt.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 ROG - Republic of Gamers motherboard drivers" -Verbose
+Write-Host
+
+$ROG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201700/ROG.ps1")
+Invoke-Expression $($ROG.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 TUF Gaming motherboard drivers" -Verbose
+Write-Host
+
+$TUFGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201700/TUFGaming.ps1")
+Invoke-Expression $($TUFGaming.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 Workstation motherboard drivers" -Verbose
+Write-Host
+
+$Workstation = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201700/Workstation.ps1")
+Invoke-Expression $($Workstation.Content)  
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
