@@ -21,8 +21,6 @@ $ProArtWLAN4 = "C:\Drivers\Motherboards\ASUS\LGA1700\ProArt\WLAN4"
 $ProArtWLAN5 = "C:\Drivers\Motherboards\ASUS\LGA1700\ProArt\WLAN5"
 $ProArtWLAN6 = "C:\Drivers\Motherboards\ASUS\LGA1700\ProArt\WLAN6"
 $ProArtWLAN7 = "C:\Drivers\Motherboards\ASUS\LGA1700\ProArt\WLAN7"
-$ProArtWLAN8 = "C:\Drivers\Motherboards\ASUS\LGA1700\ProArt\WLAN8"
-$ProArtWLAN9 = "C:\Drivers\Motherboards\ASUS\LGA1700\ProArt\WLAN9"
 
 Edit-OSDCloudWinPE -DriverPath $ProArtWLAN1
 Edit-OSDCloudWinPE -DriverPath $ProArtWLAN2
@@ -31,8 +29,6 @@ Edit-OSDCloudWinPE -DriverPath $ProArtWLAN4
 Edit-OSDCloudWinPE -DriverPath $ProArtWLAN5
 Edit-OSDCloudWinPE -DriverPath $ProArtWLAN6
 Edit-OSDCloudWinPE -DriverPath $ProArtWLAN7
-Edit-OSDCloudWinPE -DriverPath $ProArtWLAN8
-Edit-OSDCloudWinPE -DriverPath $ProArtWLAN9
 
 Write-Host
 Write-Verbose "Processing: ASUS LGA 1700 ProArt Motherboard Storage Drivers..." -Verbose 
