@@ -64,15 +64,15 @@ Edit-OSDCloudWinPE -DriverPath $AORUSEthernet27
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 4 AORUS Motherboard WiFi Drivers..." -Verbose 
-$AORUSWiFi1 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\B450\WiFi1"
-$AORUSWiFi2 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\B550\WiFi1"
-$AORUSWiFi3 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\B550\WiFi2"
-$AORUSWiFi4 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\B550\WiFi3"
-$AORUSWiFi5 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\B550\WiFi4"
-$AORUSWiFi6 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\B550\WiFi5"
-$AORUSWiFi7 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\X470\WiFi1"
-$AORUSWiFi8 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\X570\WiFi1"
-$AORUSWiFi9 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\X570\WiFi2"
+$AORUSWiFi1 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\B450\WLAN1"
+$AORUSWiFi2 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\B550\WLAN1"
+$AORUSWiFi3 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\B550\WLAN2"
+$AORUSWiFi4 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\B550\WLAN3"
+$AORUSWiFi5 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\B550\WLAN4"
+$AORUSWiFi6 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\B550\WLAN5"
+$AORUSWiFi7 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\X470\WLAN1"
+$AORUSWiFi8 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\X570\WLAN1"
+$AORUSWiFi9 = "C:\Drivers\Motherboards\Gigabyte\AM4\AORUS\X570\WLAN2"
 
 Edit-OSDCloudWinPE -DriverPath $AORUSWiFi1
 Edit-OSDCloudWinPE -DriverPath $AORUSWiFi2
