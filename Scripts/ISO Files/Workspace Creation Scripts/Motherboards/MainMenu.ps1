@@ -42,5 +42,5 @@ do
     }
     }
      until ($selection -eq '5'){Invoke-Expression $($OSDCloudMain.Content)}
-
+}
 Show-MainMenu
