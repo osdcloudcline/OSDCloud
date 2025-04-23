@@ -16,7 +16,7 @@ Get-OSDCloudTemplateNames
 
 Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = "C:\OSDCloud\ASRock-Fatal1tyGamingMotherboards-AM4"
+$WorkspacePath = "C:\OSDCloud\ASRock-Fatal1tyGaming-AM4"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
