@@ -16,7 +16,7 @@ Get-OSDCloudTemplateNames
 
 Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
-$WorkspacePath = "C:\OSDCloud\ASRock-PhantomGamingMotherboards-AM4"
+$WorkspacePath = "C:\OSDCloud\ASRock-PhantomGaming-AM4"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 Set-OSDCloudWorkspace -WorkspacePath $WorkspacePath
 
@@ -379,7 +379,7 @@ Write-Host
 # Rename OSDCloud ISO
 #########################################
 
-$OSDCloudISOPath = "C:\OSDCloud\ASRock-PhantomGamingMotherboards-AM4"
+$OSDCloudISOPath = "C:\OSDCloud\ASRock-PhantomGaming-AM4"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "$OSDCloudISOPath\OSDCloud-ASRock-PhantomGaming-AM4.iso" -Force
