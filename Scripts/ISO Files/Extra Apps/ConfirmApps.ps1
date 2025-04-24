@@ -73,7 +73,7 @@ $MSTSCenusFile2 = "$mountdir\Windows\System32\en-us\msacm32.drv.mui"
 $MSTSCenusFile3 = "$mountdir\Windows\System32\en-us\mstsc.exe.mui"
 $MSTSCenusFile4 = "$mountdir\Windows\System32\en-us\mstscax.dll.mui"
 
-Write-Host "Confirming ALL OSDCloud Portable and and nessary files have successfully been copied to the image. Please wait for file verification to complete" -ForegroundColor Blue -BackgroundColor White
+Write-Host "Confirming ALL OSDCloud Portable apps and required files have successfully been copied to the image. Please wait for file verification to complete" -ForegroundColor Blue -BackgroundColor White
 
 Write-Host "Processing: Google Chrome" -ForegroundColor Cyan
 Test-Path -Path $ChromePath
@@ -163,4 +163,4 @@ Test-Path -Path $MSTSCenusFile2
 Test-Path -Path $MSTSCenusFile3 
 Test-Path -Path $MSTSCenusFile4 
 
-Write-Host "ALL OSDCloud Portable apps and neccessary files have successfully been confirmed" -ForegroundColor DarkRed -BackgroundColor White
+Write-Host "ALL OSDCloud Portable apps and required files have successfully been confirmed" -ForegroundColor DarkRed -BackgroundColor White
