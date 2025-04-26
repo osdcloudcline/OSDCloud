@@ -11,7 +11,7 @@ Import-Module -Name 7Zip4Powershell -Force
 
 
 # Settings and File Paths
-$PS7Source = "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0/PowerShell-7.5.0-win-x64.zip"
+$PS7Source = "https://github.com/PowerShell/PowerShell/releases/download/v7.5.1/PowerShell-7.5.1-win-x64.zip"
 $PS7Destination = "C:\OSDCloud\GitHub\downloads\PowerShell\7"
 $PS7Extract = "C:\downloads\OSDCloud\PS7"
 $mountdir = "C:\Mount"
@@ -30,7 +30,7 @@ $WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
 Mount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
 
 Write-Verbose "Processing: Expanding Windows PowerShell 7 ZIP File" -Verbose
-Expand-Archive -Path "$PS7Destination\PowerShell-7.5.0-win-x64.zip" -DestinationPath "$mountdir\Program Files\PowerShell\7" -Force
+Expand-Archive -Path "$PS7Destination\PowerShell-7.5.1-win-x64.zip" -DestinationPath "$mountdir\Program Files\PowerShell\7" -Force
 
 Write-Verbose "Processing: Updating environment PATHS" -Verbose
 # Update the offline environment PATH for PowerShell 7
