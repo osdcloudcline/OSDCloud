@@ -33,14 +33,14 @@ Import-Module -Name OSD -Force
 Install-Module -Name 7Zip4Powershell -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name 7Zip4Powershell -Force
 
-$sourcedownload = "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0/PowerShell-7.5.0-win-x64.zip"
+$sourcedownload = "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0/PowerShell-7.5.1-win-x64.zip"
 $DLDestination = "C:\OSDCloud\downloads\PowerShell\7"
 
-Write-Verbose "Processing: PowerShell 7.5.0 download..." -Verbose
+Write-Verbose "Processing: PowerShell 7.5.1 download..." -Verbose
 Write-Host
 Save-WebFile -SourceUrl $sourcedownload -DestinationDirectory $DLDestination
 
-Write-Verbose "Completed: PowerShell 7.5.0 download" -Verbose
+Write-Verbose "Completed: PowerShell 7.5.1 download" -Verbose
 Write-Host
 
 # Settings and File Paths
@@ -65,7 +65,7 @@ Write-Host
 Write-Verbose "Processing: Expanding Windows PowerShell 7 ZIP File" -Verbose
 Write-Host
 
-Expand-Archive -Path "$DLDestination\PowerShell-7.5.0-win-x64.zip" -DestinationPath "$mountdir\Program Files\PowerShell\7" -Force
+Expand-Archive -Path "$DLDestination\PowerShell-7.5.1-win-x64.zip" -DestinationPath "$mountdir\Program Files\PowerShell\7" -Force
 
 Write-Verbose "Processing: Updating environment PATHS" -Verbose
 Write-Host
@@ -188,6 +188,44 @@ Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
 Write-Host
 Write-Verbose "Completed: Integration of VBS Scripting Support for OSDCloud..." -Verbose
 Write-Host
+
+################################################
+# Download OSDCloud Extra Apps
+################################################
+
+$DownloadApps = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Extra%20Apps/DownloadApps.ps1")
+Invoke-Expression $($DownloadApps.Content)
+
+###############################################
+# Add Applications
+###############################################
+
+$mountdir = "C:\Mount"
+$sourceWIMDir = "\Media\sources"
+$WorkspacePath = Get-OSDCloudWorkspace
+$WimFile = Join-Path -Path $WorkspacePath -ChildPath $sourceWIMDir
+
+Write-Verbose "Processing: Mounting OSDCloud boot.wim" -Verbose
+# Mount the image
+Mount-WindowsImage -ImagePath "$WimFile\boot.wim" -Path $mountdir -Index 1
+
+$AddApps = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Extra%20Apps/AddApps.ps1")
+Invoke-Expression $($AddApps.Content)
+
+########################################################
+# Confirm Apps have been integrated
+########################################################
+
+$ConfirmAppsFiles = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Extra%20Apps/ConfirmApps.ps1")
+Invoke-Expression $($ConfirmAppsFiles.Content)
+
+########################
+# Dismount the image
+########################
+Write-Host
+Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
+
+Dismount-WindowsImage -Path $mountdir -Save
 
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
