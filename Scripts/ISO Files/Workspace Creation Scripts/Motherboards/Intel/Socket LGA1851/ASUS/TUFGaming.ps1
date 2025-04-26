@@ -29,19 +29,19 @@ Import-Module -Name OSD -Force
 Install-Module -Name 7Zip4Powershell -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name 7Zip4Powershell -Force
 
-$sourcedownload = "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0/PowerShell-7.5.0-win-x64.zip"
+$sourcedownload = "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0/PowerShell-7.5.1-win-x64.zip"
 $DLDestination = "C:\OSDCloud\downloads\PowerShell\7"
 
-Write-Verbose "Processing: PowerShell 7.5.0 download..." -Verbose
+Write-Verbose "Processing: PowerShell 7.5.1 download..." -Verbose
 Write-Host
 Save-WebFile -SourceUrl $sourcedownload -DestinationDirectory $DLDestination
 
-Write-Verbose "Completed: PowerShell 7.5.0 download" -Verbose
+Write-Verbose "Completed: PowerShell 7.5.1 download" -Verbose
 Write-Host
 
 # Settings and File Paths
 
-$sourcedownload = "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0/PowerShell-7.5.0-win-x64.zip"
+$sourcedownload = "https://github.com/PowerShell/PowerShell/releases/download/v7.5.1/PowerShell-7.5.1-win-x64.zip"
 $DLDestination = "C:\OSDCloud\downloads\PowerShell\7"
 $mountdir = "C:\Mount"
 $sourceWIMDir = "\Media\sources"
@@ -61,7 +61,7 @@ Write-Host
 Write-Verbose "Processing: Expanding Windows PowerShell 7 ZIP File" -Verbose
 Write-Host
 
-Expand-Archive -Path "$DLDestination\PowerShell-7.5.0-win-x64.zip" -DestinationPath "$mountdir\Program Files\PowerShell\7" -Force
+Expand-Archive -Path "$DLDestination\PowerShell-7.5.1-win-x64.zip" -DestinationPath "$mountdir\Program Files\PowerShell\7" -Force
 
 Write-Verbose "Processing: Updating environment PATHS" -Verbose
 Write-Host
