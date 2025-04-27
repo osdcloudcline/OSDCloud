@@ -688,6 +688,13 @@ $AORUS = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/h
 Invoke-Expression $($AORUS.Content)
 
 Write-Host
+Write-Verbose "Processing: Integrating Gigabyte Socket LGA 1700 Eagle motherboard drivers" -Verbose
+Write-Host
+
+$Eagle = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/Intel/LGA%201700/Eagle.ps1")
+Invoke-Expression $($Eagle.Content)
+
+Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
 Write-Host
 
