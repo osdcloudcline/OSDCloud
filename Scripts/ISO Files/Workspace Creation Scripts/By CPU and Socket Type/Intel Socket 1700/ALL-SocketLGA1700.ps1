@@ -443,6 +443,17 @@ $WorkstationDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDClo
 Invoke-Expression $($WorkstationDrivers.Content)
 
 #################################
+# Download Gigabyte AERO Socket LGA1700 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket LGA 1700 AERO motherboard drivers" -Verbose
+Write-Host
+
+$AERODrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/Intel/LGA%201700/AERO%20Motherboards/AERO.ps1")
+Invoke-Expression $($AERODrivers.Content)
+
+#################################
 # Download OSDCloud - Cloud Drivers
 #################################
 
