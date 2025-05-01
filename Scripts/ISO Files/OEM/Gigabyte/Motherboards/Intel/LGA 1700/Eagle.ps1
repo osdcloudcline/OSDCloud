@@ -24,7 +24,5 @@ $EagleStorage = "C:\Drivers\Motherboards\Gigabyte\LGA1700\Eagle\Storage"
 
 Edit-OSDCloudWinPE -DriversPath $EagleStorage
 
-Write-Host
-Write-Verbose "Completed: Integration of Gigabyte LGA 1700 Eagle Motherboard Drivers..." -Verbose 
-Write-Host
+
 
