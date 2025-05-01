@@ -272,6 +272,17 @@ $EagleDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDriv
 Invoke-Expression $($EagleDrivers.Content)
 
 #################################
+# Download Gigabyte Gaming Socket LGA1700 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket LGA 1700 Gaming motherboard drivers" -Verbose
+Write-Host
+
+$GamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/Intel/LGA%201700/Gaming%20Motherboards/Gaming.ps1")
+Invoke-Expression $($GamingDrivers.Content)
+
+#################################
 # Download OSDCloud - Cloud Drivers
 #################################
 
