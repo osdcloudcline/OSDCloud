@@ -36,7 +36,5 @@ $AORUSStorage2 = "C:\Drivers\Motherboards\Gigabyte\LGA1700\AORUS\Storage2"
 Edit-OSDCloudWinPE -DriversPath $AORUSStorage1
 Edit-OSDCloudWinPE -DriversPath $AORUSStorage2
 
-Write-Host
-Write-Verbose "Completed: Integration of Gigabyte LGA 1700 AORUS Motherboard Drivers..." -Verbose 
-Write-Host
+
 
