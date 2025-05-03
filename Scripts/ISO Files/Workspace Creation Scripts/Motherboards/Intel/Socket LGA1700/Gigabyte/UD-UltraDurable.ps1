@@ -238,6 +238,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 Dismount-WindowsImage -Path $mountdir -Save
 
 #################################
+# Download Gigabyte Ultra Durable Socket LGA1700 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket LGA 1700 Ultra Durable motherboard drivers" -Verbose
+Write-Host
+
+$UltraDurableDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/Intel/LGA%201700/UD%20-%20UltraDurable%20Motherboards/UD-UltraDurable.ps1")
+Invoke-Expression $($UltraDurableDrivers.Content)
+
+#################################
 # Download OSDCloud - Cloud Drivers
 #################################
 
