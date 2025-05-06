@@ -103,9 +103,10 @@ Write-Host " 1. OSDCloud: Create ISO - VMWare ESXI 8.0"
 Write-Host " 2. OSDCloud: Create ISO - Microsoft Hyper-V"
 Write-Host " 3. OSDCloud: Create ISO - VMWare Workstation Pro"
 Write-Host " 4. OSDCloud: Create ISO - Proxmox"
-Write-Host " 5. OSDCloud: Create ISO - ALL Virtualization"
-Write-Host " 6. OSDCloud: Get Help"
-Write-Host " 7. Return to Main Menu"
+Write-Host " 5. OSDCloud: Create ISO - unRAID"
+Write-Host " 6. OSDCloud: Create ISO - ALL Virtualization"
+Write-Host " 7. OSDCloud: Get Help"
+Write-Host " 8. Return to Main Menu"
 
 do 
 {
@@ -129,22 +130,26 @@ do
     Invoke-Expression $($Proxmox.Content)
     }
 '5'{cls
+    $unRAID = Invoke-WebRequest("")
+    Invoke-Expression $($unRAID.Content)
+    }
+'6'{cls
     $ALLVirt = Invoke-WebRequest("https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/Virtualization/ALL-VT.ps1")
     Invoke-Expression $($ALLVirt.Content)
     }
-'6'{cls
+'7'{cls
     Get-Command -Module OSD | Out-File -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     Start-Process -FilePath "C:\OSDCloud\Help\Commands\OSD\OSDFunctions.txt"
     pause
     Show-MainMenu
     }
-'7'{cls
+'8'{cls
     $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
     Invoke-Expression $($OSDCloudMain.Content)
    }
     }
     }
-     until ($selection -eq '7'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '8'){Invoke-Expression $($OSDCloudMain.Content)}
     }
 
     
