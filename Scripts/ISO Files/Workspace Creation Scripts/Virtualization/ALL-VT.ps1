@@ -224,7 +224,7 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 Dismount-WindowsImage -Path $mountdir -Save
 
 ############################################
-# Add Drivers
+# Download Virtual Drivers
 ###########################################
 
 $ALLVTDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/ALL-VT-Drivers.ps1")
