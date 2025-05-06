@@ -224,7 +224,7 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 Dismount-WindowsImage -Path $mountdir -Save
 
 ############################################
-# Add Drivers
+# Download Virtual Drivers
 ###########################################
 
 $HyperVDrivers = Invoke-WebRequest("")
