@@ -227,7 +227,7 @@ Dismount-WindowsImage -Path $mountdir -Save
 # Download Virtual Drivers
 ###########################################
 
-$ALLVTDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/ALL-VT-Drivers.ps1")
+$ALLVTDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ALL%20Virtualization/ALL-VT-Drivers.ps1")
 Invoke-Expression $($ALLVTDrivers.Content)
 
 #################################
