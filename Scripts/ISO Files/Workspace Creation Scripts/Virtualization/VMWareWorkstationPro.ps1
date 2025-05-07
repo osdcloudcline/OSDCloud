@@ -227,7 +227,7 @@ Dismount-WindowsImage -Path $mountdir -Save
 # Download Virtual Drivers
 ###########################################
 
-$VMWareWSProDrivers = Invoke-WebRequest("")
+$VMWareWSProDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/VMWare%20Workstation/VMWare-WorkstationPRO-Drivers.ps1")
 Invoke-Expression $($VMWareWSProDrivers.Content)
 
 #################################
