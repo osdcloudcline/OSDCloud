@@ -228,7 +228,7 @@ Dismount-WindowsImage -Path $mountdir -Save
 # Download Virtual Drivers
 ###########################################
 
-$ESXIDrivers = Invoke-WebRequest("")
+$ESXIDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/VMWare%20ESXI/ESXI-Drivers.ps1")
 Invoke-Expression $($ESXIDrivers.Content)
 
 #################################
