@@ -351,7 +351,40 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 # Integrate Drivers
 #########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating MSI Gaming Socket LGA 1700 Motherboard Drivers" -Verbose
+Write-Host
 
+$Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/Intel/LGA%201700/Gaming.ps1")
+Invoke-Expression $($Gaming.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating MSI MAG Socket LGA 1700 Motherboard Drivers" -Verbose
+Write-Host
+
+$MAG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/Intel/LGA%201700/MAG.ps1")
+Invoke-Expression $($MAG.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating MSI MEG Socket LGA 1700 Motherboard Drivers" -Verbose
+Write-Host
+
+$MEG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/Intel/LGA%201700/MEG.ps1")
+Invoke-Expression $($MEG.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating MSI MPG Socket LGA 1700 Motherboard Drivers" -Verbose
+Write-Host
+
+$MPG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/Intel/LGA%201700/MPG.ps1")
+Invoke-Expression $($MPG.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating MSI PRO Socket LGA 1700 Motherboard Drivers" -Verbose
+Write-Host
+
+$PRO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/Intel/LGA%201700/PRO.ps1")
+Invoke-Expression $($PRO.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
