@@ -325,8 +325,8 @@ Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\ALL-VT\OSDCloud-ALL-VT.iso"
-$ISO2 = "C:\OSDCloud\ALL-VT\OSDCloud-ALL-VT_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\ALL-VT\OSDCloud-Version 1.0-ALL-VT.iso"
+$ISO2 = "C:\OSDCloud\ALL-VT\OSDCloud-Version 1.0-ALL-VT_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\Virtualization"
 
