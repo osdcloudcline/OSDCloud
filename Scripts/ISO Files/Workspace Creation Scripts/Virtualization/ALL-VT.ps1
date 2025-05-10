@@ -291,6 +291,14 @@ Write-Host
 $ALLVT = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/ALL-VT-Drivers.ps1")
 Invoke-Expression $($ALLVT.Content)
 
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
+Write-Host
+
+$CloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Cloud%20Drivers/CloudDrivers.ps1")
+Invoke-Expression $($CloudDrivers.Content) 
+
+
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
 ##########################################
