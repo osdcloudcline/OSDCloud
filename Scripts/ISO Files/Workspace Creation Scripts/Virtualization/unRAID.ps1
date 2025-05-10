@@ -301,3 +301,42 @@ Invoke-Expression $($CloudDrivers.Content)
 Write-Host
 Write-Verbose "Completed: Integrating Drivers" -Verbose
 Write-Host
+
+##########################################
+# OSDCloud WebScript for Startnet.cmd
+##########################################
+
+Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
+Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1
+Write-Host
+
+###########################################
+# Rename OSDCloud ISO
+#########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\unRAID"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Write-Host
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\Proxmox\OSDCloud-Version 1.0-unRAID.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\Proxmox\OSDCloud-Version 1.0-unRAID_NoPrompt.iso" -Force
+
+###########################################
+# Copy OSDCloud ISO Files
+#########################################
+
+$ISO1 = "C:\OSDCloud\unRAID\OSDCloud-Version 1.0-unRAID.iso"
+$ISO2 = "C:\OSDCloud\unRAID\OSDCloud-Version 1.0-unRAID_NoPrompt.iso"
+
+$OSDISODestination = "C:\ISOs\OSDCloud\Virtualization"
+
+Write-Verbose "Processing: Creating ISO directory" -Verbose
+Write-Host
+# Create ISO Directory
+New-Item -Path $OSDISODestination -ItemType Directory -Force
+
+Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
+Write-Host
+
+Copy-Item -Path $ISO1 -Destination $OSDISODestination -Force
+Copy-Item -Path $ISO2 -Destination $OSDISODestination -Force
