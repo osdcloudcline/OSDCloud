@@ -318,8 +318,8 @@ $OSDCloudISOPath = "C:\OSDCloud\ALL-VT"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ALL-VT\OSDCloud-ALL-VT.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ALL-VT\OSDCloud-ALL-VT_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ALL-VT\OSDCloud-Version 1.0-ALL-VT.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ALL-VT\OSDCloud-Version 1.0-ALL-VT_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
