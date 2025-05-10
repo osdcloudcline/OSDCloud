@@ -288,7 +288,7 @@ Write-Host
 Write-Verbose "Processing: Integrating ALL Virtualization Technology Drivers" -Verbose
 Write-Host
 
-$ALLVT = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/Extreme.ps1")
+$ALLVT = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/ALL-VT-Drivers.ps1")
 Invoke-Expression $($ALLVT.Content)
 
 ##########################################
