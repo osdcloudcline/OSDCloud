@@ -288,7 +288,7 @@ Write-Host
 Write-Verbose "Processing: Integrating Microsoft Hyper-V Virtualization Technology Drivers" -Verbose
 Write-Host
 
-$HyperV = Invoke-WebRequest("")
+$HyperV = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/HyperV.ps1")
 Invoke-Expression $($HyperV.Content)
 
 Write-Host
@@ -318,15 +318,15 @@ $OSDCloudISOPath = "C:\OSDCloud\Hyper-V"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\Hyper-V\OSDCloud-Hyper-V.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\Hyper-V\OSDCloud-Hyper-V_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\Hyper-V\OSDCloud-Version 1.0-Hyper-V.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\Hyper-V\OSDCloud-Version 1.0-Hyper-V_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\Hyper-V\OSDCloud-Hyper-V.iso"
-$ISO2 = "C:\OSDCloud\Hyper-V\OSDCloud-Hyper-V_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\Hyper-V\OSDCloud-Version 1.0-Hyper-V.iso"
+$ISO2 = "C:\OSDCloud\Hyper-V\OSDCloud-Version 1.0-Hyper-V_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\Virtualization"
 
