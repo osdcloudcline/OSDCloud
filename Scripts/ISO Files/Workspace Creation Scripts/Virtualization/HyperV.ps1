@@ -284,6 +284,24 @@ Write-Host
 # Integrate Drivers
 ########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating Microsoft Hyper-V Virtualization Technology Drivers" -Verbose
+Write-Host
+
+$HyperV = Invoke-WebRequest("")
+Invoke-Expression $($HyperV.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
+Write-Host
+
+$CloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Cloud%20Drivers/CloudDrivers.ps1")
+Invoke-Expression $($CloudDrivers.Content) 
+
+Write-Host
+Write-Verbose "Completed: Integrating Drivers" -Verbose
+Write-Host
+
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
 ##########################################
