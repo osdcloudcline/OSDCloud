@@ -288,7 +288,7 @@ Write-Host
 Write-Verbose "Processing: Integrating VMWare Workstation Professional Virtualization Technology Drivers" -Verbose
 Write-Host
 
-$unRAID = Invoke-WebRequest("")
+$unRAID = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/unRAID.ps1")
 Invoke-Expression $($unRAID.Content)
 
 Write-Host
