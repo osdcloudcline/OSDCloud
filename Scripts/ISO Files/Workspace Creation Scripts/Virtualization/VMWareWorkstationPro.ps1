@@ -288,7 +288,7 @@ Write-Host
 Write-Verbose "Processing: Integrating VMWare Workstation Professional Virtualization Technology Drivers" -Verbose
 Write-Host
 
-$VMWareWSPRO = Invoke-WebRequest("")
+$VMWareWSPRO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/VMWareWorkstationPro.ps1")
 Invoke-Expression $($VMWareWSPRO.Content)
 
 Write-Host
@@ -318,15 +318,15 @@ $OSDCloudISOPath = "C:\OSDCloud\VMWare-WorkstationPro"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\VMWare-WorkstationPro\OSDCloud-VMWare-WorkstationPro.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\VMWare-WorkstationPro\OSDCloud-VMWare-WorkstationPro_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\VMWare-WorkstationPro\OSDCloud-Version 1.0-VMWare-WorkstationPro.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\VMWare-WorkstationPro\OSDCloud-Version 1.0-VMWare-WorkstationPro_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\VMWare-WorkstationPro\OSDCloud-VMWare-WorkstationPro.iso"
-$ISO2 = "C:\OSDCloud\VMWare-WorkstationPro\OSDCloud-VMWare-WorkstationPro_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\VMWare-WorkstationPro\OSDCloud-Version 1.0-VMWare-WorkstationPro.iso"
+$ISO2 = "C:\OSDCloud\VMWare-WorkstationPro\OSDCloud-Version 1.0-VMWare-WorkstationPro_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\Virtualization"
 
