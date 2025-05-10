@@ -288,7 +288,7 @@ Write-Host
 Write-Verbose "Processing: Integrating Proxmox Virtualization Technology Drivers" -Verbose
 Write-Host
 
-$Proxmox = Invoke-WebRequest("")
+$Proxmox = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/Proxmox.ps1")
 Invoke-Expression $($Proxmox.Content)
 
 Write-Host
@@ -318,15 +318,15 @@ $OSDCloudISOPath = "C:\OSDCloud\Proxmox"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\Proxmox\OSDCloud-Proxmox.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\Proxmox\OSDCloud-Proxmox_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\Proxmox\OSDCloud-Version 1.0-Proxmox.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\Proxmox\OSDCloud-Version 1.0-Proxmox_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\Proxmox\OSDCloud-Proxmox.iso"
-$ISO2 = "C:\OSDCloud\Proxmox\OSDCloud-Proxmox_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\Proxmox\OSDCloud-Version 1.0-Proxmox.iso"
+$ISO2 = "C:\OSDCloud\Proxmox\OSDCloud-Version 1.0-Proxmox_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\Virtualization"
 
