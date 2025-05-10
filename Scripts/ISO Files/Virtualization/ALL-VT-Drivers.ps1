@@ -5,9 +5,11 @@
 Write-Host
 Write-Verbose "Processing: VMWare ESXI Virtualization Drivers..." -Verbose 
 
-$ESXIEthernetPath = "C:\Drivers\Virtualization\ESXI\Network"
-$ESXIStoragePath = "C:\Drivers\Virtualization\ESXI\Storage"
+$ESXIEthernet = "C:\Drivers\Virtualization\ESXI\Network"
+$ESXIStorage = "C:\Drivers\Virtualization\ESXI\Storage"
 
+Edit-OSDCloudWinPE -DriverPath $ESXIEthernet
+Edit-OSDCloudWinPE -DriverPath $ESXIStorage
 
 #################################
 # OSDCloud - Hyper-V VT Drivers
