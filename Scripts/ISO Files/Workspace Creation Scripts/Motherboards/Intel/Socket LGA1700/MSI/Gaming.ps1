@@ -238,11 +238,11 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 Dismount-WindowsImage -Path $mountdir -Save
 
 #################################
-# Download OSDCloud - MSI Gaming Series Drivers
+# Download MSI Gaming Series Socket LGA1700 motherboard drivers
 #################################
 
 Write-Host
-Write-Verbose "Processing: OSDCloud Download - MSI LGA 1700 Gaming Series motherboard Drivers..." -Verbose
+Write-Verbose "Processing: MSI Socket LGA 1700 Gaming Series motherboard Drivers..." -Verbose
 Write-Host
 
 $GamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/Gaming%20Series/Gaming.ps1")
