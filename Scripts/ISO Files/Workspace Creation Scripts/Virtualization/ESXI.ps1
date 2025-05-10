@@ -289,7 +289,7 @@ Write-Host
 Write-Verbose "Processing: Integrating VMWare ESXI Virtualization Technology Drivers" -Verbose
 Write-Host
 
-$ESXI = Invoke-WebRequest("")
+$ESXI = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/ESXI.ps1")
 Invoke-Expression $($ESXI.Content)
 
 Write-Host
@@ -319,8 +319,8 @@ $OSDCloudISOPath = "C:\OSDCloud\ESXI"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ESXI\OSDCloud-ESXI.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ESXI\OSDCloud-ESXI_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ESXI\OSDCloud-Version 1.0-ESXI.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ESXI\OSDCloud-Version 1.0-ESXI_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
