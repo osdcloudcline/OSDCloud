@@ -6,7 +6,7 @@ $BryanDesktopEthernet = "C:\Drivers\Custom\Bryan Desktop\ASUS Z890-A STRIX\LGA18
 $BryanDesktopStorage = "C:\Drivers\Custom\Bryan Desktop\ASUS Z890-A STRIX\LGA1851\Storage"
 $BryanDesktopWLANPath = "C:\Drivers\Custom\Bryan Desktop\ASUS Z890-A STRIX\LGA1851\WLAN"
 
-Edit-OSDCloudWinPe -DriverPath $BryanDesktopEthernetPath
+Edit-OSDCloudWinPe -DriverPath $BryanDesktopEthernet
 Edit-OSDCloudWinPe -DriverPath $BryanDesktopStorage
 Edit-OSDCloudWinPe -DriverPath $BryanDesktopWLAN
 
