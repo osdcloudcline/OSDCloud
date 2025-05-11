@@ -19,10 +19,10 @@ Edit-OSDCloudWinPE -DriverPath $ROGEthernet5
 
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 ROG - Republic of Gamers Motherboard WiFi Drivers..." -Verbose 
-$ROGWiFi1 = "C:\Drivers\Motherboards\ASUS\AM4\ROG\WiFi1"
-$ROGWiFi2 = "C:\Drivers\Motherboards\ASUS\AM4\ROG\WiFi2"
-$ROGWiFi3 = "C:\Drivers\Motherboards\ASUS\AM4\ROG\WiFi3"
-$ROGWiFi4 = "C:\Drivers\Motherboards\ASUS\AM4\ROG\WiFi4"
+$ROGWiFi1 = "C:\Drivers\Motherboards\ASUS\AM4\ROG\WLAN1"
+$ROGWiFi2 = "C:\Drivers\Motherboards\ASUS\AM4\ROG\WLAN2"
+$ROGWiFi3 = "C:\Drivers\Motherboards\ASUS\AM4\ROG\WLAN3"
+$ROGWiFi4 = "C:\Drivers\Motherboards\ASUS\AM4\ROG\WLAN4"
 
 Edit-OSDCloudWinPE -DriverPath $ROGWiFi1
 Edit-OSDCloudWinPE -DriverPath $ROGWiFi2
