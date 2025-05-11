@@ -244,14 +244,14 @@ Dismount-WindowsImage -Path $mountdir -Save
 ################################################
 
 Write-Host
-Write-Verbose "Processing: ASRock Extreme Socket AM4 Motherboard drivers download......" -Verbose
+Write-Verbose "Processing: Bryan Desktop - Intel Core Ultra 9 285K ASUS Z890-A ROG STRIX LGA1851 Drivers download......" -Verbose
 Write-Host
 
-$ExtremeDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM4/Extreme%20Motherboards/Extreme.ps1")
-Invoke-Expression $($ExtremeDrivers.Content)
+$BryanDesktopDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Custom/Bryan's%20Desktop%20-%20Intel%20Core%20Ultra%209/Bryan-NewDesktop.ps1")
+Invoke-Expression $($BryanDesktopDrivers.Content)
 
 Write-Host
-Write-Verbose "Completed: ASRock Extreme Socket AM$ Motherboard drivers download..." -Verbose
+Write-Verbose "Completed: Bryan Desktop - Intel Core Ultra 9 285K ASUS Z890-A ROG STRIX LGA1851 Drivers download..." -Verbose
 Write-Host
 
 #################################
@@ -341,11 +341,11 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 #########################################
 
 Write-Host
-Write-Verbose "Processing: Integrating ASRock Extreme Socket AM4 Motherboard Drivers" -Verbose
+Write-Verbose "Processing: Integrating Bryan Desktop - Intel Core Ultra 9 285K ASUS Z890-A ROG STRIX LGA1851 Drivers" -Verbose
 Write-Host
 
-$Extreme = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/Extreme.ps1")
-Invoke-Expression $($Extreme.Content)
+$BryanDesktop = Invoke-WebRequest("")
+Invoke-Expression $($BryanDesktop.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
