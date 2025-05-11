@@ -10,10 +10,6 @@ Write-Verbose "Confirming OSDCloudTemplate names......" -Verbose
 Get-OSDCloudTemplateNames
 
 Write-Host
-Write-Verbose "Retriving OSDCloud Workspaces..." -Verbose
-Get-OSDCloudWorkspace
-
-Write-Host
 Write-Verbose "Configuring and setting new OSDCloud Workspace Path..." -Verbose
 $WorkspacePath = "C:\OSDCloud\BryanDesktop-LGA1851"
 New-OSDCloudWorkspace -WorkspacePath $WorkspacePath
@@ -373,7 +369,7 @@ Write-Host
 Write-Verbose "Processing: Adding Customized Windows OS WIM Files" -Verbose
 Write-Host
 
-$AddWIM = Invoke-WebRequest("")
+$AddWIM = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/AddCustomWIM.ps1")
 Invoke-Expression $($AddWIM.Content)
 
 ##########################################
@@ -388,22 +384,22 @@ Write-Host
 # Rename OSDCloud ISO
 #########################################
 
-$OSDCloudISOPath = "C:\OSDCloud\ASRock-Extreme-AM4"
+$OSDCloudISOPath = "C:\OSDCloud\BryanDesktop-LGA1851"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
 
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASRock-Extreme-AM4\OSDCloud-ASRock-Extreme-AM4.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASRock-Extreme-AM4\OSDCloud-ASRock-Extreme-AM4_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "$OSDCloudISOPath\OSDCloud-Version 1.0-Bryan-Desktop-LGA1851.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "$OSDCloudISOPath\OSDCloud-Version 1.0-Bryan-Desktop-LGA1851_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\ASRock-Extreme-AM4\OSDCloud-ASRock-Extreme-AM4.iso"
-$ISO2 = "C:\OSDCloud\ASRock-Extreme-AM4\OSDCloud-ASRock-Extreme-AM4_NoPrompt.iso"
+$ISO1 = "$OSDCloudISOPath\OSDCloud-Version 1.0-Bryan-Desktop-LGA1851.iso"
+$ISO2 = "$OSDCloudISOPath\OSDCloud-Version 1.0-Bryan-Desktop-LGA1851_NoPrompt.iso"
 
-$OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM4\ASRock"
+$OSDISODestination = "C:\ISOs\OSDCloud\Custom\Bryan Desktop"
 
 Write-Verbose "Processing: Creating ISO directory" -Verbose
 Write-Host
