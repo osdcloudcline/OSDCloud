@@ -724,6 +724,20 @@ $UltraDurable = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw
 Invoke-Expression $($UltraDurable.Content)
 
 Write-Host
+Write-Verbose "Processing: Integrating MSI Socket LGA 1700 Gaming motherboard drivers" -Verbose
+Write-Host
+
+$MSIGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/Intel/LGA%201700/Gaming.ps1")
+Invoke-Expression $($MSIGaming.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating MSI Socket LGA 1700 MAG motherboard drivers" -Verbose
+Write-Host
+
+$MSIMAG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/Intel/LGA%201700/MAG.ps1")
+Invoke-Expression $($MSIMAG.Content)
+
+Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
 Write-Host
 
@@ -757,15 +771,15 @@ $OSDCloudISOPath = "C:\OSDCloud\ALL-LGA1700"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ALL-LGA1700\OSDCloud-ALL-LGA1700.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ALL-LGA1700\OSDCloud-ALL-LGA1700_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ALL-LGA1700\OSDCloud-Version 1.0-ALL-LGA1700.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ALL-LGA1700\OSDCloud-Version 1.0-ALL-LGA1700_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\ALL-LGA1700\OSDCloud-ALL-LGA1700.iso"
-$ISO2 = "C:\OSDCloud\ALL-LGA1700\OSDCloud-ALL-LGA1700_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\ALL-LGA1700\OSDCloud-Version 1.0-ALL-LGA1700.iso"
+$ISO2 = "C:\OSDCloud\ALL-LGA1700\OSDCloud-Version 1.0-ALL-LGA1700_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\Intel\Socket LGA1700"
 
