@@ -252,6 +252,12 @@ Invoke-Expression $($GamingDrivers.Content)
 # Download MSI MAG Series Socket LGA1700 motherboard drivers
 #################################
 
+Write-Host
+Write-Verbose "Processing: MSI Socket LGA 1700 MAG Series motherboard Drivers..." -Verbose
+Write-Host
+
+$MAGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/MAG%20Series/MAG.ps1")
+Invoke-Expression $($MAGDrivers.Content)
 
 #################################
 # Download MSI MEG Series Socket LGA1700 motherboard drivers
