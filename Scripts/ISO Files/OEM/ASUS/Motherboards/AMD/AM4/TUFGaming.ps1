@@ -17,12 +17,12 @@ Edit-OSDCloudWinPE -DriverPath $TUFEthernet4
 
 Write-Host
 Write-Verbose "Processing: ASUS AM 4 TUF Gaming Motherboard WiFi Drivers..." -Verbose 
-$TUFWiFi1 = "C:\Drivers\Motherboards\ASUS\AM4\TUF\WiFi1"
-$TUFWiFi2 = "C:\Drivers\Motherboards\ASUS\AM4\TUF\WiFi2"
-$TUFWiFi3 = "C:\Drivers\Motherboards\ASUS\AM4\TUF\WiFi3"
-$TUFWiFi4 = "C:\Drivers\Motherboards\ASUS\AM4\TUF\WiFi4"
-$TUFWiFi5 = "C:\Drivers\Motherboards\ASUS\AM4\TUF\WiFi5"
-$TUFWiFi6 = "C:\Drivers\Motherboards\ASUS\AM4\TUF\WiFi6"
+$TUFWiFi1 = "C:\Drivers\Motherboards\ASUS\AM4\TUF\WLAN1"
+$TUFWiFi2 = "C:\Drivers\Motherboards\ASUS\AM4\TUF\WLAN2"
+$TUFWiFi3 = "C:\Drivers\Motherboards\ASUS\AM4\TUF\WLAN3"
+$TUFWiFi4 = "C:\Drivers\Motherboards\ASUS\AM4\TUF\WLAN4"
+$TUFWiFi5 = "C:\Drivers\Motherboards\ASUS\AM4\TUF\WLAN5"
+$TUFWiFi6 = "C:\Drivers\Motherboards\ASUS\AM4\TUF\WLAN6"
 
 Edit-OSDCloudWinPE -DriverPath $TUFWiFi1
 Edit-OSDCloudWinPE -DriverPath $TUFWiFi2
