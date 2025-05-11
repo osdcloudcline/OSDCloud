@@ -344,7 +344,7 @@ Write-Host
 Write-Verbose "Processing: Integrating Bryan Desktop - Intel Core Ultra 9 285K ASUS Z890-A ROG STRIX LGA1851 Drivers" -Verbose
 Write-Host
 
-$BryanDesktop = Invoke-WebRequest("")
+$BryanDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/BryanDesktop.ps1")
 Invoke-Expression $($BryanDesktop.Content)
 
 Write-Host
@@ -364,6 +364,17 @@ Invoke-Expression $($OtherDrivers.Content)
 Write-Host
 Write-Verbose "Completed: Integrating Drivers" -Verbose
 Write-Host
+
+#########################################
+# Add Custom WIM Files
+#########################################
+
+Write-Host
+Write-Verbose "Processing: Adding Customized Windows OS WIM Files" -Verbose
+Write-Host
+
+$AddWIM = Invoke-WebRequest("")
+Invoke-Expression $($AddWIM.Content)
 
 ##########################################
 # OSDCloud WebScript for Startnet.cmd
