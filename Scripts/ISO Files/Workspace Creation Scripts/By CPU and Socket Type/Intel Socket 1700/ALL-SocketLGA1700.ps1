@@ -749,6 +749,13 @@ $MSIMAG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/
 Invoke-Expression $($MSIMAG.Content)
 
 Write-Host
+Write-Verbose "Processing: Integrating MSI Socket LGA 1700 MEG motherboard drivers" -Verbose
+Write-Host
+
+$MSIMEG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/Intel/LGA%201700/MEG.ps1")
+Invoke-Expression $($MSIMEG.Content)
+
+Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
 Write-Host
 
