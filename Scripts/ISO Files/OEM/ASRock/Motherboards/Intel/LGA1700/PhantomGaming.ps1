@@ -6,17 +6,15 @@ Write-Host
 Write-Verbose "Processing: ASRock Intel LGA 1700 Phantom Gaming Motherboard drivers..." -Verbose
 Write-Host
 
-$PhantomGamingBluetoothPath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\Bluetooth"
-$PhantomGamingEthernetPath1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\Ethernet1"
-$PhantomGamingEthernetPath2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\Ethernet2"
-$PhantomGamingEthernetPath3 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\Ethernet3"
-$PhantomGamingEthernetPath4 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\Ethernet4"
-$PhantomGamingEthernetPath5 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\Ethernet5"
-$PhantomGamingStoragePath = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\Storage"
-$PhantomGamingWLANPath1 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\WLAN1"
-$PhantomGamingWLANPath2 = "C:\OSDCloud\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\WLAN2"
+$PhantomGamingEthernetPath1 = "C:\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\Ethernet1"
+$PhantomGamingEthernetPath2 = "C:\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\Ethernet2"
+$PhantomGamingEthernetPath3 = "C:\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\Ethernet3"
+$PhantomGamingEthernetPath4 = "C:\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\Ethernet4"
+$PhantomGamingEthernetPath5 = "C:\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\Ethernet5"
+$PhantomGamingStoragePath = "C:\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\Storage"
+$PhantomGamingWLANPath1 = "C:\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\WLAN1"
+$PhantomGamingWLANPath2 = "C:\Drivers\Motherboards\ASRock\LGA1700\PhantomGaming\WLAN2"
 
-Edit-OSDCloudWinPe -DriverPath $PhantomGamingBluetoothPath
 Edit-OSDCloudWinPe -DriverPath $PhantomGamingEthernetPath1
 Edit-OSDCloudWinPe -DriverPath $PhantomGamingEthernetPath2
 Edit-OSDCloudWinPe -DriverPath $PhantomGamingEthernetPath3
