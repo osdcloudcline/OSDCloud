@@ -13,14 +13,14 @@ $GamingEthernet6 = "C:\Driverss\Motherboards\Gigabyte\AM5\Gaming\X670\Ethernet2"
 $GamingEthernet7 = "C:\Driverss\Motherboards\Gigabyte\AM5\Gaming\X870\Ethernet1"
 $GamingEthernet8 = "C:\Driverss\Motherboards\Gigabyte\AM5\Gaming\X870\Ethernet2"
 
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet1
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet2
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet3
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet4
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet5
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet6
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet7
-Edit-OSDCloudWinPE -DriversPath $GamingEthernet8
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet1
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet2
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet3
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet4
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet5
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet6
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet7
+Edit-OSDCloudWinPE -DriverPath $GamingEthernet8
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 Gaming Motherboard WiFi Drivers..." -Verbose 
@@ -37,18 +37,18 @@ $GamingWLAN10 = "C:\Driverss\Motherboards\Gigabyte\AM5\Gaming\X870\WLAN4"
 $GamingWLAN11 = "C:\Driverss\Motherboards\Gigabyte\AM5\Gaming\X870\WLAN5"
 $GamingWLAN12 = "C:\Driverss\Motherboards\Gigabyte\AM5\Gaming\X870\WLAN6"
 
-Edit-OSDCloudWinPE -DriversPath $GamingWLAN1
-Edit-OSDCloudWinPE -DriversPath $GamingWLAN2
-Edit-OSDCloudWinPE -DriversPath $GamingWLAN3
-Edit-OSDCloudWinPE -DriversPath $GamingWLAN4
-Edit-OSDCloudWinPE -DriversPath $GamingWLAN5
-Edit-OSDCloudWinPE -DriversPath $GamingWLAN6
-Edit-OSDCloudWinPE -DriversPath $GamingWLAN7
-Edit-OSDCloudWinPE -DriversPath $GamingWLAN8
-Edit-OSDCloudWinPE -DriversPath $GamingWLAN9
-Edit-OSDCloudWinPE -DriversPath $GamingWLAN10
-Edit-OSDCloudWinPE -DriversPath $GamingWLAN11
-Edit-OSDCloudWinPE -DriversPath $GamingWLAN12
+Edit-OSDCloudWinPE -DriverPath $GamingWLAN1
+Edit-OSDCloudWinPE -DriverPath $GamingWLAN2
+Edit-OSDCloudWinPE -DriverPath $GamingWLAN3
+Edit-OSDCloudWinPE -DriverPath $GamingWLAN4
+Edit-OSDCloudWinPE -DriverPath $GamingWLAN5
+Edit-OSDCloudWinPE -DriverPath $GamingWLAN6
+Edit-OSDCloudWinPE -DriverPath $GamingWLAN7
+Edit-OSDCloudWinPE -DriverPath $GamingWLAN8
+Edit-OSDCloudWinPE -DriverPath $GamingWLAN9
+Edit-OSDCloudWinPE -DriverPath $GamingWLAN10
+Edit-OSDCloudWinPE -DriverPath $GamingWLAN11
+Edit-OSDCloudWinPE -DriverPath $GamingWLAN12
 
 Write-Host
 Write-Verbose "Processing: Gigabyte AM 5 Gaming Motherboard Storage Drivers..." -Verbose 
@@ -57,10 +57,10 @@ $GamingStorage2 = "C:\Driverss\Motherboards\Gigabyte\AM5\Gaming\B650\Storage\RAI
 $GamingStorage3 = "C:\Driverss\Motherboards\Gigabyte\AM5\Gaming\X670\Storage\RAID\NVMe"
 $GamingStorage4 = "C:\Driverss\Motherboards\Gigabyte\AM5\Gaming\X870\Storage\RAID\NVMe"
 
-Edit-OSDCloudWinPE -DriversPath $GamingStorage1
-Edit-OSDCloudWinPE -DriversPath $GamingStorage2
-Edit-OSDCloudWinPE -DriversPath $GamingStorage3
-Edit-OSDCloudWinPE -DriversPath $GamingStorage4
+Edit-OSDCloudWinPE -DriverPath $GamingStorage1
+Edit-OSDCloudWinPE -DriverPath $GamingStorage2
+Edit-OSDCloudWinPE -DriverPath $GamingStorage3
+Edit-OSDCloudWinPE -DriverPath $GamingStorage4
 
 Write-Host
 Write-Verbose "Completed: Integration of Gigabyte AMD AM 5 Gaming Motherboard Drivers..." -Verbose 
