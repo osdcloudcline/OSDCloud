@@ -248,10 +248,6 @@ Write-Host
 $AQUADrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/AQUA%20Motherboards/AQUA.ps1")
 Invoke-Expression $($AQUADrivers.Content)
 
-Write-Host
-Write-Verbose "Completed: ASRock AQUA Socket LGA 1700 Motherboard drivers download..." -Verbose
-Write-Host
-
 ################################################
 # Download ASRock Extreme LGA 1700 Drivers
 ################################################
@@ -262,10 +258,6 @@ Write-Host
 
 $ExtremeDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/Extreme%20Motherboards/Extreme.ps1")
 Invoke-Expression $($ExtremeDrivers.Content)
-
-Write-Host
-Write-Verbose "Completed: ASRock Extreme Socket LGA 1700 Motherboard drivers download..." -Verbose
-Write-Host
 
 ################################################
 # Download ASRock Live Mixer LGA 1700 Drivers
@@ -278,11 +270,6 @@ Write-Host
 $LiveMixergDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/Live%20Mixer%20Motherboards/LiveMixer.ps1")
 Invoke-Expression $($LiveMixergDrivers.Content)
 
-Write-Host
-Write-Verbose "Completed: ASRock Live Mixer Socket LGA 1700 Motherboard drivers download..." -Verbose
-Write-Host
-
-
 ################################################
 # Download ASRock PRO LGA 1700 Drivers
 ################################################
@@ -293,10 +280,6 @@ Write-Host
 
 $PRODrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/PRO%20Motherboards/PRO.ps1")
 Invoke-Expression $($PRODrivers.Content)
-
-Write-Host
-Write-Verbose "Completed: ASRock PRO Socket LGA 1700 Motherboard drivers download..." -Verbose
-Write-Host
 
 ################################################
 # Download ASRock Phantom Gaming LGA 1700 Drivers
@@ -309,10 +292,6 @@ Write-Host
 $PhantomGamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/Phantom%20Gaming%20Motherboards/PhantomGaming.ps1")
 Invoke-Expression $($PhantomGamingDrivers.Content)
 
-Write-Host
-Write-Verbose "Completed: ASRock Phantom Gaming Socket LGA 1700 Motherboard drivers download..." -Verbose
-Write-Host
-
 ################################################
 # Download ASRock Steel Legend LGA 1700 Drivers
 ################################################
@@ -324,10 +303,6 @@ Write-Host
 $SteelLegendDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/Steel%20Legend%20Motherboards/SteelLegend.ps1")
 Invoke-Expression $($SteelLegendDrivers.Content)
 
-Write-Host
-Write-Verbose "Completed: ASRock Steel Legend Socket LGA 1700 Motherboard drivers download..." -Verbose
-Write-Host
-
 ################################################
 # Download ASRock Taichi LGA 1700 Drivers
 ################################################
@@ -338,10 +313,6 @@ Write-Host
 
 $TaichiDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201700/Taichi%20Motherboards/Taichi.ps1")
 Invoke-Expression $($TaichiDrivers.Content)
-
-Write-Host
-Write-Verbose "Completed: ASRock Taichi Socket LGA 1700 Motherboard drivers download..." -Verbose
-Write-Host
 
 #######################################################
 # Download ASUS Business Socket LGA 1700 motherboard Drivers
@@ -507,6 +478,17 @@ Write-Host
 
 $GamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/Gaming%20Series/Gaming.ps1")
 Invoke-Expression $($GamingDrivers.Content)
+
+#################################
+# Download MSI MAG Series Socket LGA1700 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket LGA 1700 MAG Series motherboard Drivers..." -Verbose
+Write-Host
+
+$MAGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/MAG%20Series/MAG.ps1")
+Invoke-Expression $($MAGDrivers.Content)
 
 #################################
 # Download OSDCloud - Cloud Drivers
