@@ -238,6 +238,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 Dismount-WindowsImage -Path $mountdir -Save
 
 #################################
+# Download MSI MPG Series Socket LGA1700 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket LGA 1700 MPG Series motherboard Drivers..." -Verbose
+Write-Host
+
+$MPGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/MPG%20Series/MPG.ps1")
+Invoke-Expression $($MPGDrivers.Content)
+
+#################################
 # Download OSDCloud - Cloud Drivers
 #################################
 
