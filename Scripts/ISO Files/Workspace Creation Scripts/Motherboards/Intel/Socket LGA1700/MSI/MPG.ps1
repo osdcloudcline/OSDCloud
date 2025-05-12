@@ -334,7 +334,12 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 # Integrate Drivers
 #########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating MSI Socket LGA 1700 MPG motherboard drivers" -Verbose
+Write-Host
 
+$MSIMPG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/Intel/LGA%201700/MPG.ps1")
+Invoke-Expression $($MSIMPG.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
@@ -370,15 +375,15 @@ $OSDCloudISOPath = "C:\OSDCloud\MSI-MPG-LGA1700"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\MSI-MPG-LGA1700\OSDCloud-MSI-MPG-LGA1700.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\MSI-MPG-LGA1700\OSDCloud-MSI-MPG-LGA1700_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\MSI-MPG-LGA1700\OSDCloud-Version 1.0-MSI-MPG-LGA1700.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\MSI-MPG-LGA1700\OSDCloud-Version 1.0-MSI-MPG-LGA1700_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\MSI-MPG-LGA1700\OSDCloud-MSI-MPG-LGA1700.iso"
-$ISO2 = "C:\OSDCloud\MSI-MPG-LGA1700\OSDCloud-MSI-MPG-LGA1700_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\MSI-MPG-LGA1700\OSDCloud-Version 1.0-MSI-MPG-LGA1700.iso"
+$ISO2 = "C:\OSDCloud\MSI-MPG-LGA1700\OSDCloud-Version 1.0-MSI-MPG-LGA1700_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\Intel\Socket LGA1700\MSI"
 
