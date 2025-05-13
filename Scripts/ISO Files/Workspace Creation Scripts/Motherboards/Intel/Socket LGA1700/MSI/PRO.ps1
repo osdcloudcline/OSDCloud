@@ -238,6 +238,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 Dismount-WindowsImage -Path $mountdir -Save
 
 #################################
+# Download MSI PRO Series Socket LGA1700 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket LGA 1700 PRO Series motherboard Drivers..." -Verbose
+Write-Host
+
+$PRODrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/Intel/LGA%201700/PRO%20Series/PRO.ps1")
+Invoke-Expression $($PRODrivers.Content)
+
+#################################
 # Download OSDCloud - Cloud Drivers
 #################################
 
