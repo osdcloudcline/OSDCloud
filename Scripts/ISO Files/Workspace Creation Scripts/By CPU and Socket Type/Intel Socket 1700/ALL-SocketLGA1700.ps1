@@ -785,6 +785,13 @@ $MSIMPG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/
 Invoke-Expression $($MSIMPG.Content)
 
 Write-Host
+Write-Verbose "Processing: Integrating MSI Socket LGA 1700 PRO motherboard drivers" -Verbose
+Write-Host
+
+$MSIPRO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/MSI/Motherboards/Intel/LGA%201700/PRO.ps1")
+Invoke-Expression $($MSIPRO.Content)
+
+Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
 Write-Host
 
