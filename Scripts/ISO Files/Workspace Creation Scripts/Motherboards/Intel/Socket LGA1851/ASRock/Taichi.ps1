@@ -379,15 +379,15 @@ $OSDCloudISOPath = "C:\OSDCloud\ASRock-Taichi-LGA1851"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASRock-Taichi-LGA1851\OSDCloud-ASRock-Taichi-LGA1851.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASRock-Taichi-LGA1851\OSDCloud-ASRock-Taichi-LGA1851_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASRock-Taichi-LGA1851\OSDCloud-Version 1.0-ASRock-Taichi-LGA1851.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASRock-Taichi-LGA1851\OSDCloud-Version 1.0-ASRock-Taichi-LGA1851_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\ASRock-Taichi-LGA1851\OSDCloud-ASRock-Taichi-LGA1851.iso"
-$ISO2 = "C:\OSDCloud\ASRock-Taichi-LGA1851\OSDCloud-ASRock-Taichi-LGA1851_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\ASRock-Taichi-LGA1851\OSDCloud-Version 1.0-ASRock-Taichi-LGA1851.iso"
+$ISO2 = "C:\OSDCloud\ASRock-Taichi-LGA1851\OSDCloud-Version 1.0-ASRock-Taichi-LGA1851_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\Intel\Socket LGA1851\ASRock"
 
