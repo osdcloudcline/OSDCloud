@@ -248,11 +248,6 @@ Write-Host
 $AQUADrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/AQUA%20Motherboards/AQUA.ps1")
 Invoke-Expression $($AQUADrivers.Content)
 
-Write-Host
-Write-Verbose "Completed: ASRock AQUA Socket LGA 1851 Motherboard drivers download..." -Verbose
-Write-Host
-
-
 ################################################
 # Download ASRock Live Mixer LGA 1851 Drivers
 ################################################
@@ -263,11 +258,6 @@ Write-Host
 
 $LiveMixergDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/Live%20Mixer%20Motherboards/LiveMixer.ps1")
 Invoke-Expression $($LiveMixergDrivers.Content)
-
-Write-Host
-Write-Verbose "Completed: ASRock Live Mixer Socket LGA 1851 Motherboard drivers download..." -Verbose
-Write-Host
-
 
 ################################################
 # Download ASRock PRO LGA 1851 Drivers
@@ -280,11 +270,6 @@ Write-Host
 $PRODrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/PRO%20Motherboards/PRO.ps1")
 Invoke-Expression $($PRODrivers.Content)
 
-Write-Host
-Write-Verbose "Completed: ASRock PRO Socket LGA 1851 Motherboard drivers download..." -Verbose
-Write-Host
-
-
 ################################################
 # Download ASRock Steel Legend LGA 1851 Drivers
 ################################################
@@ -295,10 +280,6 @@ Write-Host
 
 $SteelLegendDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/Intel/LGA%201851/Steel%20Legend%20Motherboards/SteelLegend.ps1")
 Invoke-Expression $($SteelLegendDrivers.Content)
-
-Write-Host
-Write-Verbose "Completed: ASRock Steel Legend Socket LGA 1851 Motherboard drivers download..." -Verbose
-Write-Host
 
 ################################################
 # Download ASRock Taichi LGA 1851 Drivers
@@ -312,8 +293,97 @@ $TaichiDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDri
 Invoke-Expression $($TaichiDrivers.Content)
 
 Write-Host
-Write-Verbose "Completed: ASRock Taichi Socket LGA 1851 Motherboard drivers download..." -Verbose
+Write-Verbose "Completed: ASRock Socket LGA 1851 Motherboard drivers download..." -Verbose
 Write-Host
+
+#################################
+# Download ASUS LGA 1851 Business motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 Business motherboard Drivers..." -Verbose
+Write-Host
+
+$BusinessDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/Business%20Motherbords/Business.ps1")
+Invoke-Expression $($BusinessDrivers.Content)
+
+#################################
+# Download ASUS LGA 1851 CSM motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 CSM motherboard Drivers..." -Verbose
+Write-Host
+
+$CSMDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/CSM%20Motherboards/CSM.ps1")
+Invoke-Expression $($CSMDrivers.Content)
+
+#################################
+# Download ASUS LGA 1851 Expedition motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 Expedition motherboard Drivers..." -Verbose
+Write-Host
+
+$ExpeditionDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/Expedition%20Motherboards/Expedition.ps1")
+Invoke-Expression $($ExpeditionDrivers.Content)
+
+#################################
+# Download ASUS LGA 1851 Other motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 Other motherboard Drivers..." -Verbose
+Write-Host
+
+$OtherDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/Other%20Motherboards/Other.ps1")
+Invoke-Expression $($OtherDrivers.Content)
+
+#################################
+# Download ASUS LGA 1851 PRIME motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 PRIME motherboard Drivers..." -Verbose
+Write-Host
+
+$PRIMEDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/PRIME%20Motherboards/PRIME.ps1")
+Invoke-Expression $($PRIMEDrivers.Content)
+
+#################################
+# Download ASUS LGA 1851 ProArt motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 ProArt motherboard Drivers..." -Verbose
+Write-Host
+
+$ProArtDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/ProArt%20Motherboards/ProArt.ps1")
+Invoke-Expression $($ProArtDrivers.Content)
+
+#################################
+# Download ASUS LGA 1851 ROG motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 ROG - Republic of Gamers motherboard Drivers..." -Verbose
+Write-Host
+
+$ROGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/ROG%20-%20Republic%20of%20Gamers%20Motherboards/ROG%20-%20Republic%20of%20Gamers.ps1")
+Invoke-Expression $($ROGDrivers.Content)
+
+#################################
+# Download ASUS LGA 1851 TUF Gaming motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 TUF Gaming motherboard Drivers..." -Verbose
+Write-Host
+
+$TUFGamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/TUF%20Gaming/TUFGaming.ps1")
+Invoke-Expression $($TUFGamingDrivers.Content)
+
 
 #################################
 # Download OSDCloud - Cloud Drivers
