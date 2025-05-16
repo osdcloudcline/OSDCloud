@@ -282,6 +282,17 @@ Write-Host
 $OtherDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/Other%20Motherboards/Other.ps1")
 Invoke-Expression $($OtherDrivers.Content)
 
+#################################
+# Download ASUS LGA 1851 PRIME motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 Other motherboard Drivers..." -Verbose
+Write-Host
+
+$PRIMEDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/PRIME%20Motherboards/PRIME.ps1")
+Invoke-Expression $($PRIMEDrivers.Content)
+
 
 #################################
 # Download OSDCloud - Cloud Drivers
