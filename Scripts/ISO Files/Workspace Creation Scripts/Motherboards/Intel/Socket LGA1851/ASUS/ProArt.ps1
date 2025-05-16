@@ -238,6 +238,17 @@ Write-Verbose "Processing: Dismounting OSDCloud boot.wim" -Verbose
 Dismount-WindowsImage -Path $mountdir -Save
 
 #################################
+# Download ASUS LGA 1851 ProArt motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 ProArt motherboard Drivers..." -Verbose
+Write-Host
+
+$ProArtDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/ProArt%20Motherboards/ProArt.ps1")
+Invoke-Expression $($ProArtDrivers.Content)
+
+#################################
 # Download OSDCloud - Cloud Drivers
 #################################
 
