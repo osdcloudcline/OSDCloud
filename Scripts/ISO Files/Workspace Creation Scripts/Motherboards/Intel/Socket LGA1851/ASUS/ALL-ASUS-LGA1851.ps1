@@ -316,6 +316,18 @@ $ROGDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDriver
 Invoke-Expression $($ROGDrivers.Content)
 
 #################################
+# Download ASUS LGA 1851 TUF Gaming motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 TUF Gaming motherboard Drivers..." -Verbose
+Write-Host
+
+$TUFGamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/TUF%20Gaming/TUFGaming.ps1")
+Invoke-Expression $($TUFGamingDrivers.Content)
+
+
+#################################
 # Download OSDCloud - Cloud Drivers
 #################################
 
