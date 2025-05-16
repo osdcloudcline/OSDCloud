@@ -261,6 +261,18 @@ $CSMDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDriver
 Invoke-Expression $($CSMDrivers.Content)
 
 #################################
+# Download ASUS LGA 1851 Expedition motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 Expedition motherboard Drivers..." -Verbose
+Write-Host
+
+$ExpeditionDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/Expedition%20Motherboards/Expedition.ps1")
+Invoke-Expression $($ExpeditionDrivers.Content)
+
+
+#################################
 # Download OSDCloud - Cloud Drivers
 #################################
 
