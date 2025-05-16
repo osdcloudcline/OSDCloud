@@ -384,6 +384,20 @@ Write-Host
 $TUFGamingDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/TUF%20Gaming/TUFGaming.ps1")
 Invoke-Expression $($TUFGamingDrivers.Content)
 
+#################################
+# Download ASUS LGA 1851 Workstation motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: ASUS LGA 1851 Workstation motherboard Drivers..." -Verbose
+Write-Host
+
+$WorkstationDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/Intel/LGA%201851/Workstation%20Motherboards/Workstation.ps1")
+Invoke-Expression $($WorkstationDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: ASUS Socket LGA 1851 Motherboard drivers download..." -Verbose
+Write-Host
 
 #################################
 # Download OSDCloud - Cloud Drivers
