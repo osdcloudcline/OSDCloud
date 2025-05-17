@@ -480,3 +480,63 @@ Write-Host
 
 $ProxmoxDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Proxmox/Proxmox.ps1")
 Invoke-Expression $($ProxmoxDrivers.Content) 
+
+#########################################
+# Integrate Drivers
+#########################################
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock AQUA Socket LGA 1851 Motherboard Drivers" -Verbose
+Write-Host
+
+$AQUA = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1851/AQUA.ps1")
+Invoke-Expression $($AQUA.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Live Mixer Socket LGA 1851 Motherboard Drivers" -Verbose
+Write-Host
+
+$LiveMixer = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1851/LiveMixer.ps1")
+Invoke-Expression $($LiveMixer.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock PRO Socket LGA 1851 Motherboard Drivers" -Verbose
+Write-Host
+
+$PRO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1851/PRO.ps1")
+Invoke-Expression $($PRO.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Steel Legend Socket LGA 1851 Motherboard Drivers" -Verbose
+Write-Host
+
+$SteelLegend = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1851/SteelLegend.ps1")
+Invoke-Expression $($SteelLegend.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Taichi Socket LGA 1851 Motherboard Drivers" -Verbose
+Write-Host
+
+$Taichi = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/Intel/LGA1851/Taichi.ps1")
+Invoke-Expression $($Taichi.Content)
+
+
+
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
+Write-Host
+
+$CloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Cloud%20Drivers/CloudDrivers.ps1")
+Invoke-Expression $($CloudDrivers.Content) 
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud - Other Drivers" -Verbose
+Write-Host
+
+$OtherDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/Other.ps1")
+Invoke-Expression $($OtherDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: Integrating Drivers" -Verbose
+Write-Host
