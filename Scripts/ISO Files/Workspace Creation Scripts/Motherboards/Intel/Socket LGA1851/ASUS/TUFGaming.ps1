@@ -334,7 +334,12 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 # Integrate Drivers
 #########################################
 
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket LGA 1851 TUF Gaming motherboard drivers" -Verbose
+Write-Host
 
+$TUFGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/Intel/LGA%201851/TUF%20Gaming.ps1")
+Invoke-Expression $($TUFGaming.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
