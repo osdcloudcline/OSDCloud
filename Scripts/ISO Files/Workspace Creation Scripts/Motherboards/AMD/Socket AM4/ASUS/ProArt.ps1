@@ -379,15 +379,15 @@ $OSDCloudISOPath = "C:\OSDCloud\ASUS-ProArt-AM4"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASUS-ProArt-AM4\OSDCloud-ASUS-ProArt-AM4.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASUS-ProArt-AM4\OSDCloud-ASUS-ProArt-AM4_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASUS-ProArt-AM4\OSDCloud-Version 1.0-ASUS-ProArt-AM4.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASUS-ProArt-AM4\OSDCloud-Version 1.0-ASUS-ProArt-AM4_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\ASUS-ProArt-AM4\OSDCloud-ASUS-ProArt-AM4.iso"
-$ISO2 = "C:\OSDCloud\ASUS-ProArt-AM4\OSDCloud-ASUS-ProArt-AM4_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\ASUS-ProArt-AM4\OSDCloud-Version 1.0-ASUS-ProArt-AM4.iso"
+$ISO2 = "C:\OSDCloud\ASUS-ProArt-AM4\OSDCloud-Version 1.0-ASUS-ProArt-AM4_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM4\ASUS"
 
