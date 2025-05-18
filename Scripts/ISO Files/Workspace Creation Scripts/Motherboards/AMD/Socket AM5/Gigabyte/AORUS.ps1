@@ -379,15 +379,15 @@ $OSDCloudISOPath = "C:\OSDCloud\Gigabyte-AORUS-AM5"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\Gigabyte-AORUS-AM5\OSDCloud-Gigabyte-AORUS-AM5.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\Gigabyte-AORUS-AM5\OSDCloud-Gigabyte-AORUS-AM5_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\Gigabyte-AORUS-AM5\OSDCloud-Version 1.0-Gigabyte-AORUS-AM5.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\Gigabyte-AORUS-AM5\OSDCloud-Version 1.0-Gigabyte-AORUS-AM5_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\Gigabyte-AORUS-AM5\OSDCloud-Gigabyte-AORUS-AM5.iso"
-$ISO2 = "C:\OSDCloud\Gigabyte-AORUS-AM5\OSDCloud-Gigabyte-AORUS-AM5_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\Gigabyte-AORUS-AM5\OSDCloud-Version 1.0-Gigabyte-AORUS-AM5.iso"
+$ISO2 = "C:\OSDCloud\Gigabyte-AORUS-AM5\OSDCloud-Version 1.0-Gigabyte-AORUS-AM5_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM5\Gigabyte"
 
