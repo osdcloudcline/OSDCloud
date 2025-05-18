@@ -24,7 +24,7 @@ do
         Invoke-Expression $($ASRock.Content)
         }
   '2' { cls
-        $ASUS = Invoke-WebRequest("")
+        $ASUS = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/Motherboards/Intel/Socket%20LGA1851/ASUS/MainMenu.ps1")
         Invoke-Expression $($ASUS.Content)
         }
   '3' { cls
