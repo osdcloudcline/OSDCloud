@@ -423,15 +423,15 @@ $OSDCloudISOPath = "C:\OSDCloud\ALL-ASRock-AM5"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ALL-ASRock-AM5\OSDCloud-ALL-ASRock-AM5.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ALL-ASRock-AM5\OSDCloud-ALL-ASRock-AM5_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ALL-ASRock-AM5\OSDCloud-Version 1.0-ALL-ASRock-AM5.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ALL-ASRock-AM5\OSDCloud-Version 1.0-ALL-ASRock-AM5_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\ALL-ASRock-AM5\OSDCloud-ALL-ASRock-AM5.iso"
-$ISO2 = "C:\OSDCloud\ALL-ASRock-AM5\OSDCloud-ALL-ASRock-AM5_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\ALL-ASRock-AM5\OSDCloud-Version 1.0-ALL-ASRock-AM5.iso"
+$ISO2 = "C:\OSDCloud\ALL-ASRock-AM5\OSDCloud-Version 1.0-ALL-ASRock-AM5_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM5\ASRock"
 
