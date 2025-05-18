@@ -382,15 +382,15 @@ Write-Host
 $OSDCloudISOPath = "C:\OSDCloud\ASRock-PhantomGaming-AM4"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "$OSDCloudISOPath\OSDCloud-ASRock-PhantomGaming-AM4.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "$OSDCloudISOPath\OSDCloud-ASRock-PhantomGaming-AM4_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "$OSDCloudISOPath\OSDCloud-Version 1.0-ASRock-PhantomGaming-AM4.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "$OSDCloudISOPath\OSDCloud-Version 1.0-ASRock-PhantomGaming-AM4_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "$OSDCloudISOPath\OSDCloud-ASRock-PhantomGaming-AM4.iso"
-$ISO2 = "$OSDCloudISOPath\OSDCloud-ASRock-PhantomGaming-AM4_NoPrompt.iso"
+$ISO1 = "$OSDCloudISOPath\OSDCloud-Version 1.0-ASRock-PhantomGaming-AM4.iso"
+$ISO2 = "$OSDCloudISOPath\OSDCloud-Version 1.0-ASRock-PhantomGaming-AM4_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM4\ASRock"
 
