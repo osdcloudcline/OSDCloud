@@ -379,8 +379,8 @@ $OSDCloudISOPath = "C:\OSDCloud\ASUS-ROG-AM5"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASUS-ROG-AM5\OSDCloud-ASUS-ROG-AM5.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASUS-ROG-AM5\OSDCloud-ASUS-ROG-AM5_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\ASUS-ROG-AM5\OSDCloud-Version 1.0-ASUS-ROG-AM5.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\ASUS-ROG-AM5\OSDCloud-Version 1.0-ASUS-ROG-AM5_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
