@@ -379,15 +379,15 @@ $OSDCloudISOPath = "C:\OSDCloud\Gigabyte-UD-UltraDurable-AM4"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\Gigabyte-UD-UltraDurable-AM4\OSDCloud-Gigabyte-UD-UltraDurable-AM4.iso" -Force
-Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\Gigabyte-UD-UltraDurable-AM4\OSDCloud-Gigabyte-UD-UltraDurable-AM4_NoPrompt.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "C:\OSDCloud\Gigabyte-UD-UltraDurable-AM4\OSDCloud-Version 1.0-Gigabyte-UD-UltraDurable-AM4.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "C:\OSDCloud\Gigabyte-UD-UltraDurable-AM4\OSDCloud-Version 1.0-Gigabyte-UD-UltraDurable-AM4_NoPrompt.iso" -Force
 
 ###########################################
 # Copy OSDCloud ISO Files
 #########################################
 
-$ISO1 = "C:\OSDCloud\Gigabyte-UD-UltraDurable-AM4\OSDCloud-Gigabyte-UD-UltraDurable-AM4.iso"
-$ISO2 = "C:\OSDCloud\Gigabyte-UD-UltraDurable-AM4\OSDCloud-Gigabyte-UD-UltraDurable-AM4_NoPrompt.iso"
+$ISO1 = "C:\OSDCloud\Gigabyte-UD-UltraDurable-AM4\OSDCloud-Version 1.0-Gigabyte-UD-UltraDurable-AM4.iso"
+$ISO2 = "C:\OSDCloud\Gigabyte-UD-UltraDurable-AM4\OSDCloud-Version 1.0-Gigabyte-UD-UltraDurable-AM4_NoPrompt.iso"
 
 $OSDISODestination = "C:\ISOs\OSDCloud\AMD\Socket AM4\Gigabyte"
 
