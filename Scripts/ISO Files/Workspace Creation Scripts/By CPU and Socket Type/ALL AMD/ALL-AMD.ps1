@@ -458,3 +458,254 @@ Write-Host
 
 $UltraDurableDriversAM4 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM4/Ultra%20Durable/UltraDurable.ps1")
 Invoke-Expression $($UltraDurableDriversAM4.Content)
+
+################################################
+# Download ASRock PRO AM5 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock PRO Socket AM5 Motherboard drivers download......" -Verbose
+Write-Host
+
+$ASRockPRODriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM5/PRO%20Motherboards/PRO.ps1")
+Invoke-Expression $($ASRockPRODriversAM5.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock PRO Socket AM5 Motherboard drivers download..." -Verbose
+Write-Host
+
+################################################
+# Download ASRock Steel Legend AM5 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Steel Legend Socket AM5 Motherboard drivers download......" -Verbose
+Write-Host
+
+$ASRockSteelLegendDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM5/Steel%20Legend%20Motherboards/SteelLegend.ps1")
+Invoke-Expression $($ASRockSteelLegendDriversAM5.Content)
+
+################################################
+# Download ASRock Taichi AM5 Drivers
+################################################
+
+Write-Host
+Write-Verbose "Processing: ASRock Taichi Socket AM4 Motherboard drivers download......" -Verbose
+Write-Host
+
+$ASRockTaichiDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASRock/Desktops/AMD/AM5/Taichi%20Motherboards/Taichi.ps1")
+Invoke-Expression $($ASRockTaichiDriversAM5.Content)
+
+Write-Host
+Write-Verbose "Completed: ASRock Steel Legend Socket AM5 Motherboard drivers download..." -Verbose
+Write-Host
+
+#######################################################
+# Download ASUS Business Socket AM5 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 Business motherboard drivers..." -Verbose
+Write-Host
+
+$ASUSBusinessDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/Business%20Motherboards/Business.ps1")
+Invoke-Expression $($ASUSBusinessDriversAM5.Content)
+
+#######################################################
+# Download ASUS CSM Socket AM5 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 CSM motherboard drivers..." -Verbose
+Write-Host
+
+$ASUSCSMDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/CSM%20Motherboards/CSM.ps1")
+Invoke-Expression $($ASUSCSMDriversAM5.Content)
+
+#######################################################
+# Download ASUS Socket AM5 Expedition motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 Expedition motherboard drivers..." -Verbose
+Write-Host
+
+$ASUSExpeditionDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/Expedition%20Motherboards/Expedition.ps1")
+Invoke-Expression $($ASUSExpeditionDriversAM5.Content)
+
+#######################################################
+# Download ASUS Socket AM5 Others motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 Others motherboard drivers..." -Verbose
+Write-Host
+
+$ASUSOthersDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/Other%20Motherboards/Other.ps1")
+Invoke-Expression $($ASUSOthersDriversAM5.Content)
+
+#######################################################
+# Download ASUS Socket AM5 PRIME motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 PRIME motherboard drivers..." -Verbose
+Write-Host
+
+$ASUSPRIMEDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/PRIME%20Motherboards/PRIME.ps1")
+Invoke-Expression $($ASUSPRIMEDriversAM5.Content)
+
+#######################################################
+# Download ASUS Socket AM5 ProArt motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 ProArt motherboard drivers..." -Verbose
+Write-Host
+
+$ASUSProArtDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/ProArt%20Motherboards/ProArt.ps1")
+Invoke-Expression $($ASUSProArtDriversAM5.Content)
+
+#######################################################
+# Download ASUS Socket AM5 ROG motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 Republic of Gamers motherboard drivers..." -Verbose
+Write-Host
+
+$ASUSROGDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/ROG%20-%20Republic%20of%20Gamers%20Motherboards/ROG%20-%20Republic%20of%20Gamers.ps1")
+Invoke-Expression $($ASUSROGDriversAM5.Content)
+
+#######################################################
+# Download ASUS Socket AM5 TUF Gaming motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: ASUS Socket AM5 TUF Gaming motherboard drivers..." -Verbose
+Write-Host
+
+$ASUSTUFGamingDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/ASUS/Desktops/AMD/AM%205/TUF%20Gaming%20Motherboards/TUFGaming.ps1")
+Invoke-Expression $($ASUSTUFGamingDriversAM5.Content)
+
+#################################
+# Download Gigabyte AERO Socket AM5 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM5 AERO motherboard drivers" -Verbose
+Write-Host
+
+$GigabyteAERODriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM5/AERO/AERO.ps1")
+Invoke-Expression $($GigabyteAERODriversAM5.Content)
+
+#################################
+# Download Gigabyte AI TOP Socket AM5 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM5 AI TOP motherboard drivers" -Verbose
+Write-Host
+
+$GigabyteAITOPDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM5/AI%20TOP/AI-TOP.ps1")
+Invoke-Expression $($GigabyteAITOPDriversAM5.Content)
+
+#################################
+# Download Gigabyte AORUS Socket AM5 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM5 AORUS motherboard drivers" -Verbose
+Write-Host
+
+$GigabyteAORUSDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM5/AORUS/AORUS.ps1")
+Invoke-Expression $($GigabyteAORUSDriversAM5.Content)
+
+#################################
+# Download Gigabyte Eagle Socket AM5 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM5 Eagle motherboard drivers" -Verbose
+Write-Host
+
+$GigabyteEagleDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM5/Eagle/Eagle.ps1")
+Invoke-Expression $($GigabyteEagleDriversAM5.Content)
+
+#################################
+# Download Gigabyte Gaming Socket AM5 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM5 Gaming motherboard drivers" -Verbose
+Write-Host
+
+$GigabyteGamingDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM5/Gaming/Gaming.ps1")
+Invoke-Expression $($GigabyteGamingDriversAM5.Content)
+
+#################################
+# Download Gigabyte UD-Ultra Durable Socket AM5 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket AM5 UD - Ultra Durable motherboard drivers" -Verbose
+Write-Host
+
+$GigabyteUltraDurableDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/AMD/AM5/UD%20-%20Ultra%20Durable/UD-Ultra%20Durable.ps1")
+Invoke-Expression $($GigabyteUltraDurableDriversAM5.Content)
+
+#######################################################
+# Download MSI Gaming Socket AM5 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 Gaming motherboard drivers..." -Verbose
+Write-Host
+
+$MSIGamingDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/Gaming%20Series/Gaming.ps1")
+Invoke-Expression $($MSIGamingDriversAM5.Content)
+
+#######################################################
+# Download MSI MAG Socket AM5 motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 MAG motherboard drivers..." -Verbose
+Write-Host
+
+$MSIMAGDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/MAG%20Series/MAG.ps1")
+Invoke-Expression $($MSIMAGDriversAM5.Content)
+
+#######################################################
+# Download MSI Socket AM5 MEG motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 MEG motherboard drivers..." -Verbose
+Write-Host
+
+$MSIMEGDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/MEG%20Series/MEG.ps1")
+Invoke-Expression $($MSIMEGDriversAM5.Content)
+
+#######################################################
+# Download MSI Socket AM5 MPG motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 MPG motherboard drivers..." -Verbose
+Write-Host
+
+$MSIMPGDriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/MPG%20Series/MPG.ps1")
+Invoke-Expression $($MSIMPGDriversAM5.Content)
+
+#######################################################
+# Download MSI Socket AM5 PRO motherboard Drivers
+#######################################################
+
+Write-Host
+Write-Verbose "Processing: MSI Socket AM5 PRO motherboard drivers..." -Verbose
+Write-Host
+
+$MSIPRODriversAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/MSI/Desktops/AMD/AM%205/PRO%20Series/PRO.ps1")
+Invoke-Expression $($MSIPRODriversAM5.Content)
+
