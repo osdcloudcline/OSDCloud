@@ -605,6 +605,13 @@ Write-Host
 $ProxmoxDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Proxmox/Proxmox.ps1")
 Invoke-Expression $($ProxmoxDrivers.Content) 
 
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - unRAID Drivers" -Verbose
+Write-Host
+
+$unRAIDDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/unRAID/unRAID.ps1")
+Invoke-Expression $($unRAIDDrivers.Content)
+
 #########################################
 # Integrate Drivers
 #########################################
