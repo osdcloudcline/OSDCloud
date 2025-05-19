@@ -69,6 +69,10 @@ Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage3
 Edit-OSDCloudWinPE -DriverPath $ProxmoxStorage4
 
 Write-Host
+Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
+Write-Host
+
+Write-Host
 Write-Verbose "Processing: unRAID Virtualization Drivers..." -Verbose 
 
 $unRAIDPath1 = "C:\Drivers\Virtualization\unRAID\Network1"
@@ -86,5 +90,6 @@ Edit-OSDCloudWinPE -DriverPath $unRAIDPath5
 Edit-OSDCloudWinPE -DriverPath $unRAIDPath6
 
 Write-Host
-Write-Verbose "Completed: Integration of Proxmox Virtualized IO Network and Storage Drivers..." -Verbose
+Write-Verbose "Completed: Integration of unRAID Network Attached Storage IO Network and Storage Drivers..." -Verbose
 Write-Host
+
