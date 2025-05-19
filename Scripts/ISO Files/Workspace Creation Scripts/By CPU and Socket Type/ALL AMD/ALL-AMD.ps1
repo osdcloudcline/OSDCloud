@@ -802,6 +802,136 @@ Invoke-Expression $($unRAIDDrivers.Content)
 # Integrate Drivers
 #########################################
 
+#########################################
+# Integrate Drivers
+#########################################
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Extreme Socket AM4 Motherboard Drivers" -Verbose
+Write-Host
+
+$Extreme = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/Extreme.ps1")
+Invoke-Expression $($Extreme.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Fatal1ty Gaming Socket AM4 Motherboard Drivers" -Verbose
+Write-Host
+
+$Fatal1tyGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/Fatal1tyGaming.ps1")
+Invoke-Expression $($Fatal1tyGaming.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock PRO Socket AM4 Motherboard Drivers" -Verbose
+Write-Host
+
+$PRO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/PRO.ps1")
+Invoke-Expression $($PRO.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Phantom Gaming Socket AM4 Motherboard Drivers" -Verbose
+Write-Host
+
+$PhantomGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/PhantomGaming.ps1")
+Invoke-Expression $($PhantomGaming.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Steel Legend Socket AM4 Motherboard Drivers" -Verbose
+Write-Host
+
+$SteelLegend = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/SteelLegend.ps1")
+Invoke-Expression $($SteelLegend.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASRock Taichi Socket AM4 Motherboard Drivers" -Verbose
+Write-Host
+
+$Taichi = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM4/Taichi.ps1")
+Invoke-Expression $($Taichi.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 Business motherboard drivers" -Verbose
+Write-Host
+
+$Business = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/Business.ps1")
+Invoke-Expression $($Business.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 CSM motherboard drivers" -Verbose
+Write-Host
+
+$CSM = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/CSM.ps1")
+Invoke-Expression $($CSM.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 Others motherboard drivers" -Verbose
+Write-Host
+
+$Others = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/Others.ps1")
+Invoke-Expression $($Others.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 PRIME motherboard drivers" -Verbose
+Write-Host
+
+$PRIME = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/PRIME.ps1")
+Invoke-Expression $($PRIME.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 ProArt motherboard drivers" -Verbose
+Write-Host
+
+$ProArt = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/ProArt.ps1")
+Invoke-Expression $($ProArt.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 ROG - Republic of Gamers motherboard drivers" -Verbose
+Write-Host
+
+$ROG = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/ROG%20-%20Republic%20of%20Gamers.ps1")
+Invoke-Expression $($ROG.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 TUF Gaming motherboard drivers" -Verbose
+Write-Host
+
+$TUFGaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/TUFGaming.ps1")
+Invoke-Expression $($TUFGaming.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM4 Workstation motherboard drivers" -Verbose
+Write-Host
+
+$Workstation = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM4/Workstation.ps1")
+Invoke-Expression $($Workstation.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating Gigabyte Socket AM4 AERO motherboard drivers" -Verbose
+Write-Host
+
+$AERO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM4/AERO.ps1")
+Invoke-Expression $($AERO.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating Gigabyte AORUS Socket AM4 AORUS motherboard drivers" -Verbose
+Write-Host
+
+$AORUS = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM4/AORUS.ps1")
+Invoke-Expression $($AORUS.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating Gigabyte Gaming Socket AM4 Gaming motherboard drivers" -Verbose
+Write-Host
+
+$Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM4/Gaming.ps1")
+Invoke-Expression $($Gaming.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating Gigabyte Gaming Socket AM4 UD - Ultra Durable motherboard drivers" -Verbose
+Write-Host
+
+$UD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/Gigabyte/Motherboards/AMD/AM4/UD-Ultra%20Durable.ps1")
+Invoke-Expression $($UD.Content)
+
 Write-Host
 Write-Verbose "Processing: Integrating ASRock PRO Socket AM5 Motherboard Drivers" -Verbose
 Write-Host
