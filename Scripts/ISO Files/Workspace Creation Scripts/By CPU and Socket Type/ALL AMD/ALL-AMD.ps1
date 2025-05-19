@@ -936,20 +936,75 @@ Write-Host
 Write-Verbose "Processing: Integrating ASRock PRO Socket AM5 Motherboard Drivers" -Verbose
 Write-Host
 
-$PRO = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM5/PRO.ps1")
-Invoke-Expression $($PRO.Content)
+$PROAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM5/PRO.ps1")
+Invoke-Expression $($PROAM5.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating ASRock Steel Legend Socket AM5 Motherboard Drivers" -Verbose
 Write-Host
 
-$SteelLegend = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM5/SteelLegend.ps1")
-Invoke-Expression $($SteelLegend.Content)
+$SteelLegendAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM5/SteelLegend.ps1")
+Invoke-Expression $($SteelLegendAM5.Content)
 
 Write-Host
 Write-Verbose "Processing: Integrating ASRock Taichi Socket AM5 Motherboard Drivers" -Verbose
 Write-Host
 
-$Taichi = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM5/Taichi.ps1")
-Invoke-Expression $($Taichi.Content)
+$TaichiAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASRock/Motherboards/AMD/AM5/Taichi.ps1")
+Invoke-Expression $($TaichiAM5.Content)
 
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM5 Business motherboard drivers" -Verbose
+Write-Host
+
+$BusinessAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/Business.ps1")
+Invoke-Expression $($BusinessAM5.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM5 CSM motherboard drivers" -Verbose
+Write-Host
+
+$CSMAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/CSM.ps1")
+Invoke-Expression $($CSMAM5.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM5 Expedition motherboard drivers" -Verbose
+Write-Host
+
+$ExpeditionAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/Expedition.ps1")
+Invoke-Expression $($ExpeditionAM5.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM5 Others motherboard drivers" -Verbose
+Write-Host
+
+$OthersAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/Others.ps1")
+Invoke-Expression $($OthersAM5.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM5 PRIME motherboard drivers" -Verbose
+Write-Host
+
+$PRIMEAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/PRIME.ps1")
+Invoke-Expression $($PRIMEAM5.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM5 ProArt motherboard drivers" -Verbose
+Write-Host
+
+$ProArtAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/ProArt.ps1")
+Invoke-Expression $($ProArtAM5.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM5 ROG - Republic of Gamers motherboard drivers" -Verbose
+Write-Host
+
+$ROGAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/ROG%20-%20Republic%20of%20Gamers.ps1")
+Invoke-Expression $($ROGAM5.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating ASUS Socket AM5 TUF Gaming motherboard drivers" -Verbose
+Write-Host
+
+$TUFGamingAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/OEM/ASUS/Motherboards/AMD/AM5/TUF%20Gaming.ps1")
+Invoke-Expression $($TUFGamingAM5.Content)
