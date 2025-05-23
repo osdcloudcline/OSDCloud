@@ -400,6 +400,17 @@ Write-Verbose "Completed: ASUS Socket LGA 1851 Motherboard drivers download..." 
 Write-Host
 
 #################################
+# Download Gigabyte AERO Socket LGA1851 motherboard drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: Gigabyte Socket LGA 1851 AERO motherboard drivers" -Verbose
+Write-Host
+
+$AERODrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Gigabyte/Desktops/Intel/LGA%201851/AERO%20Motherboards/AERO.ps1")
+Invoke-Expression $($AERODrivers.Content)
+
+#################################
 # Download OSDCloud - Cloud Drivers
 #################################
 
