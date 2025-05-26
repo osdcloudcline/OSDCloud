@@ -121,24 +121,28 @@ do
         Invoke-Expression $($ALLSocketAM5.Content)
         }
   '3' { cls
-        $ALLAMD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/By%20CPU%20and%20Socket%20Type/AMD%20Socket%20AM5/ALL-SocketAM5.ps1")
+        $ALLAMD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/By%20CPU%20and%20Socket%20Type/ALL%20AMD/ALL-AMD.ps1")
         Invoke-Expression $($ALLAMD.Content)
         }
-  '3' { cls
+  '4' { cls
         $ALLSocketLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/By%20CPU%20and%20Socket%20Type/Intel%20Socket%201700/ALL-SocketLGA1700.ps1")
         Invoke-Expression $($ALLSocketLGA1700.Content)
         }
-  '4' { cls
+  '5' { cls
         $ALLSocketLGA1851 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/By%20CPU%20and%20Socket%20Type/Intel%20Socket%201851/ALL-Socket1851.ps1")
         Invoke-Expression $($ALLSocketLGA1851.Content)
         }
- '5' { cls
+ '6' { cls
+        $ALLINTEL = Invoke-WebRequest("")
+        Invoke-Expression $($ALLINTEL.Content)
+        }
+ '7' { cls
         $OSDCloudMain = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/MainMenu.ps1")
         Invoke-Expression $($OSDCloudMain.Content)
         }
 }
     }
-     until ($selection -eq '5'){Invoke-Expression $($OSDCloudMain.Content)}
+     until ($selection -eq '7'){Invoke-Expression $($OSDCloudMain.Content)}
     }
     
 Show-MainMenu
