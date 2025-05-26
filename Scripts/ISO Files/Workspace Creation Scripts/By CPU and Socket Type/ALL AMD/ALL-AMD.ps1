@@ -802,10 +802,6 @@ Invoke-Expression $($unRAIDDrivers.Content)
 # Integrate Drivers
 #########################################
 
-#########################################
-# Integrate Drivers
-#########################################
-
 Write-Host
 Write-Verbose "Processing: Integrating ASRock Extreme Socket AM4 Motherboard Drivers" -Verbose
 Write-Host
