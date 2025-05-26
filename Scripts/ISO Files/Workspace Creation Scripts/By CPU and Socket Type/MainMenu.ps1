@@ -100,9 +100,11 @@ Clear-Host
 Write-Host "======= $Title ======"
 Write-Host " 1. OSDCloud: ALL AMD Socket AM4 Desktop Motherboards"
 Write-Host " 2. OSDCloud: ALL AMD Socket AM5 Desktop Motherboards"
-Write-Host " 3. OSDCloud: ALL INTEL Socket LGA 1700 Desktop Motherboards"
-Write-Host " 4. OSDCloud: ALL INTEL Socket LGA 1851 Desktop Motherboards"
-Write-Host " 5. Return to OSD Cloud Main Menu"
+Write-Host " 3. OSDCloud: ALL AMD Desktop Motherboards"
+Write-Host " 4. OSDCloud: ALL INTEL Socket LGA 1700 Desktop Motherboards"
+Write-Host " 5. OSDCloud: ALL INTEL Socket LGA 1851 Desktop Motherboards"
+Write-Host " 6. OSDCloud: ALL INTEL Desktop Motherboards"
+Write-Host " 7. Return to OSD Cloud Main Menu"
 
 do 
 {
@@ -117,6 +119,10 @@ do
   '2' { cls
         $ALLSocketAM5 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/By%20CPU%20and%20Socket%20Type/AMD%20Socket%20AM5/ALL-SocketAM5.ps1")
         Invoke-Expression $($ALLSocketAM5.Content)
+        }
+  '3' { cls
+        $ALLAMD = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/By%20CPU%20and%20Socket%20Type/AMD%20Socket%20AM5/ALL-SocketAM5.ps1")
+        Invoke-Expression $($ALLAMD.Content)
         }
   '3' { cls
         $ALLSocketLGA1700 = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Workspace%20Creation%20Scripts/By%20CPU%20and%20Socket%20Type/Intel%20Socket%201700/ALL-SocketLGA1700.ps1")
