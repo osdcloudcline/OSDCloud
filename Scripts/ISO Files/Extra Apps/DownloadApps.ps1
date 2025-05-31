@@ -307,7 +307,7 @@ Save-WebFile -SourceUrl $OSDCloudWallpaperURL -DestinationDirectory $OSDCloudWal
 ####    BGInfo URL                                                 #######
 ######################################################################################
 
-$BGInfo64URL = ""
+$BGInfo64URL = "https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/BGInfo/Bginfo64.exe"
 $BGIFileURL = ""
 
 $destination = "C:\OSDCloud Software\BGInfo"
