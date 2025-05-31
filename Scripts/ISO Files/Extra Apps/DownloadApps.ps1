@@ -295,13 +295,22 @@ Rename-Item -Path "$UPBRFilePath\UserProfileBackupRestore.exe" -NewName "$UPBRFi
 ######################################################################################
 ####    OSDCloud Wallpaper URL                                                 #######
 ######################################################################################
-$OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/Wallpaper/winpe.jpg"
+$OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/BGInfo/3185840.jpg"
 
 
 Write-Verbose "Processing: Downloading new OSDCloud wallpaper..." -Verbose
 $OSDCloudWallpaperdownloads = "C:\OSDCloud Software\wallpaper"
-$OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/Wallpaper/winpe.jpg"
+$OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/BGInfo/3185840.jpg"
 Save-WebFile -SourceUrl $OSDCloudWallpaperURL -DestinationDirectory $OSDCloudWallpaperdownloads
+
+######################################################################################
+####    BGInfo URL                                                 #######
+######################################################################################
+
+$BGInfo64URL = ""
+$BGIFileURL = ""
+
+$destination = "C:\OSDCloud Software\BGInfo"
 
 Write-Host
 Write-Verbose "Completed: ALL Extra App and file downloads"
