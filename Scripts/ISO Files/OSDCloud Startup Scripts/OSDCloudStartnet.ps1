@@ -3,8 +3,12 @@
 #################################################################
 
 Function Show-MainMenu{
+    $BGInfo = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Extra%20Files/BGInfo/BGInfoRegBuilder.ps1")
+    Invoke-Expression $($BGInfo.Content)
+    
     $WiFiConnect = "X:\Windows\WirelessConnect.exe"
-    Start-Process -FilePath $WiFiConnect
+    Start-Process -FilePath $WiFiConnect -WindowStyle Minimized
+    
    [CmdletBinding()]
    param(
    [string]$Title = 'OSD Cloud Startnet - Main Menu',
@@ -70,8 +74,6 @@ cls
        Write-Verbose "System Gateway/DNS Server: $GatewayDNS" -Verbose
        Write-Verbose "WAN or External IP Address: $ExternalIP" -Verbose
 
-$WiFiConnect = "X:\Windows\WirelessConnect.exe"
-Start-Process -FilePath $WiFiConnect
 
 Write-Host
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
