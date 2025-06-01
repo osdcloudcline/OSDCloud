@@ -104,4 +104,17 @@ $HWInfoDestination = "$mountdir\Windows\System32\HWiNFO"
 
 Expand-Archive -Path "$HWiNFOZIPPath\HWiNFO.zip" -DestinationPath "$HWInfoDestination" -Force
 
+# BGInfo64
 
+Write-Host
+Write-Verbose "Processing: BGInfo64 for OSDCloud..." -Verbose 
+
+$BGInfoPath = ""
+$BGIFilePath = ""
+$BGWallpaperPath = ""
+
+$BGInfoFilesDestination = "$mountdir\Windows\System32"
+
+Copy-Item -Path $BGInfoPath -Destination $BGInfoFilesDestination
+Copy-Item -Path $BGIFilePath -Destination $BGInfoFilesDestination
+Copy-Item -Path $BGWallpaperPath -Destination $BGInfoFilesDestination
