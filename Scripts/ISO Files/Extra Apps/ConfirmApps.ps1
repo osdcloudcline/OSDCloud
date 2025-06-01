@@ -166,4 +166,8 @@ Test-Path -Path $MSTSCenusFile2
 Test-Path -Path $MSTSCenusFile3 
 Test-Path -Path $MSTSCenusFile4 
 
+Write-Host "Processing: BGInfo64 System Info" -ForegroundColor Cyan
+Test-Path -Path $BGInfo64
+Test-Path -Path $BGIFile
+
 Write-Host "ALL OSDCloud Portable apps and required files have successfully been confirmed" -ForegroundColor DarkRed -BackgroundColor White
