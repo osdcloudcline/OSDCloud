@@ -309,13 +309,11 @@ Save-WebFile -SourceUrl $BGIFileURL -DestinationDirectory $BGInfodestination
 ######################################################################################
 $OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/BGInfo/3185840.jpg"
 
-
 Write-Verbose "Processing: Downloading new OSDCloud wallpaper..." -Verbose
 $OSDCloudWallpaperdownloads = "C:\OSDCloud Software\wallpaper"
 $OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Extra%20Files/BGInfo/3185840.jpg"
 Save-WebFile -SourceUrl $OSDCloudWallpaperURL -DestinationDirectory $OSDCloudWallpaperdownloads
-
-
+Rename-Item --Path "$OSDCloudWallpaperdownloads\3185840.jpg" -NewName "$OSDCloudWallpaperdownloads\winpe.jpg" -Force
 
 Write-Host
 Write-Verbose "Completed: ALL Extra App and file downloads"
