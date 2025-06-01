@@ -73,6 +73,8 @@ $MSTSCenusFile2 = "$mountdir\Windows\System32\en-us\msacm32.drv.mui"
 $MSTSCenusFile3 = "$mountdir\Windows\System32\en-us\mstsc.exe.mui"
 $MSTSCenusFile4 = "$mountdir\Windows\System32\en-us\mstscax.dll.mui"
 
+$BGInfo64 = "$mountdir\Windows\System32\BgInfo64.exe"
+
 Write-Host "Confirming ALL OSDCloud Portable apps and required files have successfully been copied to the image. Please wait for file verification to complete" -ForegroundColor Blue -BackgroundColor White
 
 Write-Host "Processing: Google Chrome" -ForegroundColor Cyan
