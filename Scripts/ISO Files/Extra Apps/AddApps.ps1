@@ -109,8 +109,8 @@ Expand-Archive -Path "$HWiNFOZIPPath\HWiNFO.zip" -DestinationPath "$HWInfoDestin
 Write-Host
 Write-Verbose "Processing: BGInfo64 for OSDCloud..." -Verbose 
 
-$BGInfoPath = "C:\OSDCloud Software\BGInfo\"
-$BGIFilePath = "C:\OSDCloud Software\BGInfo\"
+$BGInfoPath = "C:\OSDCloud Software\BGInfo\BgInfo64.exe"
+$BGIFilePath = "C:\OSDCloud Software\BGInfo\WinPE-PreStart.bgi"
 $BGWallpaperPath = ""
 
 $BGInfoFilesDestination = "$mountdir\Windows\System32"
