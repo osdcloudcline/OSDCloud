@@ -74,6 +74,7 @@ $MSTSCenusFile3 = "$mountdir\Windows\System32\en-us\mstsc.exe.mui"
 $MSTSCenusFile4 = "$mountdir\Windows\System32\en-us\mstscax.dll.mui"
 
 $BGInfo64 = "$mountdir\Windows\System32\BgInfo64.exe"
+$BGIFile = "$mountdir\Windows\System32\WinPE-PreStart.bgi"
 
 Write-Host "Confirming ALL OSDCloud Portable apps and required files have successfully been copied to the image. Please wait for file verification to complete" -ForegroundColor Blue -BackgroundColor White
 
