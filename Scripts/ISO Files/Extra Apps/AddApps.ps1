@@ -111,7 +111,7 @@ Write-Verbose "Processing: BGInfo64 for OSDCloud..." -Verbose
 
 $BGInfoPath = "C:\OSDCloud Software\BGInfo\BgInfo64.exe"
 $BGIFilePath = "C:\OSDCloud Software\BGInfo\WinPE-PreStart.bgi"
-$BGWallpaperPath = ""
+$BGWallpaperPath = "C:\OSDCloud Software\wallpaper\3185840.jpg"
 
 $BGInfoFilesDestination = "$mountdir\Windows\System32"
 
