@@ -6,13 +6,9 @@ Edit-OSDCloudWinPE -PSModuleInstall PackageProvider
 Edit-OSDCloudWinPE -PSModuleInstall Pester
 Edit-OSDCloudWinPE -PSModuleInstall PowerShellGet
 Edit-OSDCloudWinPE -PSModuleInstall OSDCloudGUI
-Edit-OSDCloudWinPE -PSModuleInstall OSDUpdate
 Edit-OSDCloudWinPE -PSModuleInstall OSDCloudAzure
 Edit-OSDCloudWinPE -PSModuleInstall AutopilotOOBE
-Edit-OSDCloudWinPE -PSModuleInstall OSDDrivers
-Edit-OSDCloudWinPE -PSModuleInstall OSDDeploy
 Edit-OSDCloudWinPE -PSModuleInstall OSDSoftware
-Edit-OSDCloudWinPE -PSModuleInstall OSDCatalog
 Edit-OSDCloudWinPE -PSModuleInstall OSDProgress
 Edit-OSDCloudWinPE -PSModuleInstall PSWindowsUpdate
 
