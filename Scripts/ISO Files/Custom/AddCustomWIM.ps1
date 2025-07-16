@@ -35,4 +35,20 @@ Copy-Item -Path "$WIMFile" -Destination "$Destination" -Force
 Stop-Transcript
 }
 }
+
+##################################
+# Add Provisioning Packages
+##################################
+Function Show-PPKGFiles{
+$PPKGLog = "C:\Logs\OSDCloud\Images\AddPPKG.log"
+Start-Transcript -Path $PPKGLog
+$PPKGQuestion = Read-Host -Prompt 'Do you want or need to add a Windows Provisioning Package PPKG file to the custion WIM?'
+If($PPKGQuestion -eq "yes") -or ($PPKGQuestion -eq "Yes") -or ($PPKGQuestion -eq "YES") -or ($PPKGQuestion -eq "Y") -or ($PPKGQuestion -eq "y"){
+$WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
+$sourceWIM = "\sources\install.wim"
+$WIMFile = Join-Path -Path $WindowsImage '\Sources\install.wim'
+$Destination = "$(Get-OSDCloudWorkspace)\Media\OSDCloud\OS"
+Write-Verbose "Creating Custom WIM OS folder..." -Verbose
+New-Item -Path $Destination -ItemType Directory -Force
+
 Show-CustomImage
