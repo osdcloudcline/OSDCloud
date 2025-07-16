@@ -44,13 +44,19 @@ $PPKGLog = "C:\Logs\OSDCloud\Images\AddPPKG.log"
 Start-Transcript -Path $PPKGLog
 $PPKGQuestion = Read-Host -Prompt 'Do you want or need to add a Windows Provisioning Package PPKG file to the custion WIM?'
 If($PPKGQuestion -eq "yes") -or ($PPKGQuestion -eq "Yes") -or ($PPKGQuestion -eq "YES") -or ($PPKGQuestion -eq "Y") -or ($PPKGQuestion -eq "y"){
+$PPKGLocation = Read-Host -Prompt 'Please enter path for Windows Provisioning PPKG and CAT Files'
 $WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
 $sourceWIM = "\sources\install.wim"
 $WIMFile = Join-Path -Path $WindowsImage '\Sources\install.wim'
 $mountdir = "C:\Mount"
+$PPKGDestination = "$mountdir\Provisiong"
 New-Item -Path $mountdir -ItemType Directory -Force
+New-Item -Path $PPKGDestination -ItemType Directory -Force
 Get-WindowsImage -ImagePath $WIMFile | Format-Table ImageIndex, ImageName
 $Index = Read-Host -Prompt ' Select edition'
 Mount-WindowsImage -ImagePath "$WIMFile\install.wim" -Path $mountdir -Index $Index
+Copy-Item -Path "$PPKGLocation\*.ppkg" -Destination "$PPKGDestination" -Recurse -Force
+Copy-Item -Path "$PPKGLocation\*.cat" -Destination "$PPKGDestination" -Recurse -Force
+
 }
 Show-CustomImage
