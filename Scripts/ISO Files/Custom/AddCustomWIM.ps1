@@ -46,7 +46,10 @@ $PPKGQuestion = Read-Host -Prompt 'Do you want or need to add a Windows Provisio
 If($PPKGQuestion -eq "yes") -or ($PPKGQuestion -eq "Yes") -or ($PPKGQuestion -eq "YES") -or ($PPKGQuestion -eq "Y") -or ($PPKGQuestion -eq "y"){
 $WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
 $sourceWIM = "\sources\install.wim"
+$WIMFile = Join-Path -Path $WindowsImage '\Sources\install.wim'
 $mountdir = "C:\Mount"
 New-Item -Path $mountdir -ItemType Directory -Force
-
+Get-WindowsImage -ImagePath $WIMFile | Format-Table ImageIndex, ImageName
+$Index = Read-Host -Prompt ' Select edition'
+Mount-WindowsImage -ImagePath "$WIMFile\install.wim" 
 Show-CustomImage
