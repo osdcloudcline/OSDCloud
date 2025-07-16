@@ -47,5 +47,6 @@ If($PPKGQuestion -eq "yes") -or ($PPKGQuestion -eq "Yes") -or ($PPKGQuestion -eq
 $WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
 $sourceWIM = "\sources\install.wim"
 $mountdir = "C:\Mount"
+New-Item -Path $mountdir -ItemType Directory -Force
 
 Show-CustomImage
