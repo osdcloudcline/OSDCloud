@@ -51,5 +51,6 @@ $mountdir = "C:\Mount"
 New-Item -Path $mountdir -ItemType Directory -Force
 Get-WindowsImage -ImagePath $WIMFile | Format-Table ImageIndex, ImageName
 $Index = Read-Host -Prompt ' Select edition'
-Mount-WindowsImage -ImagePath "$WIMFile\install.wim" 
+Mount-WindowsImage -ImagePath "$WIMFile\install.wim" -Path $mountdir -Index $Index
+}
 Show-CustomImage
