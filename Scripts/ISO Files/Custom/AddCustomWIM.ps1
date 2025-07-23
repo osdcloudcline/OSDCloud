@@ -25,7 +25,7 @@ Show-SMBINFiles
 Show-CustomImage
 }
 ElseIf($PPKGQuestion -eq "no") -or ($PPKGQuestion -eq "No") -or ($PPKGQuestion -eq "NO") -or ($PPKGQuestion -eq "N") -or ($PPKGQuestion -eq "n"){
-Show-CustomImage
+Show-SMBINFiles
 }
 }
 
