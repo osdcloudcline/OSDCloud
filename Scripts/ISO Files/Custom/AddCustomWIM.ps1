@@ -52,7 +52,7 @@ Dismount-WindowsImage -Path $mountdir -Save
 Stop-Transcript
 Show-CustomImage
 }
-ElseIf(($SMBINQuestion -eq "no") -or ($SMBINQuestion -eq "No") -or ($SMBINQuestion -eq "NO") -or ($SMBINQuestion -eq "N") -or ($SMBINQuestion -eq "n"){
+ElseIf(($SMBINQuestion -eq "no") -or ($SMBINQuestion -eq "No") -or ($SMBINQuestion -eq "NO") -or ($SMBINQuestion -eq "N") -or ($SMBINQuestion -eq "n")){
 Show-CustomImage
 }
 }
