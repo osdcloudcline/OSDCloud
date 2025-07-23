@@ -42,7 +42,7 @@ Stop-Transcript
 Function Show-PPKGFiles{
 $PPKGLog = "C:\Logs\OSDCloud\Images\AddPPKG.log"
 Start-Transcript -Path $PPKGLog
-$PPKGQuestion = Read-Host -Prompt 'Do you want or need to add a Windows Provisioning Package PPKG file to the custion WIM?'
+$PPKGQuestion = Read-Host -Prompt 'Do you want or need to add a Windows Provisioning Package PPKG file to the custom WIM?'
 If(($PPKGQuestion -eq "yes") -or ($PPKGQuestion -eq "Yes") -or ($PPKGQuestion -eq "YES") -or ($PPKGQuestion -eq "Y") -or ($PPKGQuestion -eq "y")){
 $PPKGLocation = Read-Host -Prompt 'Please enter path for Windows Provisioning PPKG and CAT Files'
 $WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
@@ -73,7 +73,7 @@ Show-SMBINFiles
 Function Show-SMBINFiles{
 $SMBINLog = "C:\Logs\OSDCloud\Images\AddSMBIN.log"
 Start-Transcript -Path $SMBINLog
-$SMBINQuestion = Read-Host -Prompt 'Do you want or need to add a customized start2.bin file to the custion WIM?'
+$SMBINQuestion = Read-Host -Prompt 'Do you want or need to add a customized start2.bin file to the custom WIM?'
 If(($SMBINQuestion -eq "yes") -or ($SMBINQuestion -eq "Yes") -or ($SMBINQuestion -eq "YES") -or ($SMBINQuestion -eq "Y") -or ($SMBINQuestion -eq "y")){
 $SMBINLocation = Read-Host -Prompt 'Please enter path for Windows start2.bin File'
 $WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
