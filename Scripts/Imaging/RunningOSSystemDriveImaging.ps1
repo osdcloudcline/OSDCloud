@@ -29,4 +29,4 @@ $ImagePath = Join-Path -Path $Destination -ChildPath $ImageName
 Write-Host "Beginning capture of internal $Drive drive..." -ForegroundColor Cyan 
 New-WindowsImage -ImagePath "$ImagePath" -CapturePath "$Drive" -Name "$ImageName" -CompressionType Max
 Write-Host 
-Write-Host "Completed: Image Capture of $SystemDrive to $Destination" -ForegroundColor Green 
+Write-Host "Completed: Image Capture of $Drive to $Destination" -ForegroundColor Green 
