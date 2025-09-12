@@ -341,10 +341,10 @@ Invoke-Expression $($ProxmoxDrivers.Content)
 #########################################
 
 Write-Host
-Write-Verbose "Processing: Integrating Bryan Desktop - Intel Core Ultra 9 285K ASUS Z890-A ROG STRIX LGA1851 Drivers" -Verbose
+Write-Verbose "Processing: Integrating Dave and Pat PC Ethernet, WLAN, Storage and SYSTEM Drivers" -Verbose
 Write-Host
 
-$DavePatPC = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/BryanDesktop.ps1")
+$DavePatPC = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/DavePatV-PCs.ps1")
 Invoke-Expression $($DavePatPC.Content)
 
 Write-Host
