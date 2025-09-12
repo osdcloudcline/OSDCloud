@@ -304,3 +304,63 @@ Write-Host
 Write-Verbose "Completed: OSDCloud Download - Cloud Drivers..." -Verbose
 Write-Host
 
+#################################
+# Download OSDCloud - Other Drivers
+#################################
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - Hyper-V Drivers" -Verbose
+Write-Host
+
+$HyperVDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Hyper-V/Hyper-V-NetworkDrivers.ps1")
+Invoke-Expression $($HyperVDrivers.Content) 
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - VMWare ESXI Drivers" -Verbose
+Write-Host
+
+$ESXIDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/VMWare%20ESXI/ESXI-Drivers.ps1")
+Invoke-Expression $($ESXIDrivers.Content) 
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - VMWare Workstation Pro Drivers" -Verbose
+Write-Host
+
+$VMWareWSProDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/VMWare%20Workstation/VMWare-WorkstationPRO-Drivers.ps1")
+Invoke-Expression $($VMWareWSProDrivers.Content) 
+
+Write-Host
+Write-Verbose "Processing: OSDCloud Download - Proxmox Drivers" -Verbose
+Write-Host
+
+$ProxmoxDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloudDrivers/raw/refs/heads/main/Network%20and%20Storage%20/Proxmox/Proxmox.ps1")
+Invoke-Expression $($ProxmoxDrivers.Content) 
+
+#########################################
+# Integrate Drivers
+#########################################
+
+Write-Host
+Write-Verbose "Processing: Integrating Bryan Desktop - Intel Core Ultra 9 285K ASUS Z890-A ROG STRIX LGA1851 Drivers" -Verbose
+Write-Host
+
+$DavePatPC = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/BryanDesktop.ps1")
+Invoke-Expression $($DavePatPC.Content)
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud - Cloud Drivers" -Verbose
+Write-Host
+
+$CloudDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Cloud%20Drivers/CloudDrivers.ps1")
+Invoke-Expression $($CloudDrivers.Content) 
+
+Write-Host
+Write-Verbose "Processing: Integrating OSDCloud - Other Drivers" -Verbose
+Write-Host
+
+$OtherDrivers = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Virtualization/Other.ps1")
+Invoke-Expression $($OtherDrivers.Content)
+
+Write-Host
+Write-Verbose "Completed: Integrating Drivers" -Verbose
+Write-Host
