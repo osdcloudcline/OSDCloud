@@ -364,3 +364,54 @@ Invoke-Expression $($OtherDrivers.Content)
 Write-Host
 Write-Verbose "Completed: Integrating Drivers" -Verbose
 Write-Host
+
+#########################################
+# Add Custom WIM Files
+#########################################
+
+Write-Host
+Write-Verbose "Processing: Adding Customized Windows OS WIM Files" -Verbose
+Write-Host
+
+$AddWIM = Invoke-WebRequest("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/ISO%20Files/Custom/AddCustomWIM.ps1")
+Invoke-Expression $($AddWIM.Content)
+
+##########################################
+# OSDCloud WebScript for Startnet.cmd
+##########################################
+
+Write-Verbose "Adding a customized PowerShell based Startnet script and configuring OSDCloud to execute it on startup..." -Verbose
+Edit-OSDCloudWinPE -WebPSScript https://raw.githubusercontent.com/osdcloudcline/OSDCloud/refs/heads/main/Scripts/ISO%20Files/OSDCloud%20Startup%20Scripts/OSDCloudStartnet.ps1
+Write-Host
+
+###########################################
+# Rename OSDCloud ISO
+#########################################
+
+$OSDCloudISOPath = "C:\OSDCloud\Dave and Pat PC"
+
+Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
+Write-Host
+
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud.iso" -NewName "$OSDCloudISOPath\OSDCloud-Version 1.0-DavePatPC.iso" -Force
+Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "$OSDCloudISOPath\OSDCloud-Version 1.0-DavePatPC_NoPrompt.iso" -Force
+
+###########################################
+# Copy OSDCloud ISO Files
+#########################################
+
+$ISO1 = "$OSDCloudISOPath\OSDCloud-Version 1.0-DavePatPC.iso"
+$ISO2 = "$OSDCloudISOPath\OSDCloud-Version 1.0-DavePatPC_NoPrompt.iso"
+
+$OSDISODestination = "C:\ISOs\OSDCloud\Custom\Dave and Pat PC"
+
+Write-Verbose "Processing: Creating ISO directory" -Verbose
+Write-Host
+# Create ISO Directory
+New-Item -Path $OSDISODestination -ItemType Directory -Force
+
+Write-Verbose "Copying OSDCloud ISO Files..." -Verbose
+Write-Host
+
+Copy-Item -Path $ISO1 -Destination $OSDISODestination -Force
+Copy-Item -Path $ISO2 -Destination $OSDISODestination -Force
