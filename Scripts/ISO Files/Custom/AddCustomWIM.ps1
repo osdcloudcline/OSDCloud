@@ -60,6 +60,7 @@ Copy-Item -Path "$PPKGLocation\*.cat" -Destination "$PPKGDestination" -Recurse -
 Dismount-WindowsImage -Path $mountdir -Save
 Stop-Transcript
 Show-SMBINFiles
+Show-MSIFiles
 Show-CustomImage
 }
 ElseIf(($PPKGQuestion -eq "no") -or ($PPKGQuestion -eq "No") -or ($PPKGQuestion -eq "NO") -or ($PPKGQuestion -eq "N") -or ($PPKGQuestion -eq "n")){
@@ -81,21 +82,49 @@ $sourceWIM = "\sources\install.wim"
 $WIMFile = Join-Path -Path $WindowsImage '\Sources\install.wim'
 $mountdir = "C:\Mount"
 $SMBINDestination = "$mountdir\downloads\Configurations\StartMenu"
-New-Item -Path $SMBINDestination -ItemType Directory -Force
 Get-WindowsImage -ImagePath $WIMFile | Format-Table ImageIndex, ImageName
 $Index = Read-Host -Prompt ' Select edition'
 Mount-WindowsImage -ImagePath "$WIMFile\install.wim" -Path $mountdir -Index $Index
+New-Item -Path $SMBINDestination -ItemType Directory -Force
 Copy-Item -Path "$SMBINLocation\*.bin" -Destination "$SMBINDestination" -Recurse -Force
 Dismount-WindowsImage -Path $mountdir -Save
 Stop-Transcript
 Show-CustomImage
 }
 ElseIf(($SMBINQuestion -eq "no") -or ($SMBINQuestion -eq "No") -or ($SMBINQuestion -eq "NO") -or ($SMBINQuestion -eq "N") -or ($SMBINQuestion -eq "n")){
+Show-MSIFiles
+}
+}
+
+##################################
+# Add MSI Software
+##################################
+
+Function Show-MSIFiles(
+$MSILog = "C:\Logs\OSDCloud\Images\AddMSI.log"
+Start-Transcript -Path $MSILog
+$MSIQuestion = Read-Host -Prompt 'Do you want or need to add MSI Software install files to the image?'
+If(($MSIQuestion -eq "yes") -or ($MSIQuestion -eq "Yes") -or ($MSIQuestion -eq "YES") -or ($MSIQuestion -eq "Y") -or ($MSIQuestion -eq "y")){
+$MSILocation = Read-Host -Prompt 'Please enter the path for the MSI Installer file'
+$WindowsImage = Read-Host -Prompt 'Please specify path to the Windows image you want to add to OSDCloud (EG: D:\OS\Windows11)'
+$sourceWIM = "\sources\install.wim"
+$WIMFile = Join-Path -Path $WindowsImage '\Sources\install.wim'
+$mountdir = "C:\Mount"
+$MSIDestination = "$mountdir\downloads\Installers\MSI"
+Get-WindowsImage -ImagePath $WIMFile | Format-Table ImageIndex, ImageName
+$Index = Read-Host -Prompt ' Select edition'
+Mount-WindowsImage -ImagePath "$WIMFile\install.wim" -Path $mountdir -Index $Index
+New-Item -Path $MSIDestination -ItemType Directory -Force
+Copy-Item -Path "$MSILocation\*.msi" -Destination "$MSIDestination" -Recurse -Force
+Copy-Item -Path "$MSILocation\*.cab" -Destination "$MSIDestination" -Recurse -Force
+Dismount-WindowsImage -Path $mountdir -Save
+Stop-Transcript
+Show-CustomImage
+}
+ElseIf(($MSIQuestion -eq "no") -or ($MSIQuestion -eq "No") -or ($MSIQuestion -eq "NO") -or ($MSIQuestion -eq "N") -or ($MSIQuestion -eq "n")){
 Show-CustomImage
 }
 }
-
-
 
 Show-PPKGFiles
 
