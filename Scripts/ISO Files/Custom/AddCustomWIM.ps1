@@ -100,7 +100,7 @@ Show-MSIFiles
 # Add MSI Software
 ##################################
 
-Function Show-MSIFiles(
+Function Show-MSIFiles{
 $MSILog = "C:\Logs\OSDCloud\Images\AddMSI.log"
 Start-Transcript -Path $MSILog
 $MSIQuestion = Read-Host -Prompt 'Do you want or need to add MSI Software install files to the image?'
