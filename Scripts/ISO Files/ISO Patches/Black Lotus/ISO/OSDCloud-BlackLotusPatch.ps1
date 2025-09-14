@@ -11,6 +11,8 @@ Save-WebFile -SourceUrl $bootmgrfw_exEFIURL -DestinationDirectory $tempdestinati
 
 Rename-Item -Path "C:\OSDCloud\downloads\ISO Patches\Black Lotus\bootmgfw_EX.efi"  -NewName "C:\OSDCloud\downloads\ISO Patches\Black Lotus\bootmgfw.efi"
 
+$mount = (Get-OSDCloudWorkspace)
+
 Mount-WindowsImage -ImagePath 
 
 Copy-Item -Path "C:\OSDCloud\downloads\ISO Patches\Black Lotus\bootmgfw.efi" -Destination -Force 
