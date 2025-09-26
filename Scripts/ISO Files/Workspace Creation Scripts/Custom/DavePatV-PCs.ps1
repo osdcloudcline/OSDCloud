@@ -388,7 +388,7 @@ Write-Host
 # Rename OSDCloud ISO
 #########################################
 
-$OSDCloudISOPath = "C:\OSDCloud\Dave and Pat PC"
+$OSDCloudISOPath = "C:\OSDCloud\DavePatV-PCs"
 
 Write-Verbose "Renaming OSDCloud ISO Files..." -Verbose
 Write-Host
@@ -400,10 +400,11 @@ Rename-Item -Path "$OSDCloudISOPath\OSDCloud_NoPrompt.iso" -NewName "$OSDCloudIS
 # Copy OSDCloud ISO Files
 #########################################
 
+$OSDCloudISOPath = "C:\OSDCloud\DavePatV-PCs"
 $ISO1 = "$OSDCloudISOPath\OSDCloud-Version 1.0-DavePatPC.iso"
 $ISO2 = "$OSDCloudISOPath\OSDCloud-Version 1.0-DavePatPC_NoPrompt.iso"
 
-$OSDISODestination = "C:\ISOs\OSDCloud\Custom\Dave and Pat PC"
+$OSDISODestination = "C:\ISOs\OSDCloud\Custom\DavePatV-PC"
 
 Write-Verbose "Processing: Creating ISO directory" -Verbose
 Write-Host
