@@ -3,8 +3,9 @@ files for use in OSDCloud
 
 includes 
 
- - OS Kits\ Windows 11 ADK 22H2 install file
- - OS Kits\ Windows 11 ADK PE Add-On 22H2
+ - OS Kits\ Windows 11 ADK 26H1 install file
+ - OS Kits\ Windows 11 ADK PE Add-On 26H1
+ - OS Kits\Windows 11 ADK 10.2800.1 26H1 KB patch
  - OS Kits\Windows 11 SDK
  - OS Kits\ Orca install file
  - OS Kits\ MDT Install file
