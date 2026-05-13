@@ -25,3 +25,4 @@ Import-Module -Name OSD -Force
 Write-Host "Acquiring User Profile Backup and Restore from GitHub repository..." -ForegroundColor Green
 Save-WebFile -SourceUrl $UPBR_URL -DestinationDirectory $OSDCloudUPBRdownload
 Rename-Item -Path "$UPBRFilePath\UserProfileBackupRestore.exe" -NewName "$UPBRFilePath\UPBR.exe" -Force
+Copy-Item -Path "$UPBRFilePath\UPBR.exe" -Destination "D:\Mount\Windows\System32" -Force
