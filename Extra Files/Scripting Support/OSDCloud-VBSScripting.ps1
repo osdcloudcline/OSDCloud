@@ -32,7 +32,7 @@ Write-Host "Mounting OSDCloud boot.wim..."
 Mount-WindowsImage -ImagePath "$OSDCloudWIM\boot.wim" -Index 1 -Path $mountdir
 Write-Host "Mounting completed..."
 }
-
+}
 
 Function Get-OSDCloudDismount(){
 $mountdir = Read-Host -Prompt 'Please provide mount directory'
