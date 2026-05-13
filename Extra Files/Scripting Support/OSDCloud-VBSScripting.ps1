@@ -35,7 +35,7 @@ Write-Host "Mounting completed..."
 }
 
 Function Get-OSDCloudDismount(){
-$mountdir = Read-Host -Prompt 'Please provide mount directory'
+$mountdir = "D:\Mount"
 Dismount-WindowsImage -Path $mountdir -Save
 }
 
