@@ -27,7 +27,7 @@ $OSDCloudMountDir = Read-Host -Prompt 'Please provide current mount directory'
 }
 ElseIf(($OSDCloudMountQues -eq "N") -or ($OSDCloudMountQues -eq "n") -or ($OSDCloudMountQues -eq "No") -or ($OSDCloudMountQues -eq "no")){
 $OSDCloudWIM = Read-Host -Prompt 'Please Specify the location of your OSDCloud boot.wim file'
-$mountdir = Read-Host 'Please specify the mount point'
+$mountdir = "D:\Mount"
 Write-Host "Mounting OSDCloud boot.wim..." 
 Mount-WindowsImage -ImagePath "$OSDCloudWIM\boot.wim" -Index 1 -Path $mountdir
 Write-Host "Mounting completed..."
@@ -59,15 +59,15 @@ $VBS4 = "$OSDCloudVBS_Extract\Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad3
 Get-OSDCloudMount
 
 Write-Verbose "Processing Item: $VBSName1..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS1
+Add-WindowsPackage -Path $OSDCloudMountDir -PackagePath $VBS1
 Write-Host
 
 Write-Verbose "Processing Item: $VBSName2..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS2
+Add-WindowsPackage -Path $OSDCloudMountDir -PackagePath $VBS2
 Write-Host
 
 Write-Verbose "Processing Item: $VBSName3..." -Verbose
-Add-WindowsPackage -Path $mountdir -PackagePath $VBS3
+Add-WindowsPackage -Path $OSDCloudMountDir -PackagePath $VBS3
 Write-Host
 
 Write-Verbose "Processing Item: $VBSName4..." -Verbose
